@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/style.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/chosen.min.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+
+      <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="address.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/address.jpg"></div><p>address</p> </a></li>
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact</p> </a></li>
+
+           <li><a href="Control-panel.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Control-panel.jpg"></div><p>Control panel</p> </a></li>
+        
+               
+          
+
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+           <li><a href="payment-input.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/payment-input.jpg"></div><p>payment-input</p> </a></li>
+
+              <li><a href="profile-pref.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/profile.jpg"></div><p>profile</p> </a></li>
+
+     
+
+<li><a href="upload-3.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-3.jpg"></div><p>upload-3</p> </a></li>
+
+<li><a href="upload-4.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-4.jpg"></div><p>upload-4</p> </a></li>
+
+<li><a href="upload-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-1.jpg"></div><p>upload-1</p> </a></li>
+
+<li><a href="wallet.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/wallet.jpg"></div><p>wallet</p> </a></li>
+
+
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+    <div class="container-fluid remove-padding control-head-main head-main hidden-xs">
+      <div class="container" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500"><a href="#"><img src="img/Logo_white.png"> </a>
+      <div class="menu-links">
+        <ul>
+          <li><a href="#">EN</a></li>
+          <li><a href="#">اطبع ملف</a></li>
+          <li><a href="#">لوحة التحكم</a></li>
+          <li><a href="#">تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container-fluid mob-menu visible-xs" id="mobile-nav">
+    <a href="#" class="logo-mob"><img src="img/Logo_white.png"></a>
+    <div class="outer-menu ">
+      <input class="checkbox-toggle" type="checkbox" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">اطبع ملف</a></li>
+              <li><a href="#">لوحة التحكم</a></li>
+              <li><a href="#">تسجيل الخروج</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="container-fluid remove-padding">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2796.956254878612!2d9.222679138183594!3d45.49082565307617!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6e3c9edc91f%3A0x8371bf4175cb9018!2sElegant+Holiday+Travel+%26+Services!5e0!3m2!1sen!2seg!4v1547410760631" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+
+</div>
+
+
+
+
+
+  <div class="container remove-padding payment-main">
+<div class="col-md-9 col-sm-8 col-xs-12" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+
+
+
+
+   <div class="col-xs-12">
+         <h3>تواصل معنا
+</h3>
+
+     </div>
+
+          <div class="col-md-4 col-xs-12 col-sm-12">
+                 <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>الاسم</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+
+     </div>
+
+
+     <div class="col-md-4 col-xs-12 col-sm-12">          <div class="input-effect">
+                <input class="effect-19" type="number" placeholder="">
+                <label>رقم الجوال</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div></div>
+     <div class="col-md-4 col-xs-12 col-sm-12">          <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>البريد الإلكتروني</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div></div>
+
+            <div class="col-xs-12">
+                <textarea style="width: 100%; height: 160px; margin-top: 30px;    border: 1px solid #ccc;"></textarea>
+
+            </div>
+
+
+    <div class="col-xs-12 remove-padding chose-main">
+
+
+
+
+<button type="button" class="pay-btn payment-btn" data-toggle="modal" data-target="#payment-fail">
+ارسل الرسالة
+
+
+
+</button>
+
+
+
+
+
+    </div> 
+
+</div>
+
+<style>
+  .contant-side-bar { margin-top: 85px; }
+
+
+</style>
+      
+<div class="col-md-3 col-sm-4 col-xs-12 contant-side-bar">
+    <h4>المكتب الإداري </h4>
+    <p>مركز السدحان، شارع موسى بن نصير، حي السليمانية، الرياض</p>
+
+    <h4>واتسآب  <a href="#">+966599139318</a></h4>
+    <h4>البريد الإلكتروني <a href="#"> support@print.sa</a></h4>
+   
+
+        <ul class="social-icn">
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          
+          <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+          
+          
+          
+        </ul>
+
+</div>
+
+
+
+</div>
+  <div class="container-fluid footer-main">
+    <div class="container remove-padding">
+      <div class="col-lg-2 col-md-3 col-sm-4 fot-logo-main remove-padding">
+        <a href="#" class="logo-fot"><img src="img/Logo_white.png"> </a>
+        <p>تقديم خدمات الطباعة في المملكة العربية السعودية</p>
+      </div>
+      <div class="col-lg-2 col-sm-3 col-lg-offset-1 col-md-2 col-md-offset-1 fot-links">
+        <h4>روابط مهمة</h4>
+        <a href="#">
+          من نحن
+        </a>
+        <br>
+        <a href="#">
+          الاسئله المتكررة
+        </a>
+        <br>
+        <a href="#">
+          نقطة الإستلام
+        </a>
+        <br>
+        <a href="#">
+          سياسه الخصوصية
+        </a>
+        <br>
+        <a href="#">
+          الشروط و الاحكام
+        </a>
+        <br>
+        <a href="#">
+          
+          تواصل معنا
+        </a>
+        <br>
+      </div>
+      <div class="col-lg-5 col-sm-5 col-lg-offset-2 col-md-5 col-md-offset-1 fot-info">
+        <h3>طباعة منصة عبر الإنترنت
+        </h3>
+        <p>المكتب الإداري لشركة اطبع التجارية، مركز السدحان، شارع موسى بن نصير، حي السليمانية، الرياض
+        للدعم الفني أو الشكاوى يمكنك التواصل معنا عبر ( support@print.sa ) أو الواتساب 966599139318</p>
+        <ul class="social-icn">
+          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+          
+          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          
+          <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+          
+          
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery-1.11.2.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/chosen.jquery.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+  AOS.init();
+</script>
+  <script>
+  $(document).ready(function() {
+  $(".chosen-select").chosen({rtl: true});
+  });
+  </script>
+  <script>
+  $(document).ready(function() {
+  function readURL(input) {
+  if (input.files && input.files[0]) {
+  var reader = new FileReader();
+  reader.onload = function(e) {
+  $('#blah').attr('src', e.target.result);
+  $('#blah').hide();
+  $('#blah').fadeIn(500);
+  }
+  reader.readAsDataURL(input.files[0]);
+  }
+  }
+  $("#imgInp").change(function() {
+  readURL(this);
+  });
+  // JavaScript for label effects only
+  $(window).load(function(){
+  $(".input-effect input").val("");
+  
+  $(".input-effect input").focusout(function(){
+  if($(this).val() != ""){
+  $(this).addClass("has-content");
+  }else{
+  $(this).removeClass("has-content");
+  }
+  })
+  });
+  });
+  </script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+  
+</body>
+</html>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>log in</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+        <link href="css/style.css"  rel="stylesheet">
+
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+  
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="Account-settings.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Account-settings.jpg"></div><p>Account settings</p> </a></li>
+
+      <li><a href="fund-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/fund-details.jpg"></div><p>fund details</p> </a></li>
+
+
+      <li><a href="Fund-News.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Fund-News.jpg"></div><p>Fund News</p> </a></li>
+
+      <li><a href="help.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/help.jpg"></div><p>help</p> </a></li>
+
+      <li><a href="Home(user).html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Home(user).jpg"></div><p>Home(user)</p> </a></li>
+       
+        <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+
+
+      <li><a href="login.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+
+      <li><a href="news-list.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/news-list.jpg"></div><p>news list</p> </a></li>
+
+      <li><a href="reset-pass.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/reset-pass.jpg"></div><p>reset pass</p> </a></li>
+
+      <li><a href="Resources.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Resources.jpg"></div><p>Resources</p> </a></li>
+
+           <li><a href="Resources-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Resources-details.jpg"></div><p>Resources details</p> </a></li>
+
+            <li><a href="Support.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Support.jpg"></div><p>Support</p> </a></li>
+
+            <li><a href="Commit-to-Investment.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Commit-to-Investment.jpg"></div><p>Commit Investment</p> </a></li>
+
+           <li><a href="FundCompany-Updates.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/FundCompany-Updates.jpg"></div><p>Fund Company Updates</p> </a></li>
+
+          <li><a href="Investment-Report.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Investment-Report.jpg"></div><p>Investment Report</p> </a></li>
+
+
+          <li><a href="My-Investments.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/My-Investments.jpg"></div><p>My Investments</p> </a></li>
+
+            <li><a href="Portfolio-Analysis.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Portfolio-Analysis.jpg"></div><p>Portfolio Analysis</p> </a></li>
+
+
+
+   </ul>
+
+</div>
+
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>  
+<div class="all-body">
+<div class="container-fluid head-main head-main-user">
+    <div class="container">
+         <a href="#" class="logo-main"><img src="img/logo.png"></a>
+
+<ul class="hidden-xs">
+    <li><a href="#" data-scroll="story">Funds</a></li>
+    <li><a href="#" data-scroll="Contact">My Investments</a></li>
+    <li><a href="#" data-scroll="Contact">My Payments</a></li>
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Others
+     <span class="caret"></span></a>
+     
+  <ul class="dropdown-menu">
+    <div>
+    <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+    </div>
+  </ul>
+
+   </li>
+
+
+
+</ul>
+
+<div class="head-pro-main">
+  <div class="dropdown">
+    <a href="#" class="msg-btn dropdown-toggle" data-toggle="dropdown"><img src="img/mail.png"></a>
+  <div class="dropdown-menu">
+   <a href="#" >
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+     <a href="#">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have variations of passages of Lore</p>
+    </a> 
+      <a href="#" class="unread-note">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+       <a href="#" >
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+     <a href="#">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a> 
+      <a href="#" class="unread-note">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+       <a href="#" >
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+     <a href="#">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a> 
+      <a href="#" class="unread-note">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+  </div>
+</div>
+<div class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       
+      <img src="img/2.png" class="pro-img-head"> Mohamed <span>
+      <img src="img/arrow-up-s-fill.png" class="down-arrow"></span></a>
+
+     
+  <ul class="dropdown-menu pro-links-main">
+    <div>
+    <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+    </div>
+  </ul>
+</div>
+</div>
+
+
+
+<div class="mob-menu-btn visible-xs">
+<button class="js-menu menu" type="button">
+<span class="bar"></span>
+</button>
+</div>
+
+<div class="col-xs-12 menu-main visible-xs">
+   
+   <a href="#">Funds</a>
+   <a href="#">My Investments</a>
+   <a href="#">My Payments</a>
+   <a href="#" class="mob-more-btn" >Others <span class="caret"></span></a>
+      <div class="more-mob-links"> 
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+      </div>
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+</div>
+
+
+<div class="container help-main remove-padding">
+   <h1>Help</h1>
+
+   <div class="col-xs-12 remove-padding">
+       <form>
+          <div class="col-xs-10 remove-padding">
+             <input placeholder="Enter your search keywordes here">
+          </div>
+          <div class="col-xs-2 remove-padding">
+            <button><img src="img/search.png"> Search</button>
+          </div>
+
+
+
+
+       </form>
+
+   </div>
+
+
+   <div class="col-xs-12 help-item">
+     <h3>Popular Questions</h3>
+     <a href="#" class="all-btn">See all 11 articles</a>
+
+     <div class="col-xs-12 remove-padding">
+        
+           <a href="#">How do I start investing with FundersClub?</a>
+           
+           <a href="#">How does FundersClub choose companies?</a>
+         
+           <a href="#">What returns can I expect?</a>
+
+       
+       
+                     <a href="#">When do I see my realized return?</a>
+           
+           <a href="#">What are the fees associated with the funds?</a>
+     
+           <a href="#">How do I track my investments?</a>
+        </div>
+
+
+   </div>
+
+
+      <div class="col-xs-12 help-item">
+     <h3>Popular Questions</h3>
+     <a href="#" class="all-btn">See all 11 articles</a>
+
+     <div class="col-xs-12 remove-padding">
+       
+           <a href="#">How do I start investing with FundersClub?</a>
+       
+           <a href="#">How does FundersClub choose companies?</a>
+         
+           <a href="#">What returns can I expect?</a>
+
+        
+       
+                     <a href="#">When do I see my realized return?</a>
+                  
+           <a href="#">What are the fees associated with the funds?</a>
+        
+           <a href="#">How do I track my investments?</a>
+        </div>
+     </div>
+
+   </div>
+
+
+
+
+</div>
+
+
+  
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="container-fluid footer-main">
+   <div class="container remove-padding">
+       <div class="col-md-2">
+          <img src="img/logo.png">
+       </div>
+       <div class="col-md-6">
+        <div class="col-xs-10 col-md-offset-1">
+          <h3>About</h3>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+       </div>
+     </div>
+       <div class="col-md-4 remove-padding">
+          <div class="col-md-6"><h3>Investors</h3>
+            <ul>
+              <li><a href="#">What We Do</a> </li>
+              <li><a href="#">Returns</a> </li>
+              <li><a href="#">Community</a> </li>
+             <li> <a href="#">How It Works</a> </li>
+             <li><a href="#">Join FundersClub</a> </li>
+           </ul>
+         </div>
+            <div class="col-md-6"><h3>Founders</h3>
+
+            <ul>
+              <li><a href="#">What We Do</a> </li>
+              <li><a href="#">Returns</a> </li>
+              <li><a href="#">Community</a> </li>
+             <li> <a href="#">How It Works</a> </li>
+             <li><a href="#">Join FundersClub</a> </li>
+           </ul>
+            </div>
+       </div>
+
+
+<div class="col-xs-12">
+   <div class="ip-logo">
+   <a href="#"><img src="img/Designed_&.png"></a>
+   <a href="#"><img src="img/Developed_by.png"></a>
+   <a href="#"><img src="img/ip-logo.png"></a>
+   </div>
+
+<span class="scroll-top-btn"><img src="img/up-btn.png"></span>
+
+</div>
+
+
+   </div>
+
+
+
+
+</div>
+
+
+<div id="new-pass-form" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <h4>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</h4>
+        <form>
+           <div class="col-xs-12 remove-padding">
+              <p>Email</p>
+              <input type="">
+           </div>
+
+<button>Sign in</button>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
+
+
+
+
+<script>
+
+$(document).ready(function() {
+
+
+
+$(".scroll-top-btn").click(function() {
+        $("html").animate({ scrollTop: 0 }, "slow");
+        });
+
+
+});
+
+$( ".mob-more-btn" ).click(function() {
+  $( ".more-mob-links" ).slideToggle( "fast", function() {
+  
+  });
+})
+
+
+
+
+var isActive = false;
+$('.js-menu').on('click', function() {
+if (isActive) {
+$('.js-menu').removeClass('active');
+
+$('.menu-main').removeClass('mob-menu-open');
+
+} else {
+$('.js-menu').addClass('active');
+$('.menu-main').addClass('mob-menu-open');
+
+}
+isActive = !isActive;
+});
+
+              
+             
+
+
+
+
+
+</script>
+
+      <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

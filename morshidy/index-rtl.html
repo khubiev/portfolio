@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="css/style-rtl.css"  rel="stylesheet">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+   
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="index-rtl.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index-rtl.jpg">
+  </div><p>index-rtl</p> </a>
+</li>
+
+ <li><a href="project-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/project-d.jpg">
+  </div><p>project-d</p> </a>
+</li>
+
+ <li><a href="project-d-rtl.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/project-d-rtl.jpg">
+  </div><p>project-d-rtl</p> </a>
+</li>
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+    
+  
+<div class="container-fluid remove-padding head-main">
+   <div class="container remove-padding">
+        <div class="col-md-3 col-sm-3"><a href="#" data-scroll="home" class="scroll-to"><img src="img/logo_ar.png"></a></div>
+        <span id="open-colse-menu-mob" class="visible-xs"></span>
+        <div class="col-md-9 col-sm-9">
+           <ul class="menu-main">
+              <li><a href="#"  data-scroll="home" class="scroll-to active-link"><p>الرئسية</p></a></li>
+              <li><a href="#"  data-scroll="about" class="scroll-to"><p>من نحن</p></a></li>
+              <li><a href="#"  data-scroll="Service" class="scroll-to"><p>الخدامات</p></a></li>
+              <li><a href="#"  data-scroll="Project" class="scroll-to"><p>المشاريع</p></a></li>
+              <li><a href="#"  data-scroll="Contact" class="scroll-to"><p>اتصل بنا</p></a></li>
+           </ul>
+           <ul class="social main">
+              <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
+              <li><a href="#"><i class="ri-whatsapp-fill"></i></a></li>
+              <li><a href="#"><i class="ri-phone-fill"></i></a></li>
+              <li><a href="index.html" class="rtl-btn">En</a></li>
+           
+           </ul>
+        </div> 
+   </div>
+</div>
+
+<div class="container-fluid remove-padding into-main block" id="home">
+   <img src="img/1.jpg">
+   <div class="container">
+     <h1>التصميم الداخلي والعمارة</h1>
+     <p>نحن نوثق الإلهام. هدفنا هو تصور وإنشاء وصيانة منازل جميلة لعملائنا. ينصب تركيزنا على العناصر المرئية التي تحفزك. نحن نغطي ابتكارات التصميم المعماري والداخلي وتشطيب المنازل والأثاث والديكور. نأمل في تصميم منزلك يومًا ما!</p>
+     <a href="#" data-scroll="Contact" class="scroll-to">اتصل بنا</a>
+   </div>
+</div>
+ 
+<div class="container-fluid remove-padding about-main block" id="about">
+   <h1>من نحن </h1>
+   <div class="container">
+   <h3>من نحن</h3>
+    <p>نحن نوثق الإلهام. هدفنا هو تصور وإنشاء وصيانة منازل جميلة لعملائنا. ينصب تركيزنا على العناصر المرئية التي تحفزك. نحن نغطي ابتكارات التصميم المعماري والداخلي وتشطيب المنازل والأثاث والديكور. نأمل في تصميم منزلك يومًا ما!</p>
+    <a href="#" data-scroll="Contact" class="scroll-to">ابق على تواصل</a>     
+   </div>
+
+</div>
+
+
+<div class="container-fluid ser-main block" id="Service">
+   <div class="container remove-padding">
+     <h1>الخدمات</h1>
+     <p>نحن نقدم أفضل الخدمات لعملائنا</p>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="col-xs-12 remove-padding">
+           <i class="ri-service-fill"></i>
+           <h3>ينفق الاموال</h3>
+           <p>هدفنا هو تصور وإنشاء وصيانة منازل جميلة لعملائنا</p>
+         </div>
+      </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="col-xs-12 remove-padding">
+           <i class="ri-patreon-fill"></i>
+           <h3>تحديد الميزانية
+</h3>
+           <p>هدفنا هو تصور وإنشاء وصيانة منازل جميلة لعملائنا</p>
+         </div>
+      </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12">
+         <div class="col-xs-12 remove-padding">
+           <i class="ri-lock-unlock-fill"></i>
+           <h3>الأمان</h3>
+           <p>هدفنا هو تصور وإنشاء وصيانة منازل جميلة لعملائنا</p>
+         </div>
+      </div>
+   </div>
+
+</div>
+
+
+<div class="container remove-padding pro-main block" id="Project">
+ 
+ <div class="col-xs-12 tab-head">
+  <h1>المشاريع</h1>
+  <p>نحن نقدم أفضل الخدمات لعملائنا
+</p>
+<a href="#" class="tab active" data-toggle-target=".tab-content-1">التبويب 1</a>
+<a href="#" class="tab" data-toggle-target=".tab-content-2">التبويب 2</a>
+<a href="#" class="tab" data-toggle-target=".tab-content-3">التبويب 3</a>
+</div>
+
+<div class="tab-content tab-content-1 active">
+  <div class="col-xs-12 remove-padding">
+     <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+  </div>
+</div>
+<div class="tab-content tab-content-2">
+    <div class="col-xs-12 remove-padding">
+     <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+  </div>
+</div>
+
+<div class="tab-content tab-content-3">
+    <div class="col-xs-12 remove-padding">
+     <div class="col-md-4">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+
+          <div class="col-md-4 col-sm-4 col-xs-12">
+        <a href="project-d.html" class="flat-hover">
+           <img src="img/news-1.png">
+           <span>28 يوليو 2018
+</span>
+           <h3>كيف يبدو أن تكون مصممًا داخليًا</h3>
+           <p>محررات النصوص تُظهر النص كما هو حاليا في الملف؛ باستثناء أحرف التحكم (مثل علامة سطر جديد) المستخدمة في الترميز.</p>
+        </a>
+     </div>
+  </div>
+</div>
+</div>
+
+<div class="container-fluid contact-main block" id="Contact">
+   <div class="container remove-padding">
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <h1>اتصل بنا</h1>
+        <p>لا تتردد في الاتصال بنا بخصوص استفساراتك وسنقوم بالرد عليك في أقرب وقت ممكن</p>
+         <ul>
+      <li><a href="#"><i class="ri-facebook-fill"></i> صفحتنا على Facebook</a></li>
+      <li><a href="#"><i class="ri-mail-open-fill"></i> domain@gmail.com</a></li>
+      <li><a href="#"><i class="ri-phone-fill"></i> 01102394387</a></li>
+      <li><a href="#"><i class="ri-whatsapp-fill"></i> 01102394387</a></li>
+      <li><a href="#"><i class="ri-phone-fill"></i> 01102394387</a></li>
+         
+         </ul>
+      </div>
+      <div class="col-md-8 col-sm-8 col-xs-12">
+         <form>
+            <div class="col-xs-12 remove-padding">
+               <input type="Your name" name="name" type="text" placeholder="اسمك">
+            </div>
+
+            <div class="col-xs-12 remove-padding">
+               <input type="Your emal" name="emal" type="emal" placeholder="بريدك الالكتروني">
+            </div>
+
+            <div class="col-xs-12 remove-padding">
+               <textarea placeholder="رسالتك"></textarea>
+            </div>
+            <button>ارسال <i class="ri-send-plane-fill"></i></button>
+         </form>
+      </div>
+
+   </div>
+</div>
+<div class="container-fluid fot-main text-center">
+   <p>حقوق النشر © 2020
+</p>
+</div>
+
+<a href="https://api.whatsapp.com/send?phone=+201092329405&text=hi" class="float1" target="_blank">
+<i class="ri-whatsapp-fill my-float"></i>
+</a>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+ $('.tab').on('click', function(evt) {
+  evt.preventDefault();
+  $('.tab').removeClass('active');
+  $(this).addClass('active');
+  var sel = this.getAttribute('data-toggle-target');
+  $('.tab-content').removeClass('active').filter(sel).addClass('active');
+});
+
+
+ $('#open-colse-menu-mob, .scroll-to').on('click', function() {
+$('.head-main .col-md-9.col-sm-9').toggleClass('selected');
+});
+
+$("a.scroll-to").click(function(event) {
+event.preventDefault();
+});
+
+
+      var lia = $("a.scroll-to");
+      $(function () {
+                            
+      $("body").css("paddingTop", $("nav").innerHeight() + -10);
+                            
+      lia.click(function (e) {
+    $(this).addClass("active-link").siblings().removeClass("active-link");
+    $("html, body").animate({
+    scrollTop : $("#" + $(this).data("scroll")).offset().top -75
+    },1000);
+   }) ;
+ 
+  $(window).scroll(function () {
+  $(".block").each(function () {
+  if($(window).scrollTop() > $(this).offset().top -90) {
+  var blockId = $(this).attr("id");
+  $('a.scroll-to').removeClass("active-link");
+  if (!$('a.scroll-to[data-scroll="'+ blockId+'"]').hasClass("active-link")){
+      $('a.scroll-to[data-scroll="'+ blockId+'"]').addClass("active-link")}}
+     });
+  });
+
+ });
+	});
+</script>
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

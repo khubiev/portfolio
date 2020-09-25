@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>clients</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="css/swiper.min.css">
+ <link href="css/style.css"  rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+
+</head>
+<body>
+
+  <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="about-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/about_us.jpg"></div><p>about us</p> </a></li>
+      <li><a href="blog.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/blog.jpg"></div><p>blog</p> </a></li>
+      <li><a href="careers.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/careers.jpg"></div><p>careers</p> </a></li>
+           <li><a href="clients.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/clients.jpg"></div><p>clients</p> </a></li>
+        
+               
+                     <li><a href="home.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/home.jpg"></div><p>home</p> </a></li>
+
+      <li><a href="project-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/project-details.jpg"></div><p>project details</p> </a></li>
+           <li><a href="projects.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/projects.jpg"></div><p>projects</p> </a></li>
+
+              <li><a href="services.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/services.jpg"></div><p>services</p> </a></li>
+
+                 <li><a href="team.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/team.jpg"></div><p>team</p> </a></li>
+
+
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+  <div class="container-fluid heder-disktop remove-padding hidden-xs" id="navbar">
+<div class="add-bg"></div>
+<div class="add-bg-1"></div>
+
+<div class="open-btn">
+ <div class="menu-btn-main toggle-menu">
+      <div class="menu-btn">
+        <span></span>
+        <span class="short-span"></span>
+        <span></span>
+      </div>
+     
+    </div>
+</div>
+
+
+<div class="close-btn">
+ <div class="menu-btn-main toggle-menu">
+  
+      <div class="close"></div>
+    </div>
+    </div>
+    <div class="container remove-padding" >
+          
+        <a href="#" class="logo"><img src="img/logo.png"></a>
+        <div id="container-menu">
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About us <span><i class="fas fa-chevron-down"></i>
+</span></a> 
+        <!-- First Tier Drop Down -->
+        <ul>
+          <li><a href="#">Themes</a></li>
+          <li><a href="#">Plugins</a></li>
+          <li><a href="#">Tutorials</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+       <li><a href="#"><i class="fas fa-phone"></i></a></li>
+      
+
+    </ul>
+  </nav>
+</div>
+    </div>
+  </div>
+<div class="container-fluid mob-menu visible-xs" id="mobile-nav">  
+<a href="#" class="logo-mob"><img src="img/logo.png"></a>
+<div class="outer-menu ">
+  <input class="checkbox-toggle" type="checkbox" />
+  <div class="hamburger">
+    <div></div>
+  </div>
+  <div class="menu">
+    <div>
+      <div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li>
+          <a href="#" class="about-down">About us <span><i class="fas fa-chevron-down"></i></span></a>
+          
+          </li>
+          <div class="about-links">
+                    <li>
+          <a href="#">About us 1 </a>
+          
+          </li>
+                    <li>
+          <a href="#">About us 2 </a>
+          
+          </li>
+                    <li>
+          <a href="#">About us 3 </a>
+          
+          </li>
+          </div>
+          
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#"><i class="fas fa-phone"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>  
+
+<div class="container-fluid slider-main remove-padding head-cover">
+
+<img src="img/interior.jpg">
+  <div class="cover-main-head">
+    <div  data-aos="fade-right" data-aos-easing="linear"
+     data-aos-duration="500" class="title">
+    <span class="be-title-black"></span>
+    <p>OUR PARTNERS</p>
+   
+   
+    </div>
+   <h2 data-aos="fade-down" data-aos-easing="linear"
+     data-aos-duration="500" class="text-center">OUR PARTNERS</h2>
+   <h5 data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500" class="text-center">See the companies and individuals we work with</h5>
+   
+   
+</div>
+</div>
+<div class="container-fluid remove-padding clients-bg main-page">
+
+    <div class="container remove-padding clients-main-p add-normal-padding">
+      <p  data-aos="fade-down" data-aos-easing="linear"
+     data-aos-duration="500">Because “you can’t do it all” we recognize when we do business that partners are essential for our success. Beside the finest quality they provide, they understand the market, and they offer unique capabilities and expertise</p>
+    </div>
+    
+    <div class="clients-main remove-padding container-fluid">
+   
+   
+   <div class="container remove-padding">
+     <div class="logo-clints-grid">
+       <div  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500" class="logo-clints-child">
+         <a href="#"> <img src="img/clients-logo-1.png"></a>
+       </div>
+
+     
+        
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-2.png"></a>
+       </div>
+ 
+     
+
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-3.png"></a>
+       </div>
+    
+     
+            
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-4.png"></a>
+       </div>
+     
+     
+               
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-5.png"></a>
+       </div>
+     
+     
+        
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-6.png"></a>
+       </div>
+ 
+     
+     
+           
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-7.png"></a>
+       </div>
+
+     
+     
+             
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-8.png"></a>
+       </div>
+
+     
+     
+        
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-9.png"></a>
+       </div>
+  
+     
+       
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-10.png"></a>
+       </div>
+    
+     
+             
+       <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-11.png"></a>
+       </div>
+              <div class="logo-clints-child"  data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+         <a href="#"> <img src="img/clients-logo-12.png"></a>
+       </div>
+   
+   
+   </div>
+   
+    </div>
+    
+    <div class="container slider-up-main"  data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500" style="position:relative">
+   <div class="mark-main">
+     <img src="img/Bitmap.png">
+   </div>
+   <div class="col-md-2 col-sm-2 hidden-xs  name-b-main">
+     <div class="name-b"></div>
+   </div>
+   <div class="col-md-10 col-sm-10 col-xs-12 remove-padding">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, .</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+          <div class="swiper-slide">
+        <p class="tast-p">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+        
+        
+        <span class="tast-name">Richard madden, client</span>
+      
+      </div>
+
+    </div>
+        <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  </div>
+</div>
+</div>
+
+
+<div class="container-fluid footer-top remove-padding">
+<div class="container-fluid footer-main remove-padding" >
+  <div class="container footer remove-padding" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500">
+    <a class="fot-logo" href="#"> <img class="fot-logo-img" src="img/logo-fot.png"></a>
+  <div class="col-md-9 col-sm-10 col-sm-offset-2 footer-links col-md-offset-3 remove-padding">
+     <div class="col-md-2 col-sm-2">
+       <h3>
+       Info</h3>
+       <a href="#">About us</a>
+       <br>
+        <a href="#">Careers</a>
+        <br>
+         <a href="#">Our team</a>
+         <br>
+          <a href="#">Clients</a>
+     </div>
+     <div class="col-md-3 col-sm-3">
+            <h3>
+       Projects</h3>
+       <a href="#">Interior Design</a>
+       <br>
+        <a href="#">Finishing</a>
+        <br>
+         <a href="#">Furniture</a>
+     </div>
+     <div class="col-md-4 col-sm-3">
+                 <h3>
+       contact us</h3>
+       
+       <p>Phone: +1 (378) 400-1234</p>
+       <p>Email: contact@interico.com</p>
+       <p>Address: 114 Margaret Street, Canada</p>
+     </div>
+     <div class="col-md-3 col-sm-3">
+     <h3>follow us</h3>
+     <ul>
+       <li> <a href="#"><i class="fab fa-facebook-f"></i></a></li>
+       <li> <a href="#"><i class="fab fa-instagram"></i></a></li>
+       <li> <a href="#"><i class="fab fa-youtube"></i></a></li>
+     </ul>
+     
+     </div>
+  
+  </div>
+  
+  </div>
+  
+  <div data-aos="fade-right" data-aos-easing="linear"
+     data-aos-duration="500" class="container d-d-l remove-padding">
+    <a href="#"><img src="img/Designed_&.png"></a>
+    <a href="#"><img src="img/Developed_by.png"></a>
+    <a href="#"><img src="img/logo-ip.png"></a>
+  
+  </div>
+</div>
+</div>
+
+
+</div>
+
+
+
+<div class="scrollup">
+  <a href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+
+</div>
+
+
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.js"></script> 
+<script src="js/swiper.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/jquery.countup.min.js"></script> 
+<!-- <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script> -->
+
+<script>
+$('.counter').countUp();
+</script>
+ 
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+	        navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+
+<script>
+
+
+
+
+
+
+
+
+
+$(document).ready(function() {
+	
+	
+	  var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-90px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+
+
+	
+	
+  $( ".toggle-menu" ).click(function() {
+  $( "#container-menu" ).fadeToggle( "fast", "linear" );
+  $( ".heder-disktop" ).addClass( "show-hide-nav-1" );
+  });
+
+
+  $( ".open-btn" ).click(function() {
+   $( ".open-btn" ).hide()
+   $( ".close-btn" ).show();
+   $( ".add-bg" ).css({ width: "100%" });
+  });
+	
+	
+	
+$( ".close-btn" ).click(function() {
+ $( ".close-btn" ).hide();
+ $( ".open-btn" ).show();
+ $( ".add-bg" ).css({ width: "0" });
+});
+
+
+	var s = $(".heder-disktop");
+	var pos = s.position();					   
+	$(window).scroll(function() {
+		var windowpos = $(window).scrollTop();
+		if (windowpos >= pos.top & windowpos <=500) {
+			$( ".add-bg-1" ).css({ width: "0" });
+			
+		} else {
+  $( ".add-bg-1" ).css({ width: "100%" });
+		}
+	});
+	
+
+
+
+
+ $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+
+
+});
+
+
+$('.about-down').click(function(e) {
+		$('.about-links').slideToggle(400);    });
+
+
+
+  $('.tab_content').hide();
+  $('.tab_content:first').show();
+  $('.tabs li:first').addClass('active');
+  $('.tabs li').click(function(event) {
+    $('.tabs li').removeClass('active');
+    $(this).addClass('active');
+    $('.tab_content').hide();
+
+    var selectTab = $(this).find('button').attr("href");
+
+    $(selectTab).fadeIn();
+  });
+  
+
+
+
+</script>
+<script>
+
+$(function () {
+    "use strict";
+    
+    $(".work-img img").click(function () {
+        var $src = $(this).attr("src");
+        $(".show-pop").fadeIn();
+        $(".work-img img").attr("src", $src);
+    });
+    
+    $("span, .overlay-pop").click(function () {
+        $(".show-pop").fadeOut();
+    });
+    
+});
+
+</script>
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

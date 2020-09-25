@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Profile</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/progress.css">
+        <link href="css/style.css"  rel="stylesheet">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+  <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="edit-Organization-data.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/edit-Organization-data.jpg">
+  </div><p>edit-Organization-data</p> </a>
+</li>
+
+ <li><a href="grade-sturcture.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/grade-sturcture.jpg">
+  </div><p>grade-sturcture</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="index-rtl.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index-rtl.jpg">
+  </div><p>index-rtl</p> </a>
+</li>
+
+ <li><a href="invite-new-user.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/invite-new-user.jpg">
+  </div><p>invite-new-user</p> </a>
+</li>
+
+ <li><a href="login.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/login.jpg">
+  </div><p>login</p> </a>
+</li>
+
+ <li><a href="new-job-deiscription.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/new-job-deiscription.jpg">
+  </div><p>new-job-deiscription</p> </a>
+</li>
+
+ <li><a href="Organization-Dashboard.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Organization-Dashboard.jpg">
+  </div><p>Organization-Dashboard</p> </a>
+</li>
+
+ <li><a href="payment.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/payment.jpg">
+  </div><p>payment</p> </a>
+</li>
+
+ <li><a href="register-organization-data.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/register-organization-data.jpg">
+  </div><p>register-organization-data</p> </a>
+</li>
+
+ <li><a href="singUp.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/singUp.jpg">
+  </div><p>singUp</p> </a>
+</li>
+
+ <li><a href="under-construction-page.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/under-construction-page.jpg">
+  </div><p>under-construction-page</p> </a>
+</li>
+
+ <li><a href="upgrade-plan.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/upgrade-plan.jpg">
+  </div><p>upgrade-plan</p> </a>
+</li>
+
+ <li><a href="User-Profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/User-Profile.jpg">
+  </div><p>User-Profile</p> </a>
+</li>
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span> 
+<div id="app">
+<div class="container-fluid head-mob-pro hidden-md hidden-lg">
+   <div class="container">
+    <a href="#">
+      <img src="img/logo.png">
+    </a>
+
+            <span id="open-colse-menu-mob" 
+        :class="{ selected: isSelected}"
+        @click="isSelected = !isSelected"
+       ></span>
+  </div>
+</div>
+
+<div class="container-fluid pro-main">
+  <div class="pro-side"  v-bind:class="{selected: isSelected}">
+     <a href="#">
+        <img src="img/logo.png">
+     </a>
+     <ul>
+        <li class="active-side-link"><a href="#"><i class="ri-user-3-fill"></i> profile</a></li>
+        <li><a href="#"><i class="ri-home-4-fill"></i> Dashboard</a></li>
+        <li><a href="#"><i class="ri-calendar-todo-fill"></i> plans</a></li>
+        <li><a href="#"><i class="ri-add-line"></i> Add subOrganization</a></li>
+        <li><a href="#"><i class="ri-settings-3-fill"></i> setting</a></li>
+     </ul>
+     <div class="col-xs-12 remove-padding logout-btn">
+        <a href="#"><i class="ri-logout-box-fill"></i>Log Out</a>
+     </div>
+  </div>
+   <div class="container pro-cont remove-padding">
+      <div class="col-md-9 col-md-offset-3 col-lg-10 col-lg-offset-2 col-xs-12 col-sm-12">
+         <div class="col-xs-12">
+            <div class="col-xs-12 pro-cont-item por-cont-head remove-padding">
+               <p>Welcome back !</p>
+               <div class="dropdown">
+  <a href="#" data-toggle="dropdown">Microsoft
+  <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Option 1</a></li>
+    <li><a href="#">Option 2</a></li>
+    <li><a href="#">Option 3</a></li>
+  </ul>
+</div>
+            </div>
+         </div>
+
+
+
+<div class="col-md-12 col-lg-8 col-xs-12 col-sm-12">
+
+    <div class="col-xs-12 remove-padding pro-cont-item user-pro-info">
+           <img src="img/log-bg.png">
+           <h3>Mohamed Hassan</h3>
+         <ul>
+            <li><i class="ri-briefcase-4-fill"></i><p>Product Design</p></li>
+            <li><i class="ri-at-fill"></i><a href="#">mohamed hassan@gmail.com</a></li>
+            <li><i class="ri-phone-fill"></i><p>010223344568</p></li>
+            <li><i class="ri-map-pin-2-fill"></i><p>Egypt</p></li>
+         </ul>
+    </div>
+
+<div class="col-xs-12 remove-padding user-card-cont">
+  
+   <div class="col-xs-12 remove-padding user-card-head">
+      <p><i class="ri-article-line"></i>my cards</p>
+      <a href="#">Add new card</a>
+   </div>
+   <div class="col-xs-12 remove-padding user-card-main">
+     <div class="user-card-item">
+      
+        <h1>V</h1>
+         <div class="col-xs-12 remove-padding card-img-main">
+            <img src="img/12.png">
+         </div>
+     
+      <div class="col-xs-12 remove-padding card-info">
+         <h3>Mohamed Hassan</h3>
+         <h4>**** **** ****  1234</h4>
+      </div>
+      <div class="col-xs-12 remove-padding card-bottom">
+         <p>12 \ 7</p>
+         <span>***</span>
+      </div>
+   </div>
+
+        <div class="user-card-item">
+      
+         <img src="img/log-bg.png">
+   </div>
+ </div>
+</div>
+
+</div>
+
+<div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 org-side-main ">
+   <div class="col-xs-12 pro-cont-item text-center cart-side">
+     <div class="col-xs-12 remove-padding">
+        <h2>Organizations <span>2</span></h2>
+      </div>
+    <div class="col-xs-12 remove-padding cart-side-item">
+           <img src="img/12.png">
+           <a href="#">Dashboard</a>
+           <ul>
+              <li><h4>Microsoft</h4></li>
+              <li><i class="ri-map-pin-2-fill"></i><p>Egypt</p></li>
+              <li><i class="ri-phone-fill"></i><p>435767476589</p></li>
+              <li><i class="ri-building-4-fill"></i><img src="img/12.png"></li>
+           </ul>
+     
+    </div>
+
+        <div class="col-xs-12 remove-padding cart-side-item">
+           <img src="img/12.png">
+           <a href="#">Dashboard</a>
+           <ul>
+              <li><h4>Microsoft</h4></li>
+              <li><i class="ri-map-pin-2-fill"></i><p>Egypt</p></li>
+              <li><i class="ri-phone-fill"></i><p>435767476589</p></li>
+              <li><p>Affiliated with <a href="#"> Microsoft</a> </p></li>
+           </ul>
+     
+    </div>
+
+
+
+
+
+
+
+
+
+
+   </div>
+
+<div class="col-xs-12 eval-btn remove-padding">
+   <a href="#">Evaluate New Job</a>
+</div>
+
+</div>
+
+      </div>
+   </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+  <script src="js/progress.js"></script>
+<script src="js/vue.js"></script>
+
+
+
+<script>
+
+ new Vue({
+  el: '#app',
+  
+    data: {
+    'isSelected': false,
+  }
+
+})
+
+
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

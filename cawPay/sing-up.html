@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sing-up</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/chosen.css">
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="css/style.css"  rel="stylesheet">
+  </head>
+  <body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="Merchant.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Merchant.jpg">
+  </div><p>Merchant</p> </a>
+</li>
+
+ <li><a href="payment-page-event-ticket.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/payment-page-event-ticket.jpg">
+  </div><p>payment-page-event-ticket</p> </a>
+</li>
+
+ <li><a href="payment-page-recurring.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/payment-page-recurring.jpg">
+  </div><p>payment-page-recurring</p> </a>
+</li>
+
+ <li><a href="sing-up.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/sing-up.jpg">
+  </div><p>sing-up</p> </a>
+</li>
+
+ <li><a href="cowpay-front/index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="cowpay-front/img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+   <div class="container-fluid sing-up-main">
+      <div class="com-md-6 col-sm-6 col-xs-12 form-main remove-padding">
+         <div class="col-xs-12">
+           
+           <img src="img/LOGO.png">
+            <h1>Getting started</h1>
+              <from>
+                 <div class="col-xs-12 remove-padding input-item">
+                    <p>Full name</p>
+                    <input type="text">
+                 </div>
+                     <div class="col-xs-12 remove-padding input-item">
+                    <p>Business name</p>
+                    <input type="text">
+                 </div>
+                     <div class="col-xs-12 remove-padding input-item">
+                    <p>Business link</p>
+                    <input type="text">
+                 </div>
+                     <div class="col-xs-12 remove-padding input-item">
+                    <p>Business type</p>
+                                 <select class="my-select">
+              <option selected="selected">Red</option>
+              <option>Orange</option>
+              <option>Yellow</option>
+              <option>Green</option>
+            </select>
+                 </div>
+
+                 <button>SING UP <i class="fas fa-angle-right"></i></button>
+              </from>
+
+<span class="sing-in-link">Already gave an account? <a href="#">Sign in</a></span>
+
+         </div>
+      </div>
+      <div class="com-md-6 col-sm-6 col-xs-12 bg-main remove-padding">
+         <div class="col-xs-12">
+             <div class="comment-block">
+               <h3>Why people choose us</h3>
+               <i class="fas fa-quote-right"></i>
+               <p>Lorem ipsum dolor sit amet, conse
+ctetur adipiscing elit, sed eiusmod
+tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim
+veniam, quis nostrud exercitation
+ullamco</p>
+<div class="clearfix"></div>
+<div class="comment-info">
+   <img src="img/sing-bg.png">
+   <div class="comment-name">
+   <h5>Sam Smith</h5>
+   <h6>Company name</h6>
+ </div>
+</div>
+
+             </div>
+
+         </div>
+      </div>
+
+   </div>
+
+ 
+
+
+    
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/chosen.jquery.js"></script>
+        <script src="js/init.js"></script>
+    <script>
+
+    </script>
+
+    <script>
+
+
+    
+    $(document).ready( function() {
+
+  $(".my-select").chosen();
+
+    });
+
+    </script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+    
+  </body>
+</html>

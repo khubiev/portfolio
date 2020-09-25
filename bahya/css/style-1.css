@@ -1,0 +1,410 @@
+
+
+body {
+
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0 !important;
+ }
+
+body {
+  position: relative;
+  background-color: #f4f5fc;
+
+}
+
+
+\
+
+a:focus {
+    outline: thin dotted;
+    outline: 0;
+    outline-offset: 0;
+}
+
+ul { margin: 0; padding: 0 }
+li { list-style: none; }
+a, button {
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  outline: none; text-decoration:none;
+}
+a { text-decoration: none; display: inline-block; }
+
+h1, h2, h3, h4, h5, h6, p {  color: #333333; }
+
+#form1, #form2, #form3, #form4, #shareDiv {
+    position: absolute;
+    border-radius: 8px;
+    box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.08);
+    width: 400px;
+    height: auto;
+    padding: 30px;
+    top: 70px;
+    left: calc(50% - 200px);
+    background-color: #fff;
+}
+
+h1 { font-size: 22px; }
+
+.labeldiv {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.inputdiv {     margin-bottom: 25px;
+    position: relative; }
+
+.inputdiv .short input {    width: calc(100% - 114px);}
+
+.logo {
+    margin-bottom: 25px;
+}
+
+.logo a {    float: right;
+    position: relative;
+    top: 16px;
+    border-radius: 6px;
+    color: #7ad58d; }
+
+#shareDiv .logo img { margin-top: 0 !important; margin-right: 0 !important }
+
+input, .input {
+    font: normal 16px Verdana;
+    border: 1px solid #d4d4d4;
+    padding: 10px;
+    width: calc(100% - 22px);
+    border-radius: 6px;
+}
+
+.inputdiv textarea {     resize: none;
+    height: 50px; }
+
+    .next input { width: 100%;
+    background: #7ad58d;
+    border: none;
+    color: #fff;  -webkit-transition: all .3s ease;
+  transition: all .3s ease; cursor: pointer; }
+
+
+    :focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+    .next input:hover {     background: #4dbe65; }
+.next input:disabled {
+  background: #ccc;
+  color:#333;
+}
+
+ button#next2:disabled {
+  background: #ccc !important;
+  color:#333 !important;
+  cursor: not-allowed !important;
+}
+
+
+#form2 .previous {     width: 49%;
+    display: inline-block; float: left; }
+
+#form2 .previous button {    float: left;width: calc(100% - 10px);
+    background: #7dcbf0;
+    border: none;
+    color: #fff;  -webkit-transition: all .3s ease;
+  transition: all .3s ease; cursor: pointer;}
+
+  #form2 .next button {    
+    background: #7ad48c;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    float: right;
+}
+
+i.ri-delete-bin-6-line {
+    position: absolute;
+    right: 100px;
+    top: 13px;
+    color: #ff2b2b;
+    cursor: pointer;
+        -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+  .long i.ri-delete-bin-6-line { right: 15px }
+
+.inputdiv div { margin-bottom: 20px; position: relative; }
+
+i.ri-delete-bin-6-line:hover { color: #fc0000; }
+
+    #form2 .next { width: 49%; display: inline-block; float: right } 
+    #form2 .newt button { float: right;width: calc(100% - 10px);
+        background: #7ad58d;
+    border: none;
+    color: #fff;  -webkit-transition: all .3s ease;
+  transition: all .3s ease; cursor: pointer; }
+
+
+      #form3 .next { width: 49%; display: inline-block; float: right } 
+    #form3 .newt button { float: right;width: calc(100% - 10px);
+        background: #7ad58d;
+    border: none;
+    color: #fff;  -webkit-transition: all .3s ease;
+  transition: all .3s ease; cursor: pointer; }
+
+
+  #form3 .previous {     width: 49%;
+    display: inline-block; float: left; }
+
+#form3 .previous button {    float: left;width: calc(100% - 10px);
+    background: #7dcbf0;
+    border: none;
+    color: #fff;  -webkit-transition: all .3s ease;
+  transition: all .3s ease; cursor: pointer;}
+
+  #form3 .next button {    
+    background: #7ad48c;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    float: right;
+}
+
+
+#form4 .inputdiv input {
+    width: calc(100% - 22px);
+}
+      #form4 .next { width: 49%; display: inline-block; float: right } 
+    #form4 .newt button { float: right;width: calc(100% - 10px);
+        background: #7ad58d;
+    border: none;
+    color: #fff;  -webkit-transition: all .3s ease;
+  transition: all .3s ease; cursor: pointer; }
+
+
+  #form4 .previous {     width: 49%;
+    display: inline-block; float: left; }
+
+#form4 .previous button {    float: left;width: calc(100% - 10px);
+    background: #7dcbf0;
+    border: none;
+    color: #fff;  -webkit-transition: all .3s ease;
+  transition: all .3s ease; cursor: pointer;}
+
+  #form4 .next button {    
+    background: #7ad48c;
+    border:none;
+    color:#fff;
+    cursor: pointer;
+    float: right;
+}
+
+input#deadline {
+    width: 100%;
+    width: calc(100% - 22px);
+    margin-top: 10px;
+}
+
+.slider:before {
+
+    height: 22px;
+    width: 22px;
+    left: 4px !important;
+
+}
+
+.slider {
+
+    height: 32px;
+}
+
+
+   button:disabled,
+button[disabled]{
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+} 
+
+.qs { display: block;    margin-top: 10px; margin-bottom: 20px; }
+
+.qs input {   position: absolute;
+    width: 60px !important;
+    right: 0;
+    top: -54px;  }
+
+ .next input:disabled {
+    background: #ccc;
+    color: #333;
+}
+
+
+.add-input {
+    margin-bottom: 20px;
+}
+
+.add-input input { width: 100%;
+    background: #7dcbf0;
+    border: none;
+    color: #fff; cursor: pointer; }
+
+
+  .list-div-main {  margin-bottom: 20px }  
+
+@media only screen and (max-width : 1200px) {}
+
+
+@media only screen and (max-width : 991px) {}
+
+
+
+
+/*
+===================================================================================================================
+                                                    end media                                                        
+====================================================================================================================
+*/
+
+  body {font: normal 16px 'Tajawal'; ?>;}
+  input, .input {font: normal 16px  'Tajawal'; ?>; border: 1px solid #d4d4d4; padding: 10px;}
+  
+  .qs {visibility: hidden; position: absolute; }
+  .input-toggle {visibility: visible; position: relative; }
+
+  .visible {visibility: visible;}
+  .hidden {visibility: hidden;}
+  
+  
+  
+  
+::-webkit-input-placeholder { /* Edge */
+  color: #d4d4d4;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #d4d4d4;
+}
+
+::placeholder {
+  color: #d4d4d4;
+}
+
+  
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  top: -36px;
+  right: 0
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+
+  left: 4px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #7ad48c;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7ad48c;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}   
+
+
+#next2 { width: calc(100% - 10px); }
+
+#form2 .previous button { width: calc(100% - 10px); }
+
+
+
+#shareDiv button {     position: absolute;
+    right: 30px;
+    width: 70px;
+    text-align: center;
+    border-radius: 0 6px 6px 0; }
+
+    #shareDiv input#link { margin-bottom: 25px }
+#shareDiv input.input { margin-bottom: 25px;width: 100%;
+    color: #fff;
+    background: #4dbe65;
+    border: none;
+    cursor: pointer; margin-top: 25px;
+        -webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+
+    #shareDiv input.input:hover {     background: #31b64d !important; }
+
+#shareDiv img { margin-right: 10px; margin-top: 10px }
+
+#shareDiv input.input:hover {background: #7ad58d;}
+
+
+.center-content {    text-align: center;}
+
+.ready-p { margin-bottom: 20px; text-align: center; }
+
+
+@media only screen and (max-width : 767px) {
+
+#form1, #form2, #form3, #form4, #shareDiv {
+    position: absolute;
+    border-radius: 8px;
+    width: calc(100% - 19px);
+    height: auto;
+    padding: 30px 10px;
+    top: 0;
+    left: 0;
+}
+
+#form1, #form2, #form3, #form4, #shareDiv { box-shadow: none }
+
+body {
+    position: relative;
+    background-color: #ffffff;
+}
+#shareDiv button {
+    right: 10px;
+}
+
+}

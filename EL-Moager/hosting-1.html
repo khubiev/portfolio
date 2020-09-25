@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>index</title>
+    <!-- my css -->
+     <!--<link href="css/style.css" rel="stylesheet">-->
+     <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/DateTimePicker.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd; margin-bottom: 0;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px;  padding: 0}
+
+    .all-pages-main ul li { float: left;
+    width: 43.5%;
+    padding: 10px;
+    list-style: none;
+    display: inline-block; }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="car.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/car.jpg"></div><p>car details</p> </a></li>
+      <li><a href="fav.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fav.jpg"></div><p>favorite</p> </a></li>
+      <li><a href="fillter.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fillter.jpg"></div><p>fillter</p> </a></li>
+      <li><a href="hosting-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/hosting-1.jpg"></div><p>hosting </p> </a></li>
+        <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="makepayment-new.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/makepayment-new.jpg"></div><p>makepayment new</p> </a></li>
+      <li><a href="my-cars.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/my-cars.jpg"></div><p>my cars</p> </a></li>
+      <li><a href="owner.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/owner.jpg"></div><p>owner</p> </a></li>
+      <li><a href="statement-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/statement-1.jpg"></div><p>statement </p> </a></li>
+      <li><a href="thanks.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/thanks.jpg"></div><p>thanks</p> </a></li>
+      <li><a href="vip.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/vip.jpg"></div><p>vip</p> </a></li>
+
+
+
+
+
+    
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="images/more.png">
+</span>
+
+
+
+
+  <div class="header">
+  <div class="Container">
+  
+            <div class="logo">
+                <a href="#a"> <img src="images/logo@1x.png"> </a></div>
+            <div class="rent"><a href="#a"><sub>Rent your car</sub></a></div>
+            <div class="Signup"><a href="#a"><sub>Sign up</sub></a></div>
+            <div class="Login"><a href="#a"><sub>Login</sub></a></div>
+            <div class="sareng">
+                <div class="sari">
+                    <img src="images/$@1x.png">
+                    <a href="#a"><sub>SAR</sub></a>
+                </div>
+                <!-- end sar -->
+                <div class="eng">
+                    <img src="images/GLOBE@1x.png">
+                    <a href="#a"><sub>English</sub></a>
+                </div>
+                <!-- end english-->
+            </div>
+            <!-- end sareng -->
+</div>
+        </div>
+        
+<div class="continar">
+    <div class="content">
+      
+        <!-- end of the header -->
+
+
+
+
+
+<div class="mean">
+<div class="step-one" id="step-one-btn"><p>1</p></div>
+
+<div class="step-tow" id="step-tow-btn"><p>2</p></div>
+
+<div class="step-three" id="step-three-btn"><p>3</p></div>
+
+<div class="step-four" id="step-four-btn"><p>4</p></div>
+
+
+  <div class="host-1">
+    <div class="hi"><h1><strong> Hi, Khubiev ! </strong></h1></div>
+    <div class="hi"><h2> Let’s get you ready to rent your car. </h2></div>
+    <div class="step1">
+      <div class="cartype">
+        <h3><strong>STEP 1 </strong>  :  What kind of ad do you like?</h3>
+         <div class="freeicn"> <img src="images/Free.png"></div>
+         <div class="vipicn"><img src="images/vip_car_icn.png"></div>
+          <div class="freevip">
+           <ul>
+            <li><p>Instant book</p></li>
+            <li><img src="images/check.png"></li>
+            <li><img src="images/check.png"></li>
+           </ul>
+           
+           
+           <ul class="Featured">
+            <li><p>Featured listing</p></li>
+            
+            <li></li>
+             <li><img src="images/check.png"></li>
+           </ul>
+           
+           
+           <ul>
+            <li><p>Direct interaction</p></li>
+            <li></li>
+            <li><img src="images/check.png"></li>
+           </ul>
+           
+           
+           <ul class="Featured">
+            <li><p>Almoajer <br>commission</p></li>
+            <li><img src="images/check.png"></li>
+            <li></li>
+            
+           </ul>
+           
+           
+           <ul>
+            <li><p>Fees</p></li>
+            <li><img src="images/check.png"></li>
+            <li class="fees"><p> Depending <br>on car type</p></li>
+           </ul>
+
+          </div>
+          
+          <button class="btn-1" type="button">Select</button>
+          <button class="btn-1" type="button">Select</button>
+  
+      
+      </div>
+
+       <div class="payicn"><img  src="images/payicon.png"></div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+ <div class="host2">
+   <h3><strong>STEP 2 </strong>:  Fill up the following data about your Vehicle.</h3>
+    <div class="leftside">
+   
+      <select>
+      <option value="BMW">BMW</option>
+      <option value="BMW">BMW</option>
+      <option value="BMW">BMW</option>
+      <option value="BMW">BMW</option>
+      
+      </select>
+      
+      
+      <select>
+      <option value="315i">315i</option>
+      <option value="315i">315i</option>
+      <option value="315i">315i</option>
+      <option value="315i">315i</option>
+      
+      </select>
+      
+      
+      <select >
+      <option value="date"><p>production date</p></option>
+      <option value="date">production date</option>
+      <option value="date">production date</option>
+      <option value="date">production date</option>
+      
+      </select>
+      
+      
+      <select >
+      <option value="1"><p>Color</p></option>
+      <option value="1">Color</option>
+      <option value="1">Color</option>
+      <option value="1">Color</option>
+      
+      </select>
+      
+      
+      <input  type="text" name="search" placeholder="KM meter" value="">
+      
+      
+     <select>
+      <option value="315i">600 CC</option>
+      <option value="315i">600 CC</option>
+      <option value="315i">600 CC</option>
+      <option value="315i">600 CC</option>
+      
+      </select>
+      
+      
+      <input  type="text" name="search" placeholder="Allowed KM’s" value="">
+      <textarea placeholder="Vehicle description"></textarea>
+       
+    <h4>Location info</h4>
+    <select>
+      <option value="315i">Country</option>
+      <option value="315i">Country</option>
+
+      <option value="315i">Country</option>
+      <option value="315i">Country</option>
+      
+      </select>
+      <select>
+      <option value="315i">City</option>
+      <option value="315i">City</option>
+      <option value="315i">City</option>
+      <option value="315i">City</option>
+      
+      </select>
+   <input type="text" name="search" placeholder="Area" value="">
+</div>
+
+<div class="rightside">
+
+ <div class="on">
+  <p>Shifting type</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+
+
+
+
+ <div class="on">
+  <p>A . C </p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+
+
+
+ <div class="on">
+  <p>black glass</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+ 
+ 
+ 
+ 
+  <div class="on">
+  <p>Car deliver</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+
+
+
+
+ <div class="on">
+  <p>Car delivery</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+
+
+
+ <div class="on">
+  <p>Shaded glass</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+ 
+ 
+ 
+ 
+ <div class="on">
+  <p>Helmet (for motorcycles)</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+
+
+
+ <div class="on">
+  <p>Suit (for motorcycles)</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+ 
+ 
+ 
+ 
+  <div class="on">
+  <p>GPS</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+
+
+
+
+ <div class="on">
+  <p>Kid Seat</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+
+
+
+
+ <div class="on">
+  <p>Cruise Control</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+ 
+ 
+ 
+  <div class="on">
+  <p>Sunroof</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+ 
+
+
+</div><!-- end of rightside -->
+
+
+
+
+</div><!-- end of the host2 -->
+
+<div class="next btn-2">
+<button type="button">Next</button>
+  </div>
+
+
+
+
+
+
+            <div class="host3">
+                <h3><strong>STEP 3 </strong>: upload the following Photos . </h3>
+
+                <div class="leftside3">
+
+
+                    <div class="car1"><img src="images/car-photo.png"></div>
+                    <p> Car photos</p>
+                    <span >you can not uplaod more then 10 photos</span>
+
+
+                    <div class="next">
+
+                        <input class="inputfile next" type="file" name="file[]" multiple id="file1">
+                        <label for="file1">Upload</label>
+
+                    </div>
+                    <div class="image_dev uploaded-images-div">
+                    </div>
+
+
+                </div>
+                <!-- leftside3 -->
+
+
+                <div class="rightside3">
+
+
+                    <img src="images/License-photo.png">
+
+                    <p> License photo</p>
+
+                    <span >you can not uplaod more then 1 photo</span>
+
+                    <div class="next">
+
+                        <input class="inputfile next" type="file" name="file" id="file2">
+                        <label for="file2">Upload</label>
+
+                    </div>
+                    <div class="image_dev2 uploaded-images-div">
+                    </div>
+
+
+                </div>
+                <!-- rightside3 -->
+
+
+            </div>
+            <!-- end of the host4 -->
+
+            <div class="next btn-3">
+                <button type="button">Next</button>
+
+            </div>
+
+
+
+
+
+
+
+
+
+     <div class="host4">
+   <h3><strong>STEP 4 </strong>:  Fill up the following data about your Vehicle.</h3>
+    <div class="leftside4">
+     <h4>Price</h4>   
+     <pre>Lorem Ipsum is simply dummy text of the printing</pre>
+     <div class="price-type-span"></div>
+     <input type="number" name="someid" />
+     <pre>Lorem Ipsum is simply dummy text of the printing</pre>
+     <div class="price-type-span"></div>
+     <input type="number" name="someid" />
+     <h4>Bank info</h4>
+     <div class="bnkname">
+     <input type="text" name="search" placeholder="Bank name" value="">
+     </div> 
+     
+     
+     
+     <select>
+      <option value="315i">Country</option>
+      <option value="315i">Country</option>
+     </select>
+     <select>
+      <option value="315i">City</option>
+      <option value="315i">City</option>
+     </select>
+     <div class="bnkname">
+     <input type="text" name="search" placeholder="Branch" value="">
+     </div>
+     <div class="bnkname">
+     <input type="text" name="search" placeholder="Onwer" value="">
+     </div>
+     <div class="bnkname">
+     <input type="number" name="search" placeholder="Account number" value="">
+     </div>
+     <div class="bnkname">
+     <input type="number" name="search" placeholder="IBAN" value="">
+     </div>
+     
+     <div class="bnkname">
+     <input type="number" name="search" placeholder="Swift code" value="">
+     <div><p>* For non-KSA users</p></div>
+     
+     </div>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    
+    
+    </div>     
+               
+               
+               <div  class="rightside4">
+               
+                <div class="on">
+  <p>Discount for long periods</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+               
+             <div class="for">
+     <input type="text" name="search" placeholder="for 3 months" value="">
+     </div>  
+        
+               
+                 <div class="for">
+     <input type="text" name="search" placeholder="for 6 months" value="">
+     </div> 
+     
+     
+     
+     
+             <div class="for">
+     <input type="text" name="search" placeholder="for 12 months" value="">
+     </div>              
+    
+               
+      <h4>Renting policy</h4>         
+               
+             
+      <textarea placeholder="Vehicle description"></textarea>
+               
+     <h3>  Cancelation policy</h3>
+             
+             
+            <div class="check">
+            
+            <div class="vote">
+            <input type="radio" id="checkbox1" name="vote" value="1">
+            <label for="checkbox1"></label>
+            
+            
+            <div id="policy-popup" class="info" ></div>
+            
+                             <div id="myModal-8" class="mamaa">
+
+                            <!-- Modal content -->
+                            <div class="modal-content-8">
+                                <span class="closeee">&times;</span>
+
+                                <p>Some text in the Modal..</p>
+                            </div>
+
+                        </div>
+            
+            
+            <label>Flixable</label>
+            
+             </div>                               
+            
+            
+            <div class="vote">
+            <input type="radio" id="checkbox2" name="vote" value="1" checked >
+            <label for="checkbox2"></label>
+            <label >Normal</label>
+             </div>                               
+            
+
+            
+            <div class="vote">
+            <input type="radio" id="checkbox3" name="vote" value="1" >
+            <label for="checkbox3"></label>
+            <label >Rough</label>
+             </div>     
+           <div class="line"></div>
+            
+                       
+                       <div class="Instant ">
+                         <div class="on">
+  <p>Instant ordering</p>
+  <label class="switch">
+  <input type="checkbox" checked>
+  <div class="slider round"></div>
+</label>
+</div>
+</div>
+            </div> <!--check-->
+               
+               
+
+               
+               
+               </div>
+               
+               
+               
+               
+               
+   
+                
+         
+               
+   </div> <!-- end of the host4 -->           
+               
+     <div class="next btn-4">
+<button type="button">Finish</button>
+  </div>
+
+ 
+</div> <!--end mean-->
+        
+     
+
+        <!-- footer -->
+
+        <div class="footerbg">
+
+            <div class="getapp">
+
+
+                <p>Get Almoajer app</p>
+                <a href="#a"> <img src="images/apple.png"></a>
+                <a href="#a"> <img src="images/android.png"></a>
+
+            </div>
+
+            <div class="botmenu">
+                <a href="#a"><p>About</p></a>
+                <a href="#a"><p>Help</p></a>
+                <a href="#a"><p>Policies</p></a>
+                <a href="#a"><p>Terms</p></a>
+
+
+            </div>
+
+            <div class="social">
+                <a href="# " class="twitter"> </a>
+                <a href="#" class="google"></a>
+                <a href="#" class="instagram"> </a>
+                <a href="#" class="linkedin"> </a>
+                <a href="#" class="youtube"></a>
+                <a href="#" class="facebook"> </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+    <!-- end of the content -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end of the continar -->
+<script type="text/javascript" src="js/jQuery1.11.2.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+
+
+	
+    // Get the modal
+    var modal8 = document.getElementById('myModal-8');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("policy-popup");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closeee")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal8.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal8.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal8 || event.target == modal3 || event.target == modal) {
+            modal8.style.display = "none";
+            modal3.style.display = "none";
+            modal.style.display = "none";
+        }
+    }
+
+	
+</script>
+
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

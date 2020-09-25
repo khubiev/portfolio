@@ -1,0 +1,1044 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>donate</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-rtl.css" rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">
+<link href="css/chosen.min.css"  rel="stylesheet">
+
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="applaince.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/applaince.jpg"></div><p>applaince</p> </a></li>
+      <li><a href="articals.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/articals.jpg"></div><p>articals</p> </a></li>
+      <li><a href="call-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/call-us.jpg"></div><p>call us</p> </a></li>
+           <li><a href="department-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/department-details.jpg"></div><p>department-details</p> </a></li>
+               <li><a href="donate-cases.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/donate-cases.jpg"></div><p>donate cases</p> </a></li>   
+               
+                     <li><a href="donate.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/donate.jpg"></div><p>donate</p> </a></li>
+
+      <li><a href="home.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/home.jpg"></div><p>home</p> </a></li>
+           <li><a href="job-form.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/job-form.jpg"></div><p>job form</p> </a></li>
+               <li><a href="jobs.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/jobs.jpg"></div><p>jobs</p> </a></li> 
+
+                     <li><a href="news-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/news-details.jpg"></div><p>news details</p> </a></li>
+   
+      <li><a href="providers.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/providers.jpg"></div><p>providers</p> </a></li>
+
+           <li><a href="questions.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/questions.jpg"></div><p>questions</p> </a></li>
+               <li><a href="single-alboum.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/single-alboum.jpg"></div><p>single alboum</p> </a></li>   
+               
+                     <li><a href="thanks.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/thanks.jpg"></div><p>thanks</p> </a></li>
+      <li><a href="type-ques.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/type-ques.jpg"></div><p>type ques</p> </a></li>
+      <li><a href="voulanter.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/voulanter.jpg"></div><p>voulanter</p> </a></li>
+  
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+  
+<style>
+/* The container */
+.container-2 {
+    position: relative;
+    padding-right: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+margin-left:30px;
+    color: #6d6d6d;
+}
+
+/* Hide the browser's default radio button */
+.container-2 input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.container-2 .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-2:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-2 input:checked ~ .checkmark {
+        background-color: #3b9ec0;
+    border: 2px solid #3b9ec0;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.container-2 .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-2 input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-2 .checkmark:after {
+ 	top: 7px;
+	left: 7px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+
+         .value-of-donate .chosen-container-single .chosen-default, .value-of-donate .chosen-container-single .chosen-single {
+    color: #999;
+    border-right: none !important;
+} 
+
+.value-of-donate-input input { border-left:none !important}
+
+</style>
+<div class="container-fluid all-body remove-padding">
+  <div class="container remove-padding hidden-xs">
+    <div class="container remove-padding">
+     <div class="col-xs-12 remove-padding first-head">
+  <a href="#">   <img src="img/bahya-logo-AR.png"> </a>
+  <div class="col-md-5 col-sm-7 pull-left">
+   <div class="col-md-5 col-sm-5">
+     <a href="#" class="donation-btn">تبرع </a>
+   </div>
+   <div class="col-md-5 col-sm-5">
+   <a href="#" class="volunteer-btn">تطوع</a>
+   </div>
+   <div class="col-md-2 col-sm-2 remove-padding">
+   <div class="dropdown">
+  <button class=" dropdown-toggle lan-btn" type="button" data-toggle="dropdown">
+   <img src="img/globe_network.png">
+  <span class="caret"></span></button>
+  <ul class="dropdown-menu lan-options">
+    <li><a href="#" class="active-lan">arabic</a></li>
+    <li><a href="#">english</a></li>
+
+  </ul>
+</div>
+   </div>
+  </div>
+      </div>
+     
+        <div class="col-xs-12 remove-padding sub-menu-main  head-main">
+          <div class="col-lg-12 col-md-12 col-sm-12 menu-main remove-padding">
+            <div class="menu-main-cont" >
+             
+              <a href="#" class="home"><span>الرئيسية</span></a>
+
+
+
+
+              
+                <div class="down-me">
+<a href="#" class="dropbtn"><span> عن بهية&nbsp <i class="fas fa-caret-down"></i></span></a>
+    <div class="sub-drop-dowm">
+      <a href="#"><span>عن بهية</span></a>
+      <a href="#"><span>رؤيتنا</span></a>
+      <a href="#"><span>اتصل بنا</span></a>
+         <a href="#"><span>      الشركاء والرعاه
+</span></a>
+    </div>
+  </div>
+            
+             <div class="down-me">
+<a href="#" class="dropbtn"><span>اخبار واحداثة&nbsp <i class="fas fa-caret-down"></i></span></a>
+    <div class="sub-drop-dowm">
+      <a href="#"><span>الاخبار</span></a>
+      <a href="#"><span>قصص بهبه</span></a>
+      <a href="#"><span>الحملات الدعائيه</span></a>
+      <a href="#"><span>الانشطة</span></a>
+      <a href="#"><span>الاحداث</span></a>
+      <a href="#"><span>صور وفيديو</span></a>
+    </div>
+  </div>
+         
+             <div class="down-me">
+<a href="#" class="dropbtn"><span>معلومات طبية&nbsp <i class="fas fa-caret-down"></i></span></a>
+    <div class="sub-drop-dowm">
+      <a href="#"><span>اسئلة واجوبة</span></a>
+      <a href="#"><span>المقالات</span></a>
+      <a href="#"><span>اسال سؤال</span></a>
+      <a href="#"><span>اسئلتى</span></a>
+    </div>
+  </div>
+       
+       
+          <div class="down-me">
+<a href="#" class="dropbtn"><span>خدمات متنوعهة&nbsp <i class="fas fa-caret-down"></i></span></a>
+    <div class="sub-drop-dowm">
+      <a href="#"><span>      الوظائف
+</span></a>
+      <a href="#"><span>قيد الموردين</span></a>
+      <a href="#"><span>التطوع</span></a>
+      
+
+
+
+      
+    </div>
+  </div>
+
+
+
+
+        
+            
+            <div class="down-me ">
+<a href="#" class="dropbtn"><span>الاقسام &nbsp <i class="fas fa-caret-down"></i></span></a>
+    <div class="sub-drop-dowm last-sub">
+      <a href="#"><span>القسم الاول</span></a>
+      <a href="#"><span>القسم الثاني</span></a>
+      <a href="#"><span>القسم الثالث</span></a>
+    </div>
+  </div>
+            </div>
+          </div>
+        </div>
+    
+    </div>
+  </div>
+
+  <div class="container-fluid remove-padding visible-xs mobile-menu">
+    <div class="mobile-menu-main"> <img src="img/bahya-logo-AR-mob.png">
+      <div class="col-xs-7 remove-padding mobile-top-links">
+        <div class="col-xs-5 top-link remove-padding"> <a href="#">تبرع الأن <span>|</span> </a> </div>
+        <div class="col-xs-5 top-link remove-padding"> <a href="#">التطوع</a> </div>
+        <div class="col-xs-2 remove-padding mobile-menu-btn">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fas fa-bars"></i> </button>
+        </div>
+      </div>
+    </div>
+    <div class="visible-xs remove-padding">
+      <div class="col-xs-12 remove-padding" >
+        <div class="collapse navbar-collapse mobile-menu-cont container-fluid remove-padding">
+          <ul class="remove-padding mob-menu-links-cont">
+            <li class="col-xs-12"> <a href="#">الرئيسية </a></li>
+            <li class="col-xs-12"> <a href="#">قصة بهية</a></li>
+            <li class="col-xs-12"> <a href="#">فيديو</a></li>
+            <li class="col-xs-12"><a href="#">أخبار بهية</a></li>
+            <li class="col-xs-12"><a href="#" data-toggle="collapse" data-target=".navbar-collapse1">عن بهية&nbsp <i class="fas fa-caret-down"> </i>
+              <div class="collapse navbar-collapse1 sub-links"> <a href="#">العنوان الاول </a> <a href="#">العنوان الثاني </a> <a href="#">العنوان الثالث </a> </div>
+              </a> </li>
+            <li class="col-xs-12"><a href="#">اتصل بنا</a></li>
+            <li class="col-xs-12"><a href="#" data-toggle="collapse" data-target=".navbar-collapse3"> اللغة &nbsp <i class="fas fa-caret-down"></i>
+              <div class="collapse navbar-collapse3 sub-links"> <a href="#">العربيه</a> <a href="#">English</a> </div>
+              </a></li>
+          </ul>
+
+        </div>
+     
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+<div class="container news-list-main job-form-main remove-padding">
+<h1 class="page-title">تبرع </h1>
+
+
+
+<div class="container remove-padding call-main form-main donate-main ">
+
+
+
+ <form>
+ <div class="col-md-5 col-sm-5 remove-padding">
+ 
+   <p class="online-donate">تبرع اونلاين</p>
+ <div class="chackbox-main">
+
+<fieldset id="group1">
+<label class="container-2">التبرع من بنك داخل مصر
+  <input type="radio" name="group1" checked="checked"  value="" id="local">
+  <span class="checkmark"></span>
+</label>
+<label class="container-2">التبرع من بنك خارج مصر
+  <input input type="radio" name="group1" id="international" value="">
+  <span class="checkmark"></span>
+</label>
+</fieldset>
+
+</div>
+   <div class="col-xs-12 remove-padding">
+    <div class="col-md-8 col-sm-6 donate-case "> <select data-placeholder="حالة #١٢٣٣٤٥ " class="chosen-select-no-single">
+            <option value=""></option>
+<option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option>
+          </select></div>
+              <div class="col-md-4 col-sm-6 donate-type"> <select data-placeholder="زكاة المال " class="chosen-select-no-single">
+            <option value=""></option>
+<option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option><option>عنوان 1</option>
+          </select></div>
+   </div>
+          <div class="col-xs-12 remove-padding">
+            <div class="col-xs-9 remove-padding value-of-donate-input">
+            <input type="text" placeholder="الأسم">
+            </div>
+            <div class="col-xs-3 remove-padding value-of-donate">
+             <div id="local-select">                    
+             <select class="chosen-select-no-single">
+            <option value="eg">جنيه</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+           <option>عنوان 1</option>
+            <option>عنوان 1</option>
+          </select>
+          </div> 
+          
+           <div id="international-select" style="display:none">                    
+             <select class="chosen-select-no-single">
+            <option value="dlr"> دولار</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+            <option>عنوان 1</option>
+           <option>عنوان 1</option>
+            <option>عنوان 1</option>
+          </select>
+          </div> 
+          
+          
+          
+           </div>
+          
+          </div>
+         <style>
+
+         
+         </style> 
+ 
+  
+     <input type="text" placeholder="الأسم">
+     <input type="text" placeholder="رقم الموبايل">
+     
+
+ <div class="chackbox-main">
+<div id="local-main" >
+<fieldset id="group2">
+<label class="container-2">البنك الاهلي
+  <input type="radio" name="group2" checked="checked"  value="">
+  <span class="checkmark"></span>
+</label>
+<label class="container-2">بنك cib
+  <input input type="radio" name="group2" value="">
+  <span class="checkmark"></span>
+</label>
+
+<label class="container-2">بنك مصر
+  <input input type="radio" name="group2" value="">
+  <span class="checkmark"></span>
+</label>
+</fieldset>
+</div>
+<div id="international-main" style="display:none"></div>
+</div>
+
+<div class="col-xs-12 remove-padding recapcha-main">
+  
+  <p>* برجاء الضغط على المربع ادناه ثم زر تبرع الان</p>
+  <img src="img/Google-recapcha.png" alt="">
+
+</div>
+
+     <button type="submit" class="send-btn">ارسال</button>	 
+  
+ </div>
+ 
+  </form>  
+ <div class="col-md-2 col-sm-2 remove-padding">
+   <div class="line-between"></div>
+ </div>
+ <div class="col-md-5 col-sm-5 remove-padding ">
+  <p class="online-donate">طرق التبرع الاخرى</p>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="other-donate-main"> 
+      <h3>   ١٨٦٦٠٢   </h3>
+      <p>  اتصل بنا يصلك مندوبنا اينما كنت | يوميا من الساعه التاسعه صباحا وحتى منتصف الليل طوال ايام الاسبوع</p>
+   
+
+    </div>
+       <div class="other-donate-main"> 
+       <p> اتبرع علي حساب</p>
+      <h3>   ٦٦٦٦   </h3>
+      <p>  في جميع بنوك مصر</p>
+   
+
+    </div>
+       <div class="other-donate-main"> 
+      <h3>   ٩٦٢٠  </h3>
+      <p>  ابعت رسالة فاضية على
+</p>
+   
+
+    </div>
+
+<style>
+
+/*other-way-pay*/
+
+.other-way-pay { width: 100%; cursor: pointer; margin-bottom: 30px; padding: 0 }
+.other-way-pay img { width: 100%; }
+.other-pay-form-main {     width: 100%;
+    padding: 0; display: table; padding-top: 15px; padding-bottom: 15px; position: relative;    height: 300px;}
+button.other-pay-close.btn {
+    background: #d75e81;
+    color: #fff;
+    border-radius: 0;
+}
+button.other-pay-close.btn:hover {
+    background: #c2365e;
+
+}
+
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+p.other-pay-label {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+.num-other-pay-input {  margin-bottom: 15px !important; padding-left: 50px; }
+
+#other-pay .chosen-container {
+    width: 100% !important;
+    margin-bottom: 15px !important;
+}
+.code-other-pay-form input {  color: #000 !important;
+  font-size: 20px
+}
+
+.code-other-pay-form input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #000;
+  opacity: 1; /* Firefox */
+  font-size: 20px
+}
+
+.code-other-pay-form input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #000;
+  font-size: 20px
+}
+
+.code-other-pay-form input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #000;
+  font-size: 20px
+}
+
+
+
+#other-pay .modal-content { overflow: hidden; }
+
+#other-pay .modal-content {
+
+        border-radius: 0px;
+            overflow: hidden;
+
+}
+
+.main-other-pay-form { height: 250px; position: absolute;-webkit-transition: all .3s ease;
+    transition: all .3s ease; }
+
+.remove-first-form {transform: translateX(-600px);    -webkit-transition: all .3s ease;
+    transition: all .3s ease;}
+
+
+
+
+
+    .code-other-pay-form {transform: translateX(600px); -webkit-transition: all .3s ease;
+    transition: all .3s ease;height: 250px; position: absolute;    padding-top: 70px; }
+.add-code-other-pay-form {
+
+  transform: translateX(0);-webkit-transition: all .3s ease;
+    transition: all .3s ease
+}
+
+.remove-code-other-pay-form {transform: translateX(-600px);    -webkit-transition: all .3s ease;
+    transition: all .3s ease;}
+
+
+.result-pay-form {transform: translateX(600px);-webkit-transition: all .3s ease;
+    transition: all .3s ease; position: absolute;height: 250px; text-align: center; }
+
+.result-pay-form-show {transform: translateX(0px);}
+
+.result-pay-form img {     height: 180px;
+    margin-bottom: 20px; }
+
+    .result-pay-form p { font-weight: bold }
+
+    .pay-phone-num { position: relative;  }
+    .pay-phone-num span {
+    position: absolute;
+    left: 30px;
+    top: 37px;
+}
+
+
+
+@media only screen and (max-width : 767px) {
+    .other-pay-form-main {
+
+    height: 430px;
+}
+
+.code-other-pay-form {
+
+    padding-top: 135px;
+}
+
+.result-pay-form img {
+
+    margin-top: 75px;
+}
+}
+ 
+/*end other-way-pay*/
+
+
+
+
+
+
+
+
+
+
+
+
+ .dontae-online-last { margin-bottom: 30px}
+  .dontae-online-last img { width: 100%; }
+    .dontae-online-last a { display: block; text-decoration: none; }
+
+    .dontae-online-last p {     margin-top: 10px;
+    color: #e60000;
+    font-weight: bold;}
+   
+
+   #vcash .modal-dialog.job-det { width: 1000px; max-width: 100%; padding: 0; }
+
+   #vcash .job-det .modal-content {min-height: 800px;}
+.vcash-cont {     height: 700px;
+    overflow: auto;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    margin-top: 5px; }
+
+ #vcash h1 {
+margin: 0;
+    margin-bottom: 30px;
+    color: #d75e81;
+    font-weight: bold;
+    font-size: 24px;
+ }
+ #vcash h3 {    font-size: 20px;
+    font-weight: bold;}
+ #vcash h5 {font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 30px;}
+ #vcash h6{    font-size: 16px;
+    margin-top: 20px;}
+
+     #vcash img { margin-top: 30px; width: 100% }
+
+
+</style>
+
+   <div class="col-xs-12 dontae-online-last remove-padding">
+       <div class="col-md-4 col-sm-4 col-xs-12 hidden-xs">
+          <img src="img/fawry.png">
+       </div>
+
+            <div class="col-md-4 col-sm-4 col-xs-12 hidden-xs">
+          <img src="img/mega.png">
+       </div>
+
+                   <div class="col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                    <a href="#" class="text-center" data-toggle="modal" data-target="#vcash">
+          <img src="img/vcash.png">
+          
+          <p>
+طريقة الدفع  
+&nbsp 
+<i class="fas fa-caret-left"></i>
+</p>
+        </a>
+       </div>
+
+
+<div id="vcash" class="modal fade" role="dialog">
+  <div class="modal-dialog job-det text-center">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+<div class="col-xs-12 remove-padding vcash-cont">
+
+<h1 class="text-center">ازاي ادفع اونلاين مع فودافون كاش؟</h1>
+
+<h5>
+  
+اطلب #100*9*, حدد المبلغ اللي عايز تشتري بيه و اتأكد انك معاك فلوس كفاية في المحفظة, ادخل الرقم السري.
+<br>
+هيجيلك علي طول رسالة ببيانات الكارت بالمبلغ اللي حددته.
+<br>
+تأكد ان عملية الشراء في حدود مبلغ الكارت. لو اشتريت اونلاين بمبلغ اقل من اللي في الكارت, الفرق مش هيتخصم من محفظتك.
+<br>
+ادخل بيانات الكارت علي الويبسايت و اختر نوع الكارت ماستركارد.
+<br>
+الكارت صالح لمدة 24 ساعة و يمكن استخدامه لمعاملة واحدة فقط.
+لايوجد حد أقصي لعدد الكروت المصدرة
+
+
+</h5>
+
+
+
+
+
+
+
+<div class="how-pay">
+  <h3>ازاي اقدر ادفع اونلاين؟</h3>
+
+  <h6>
+    
+اطلب الكود #100*9*
+<br>
+الخدمة الصوتية 7000
+
+
+  </h6>
+
+
+</div>
+
+<img src="img/how-pay-vcash.png">
+
+</div>
+
+    </div>
+
+  </div>
+</div>
+   </div>
+
+  <div class="clearfix"></div> 
+
+ <a href="#" class="other-cases">شاهد باقي الحالات</a>
+   
+ </div>
+ <div class="clearfix"></div>
+ <p class="donate-rules">١- قرار قيد لمؤسسة بهية للاكتشاف المبكر وعلاج سرطان الثدي تحت رقم 761 بتاريخ 31/1/2016<br> ٢- ترخيص جمع المال ترخيص رقم 30 لسنة لسنة 2017 للفترة من 01-03-2018 الي 28-02-2019</p>
+
+  
+  
+  
+   
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="container-fluid footer-main remove-padding">
+
+
+        <div class="container-fluid remove-padding footer-cont-main">
+
+            <div class="container footer-cont ">
+                <div class="col-md-12  remove-padding">
+                    <div class="col-lg-4 col-md-4 col-sm-6 who-is remove-padding col-xs-12">
+                
+                      
+                        <div class="app-bottom">
+                            <a href="#">
+                                <img src="img/apple_app_store.png">
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=org.baheya.hospital" target="_blank">
+                                <img class="remove-margin" src="img/google_play.png">
+                            </a>
+                        </div>
+                        
+                        
+
+                    </div>
+
+
+                    <div class="col-lg-2 col-md-2  col-xs-12 bottom-links col-lg-offset-1 col-md-offset-1 col-sm-6 remove-padding	">
+                        <div class="bottom-links-main" style="
+
+">
+                            <a href="http://wip.internetplus.biz/baheya/ar/donate">
+
+                                تبرع الان
+                            </a>
+                            <a href="http://wip.internetplus.biz/baheya/ar/contact-us">
+
+                                تطوع الان </a>
+
+                            <a href="http://wip.internetplus.biz/baheya/ar/baheya-news">
+
+                                أخبار بهية </a>
+                            <a href="http://wip.internetplus.biz/baheya/ar/contact-us">
+
+                                أتصل بنا </a>
+                        </div>
+</div>
+
+<div class="col-md-3 col-md-offset-2 col-sm-4 col-sm-offset-4 col-xs-10 col-xs-offset-1">
+                        <div class="contact-us-bottom">
+                           
+                            <div class="clearfix"></div>
+                            <div class="fot-social-main" style="
+
+">
+                                <ul>
+
+
+                                    <li><a href="https://www.facebook.com/BaheyaFoundation" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+         <li><a href="https://www.youtube.com/channel/UCqmBdlOIbImeCvgDlzK3n_Q" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                                    <li><a href="https://twitter.com/BaheyaHospital" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="https://www.instagram.com/explore/locations/664916233/baheya-foundation-/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                           
+                                </ul>
+                            </div>
+                            <div class="clearfix"></div>
+
+
+                        </div>
+
+                    </div>
+
+
+            <div class="col-xs-12 copy-right remove-padding">
+
+                       
+                        <div class="our-logo"><a target="_blank" href="https://www.internetplus.biz/Design-Ar.html"> <img src="img/desgin.png" alt=""></a> &nbsp; <a href="https://www.internetplus.biz/Programs-Ar.html" target="_blank">
+                                <img src="img/dev.png" alt=""></a>&nbsp; <a href="https://internetplus.biz/" target="_blank"> <img src="img/logo-copy-right.png" alt=""></a></div>
+ <p>حقوق التأليف والنشر عام 201٨ . جميع الحقوق محفوظة</p>
+
+                    </div>        
+                
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.js"></script>
+<script src="js/chosen.jquery.js"></script> 
+<script src="js/init.js"></script> 
+<script>
+
+     $(document).ready(function() {
+        $(".chosen-select").chosen({rtl: true}); 
+    });
+
+</script>
+
+<script>
+$(document).ready(function() {
+ $(function() {
+   $("input[name='group1']").click(function() {
+     if ($("#local").is(":checked")) {
+       $("#local-main").show();
+	   $("#international-main").hide();
+	   
+     } else {
+         $("#local-main").hide();
+	   $("#international-main").show();
+     }
+   });
+ });
+ 
+
+ 
+  $(function() {
+   $("input[name='group1']").click(function() {
+     if ($("#local").is(":checked")) {
+       $("#local-select").show();
+	   $("#international-select").hide();
+     } else {
+         $("#local-select").hide();
+	   $("#international-select").show();
+     }
+   });
+ });
+
+
+
+
+
+
+
+
+
+
+});
+
+</script>
+
+<script type="text/javascript">
+  
+$(document).ready(function() {
+
+$('.conf-payment-btn').click( function() {
+
+    $(".main-other-pay-form").addClass("remove-first-form");
+    $(".code-other-pay-form").addClass("add-code-other-pay-form");
+} );
+
+
+$('.conf-code-btn').click( function() {
+
+
+
+$(".code-other-pay-form").addClass("remove-code-other-pay-form");
+
+     $(".result-pay-form").addClass("result-pay-form-show");
+} );
+
+
+
+
+
+});
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

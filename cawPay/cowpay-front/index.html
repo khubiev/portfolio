@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/chosen.css">
+      <link rel="icon" href="img/fiv.png">
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="css/style.css"  rel="stylesheet">
+  </head>
+  <body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="../Merchant.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="../img/shots/Merchant.jpg">
+  </div><p>Merchant</p> </a>
+</li>
+
+ <li><a href="../payment-page-event-ticket.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="../img/shots/payment-page-event-ticket.jpg">
+  </div><p>payment-page-event-ticket</p> </a>
+</li>
+
+ <li><a href="../payment-page-recurring.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="../img/shots/payment-page-recurring.jpg">
+  </div><p>payment-page-recurring</p> </a>
+</li>
+
+ <li><a href="../sing-up.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="../img/shots/sing-up.jpg">
+  </div><p>sing-up</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+<div class="all-page">
+<div class="container-fluid remove-padding">
+   <div class="container-fluid header remove-padding">
+       <div class="container">
+           <div class="col-md-2 col-sm-2 col-xs-6" data-aos="fade-right">
+              <a href="#" class="top-logo"><img src="img/LOGO-w.png"></a>
+           </div>
+           <div class="col-lg-7 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 hidden-xs">
+              <ul>
+                 <li data-aos="fade-down"><a href="#">What we do</a></li>
+                 <li data-aos="fade-down" data-aos-delay="100"><a href="#">Why us?</a></li>
+                 <li data-aos="fade-down" data-aos-delay="200"><a href="#">Getting started</a></li>
+                 <li data-aos="fade-down" data-aos-delay="300"><a href="#">Developers</a></li>
+                 <li data-aos="fade-down" data-aos-delay="400"><a href="#" class="sing-in-btn">Sign in</a></li>
+              </ul>
+           </div>
+       </div>
+
+    <button class="js-menu menu visible-xs" type="button">
+    <span class="bar"></span>
+    </button>
+    <a href="#" class="sing-in-btn visible-xs">Sign in</a>
+    <div class="menu-main-mob visible-xs" >
+      <ul>
+        <li><a class="swipe-effect" href="#">What we do</a></li>
+        <li><a class="swipe-effect" href="#">Why us?</a></li>
+        <li><a class="swipe-effect" href="#">Getting started</a></li>
+        <li><a class="swipe-effect" href="#">Developers</a></li>
+   
+        
+        
+        
+      </ul>
+    </div>
+
+
+   </div>
+<div class="container-fluid remove-padding top-slider">
+   <img class="top-bg visible-xs visible-sm" src="img/top-bg.svg" >
+
+
+   <img class="side-mob"  src="img/side-mob.png" data-aos="fade-left" >
+
+<div class="container slider-main-top">
+   <div class="col-lg-7 col-lg-offset-1 col-md-8 col-md-offset-0 col-sm-12">
+     
+
+ <div class="slick-carousel client-slider" data-aos="fade-right" >
+
+
+        <div class="slide-content">
+           <h1>Your Gateaway to  Accept Digital Payments </h1>
+           <p>COWPAY is a payment technology enabler striving for helping
+businesses better deal with financial cycle by collecting, 
+splitting, disbursing money digitally. </p>
+           <a href="#">Get started</a>
+         </div>
+        <div class="slide-content">
+           <h1>Never lose a customer by availing
+a variety of payment methods  </h1>
+           <p>COWPAY is a payment technology enabler striving for helping
+businesses better deal with financial cycle by collecting, 
+splitting, disbursing money digitally. </p>
+           <a href="#">Get started</a>
+         </div>
+
+                 <div class="slide-content">
+           <h1>Payments Tailored for
+multiple business cases    </h1>
+           <p>COWPAY is a payment technology enabler striving for helping
+businesses better deal with financial cycle by collecting, 
+splitting, disbursing money digitally. </p>
+           <a href="#">Get started</a>
+         </div>
+
+
+
+
+     </div>
+
+
+   </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="container remove-padding why-main">
+    <h1>Why Cowpay?</h1>
+    <div class="col-md-3 col-sm-6 col-xs-12" data-aos="flip-left">
+       <div class="col-xs-12 why-item remove-padding">
+         <img src="img/why-1.png">
+          <h3>Payment Options</h3>
+          <p>Have multiple of payment options available for your customers from Cash, to Cards to even collection from home</p>
+     </div>
+    </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12" data-aos="flip-left"  data-aos-delay="100">
+       <div class="col-xs-12 why-item remove-padding item-why-space">
+         <img src="img/why-2.png">
+          <h3>Developer Friendly</h3>
+          <p>No need for tech geeks to start accepting payments with our ready to use plugins and SDKs with top notch documentation</p>
+     </div>
+    </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12" data-aos="flip-left"  data-aos-delay="200">
+       <div class="col-xs-12 why-item remove-padding">
+         <img src="img/why-3.png">
+          <h3>Central Management</h3>
+          <p>Manage all your financial transactions from one place and not only that but have first layer of intelligence about your business</p>
+     </div>
+    </div>
+
+        <div class="col-md-3 col-sm-6 col-xs-12" data-aos="flip-left"  data-aos-delay="300">
+       <div class="col-xs-12 why-item remove-padding item-why-space">
+         <img src="img/why-4.png">
+          <h3>Business Cases</h3>
+          <p>Either a checkout page , Mobile Integration , Recurring payments , or Reservations we have a payment solution for your business</p>
+     </div>
+    </div> 
+ 
+
+</div>
+
+
+<div class="container pay-main remove-padding">
+    <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 remove-padding">
+       <h1>Available Payment options</h1>
+       <div class="after-title"> </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 pay-item" data-aos="zoom-in">
+            <div class="col-xs-12">
+                <img src="img/fawry.png">
+                <p>Cash</p>
+            </div>
+        </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 pay-item" data-aos="zoom-in">
+            <div class="col-xs-12">
+                <img src="img/visa.png">
+                <p>Credit card </p>
+            </div>
+        </div>
+
+                <div class="col-md-4 col-sm-4 col-xs-12 pay-item" data-aos="zoom-in">
+            <div class="col-xs-12">
+                <img src="img/bike.png">
+                <p>Collections from home</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="contact-main remove-padding container-fluid">
+     <div class="container remove-padding">
+       <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 remove-padding">
+          <div class="col-md-6 col-sm-6 col-xs-12 form-info-main"  data-aos="fade-right">
+            <h3>Don’t Know How to Start? </h3>
+            <div class="after-form-title"></div>
+            <p>Fill in this form and we will call you to have you join our family. Or you can simply use our
+contact data below.</p>
+
+<a href="#"><i class="fas fa-phone"></i>+123 456 7890</a>
+<br>
+<a href="#"><i class="fas fa-envelope"></i>you@example.com</a>
+
+          </div>
+          <div class="col-md-5 col-md-offset-1 col-sm-6 co-xs-12 form-main"  data-aos="fade-left">
+            <form>
+               <h3>Contact form</h3>
+               <div class="col-xs-12 remove-padding input-item">
+                  <p>Full name</p>
+                  <input type="" name="">
+               </div>
+
+                              <div class="col-xs-12 remove-padding input-item">
+                  <p>Business name</p>
+                  <input type="" name="">
+               </div>
+
+
+                              <div class="col-xs-12 remove-padding input-item">
+                  <p>Business link</p>
+                  <input type="" name="">
+               </div>
+
+
+                              <div class="col-xs-12 remove-padding input-item">
+                  <p>Business link</p>
+                  <input type="" name="">
+               </div>
+
+               <button>SUBMIT</button>
+
+            </form>   
+
+
+          </div> 
+        
+
+
+
+       </div>
+     </div>
+    
+
+
+
+
+</div>
+  <style>
+  .int-main { text-align: center;
+    background: #eee;
+    padding-bottom: 30px; }
+  .int-main h1 {text-align: center;
+    font-family: myFont-bold;
+    margin-bottom: 30px;
+    font-size: 30px; margin-top: 50px;  }
+  .int-main p {    font-family: myFont-Medium;
+    font-size: 16px; margin-bottom: 50px;}
+  .int-main .int-item { padding: 15px; display: inline-block; width: 33%; margin-bottom: 15px; }
+  .int-main .int-item img {  height: 150px; margin: 0 auto }
+
+@media only screen and (max-width: 767px) {
+
+ .int-main .int-item {  width: 49%; margin-bottom: 0 }
+.int-main .int-item img { height: 100px; }
+}
+
+
+</style>
+
+
+<div class="container-fluid int-main">
+   <div class="container remove-padding">
+      <h1>INTERROGATION</h1>
+      <div class="col-xs-12 remove-padding">
+          <div class="int-item" data-aos="flip-up"><img src="img/1.png"> </div>
+          <div class="int-item" data-aos="flip-up"><img src="img/2.png"> </div>
+          <div class="int-item" data-aos="flip-up"><img src="img/3.png"> </div>
+          <div class="int-item" data-aos="flip-up"><img src="img/4.png"> </div>
+          <div class="int-item" data-aos="flip-up"><img src="img/8.png"> </div>
+          <div class="int-item" data-aos="flip-up"><img src="img/7.png"> </div>
+
+      </div>
+
+   </div>
+
+</div>
+
+</div>
+<div class="container-fluid footer-main">
+  <div class="container">
+   <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-0 col-xs-12 remove-padding">
+      <div class="col-md-4 col-sm-3 col-xs-12">
+         <img src="img/LOGO.png">
+      </div>
+
+           <div class="col-md-4 col-sm-6 col-xs-12">
+         <h4>Site map</h4>
+         <a href="#">Home</a>    
+         <a href="#">Getting started</a>
+         <a href="#">What we do</a>
+         <a href="#">Developers</a>
+         <a href="#">Why us</a>
+      </div>
+
+           <div class="col-md-4 col-sm-3 col-xs-12">
+<h4>Contact us</h4>
+<a href="#">+123 456 7890</a>
+<a href="#">you@example.com</a>
+
+<p>Long very long address details</p>
+
+         
+      </div>
+
+
+
+   </div>
+
+<div class="col-xs-12 remove-padding bot-main">
+   <p>© 2019 Cowpay All Rights Reserved</p>
+
+   <ul class="social-icons">
+     <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+     <li><a href="#"><i class="fab fa-google"></i></a></li>
+     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+   </ul>
+
+   <div class="ip-logo"><a target="_blank" href="https://www.internetplus.biz/Design-en.html">
+        <img src="img/Designed_&.png" alt="Webapp Design  ">
+            </a> <a href="https://www.internetplus.biz/Programs-en.html" target="_blank">
+                  <img src="img/Developed_by.png" alt=" Design; Develop Apps"></a>
+                  <a href="https://internetplus.biz/en" target="_blank"> 
+                    <img src="img/ip-logo.png" alt=" Internet Plus an Egyptian Company  ">
+                    </a></div>
+
+
+</div>
+
+
+<style type="text/css">
+  .ip-logo {
+    clear: both;
+    position: relative;
+    top: 0px;
+}
+
+.ip-logo img {      height: auto !important;
+    display: inline-block !important;
+    margin: 0 !important; margin-right: 5px !important }
+
+.ip-logo a { margin-right: 0; margin-bottom: 0 }
+
+</style>
+
+
+
+</div>
+</div>
+
+
+
+
+    
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/chosen.jquery.js"></script>
+    <script src="js/ImageSelect.jquery.js"></script> 
+    <script>
+
+    </script>
+
+    <script>
+
+          AOS.init({
+    once: true
+    })
+    
+    $(document).ready( function() {
+   
+$('.client-slider').slick({
+arrows: false,
+dots: true,
+slidesToShow: 1,
+slidesToScroll: 1,
+autoplay: true,
+fade:true,
+
+});
+
+      var isActive = false;
+      $('.js-menu').on('click', function() {
+      if (isActive) {
+      $('.js-menu').removeClass('active');
+      $('.menu-main-mob').removeClass('menu-open');
+      $('body').removeClass('remove-scroll');
+      } else {
+      $('.js-menu').addClass('active');
+      $('.menu-main-mob').addClass('menu-open');
+      $('body').addClass('remove-scroll');
+      }
+      isActive = !isActive;
+      });
+
+
+       $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+            $('.header').addClass('add-bg-head');
+        } else {
+            $('.header').removeClass('add-bg-head');
+        }
+    });
+
+
+    });
+
+    </script>
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+    
+  </body>
+</html>

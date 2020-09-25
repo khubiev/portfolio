@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>admin timeline</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/icpc.css" rel="stylesheet">
+    <link href="css/style.css"  rel="stylesheet">
+    <link href="css/lightgallery.css"  rel="stylesheet">
+  
+
+  </head>
+  <body>
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;    height: 40px; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="admin-add-new-compeny.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/admin-add-new-compeny.jpg"></div><p>admin add new compeny</p> </a></li>
+
+      <li><a href="admin-company-jobs.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/admin-company-jobs.jpg"></div><p>admin company jobs</p> </a></li>
+
+      <li><a href="admin-timeline.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/admin-timeline.jpg"></div><p>admin timeline</p> </a></li>
+
+      <li><a href="adminstretor-companies-list.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/adminstretor-companies-list.jpg"></div><p>adminstretor companies list</p> </a></li>
+       
+        <li><a href="adminstretor-contastes.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/adminstretor-contastes.jpg"></div><p>admin contastes</p> </a></li>
+
+
+      <li><a href="adminstretor-HALL-OF-FAME.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/adminstretor-HALL-OF-FAME.jpg"></div><p>adminstretor HALL OF FAME</p> </a></li>
+
+
+      <li><a href="adminstretor-reports-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/adminstretor-reports-1.jpg"></div><p>adminstretor reports-1</p> </a></li>
+
+      <li><a href="adminstretor-reports-2.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/adminstretor-reports-2.jpg"></div><p>adminstretor-reports-2</p> </a></li>
+
+      <li><a href="adminstretor-reports.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/adminstretor-reports.jpg"></div><p>adminstretor reports</p> </a></li>
+
+      <li><a href="Company-add-new-event.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Company-add-new-event.jpg"></div><p>Company add new event</p> </a></li>
+
+
+
+            <li><a href="Company-our-events.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Company-our-events.jpg"></div><p>Company our events</p> </a></li>
+
+      <li><a href="create-new-ad.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/create-new-ad.jpg"></div><p>create new ad</p> </a></li>
+
+      <li><a href="login.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+      <li><a href="rec-Company-Dashboard–Empty.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/rec-Company-Dashboard–Empty.jpg"></div><p>Dashboard Empty</p> </a></li>
+       
+        <li><a href="Recruiter-Dashboard-2.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Recruiter-Dashboard-2.jpg"></div><p>Recruiter Dashboard 2</p> </a></li>
+
+
+      <li><a href="Recruiter-Dashboard-6.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Recruiter-Dashboard-6.jpg"></div><p>Recruiter Dashboard 6</p> </a></li>
+
+
+      <li><a href="Recruiter-fillter.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Recruiter-fillter.jpg"></div><p>Recruiter fillter</p> </a></li>
+
+      <li><a href="Recruiter-Unlock-cv.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Recruiter-Unlock-cv.jpg"></div><p>Recruiter-Unlock-cv</p> </a></li>
+
+      <li><a href="Register.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Register.jpg"></div><p>Register</p> </a></li>
+
+      <li><a href="S-C-chat.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-chat.jpg"></div><p>S-C chat</p> </a></li>
+
+
+
+
+
+      <li><a href="S-C-company-profile.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-company-profile.jpg"></div><p>S-C company profile</p> </a></li>
+
+      <li><a href="S-C-computations.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-computations.jpg"></div><p>S-C computations</p> </a></li>
+
+      <li><a href="S-C-Job-description.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-Job-description.jpg"></div><p>S-C-Job description</p> </a></li>
+
+      <li><a href="S-C-jobs.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-jobs.jpg"></div><p>S-C jobs</p> </a></li>
+       
+        <li><a href="S-C-our-event.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-our-event.jpg"></div><p>S-C our event</p> </a></li>
+
+
+      <li><a href="S-C-Practice-problems.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-Practice-problems.jpg"></div><p>S-C Practice problems</p> </a></li>
+
+
+      <li><a href="S-C-Practice.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-Practice.jpg"></div><p>S-C Practice</p> </a></li>
+
+      <li><a href="S-C-Ranks.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-Ranks.jpg"></div><p>S-C Ranks</p> </a></li>
+
+      <li><a href="S-C-timeline.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-timeline.jpg"></div><p>S-C timeline</p> </a></li>
+
+      <li><a href="S-C-User-profile-c.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-User-profile-c.jpg"></div><p>S-C User profile c</p> </a></li>
+
+
+
+            <li><a href="S-C-User-profile.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/S-C-User-profile.jpg"></div><p>S-C-User profile</p> </a></li>
+
+      <li><a href="sponser-add-job.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/sponser-add-job.jpg"></div><p>sponser add job</p> </a></li>
+
+      <li><a href="sponser-jobs-applications.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/sponser-jobs-applications.jpg"></div><p>sponser jobs applications</p> </a></li>
+
+      <li><a href="sponser-Our-banner-ads.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/sponser-Our-banner-ads.jpg"></div><p>sponser Our banner ads</p> </a></li>
+       
+        <li><a href="sponser-our-jobs.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/sponser-our-jobs.jpg"></div><p>sponser-our-jobs</p> </a></li>
+
+
+      <li><a href="sponser-profile.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/sponser-profile.jpg"></div><p>sponser-profile</p> </a></li>
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+<div class="body-bg"></div>
+<div class="container-fluid admin-head s-c-header remove-padding">
+      <div class="container">
+         <a href="#" class="logo-link jumb-effect">
+            <img src="img/logo.png">
+         </a>
+
+
+<div class="s-c-head-links hidden-xs">
+     <ul>
+        <li><a href="#"><span class="icon-time-line"></span> Timeline</a></li>
+        <li><a href="#" class="s-c-link-active"><span class="icon-briefcase"></span> Jobs</a></li>
+        <li><a href="#"><span class="icon-target"></span> Practice</a></li>
+        <li><a href="#"><span class="icon-competitions"></span> Competitions</a></li>
+
+     </ul>
+
+
+
+</div>
+
+<div class="serch-main">
+   <form>
+      <input type="text" name="search" placeholder="Search…">
+      <button><span class="icon-search"></span></button>
+   </form>
+
+
+</div>
+
+
+
+
+<div class="head-links">
+    <ul>
+         <li class="mob-serch visible-xs visible-sm">
+       
+          <span class="icon-search"></span>
+       
+    </li>
+
+
+    <li class="notification dropdown">
+       <a href="#" class="jumb-effect" data-toggle="dropdown">
+        <span class="icon-bell"></span> 
+        <div class="notification-full"></div>
+       </a>
+  <div class="dropdown-menu">
+
+<div class="col-xs-12 remove-padding notification-content-main">
+
+     <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+
+          <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+
+
+          <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+
+
+          <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet</h3>
+          <p>Lorem ipsum dolor amet, conseteLorem ipsum dolor sit amet </p>
+       </div>
+     </a>
+
+     <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+
+          <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+
+
+          <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+
+          <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+
+
+
+          <a href="#" class="jumb-effect">
+       <img src="img/avtar.png">
+       <div class="note-main-info">
+          <h3>Lorem ipsum dolor sit amet,</h3>
+          <p>Lorem ipsum dolor amet, consete </p>
+       </div>
+     </a>
+</div>
+
+<a href="#" class="load-more-btn jumb-effect">View more</a>
+
+
+</div>
+
+
+
+     </li>
+
+     <li class="dropdown settings-btn">
+        <a href="#" class="jumb-effect" data-toggle="dropdown">
+          <span class="icon-settings"></span>
+        </a>
+
+  <ul class="dropdown-menu">
+     <li><a href="#" class="jumb-effect"><span class="icon-settings "></span> Setting</a></li>
+     <li><a href="#" class="jumb-effect"><span class="icon-edit-fill "></span> Edit Profile</a></li>
+     <li><a href="#" class="jumb-effect"><span class="icon-log-out-sharp "></span> Logout</a></li>
+ 
+
+
+  </ul>
+
+    </li>
+
+
+    </ul>
+
+
+
+</div>
+
+<div class="mob-menu-btn visible-xs">
+   <div></div>
+   <div></div>
+</div>
+
+
+    </div>
+
+  
+</div>
+
+<!-- end header  -->
+
+
+<div class="container-fluid all-body admin-all remove-padding">
+   <div class="container remove-padding">
+      
+
+<!-- side bar -->
+      <div class="col-md-3 col-sm-4 side-bar">
+
+<span class="icon-close-mini hide-mob-menu visible-xs"></span>
+         <div class="col-xs-12 profile-main remove-padding">
+            <img src="img/avtar.png">
+            <p>Administrator name</p>
+            <p><span class="icon-loction"></span>NY, USA</p>
+         </div>
+
+         <div class="col-xs-12 remove-padding side-links">
+             <a href="#"><span class="icon-time-line"> </span>Timeline</a>
+             <a href="#" class="active-link"><span class="icon-sponsors"> </span>Sponsors</a>
+             <a href="#"><span class="icon-cup"> </span>Contests</a>
+             <a href="#"><span class="icon-report-flag"> </span>Reports</a>
+             <a href="#" class="remove-border"><span class="icon-endorsement"> </span>Endorsement</a>
+             
+         </div>
+
+<div class="col-xs-12 remove-padding side-footer">
+   <ul>
+      <li><a href="#">Help center</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">Terms of service</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li> 
+      <li><a href="#">Help center</a></li> 
+   </ul>
+
+   <p> ICPC.inc © 2019 Created by . <a href="#"> Endure Capital</a></p>
+
+</div>
+
+
+
+      </div>
+
+<!--end side bar -->
+
+
+<div class="col-md-6 col-sm-8 col-xs-12">
+
+<div class="col-xs-12 visible-sm visible-xs remove-padding admin-side-title">
+  <p><span class="icon-star-outline"></span>Hall of Fame</p>
+</div>
+
+
+   <div class="col-xs-12 remove-padding add-post">
+         <div class="user-img-post-frame">
+             <img src="img/avtar.png">
+         </div>
+
+
+<p class="add-post-main" style="    margin-top: 15px;
+    color: #777;" data-toggle="modal" data-target="#add-post">Write your post here </p>
+
+   </div>
+
+<div class="col-xs-12 remove-padding fillter-main-timeline">
+   <p>You are watching all posts now.</p>
+   <div class="dropdown fillter-btn">
+  <button type="button" data-toggle="dropdown" class=""> 
+  <span class="icon-fillter"></span></button>
+  <ul class="dropdown-menu">
+    <li class="job-form-item"> 
+      <div class="form-group remove-padding">
+                                           
+      <input type="radio" id="option-1" name="fillter">
+      <label for="option-1">option-1</label>
+    
+    </div></li>
+
+        <li class="job-form-item"> 
+      <div class="form-group remove-padding">
+                                           
+      <input type="radio" id="option-2" name="fillter">
+      <label for="option-2">option-2</label>
+    
+    </div></li>
+
+        <li class="job-form-item"> 
+      <div class="form-group remove-padding">
+                                           
+      <input type="radio" id="option-3" name="fillter">
+      <label for="option-3">option-3</label>
+    
+    </div></li>
+
+        <li class="job-form-item"> 
+      <div class="form-group remove-padding">
+                                           
+      <input type="radio" id="option-4" name="fillter">
+      <label for="option-4">option-4</label>
+    
+    </div></li>
+
+  </ul>
+</div>
+</div>
+
+
+
+
+
+<div class="col-xs-12 remove-padding post-main-item only-text with-img ">
+  <div class="post-head">
+    <a href="#"><img src="img/avtar.png"></a>
+    
+    <div class="post-head-info">
+      
+      <h3><a href="#">Post writer name</a></h3>
+      <ul><li><span class="icon-eye"></span>Subrigion</li> | <li>Yesterday, 23:22</li></ul>
+      
+    </div>
+    <div class="post-options-main dropdown">
+      <button type="button" data-toggle="dropdown" class="">
+      <span class="icon-menu-option"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Edit post</a></li>
+        <li><a href="#">Report</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-gallery">
+  <div class="col-xs-12 remove-padding post-content one-img gallary-time-line">
+    <div class="post-img-frame" data-src="img/1.jpg">
+      <img src="img/1.jpg" >
+    </div>
+  </div>
+  </div>
+  <div class="col-xs-12 remove-padding like-dis-main">
+    <ul>
+      <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+      <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+      <li><a href="#"><span class="icon-messages-chat" ></span>999</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 remove-padding form-main-to-comment">
+    <img src="img/avtar.png">
+    <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write Comment"></textarea>
+      <div class="add-comment-btns-main">
+        <button type="submit"><img src="img/send-button.svg"></button>
+        <label class="upload-btn">
+          <input type='file' class="imgInp" />
+          <div class="icon-image-plus"></div>
+        </label>
+      </div>
+      <div class="img-up-main col-xs-12 remove-padding">
+        
+        <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+        <span class="icon-close-mini remove-comment-img-btn" ></span>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 remove-padding post-main-item only-text with-img">
+  <div class="post-head">
+    <a href="#"><img src="img/avtar.png"></a>
+    
+    <div class="post-head-info">
+      
+      <h3><a href="#">Post writer name</a></h3>
+      <ul><li><span class="icon-eye"></span>Subrigion</li> | <li>Yesterday, 23:22</li></ul>
+      
+    </div>
+    <div class="post-options-main dropdown">
+      <button type="button" data-toggle="dropdown" class="">
+      <span class="icon-menu-option"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Edit post</a></li>
+        <li><a href="#">Report</a></li>
+      </ul>
+    </div>
+  </div>
+
+    <div class="demo-gallery">
+  <div class="col-xs-12 remove-padding post-content tow-img gallary-time-line">
+
+<div class="" data-src="img/1.jpg">
+    <div class="post-img-frame" >
+      <img src="img/1.jpg">
+    </div>
+</div>
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame" >
+      <img src="img/1.jpg">
+    </div>
+</div>
+</div>
+  </div>
+  <div class="col-xs-12 remove-padding like-dis-main">
+    <ul>
+      <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+      <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+      <li><a href="#"><span class="icon-messages-chat" ></span>999</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 remove-padding form-main-to-comment">
+    <img src="img/avtar.png">
+    <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write Comment"></textarea>
+      <div class="add-comment-btns-main">
+        <button type="submit"><img src="img/send-button.svg"></button>
+        <label class="upload-btn">
+          <input type='file' class="imgInp" />
+          <div class="icon-image-plus"></div>
+        </label>
+      </div>
+      <div class="img-up-main col-xs-12 remove-padding">
+        
+        <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+        <span class="icon-close-mini remove-comment-img-btn" ></span>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+<div class="col-xs-12 remove-padding post-main-item only-text with-img">
+  <div class="post-head">
+    <a href="#"><img src="img/avtar.png"></a>
+    
+    <div class="post-head-info">
+      
+      <h3><a href="#">Post writer name</a></h3>
+      <ul><li><span class="icon-eye"></span>Subrigion</li> | <li>Yesterday, 23:22</li></ul>
+      
+    </div>
+    <div class="post-options-main dropdown">
+      <button type="button" data-toggle="dropdown" class="">
+      <span class="icon-menu-option"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Edit post</a></li>
+        <li><a href="#">Report</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="demo-gallery">
+  <div class="col-xs-12 remove-padding post-content three-img gallary-time-line">
+
+<div class="" data-src="img/1.jpg">
+    <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+</div>
+  </div>
+  <div class="col-xs-12 remove-padding like-dis-main">
+    <ul>
+      <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+      <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+      <li><a href="#"><span class="icon-messages-chat" ></span>999</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 remove-padding form-main-to-comment">
+    <img src="img/avtar.png">
+    <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write Comment"></textarea>
+      <div class="add-comment-btns-main">
+        <button type="submit"><img src="img/send-button.svg"></button>
+        <label class="upload-btn">
+          <input type='file' class="imgInp" />
+          <div class="icon-image-plus"></div>
+        </label>
+      </div>
+      <div class="img-up-main col-xs-12 remove-padding">
+        
+        <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+        <span class="icon-close-mini remove-comment-img-btn" ></span>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+<div class="col-xs-12 remove-padding post-main-item only-text with-img">
+  <div class="post-head">
+    <a href="#"><img src="img/avtar.png"></a>
+    
+    <div class="post-head-info">
+      
+      <h3><a href="#">Post writer name</a></h3>
+      <ul><li><span class="icon-eye"></span>Subrigion</li> | <li>Yesterday, 23:22</li></ul>
+      
+    </div>
+    <div class="post-options-main dropdown">
+      <button type="button" data-toggle="dropdown" class="">
+      <span class="icon-menu-option"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Edit post</a></li>
+        <li><a href="#">Report</a></li>
+      </ul>
+    </div>
+  </div>
+   <div class="demo-gallery">
+  <div class="col-xs-12 remove-padding post-content four-img gallary-time-line">
+
+<div class="" data-src="img/1.jpg">
+    <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+</div>
+  </div>
+  <div class="col-xs-12 remove-padding like-dis-main">
+    <ul>
+      <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+      <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+      <li><a href="#"><span class="icon-messages-chat" ></span>999</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 remove-padding form-main-to-comment">
+    <img src="img/avtar.png">
+    <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write Comment"></textarea>
+      <div class="add-comment-btns-main">
+        <button type="submit"><img src="img/send-button.svg"></button>
+        <label class="upload-btn">
+          <input type='file' class="imgInp" />
+          <div class="icon-image-plus"></div>
+        </label>
+      </div>
+      <div class="img-up-main col-xs-12 remove-padding">
+        
+        <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+        <span class="icon-close-mini remove-comment-img-btn" ></span>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+<div class="col-xs-12 remove-padding post-main-item only-text with-img">
+  <div class="post-head">
+    <a href="#"><img src="img/avtar.png"></a>
+    
+    <div class="post-head-info">
+      
+      <h3><a href="#">Post writer name</a></h3>
+      <ul><li><span class="icon-eye"></span>Subrigion</li> | <li>Yesterday, 23:22</li></ul>
+      
+    </div>
+    <div class="post-options-main dropdown">
+      <button type="button" data-toggle="dropdown" class="">
+      <span class="icon-menu-option"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Edit post</a></li>
+        <li><a href="#">Report</a></li>
+      </ul>
+    </div>
+  </div>
+   <div class="demo-gallery">
+  <div class="col-xs-12 remove-padding post-content four-img gallary-time-line">
+
+<div class="" data-src="img/1.jpg">
+    <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+    <div class="more-img">
+     <p>+5</p>
+  </div>
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="" data-src="img/1.jpg">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+</div>
+  </div>
+  <div class="col-xs-12 remove-padding like-dis-main">
+    <ul>
+      <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+      <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+      <li><a href="#"><span class="icon-messages-chat" ></span>999</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 remove-padding form-main-to-comment">
+    <img src="img/avtar.png">
+    <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write Comment"></textarea>
+      <div class="add-comment-btns-main">
+        <button type="submit"><img src="img/send-button.svg"></button>
+        <label class="upload-btn">
+          <input type='file' class="imgInp" />
+          <div class="icon-image-plus"></div>
+        </label>
+      </div>
+      <div class="img-up-main col-xs-12 remove-padding">
+        
+        <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+        <span class="icon-close-mini remove-comment-img-btn" ></span>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="col-xs-12 remove-padding post-main-item only-text with-img">
+  <div class="post-head">
+    <a href="#"><img src="img/avtar.png"></a>
+    
+    <div class="post-head-info">
+      
+      <h3><a href="#">Post writer name</a></h3>
+      <ul><li><span class="icon-eye"></span>Subrigion</li> | <li>Yesterday, 23:22</li></ul>
+      
+    </div>
+    <div class="post-options-main dropdown">
+      <button type="button" data-toggle="dropdown" class="">
+      <span class="icon-menu-option"></span></button>
+      <ul class="dropdown-menu">
+        <li><a href="#">Edit post</a></li>
+        <li><a href="#">Report</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding post-content four-img">
+
+<div class="more-img-alboum">
+    <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+<div class="more-img-alboum">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="more-img-alboum">
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+<div class="more-img-alboum">
+  <div class="more-img">
+     <p>+5</p>
+  </div>
+        <div class="post-img-frame">
+      <img src="img/1.jpg">
+    </div>
+</div>
+
+  </div>
+  <div class="col-xs-12 remove-padding like-dis-main">
+    <ul>
+      <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+      <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+      <li><a href="#"><span class="icon-messages-chat" ></span>999</a></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 remove-padding form-main-to-comment">
+    <img src="img/avtar.png">
+    <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write Comment"></textarea>
+      <div class="add-comment-btns-main">
+        <button type="submit"><img src="img/send-button.svg"></button>
+        <label class="upload-btn">
+          <input type='file' class="imgInp" />
+          <div class="icon-image-plus"></div>
+        </label>
+      </div>
+      <div class="img-up-main col-xs-12 remove-padding">
+        
+        <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+        <span class="icon-close-mini remove-comment-img-btn" ></span>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="col-xs-12 remove-padding post-main-item only-text">
+   <div class="post-head">
+      <a href="#"><img src="img/avtar.png"></a>
+      
+      <div class="post-head-info">
+        
+           <h3><a href="#">Post writer name</a></h3>
+           <ul><li><span class="icon-eye"></span>Subrigion</li> | <li>Yesterday, 23:22</li></ul>
+
+        
+      </div>
+
+<div class="post-options-main dropdown">
+  <button type="button" data-toggle="dropdown" class=""> 
+    <span class="icon-menu-option"></span></button>
+  <ul class="dropdown-menu">
+    <li><a href="#">Edit post</a></li>
+    <li><a href="#">Report</a></li>
+  </ul>
+</div>
+
+   </div>
+
+
+<div class="col-xs-12 remove-padding post-content">
+   <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.
+sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut…</p>
+</div>
+
+
+<div class="col-xs-12 remove-padding like-dis-main">
+  <ul>
+     <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+     <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+     <li><a href="#"><span class="icon-messages-chat" ></span>999</a></li>
+
+  </ul>
+</div>
+
+
+<div class="col-xs-12 remove-padding form-main-to-comment">
+  <img src="img/avtar.png">
+  <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write Comment"></textarea>
+      <div class="add-comment-btns-main">
+       <button type="submit"><img src="img/send-button.svg"></button>
+            <label class="upload-btn"> 
+              <input type='file' class="imgInp" />
+            <div class="icon-image-plus"></div>
+            </label>
+ </div>
+
+
+
+<div class="img-up-main col-xs-12 remove-padding">
+  
+            <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+
+<span class="icon-close-mini remove-comment-img-btn" ></span>
+
+</div>
+
+
+  </form>
+</div>
+<div class="clearfix"></div>
+
+
+<div class="col-xs-12 remove-padding comment-main">
+  <a href="#"><img src="img/avtar.png"></a>
+ <div class="user-comment-head">
+ 
+ <a href="#">Name Surname</a>
+ <span>12 min ago</span>  
+</div>
+
+<div class="user-comment-content">
+   <p>Lorem ipsum dolor sit amet, solum dictas vim cu, ne his hendrerit deterruisset, id sed doctus fuisset intellegam. Per case melius assentior ea. Et scaevola insolens eum. Ad vix verear eruditi ancillae, fabulas assentior his at, eum no dico euripidis reprehendunt. Cibo delectus eu ius, usu veri putent at.
+</p>
+</div>
+
+<div class="col-xs-12 remove-padding like-dis-main">
+  <ul>
+     <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+     <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+      <li><a href="#"><span class="icon-messages-chat" ></span>65</a></li>
+
+  </ul>
+</div>
+
+
+<div class="col-xs-12 remove-padding form-main-to-comment">
+  <img src="img/avtar.png">
+  <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write reply"></textarea>
+      <div class="add-comment-btns-main">
+       <button type="submit"><img src="img/send-button.svg"></button>
+            <label class="upload-btn"> 
+              <input type='file' class="imgInp" />
+            <div class="icon-image-plus"></div>
+            </label>
+ </div>
+
+
+
+<div class="img-up-main col-xs-12 remove-padding">
+  
+            <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+
+<span class="icon-close-mini remove-comment-img-btn" ></span>
+
+</div>
+
+
+  </form>
+</div>
+
+
+
+
+</div>
+
+
+<div class="col-xs-12 remove-padding comment-main">
+  <a href="#"><img src="img/avtar.png"></a>
+ <div class="user-comment-head">
+ 
+ <a href="#">Name Surname</a>
+ <span>12 min ago</span>  
+</div>
+
+<div class="user-comment-content">
+   <p>Lorem ipsum dolor sit amet, solum dictas vim cu, ne his hendrerit deterruisset, id sed doctus fuisset intellegam. Per case melius assentior ea. Et scaevola insolens eum. Ad vix verear eruditi ancillae, fabulas assentior his at, eum no dico euripidis reprehendunt. Cibo delectus eu ius, usu veri putent at.
+</p>
+</div>
+
+<div class="col-xs-12 remove-padding like-dis-main">
+  <ul>
+     <li><a href="#" class="like-dis-btn like-icn"><span class="icon-like" ></span> 99</a></li>
+     <li><a href="#" class="like-dis-btn dislike-icn"><span class="icon-dislike" ></span>99</a></li>
+     <li><a href="#"><span class="icon-messages-chat" ></span>65</a></li>
+
+  </ul>
+</div>
+
+
+<div class="col-xs-12 remove-padding form-main-to-comment">
+  <img src="img/avtar.png">
+  <form class="add-commnt-main-form">
+      <textarea rows='1' class="add-commnt-textarea" placeholder="Write reply"></textarea>
+      <div class="add-comment-btns-main">
+       <button type="submit"><img src="img/send-button.svg"></button>
+            <label class="upload-btn"> 
+              <input type='file' class="imgInp" />
+            <div class="icon-image-plus"></div>
+            </label>
+ </div>
+
+
+
+<div class="img-up-main col-xs-12 remove-padding">
+  
+            <div  class="img_comment-main img_contain"><img class="blah" alt="" src="" /></div>
+
+<span class="icon-close-mini remove-comment-img-btn" ></span>
+
+</div>
+
+
+  </form>
+</div>
+
+
+
+
+</div>
+
+
+<div class="col-xs-12 remove-padding repled-to-comment-main">
+     <div class="col-xs-12 remove-padding repled-to-comment-item">
+         <a href="#"> <img src="img/avtar.png"></a>
+         <a href="#">Name Surname</a>
+         <span>12 min ago</span>
+         <div class="clearfix"></div>
+         <p>Lorem ipsum dolor sit amet, solum dictas vim cu, ne his hendrerit deterruisset, id sed doctus fuisset intellegam. Per case melius assentior ea. Et scaevola insolens eum. Ad vix verear eruditi ancillae, fabulas assentior his at, eum no dico euripidis reprehendunt. Cibo delectus eu ius, usu veri putent at.
+         </p>
+     </div>
+
+          <div class="col-xs-12 remove-padding repled-to-comment-item">
+         <a href="#"> <img src="img/avtar.png"></a>
+         <a href="#">Name Surname</a>
+         <span>12 min ago</span>
+         <div class="clearfix"></div>
+         <p>Lorem ipsum dolor sit amet, solum dictas vim cu, ne his hendrerit deterruisset, id sed doctus fuisset intellegam. Per case melius assentior ea. Et scaevola insolens eum. Ad vix verear eruditi ancillae, fabulas assentior his at, eum no dico euripidis reprehendunt. Cibo delectus eu ius, usu veri putent at.
+         </p>
+     </div>
+
+<a href="#">View more replies</a>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+<div class="end-of-time-line">
+   <img src="img/end-og-page.png">
+   <p>Ok, That’s all for now.</p>
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-3 col-sm-12 col-xs-12 s-c-fillter-side-bar">
+
+<div class="col-xs-12 remove-padding admin-side-title">
+  <p><span class="icon-star-outline"></span>Hall of Fame</p>
+</div>
+
+
+
+<div class="s-c-related-main col-xs-12 remove-padding">
+
+      <h2>All posts</h2>
+       <a href="#" class="clear-btn jumb-effect">Clear</a>
+     <div class="loction-fillter-down">
+<from>
+
+         <div class="regin-fillter-down" >
+            
+            <div class="regin-fillter-option links-main-fillter-side" >
+                          <div class="form-group">
+      <input type="radio" name="Regin" id="All-option">
+      <label for="All-option">All</label>
+    </div>
+
+                <div class="form-group">
+      <input type="radio" name="Regin" id="egypt-option">
+      <label for="egypt-option">Egypt</label>
+    </div>
+
+
+                <div class="form-group">
+      <input type="radio" name="Regin" id="saudi-arabia-option">
+      <label for="saudi-arabia-option">Saudi Arabia</label>
+    </div>
+
+
+                <div class="form-group">
+      <input type="radio" name="Regin" id="indonesia-option">
+      <label for="indonesia-option">Indonesia</label>
+    </div>
+
+            </div>
+
+
+         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+<button class="fillter-btn-side-bar">  Fillter</button>
+</from>
+     </div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div>
+  
+
+<div id="add-post" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <div class="modal-content">
+       <form>
+           <textarea autofocus="false" rows='1' class="add-commnt-textarea" placeholder="Write your post here" id="write-post"></textarea>
+
+
+          <div class="image_dev uploaded-images-div">
+            
+
+
+                                                             <div class="next top-photo-upload-btn">
+
+                        <input class="inputfile next" type="file" name="file[]" multiple id="file7">
+                        <label for="file7"><span class="icon-image-plus"></span></label>
+
+                    </div>
+
+          </div>
+
+
+<div class="clearfix"></div>
+
+            <button type="submit">Post</button>
+
+                    <div class="next bottom-photo-upload-btn">
+
+                        <input class="inputfile next" type="file" name="file[]" multiple id="file1">
+                        <label for="file1"><span class="icon-image-plus"></span> Photo</label>
+
+                    </div>
+
+
+
+         
+       </form>
+
+   
+    </div>
+
+  </div>
+</div>
+
+<span class="fillter-mob-btn"></span>
+
+
+
+      
+      <script src="js/jquery-1.11.2.min.js"></script>
+      <script src="js/bootstrap.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+<script src="js/lightgallery-all.min.js"></script> 
+<script src="js/jquery.mousewheel.min.js"></script>
+
+
+
+<script type="text/javascript">
+  
+
+$(document).ready(function() {
+
+      $('.gallary-time-line').lightGallery();
+
+  let $document = $(this);
+  
+  $document.on('onCloseAfter.lg',function(event){
+      $document.data('lightGallery').destroy(true);
+  });
+  
+  $('.more-img-alboum').on('click', function(e) {
+      $document.lightGallery({
+          dynamic: true,
+          dynamicEl: [{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg'
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg',
+            
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg',
+              
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg',
+              
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg',
+              
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg',
+              
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg',
+              
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg',
+              
+          },{
+              src: 'img/1.jpg',
+              thumb: 'img/1.jpg'
+          }]
+      });
+  });
+});
+
+</script>
+
+
+
+      <script>
+      $(document).ready(function() {
+
+
+
+// $(".add-post-main").click(function(){
+
+//   $('#write-post').prop("autofocus");
+ 
+
+
+// });
+
+
+
+
+
+
+
+
+
+
+// if( $('#add-post').hasClass('in') ) {
+//   $('#write-post').attr("autofocus", "true");
+// }else{
+
+//  $('#write-post').attr("autofocus", "false");
+
+// // }
+
+// if ($('#write-post').hasAttr("autofocus")) {
+//    alert('has')
+// }
+
+// else{
+
+ 
+
+// }
+
+
+
+
+
+
+
+
+
+
+// tabs head
+$('.jobs-top').click(function () {
+var tab_id = $(this).attr('data-tab');
+$('.jobs-top').removeClass('current');
+$('.jobs-tabs').removeClass('current');
+$(this).addClass('current');
+$("#" + tab_id).addClass('current');
+});
+// end tabs head
+
+$(".mob-menu-btn").click(function(){
+  $(".side-bar").addClass("side-bar-active");
+});
+
+$(".hide-mob-menu").click(function(){
+  $(".side-bar").removeClass("side-bar-active");
+});
+
+
+$('.mob-serch').click(function(e){
+  e.stopPropagation();
+$('.serch-main').toggleClass('serch-active-mob');
+$('.body-bg').toggleClass('body-overlay');
+
+});
+
+$('.serch-main').click(function(e){
+e.stopPropagation();
+});
+
+$('body,html').click(function(e){
+$('.serch-main').removeClass('serch-active-mob');
+$('.body-bg').removeClass('body-overlay');
+
+
+
+
+});
+
+
+$(".like-dis-btn").click(function(){
+  var other = $(this).hasClass('like-icn') ? 'dislike-icn' : 'like-icn';
+  $(this).closest("ul").find('a.' + other).removeClass("active-like-dis")
+  // $(".like-dis-btn").removeClass("active-like-dis");
+  $(this).toggleClass("active-like-dis");
+
+});
+
+
+
+
+
+
+
+
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    
+   $(input.parentNode.parentNode.parentNode).children('.img-up-main').children('.img_comment-main').children('.blah').attr('src', e.target.result);
+    $(input.parentNode.parentNode.parentNode).children('.img-up-main').children('.img_comment-main').children('.blah').hide();
+    $(input.parentNode.parentNode.parentNode).children('.img-up-main').children('.img_comment-main').children('.blah').fadeIn(500);
+
+// siblings('.img-up-main').show()
+     $(input.parentNode.parentNode.parentNode).children('.img-up-main').show(); 
+    }
+
+    reader.readAsDataURL(input.files[0]);
+    }
+    }
+    $(".imgInp").change(function() {
+    readURL(this);
+    });
+
+      if ($('img.blah').attr('src') == '') {
+         
+          $('.img-up-main').hide();
+
+        }
+
+
+
+
+
+
+
+
+var textarea = document.querySelectorAll('.add-commnt-textarea');
+
+
+ 
+textarea.forEach((i)=>{
+ i.addEventListener('keydown', autosize);
+})
+ 
+
+
+             
+function autosize(){
+  var el = this;
+  setTimeout(function(){
+    el.style.cssText = 'height:auto; padding:0';
+    // for box-sizing other than "content-box" use:
+    // el.style.cssText = '-moz-box-sizing:content-box';
+    el.style.cssText = 'height:' + el.scrollHeight + 'px';
+   
+          },0);
+        }
+      });
+
+
+
+
+// $('.blah').on('load', function () {
+//   if($(this).attr('src') == '') {
+//     $('.img-up-main').hide();
+//   }else{
+//     $('.img-up-main').show();
+//   }
+// });
+
+
+
+$( ".remove-comment-img-btn" ).click(function() {
+$(this).parent().hide();
+});
+
+
+
+ $("a.like-dis-btn").click(function(event) {
+            
+              event.preventDefault();
+              });
+
+      </script>
+
+
+<script type="text/javascript">
+  function readURL(input) {
+    var i = 0;
+    if (input.files) {
+        $(input.files).each(function () {
+
+            var reader = new FileReader();
+            reader.readAsDataURL(this);
+            reader.onload = function (e) {
+                var numUploadedImages = $('.next_img').length;
+               
+                if (numUploadedImages < 2000) {
+                  
+                    if ($(".image_dev").find('.first_uploaded_image').length == 1) {
+                        $(".image_dev").prepend('<img id="' + i + '" class="next_img next_img1 first_uploaded_image" title="remove" src="' + e.target.result + '" alt="" style="width:120px; object-fit: cover; height:120px; border-radius:100%; float:left; margin-top:10px;" />');
+
+
+                    } else {
+                       $( ".uploaded-images-div" ).addClass( "has-imges" );
+                        $(".image_dev").prepend('<img id="' + i + '" class="next_img next_img1 not_first_uploaded_image" title="remove" src="' + e.target.result + '" alt="" style="width:120px; height:120px;object-fit: cover;  float:left; margin-top:10px;position:relative;" />');
+                    }
+                    $(".image_dev").prepend('<input id="image_hidden_input_' + i + '" type="hidden" name="car_image_' + i + '" value="' + e.target.result + '" />');
+                    i++;
+                }
+
+                if (numUploadedImages >= 2000) {
+
+                    $("#file1, #file7").prop('disabled', true);
+                    $('.leftside3 span').css('opacity', 1);
+                }
+
+
+
+            }
+
+        });
+
+      
+    }
+    
+   
+}
+
+
+
+$(document).on('click', '.next_img', function () {
+    if ($(this).hasClass('next_img1')) {
+        
+        $("#file1, #file7 ").prop('disabled', false);
+        $("input#image_hidden_input_" + $(this).attr('id')).remove();
+        $('.leftside3 span').css('opacity', 0);
+ 
+        if ( $('.next_img').length == 1) {
+
+          $('.uploaded-images-div').removeClass( "has-imges" );
+        }
+    }
+    $(this).remove();
+});
+
+$("#file1").change(function (event) {
+    var ev = (event.target.id);
+    
+    if (ev == "file1") {
+        readURL(this);
+    }
+
+});
+
+$("#file7").change(function (event) {
+    var ev = (event.target.id);
+   
+    if (ev == "file7") {
+        readURL(this);
+    }
+
+});
+
+
+
+
+
+$( ".slide-side-fillter" ).click(function() {
+
+$(this).siblings('.links-main-fillter-side').slideToggle( "fast" );
+$(this).toggleClass('links-colapsed')
+});
+
+
+$(".fillter-mob-btn").click(function(){
+  $(".s-c-fillter-side-bar").toggleClass("s-c-fillter-side-bar-active");
+  $(this).toggleClass("colse-btn");
+});
+
+
+
+
+
+
+</script>
+
+
+      <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+      
+    </body>
+  </html>

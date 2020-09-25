@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/chosen.css">
+<link href="css/Ghazawy.css"  rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">        
+<!--     <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16"> -->
+  </head>
+  <body>
+
+
+<div class="container">
+	<a href="#" class="btn-solid">Link Style</a>
+	<br>
+	<a href="#" class="btn-outline">Link Style</a>
+	<br>
+	<button  class="btn-solid">Link Style</button>
+	<br>
+	<button  class="btn-outline">Link Style</button>
+	<br>
+		<br>
+<form>
+	<div class="col-xs-12 remove-padding input-item">
+		<p>Label</p>
+	 <input type="text">
+	</div> 
+
+
+	<div class="col-xs-12 remove-padding input-item">
+			<br>
+
+     <p>password</p>
+	 <input id="password-field" type="password">
+	 <span toggle="#password-field" class="pass-icon icon-eye-close"></span>
+    </div>
+
+    <div class="col-xs-12 remove-padding input-item">
+    	<br>
+   <p>Country</p>
+
+   <select class="my-select">
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+
+
+
+   </select> 
+</div>
+
+
+    	<div class="col-xs-12 remove-padding input-item">
+    			<br>
+		<p>Message</p>
+	 <textarea></textarea>
+	</div>
+
+  
+  <div class="col-xs-12 remove-padding input-item">
+  <br>
+    <div class="radio-item">
+    <input type="radio" id="test1" name="radio-group" checked>
+    <label for="test1">option1</label>
+  </div>
+  <div class="radio-item">
+    <input type="radio" id="test2" name="radio-group">
+    <label for="test2">option2</label>
+  </div>
+
+</div>
+
+
+<div class="col-xs-12 remove-padding input-item">
+  
+
+
+
+  <div class="cutsom-checkbox-row">
+            <input id="checkbox1" type="checkbox">
+            <label for="checkbox1">HAML</label>
+          </div>
+  <div class="cutsom-checkbox-row">
+            <input id="checkbox2" type="checkbox">
+            <label for="checkbox2">HTML</label>
+          </div>
+    <div class="cutsom-checkbox-row">
+            <input id="checkbox3" type="checkbox">
+            <label for="checkbox3">CSS</label>
+          </div>
+
+  
+</div>
+
+
+
+</form>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/chosen.jquery.js"></script>
+
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+$(".my-select").chosen();
+$(".pass-icon").click(function() {
+
+  $(this).toggleClass("icon-eye-close icon-eye");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+
+
+
+
+
+	});
+</script>
+
+
+</body>
+</html>

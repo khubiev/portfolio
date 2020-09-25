@@ -1,0 +1,11 @@
+<svg id="ic_call_center" data-name="ic_call center" xmlns="http://www.w3.org/2000/svg" width="26.311" height="28.244" viewBox="0 0 26.311 28.244">
+  <path id="Path_3254" data-name="Path 3254" d="M5.02,48.443H1.731A1.736,1.736,0,0,1,0,46.712V41.231A1.736,1.736,0,0,1,1.731,39.5H5.02a1.736,1.736,0,0,1,1.731,1.731v5.481A1.736,1.736,0,0,1,5.02,48.443Z" transform="translate(0 -28.104)" fill="#00b18f"/>
+  <path id="Path_3255" data-name="Path 3255" d="M72.82,48.443H69.531A1.736,1.736,0,0,1,67.8,46.712V41.231A1.736,1.736,0,0,1,69.531,39.5H72.82a1.736,1.736,0,0,1,1.731,1.731v5.481A1.736,1.736,0,0,1,72.82,48.443Z" transform="translate(-48.24 -28.104)" fill="#00b18f"/>
+  <g id="Group_1433" data-name="Group 1433" transform="translate(2.423)">
+    <path id="Path_3256" data-name="Path 3256" d="M29.836,12.492H27.816V10.7a8.7,8.7,0,0,0-17.4.029v1.789H8.4V10.732a10.732,10.732,0,0,1,21.464,0v1.76Z" transform="translate(-8.4)" fill="#00b18f"/>
+  </g>
+  <g id="Group_1434" data-name="Group 1434" transform="translate(16.041 19.358)">
+    <path id="Path_3257" data-name="Path 3257" d="M55.6,74.514V73.072A5.984,5.984,0,0,0,61.572,67.1h1.443A7.412,7.412,0,0,1,55.6,74.514Z" transform="translate(-55.6 -67.1)" fill="#00b18f"/>
+  </g>
+  <path id="Path_3258" data-name="Path 3258" d="M40.252,87.156H38.031A1.736,1.736,0,0,1,36.3,85.425v-.894A1.736,1.736,0,0,1,38.031,82.8h2.221a1.736,1.736,0,0,1,1.731,1.731v.894A1.736,1.736,0,0,1,40.252,87.156Z" transform="translate(-25.827 -58.912)" fill="#00b18f"/>
+</svg>

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>who-we-are</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-rtl.css"  rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact us</p> </a></li>
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="offers-store.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/offers-store.jpg"></div><p>offers store</p> </a></li>
+      <li><a href="offers.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/offers.jpg"></div><p>offers</p> </a></li>
+      <li><a href="store-info.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/store-info.jpg"></div><p>store info</p> </a></li>
+      <li><a href="stores.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/stores.jpg"></div><p>stores</p> </a></li>
+      <li><a href="who-we-are.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/who-we-are.jpg"></div><p>who we are</p> </a></li>
+
+
+
+
+   </ul>
+
+</div>
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+<div class="container-fluid all-body">
+
+<!--header-->
+
+  <div class="container header-main remove-padding">
+    
+    <!--for disktop-->
+  <div class="disk-menu-main hidden-xs">
+      <div class="col-md-2 col-sm-3 logo"  data-aos="fade-left"> <a href="#"> <img src="img/logo.png"></a> </div>
+      <div class="col-md-10 col-sm-9 remove-padding">
+        <ul class="disk-menu">
+          <li data-aos="fade-down"><a href="#" class="active-link">الصفحة الرئيسية</a></li>
+          <li data-aos="fade-down">
+            <div class="dropdown"> <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">المحلات <i class="fa fa-angle-down"></i> </a>
+              <div class="dropdown-menu down-sub"> <a href="#">العنوان الاول </a> <a href="#">العنوان الثاني </a> <a href="#">العنوان الثالث </a> </div>
+            </div>
+          </li>
+          <li data-aos="fade-down">
+            <div class="dropdown"> <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown"> المنتجات <i class="fa fa-angle-down"></i> </a>
+              <div class="dropdown-menu down-sub"> <a href="#">العنوان الاول </a> <a href="#">العنوان الثاني </a> <a href="#">العنوان الثالث </a> </div>
+            </div>
+          </li>
+          <li class="country" data-aos="fade-right">
+            <div class="dropdown"> <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown"> <img src="img/flag.png"> جدة <i class="fa fa-angle-down"></i> </a>
+              <div class="dropdown-menu country-down-main">
+                <div class="country-down">
+                  <div class="country-type">
+                    <div class="flag-main"><img src="img/flag2.png"></div>
+                    <p>مصر</p>
+                    <ul>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                    </ul>
+                  </div>
+                  <div class="country-type">
+                    <div class="flag-main"><img src="img/flag2.png"></div>
+                    <p>مصر</p>
+                    <ul>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                    </ul>
+                  </div>
+                  <div class="country-type">
+                    <div class="flag-main"><img src="img/flag2.png"></div>
+                    <p>مصر</p>
+                    <ul>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                    </ul>
+                  </div>
+                  <div class="country-type">
+                    <div class="flag-main"><img src="img/flag2.png"></div>
+                    <p>مصر</p>
+                    <ul>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                    </ul>
+                  </div>
+                  <div class="country-type">
+                    <div class="flag-main"><img src="img/flag2.png"></div>
+                    <p>مصر</p>
+                    <ul>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                    </ul>
+                  </div>
+                  <div class="country-type">
+                    <div class="flag-main"><img src="img/flag2.png"></div>
+                    <p>مصر</p>
+                    <ul>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                      <li><a href="#">القاهرة</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+     <!--end for disktop-->
+     <!--for mobile-->
+     
+  <div class="mobile-menu visible-xs">
+      <div class=" remove-padding visible-xs mobile-menu">
+        <div class="mobile-menu-main">
+          <div class="col-xs-12 remove-padding mobile-top-links">
+            <div class="col-xs-2 remove-padding mobile-menu-btn">
+              <button data-aos="fade-down" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <i class="fas fa-bars"></i> </button>
+            </div>
+            <div class="col-xs-5 text-left"> <a href="#"> <img data-aos="fade-down" src="img/logo.png"></a> </div>
+            <div class="col-xs-5 remove-padding">
+              <ul class="disk-menu">
+                <li class="country" data-aos="fade-down">
+                  <div class="dropdown"> <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown"> <img src="img/flag.png"> جدة <i class="fa fa-angle-down"></i> </a>
+                    <div class="dropdown-menu country-down-main">
+                      <div class="country-down">
+                        <div class="country-type">
+                          <div class="flag-main"><img src="img/flag2.png"></div>
+                          <p>مصر</p>
+                          <ul>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                          </ul>
+                        </div>
+                        <div class="country-type">
+                          <div class="flag-main"><img src="img/flag2.png"></div>
+                          <p>مصر</p>
+                          <ul>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                          </ul>
+                        </div>
+                        <div class="country-type">
+                          <div class="flag-main"><img src="img/flag2.png"></div>
+                          <p>مصر</p>
+                          <ul>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                          </ul>
+                        </div>
+                        <div class="country-type">
+                          <div class="flag-main"><img src="img/flag2.png"></div>
+                          <p>مصر</p>
+                          <ul>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                          </ul>
+                        </div>
+                        <div class="country-type">
+                          <div class="flag-main"><img src="img/flag2.png"></div>
+                          <p>مصر</p>
+                          <ul>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                          </ul>
+                        </div>
+                        <div class="country-type">
+                          <div class="flag-main"><img src="img/flag2.png"></div>
+                          <p>مصر</p>
+                          <ul>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                            <li><a href="#">القاهرة</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="visible-xs remove-padding">
+          <div class="col-xs-12 remove-padding" >
+            <div class="collapse navbar-collapse mobile-menu-cont container-fluid remove-padding">
+
+              <div class="panel-group" id="accordion">
+               <a href="#" class="main-menu-links mobile-home-link"> الصفحة الرئيسية </a>
+  <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="accordion-toggle main-menu-links collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseone">
+               المحلات
+               <i class="fas fa-caret-down"></i>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseone" class="panel-collapse collapse">
+            <div class="panel-body">
+<a href="#">العنوان الاول </a> <a href="#">العنوان الثاني </a> <a href="#">العنوان الثالث </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="accordion-toggle main-menu-links collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+               المنتجات
+               <i class="fas fa-caret-down"></i>
+                </a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+<a href="#">العنوان الاول </a> <a href="#">العنوان الثاني </a> <a href="#">العنوان الثالث </a>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+            <!--nav-collapse --> 
+            
+            
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--end for mobile-->
+  </div>
+  
+  <!--end header-->
+  <div class="content">
+  
+<div class="container-fluid where-am-i">
+  <div class="container" data-aos="fade-left">
+    <p>من نحن</p>
+  </div>
+</div>
+<div class="container who-we-are">
+<h2 data-aos="fade-left">سفير العروض</h2>
+<p data-aos="fade-left">نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق نصاً ما باللغة العربية يمكن تغييرة في وقت لاحق</p>
+</div>
+
+
+
+
+  </div>
+  
+  <!--footer-->
+ <div class=" container-fluid footer-main">
+    <div class="container">
+      <div class="col-md-2 col-sm-3 col-xs-12 text-center fot-logo" data-aos="fade-left"> <a href="#"> <img src="img/fot-logo.png"></a> </div>
+      <div class="col-md-3 col-md-offset-1 col-sm-3 col-sm-offset-0 col-xs-12 col-xs-offset-0 bottom-links-main">
+        <div class="col-md-6 col-sm-6 col-xs-12 fot-links remove-padding">
+          <ul data-aos="zoom-in">
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">المتاجر</a></li>
+            <li><a href="#">المنتجات</a></li>
+          </ul>
+        </div>
+        <div data-aos="zoom-in" class="col-md-6 col-xs-12 col-sm-6 text-left fot-links remove-padding">
+          <ul>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+          </ul>
+        </div>
+      </div>
+      <div data-aos="fade-right" class="col-md-4 col-md-offset-2 col-sm-5 col-sm-offset-1 col-xs-12 text-center  remove-padding">
+        <div class="app-links"> <a href="#"> <img src="img/Apple_App_Store.png"></a> <a href="#"> <img src="img/Google_Play.png"></a> </div>
+        <div class="copy-right"> <a href="#"> <img src="img/ip-d.png"> </a> <a href="#"> <img src="img/ip-p.png"> </a> <a href="#"> <img src="img/ip.png"> </a> </div>
+      </div>
+    </div>
+  </div>
+   <!--end footer-->
+</div>
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/main-js.js"></script> 
+<script src="js/bootstrap.js"></script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+<script>
+    AOS.init();
+  </script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

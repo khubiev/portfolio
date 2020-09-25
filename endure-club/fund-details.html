@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>fund details</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css"  rel="stylesheet">
+
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+    
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="Account-settings.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Account-settings.jpg"></div><p>Account settings</p> </a></li>
+
+      <li><a href="fund-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/fund-details.jpg"></div><p>fund details</p> </a></li>
+
+
+      <li><a href="Fund-News.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Fund-News.jpg"></div><p>Fund News</p> </a></li>
+
+      <li><a href="help.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/help.jpg"></div><p>help</p> </a></li>
+
+      <li><a href="Home(user).html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Home(user).jpg"></div><p>Home(user)</p> </a></li>
+       
+        <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+
+
+      <li><a href="login.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+
+      <li><a href="news-list.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/news-list.jpg"></div><p>news list</p> </a></li>
+
+      <li><a href="reset-pass.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/reset-pass.jpg"></div><p>reset pass</p> </a></li>
+
+      <li><a href="Resources.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Resources.jpg"></div><p>Resources</p> </a></li>
+
+           <li><a href="Resources-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Resources-details.jpg"></div><p>Resources details</p> </a></li>
+
+            <li><a href="Support.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Support.jpg"></div><p>Support</p> </a></li>
+
+            <li><a href="Commit-to-Investment.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Commit-to-Investment.jpg"></div><p>Commit Investment</p> </a></li>
+
+           <li><a href="FundCompany-Updates.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/FundCompany-Updates.jpg"></div><p>Fund Company Updates</p> </a></li>
+
+          <li><a href="Investment-Report.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Investment-Report.jpg"></div><p>Investment Report</p> </a></li>
+
+
+          <li><a href="My-Investments.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/My-Investments.jpg"></div><p>My Investments</p> </a></li>
+
+            <li><a href="Portfolio-Analysis.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Portfolio-Analysis.jpg"></div><p>Portfolio Analysis</p> </a></li>
+
+
+
+   </ul>
+
+</div>
+
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+<div class="all-body">
+<div class="container-fluid head-main head-main-user">
+    <div class="container">
+         <a href="#" class="logo-main"><img src="img/logo.png"></a>
+
+<ul class="hidden-xs">
+    <li><a href="#" data-scroll="story">Funds</a></li>
+    <li><a href="#" data-scroll="Contact">My Investments</a></li>
+    <li><a href="#" data-scroll="Contact">My Payments</a></li>
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Others
+     <span class="caret"></span></a>
+     
+  <ul class="dropdown-menu">
+    <div>
+    <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+    </div>
+  </ul>
+
+   </li>
+
+
+
+</ul>
+
+<div class="head-pro-main">
+  <div class="dropdown">
+    <a href="#" class="msg-btn dropdown-toggle" data-toggle="dropdown"><img src="img/mail.png"></a>
+  <div class="dropdown-menu">
+   <a href="#" >
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+     <a href="#">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have variations of passages of Lore</p>
+    </a> 
+      <a href="#" class="unread-note">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+       <a href="#" >
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+     <a href="#">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a> 
+      <a href="#" class="unread-note">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+       <a href="#" >
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+     <a href="#">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a> 
+      <a href="#" class="unread-note">
+       <p>There are many variations of passages of Lorem Ipsum available, but the majority have</p>
+    </a>
+  </div>
+</div>
+<div class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+       
+      <img src="img/2.png" class="pro-img-head"> Mohamed <span>
+      <img src="img/arrow-up-s-fill.png" class="down-arrow"></span></a>
+
+     
+  <ul class="dropdown-menu pro-links-main">
+    <div>
+    <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+        <li><a href="#">Exampele</a></li>
+    <li><a href="#">Exampele</a></li>
+    </div>
+  </ul>
+</div>
+</div>
+
+
+
+<div class="mob-menu-btn visible-xs">
+<button class="js-menu menu" type="button">
+<span class="bar"></span>
+</button>
+</div>
+
+<div class="col-xs-12 menu-main visible-xs">
+   
+   <a href="#">Funds</a>
+   <a href="#">My Investments</a>
+   <a href="#">My Payments</a>
+   <a href="#" class="mob-more-btn" >Others <span class="caret"></span></a>
+      <div class="more-mob-links"> 
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+        <a href="#">Exampele</a>
+      </div>
+
+
+
+
+
+
+</div>
+
+
+    </div>
+
+</div>
+
+
+<div class="container">
+  <div class="col-xs-12 main-fund-main remove-padding">
+  <div class="col-md-8">
+     <div class="main-logo-fund">
+        <img src="img/logo.png">
+     </div>
+     <div class="main-fund-info">
+        <h2>Fund N56</h2>
+        <h6>Public fund</h6>
+     </div>
+     <div class="clearfix"></div>
+     <p>There are many variations of passages of Lorem available The are many variations of passages of Lorem Ipsum available.</p>
+     <ul>
+         <li><img src="img/view.png">Country: Egypt</li>|
+         <li><img src="img/view.png">Co-Investors: 12</li>|
+         <li><img src="img/view.png">Watchers: 50</li>
+     </ul>
+  </div>
+  <div class="col-md-4 main-fund-side-bar">
+    <div class="col-xs-12 remove-padding">
+     <h3>$1,344,234</h3>
+     <p>Invested of $2,000,000 minimum raise</p>
+     <h3><span>!</span>$2,000,000 Limit reached</h3>
+     <p>You can join the waitlist and may get into the fund if other investors do not complete their investments.</p>
+     <h3><img src="img/date.png">10 Days left </h3>
+     <h4>60% Funded</h4>
+     <div class="progress-main"><div></div></div>
+     <a href="#">Invest Now</a>
+  </div>
+</div>
+</div>
+</div>
+
+<div class="container remove-padding watch-main-fund">
+   <div class="col-md-4 watch-item-fund"> 
+    <div class="col-xs-12">
+     <h2>137 Watchers</h2>
+     <p>watchers are following this fund news</p>
+     <a href="#">Watch</a>
+   </div>
+   </div>
+   <div class="col-md-4 watch-item-fund">
+    <div class="col-xs-12">
+          <h2>Have a Question?</h2>
+     <p>View questions from the community or ask your own.</p>
+     <a href="#">Visit Q&A Forum</a>
+   </div>
+   </div>
+   <div class="col-md-4 watch-item-fund">
+     <div class="col-xs-12">
+          <h2>Current Investors</h2>
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+        <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <img src="img/2.png">
+    <div class="clearfix"></div>
+     <a href="#" data-toggle="modal" data-target="#moreInvestors">view all</a>
+</div>
+   </div>
+
+
+</div>
+
+
+
+
+
+<div class="container ">
+  <div class=" col-xs-12 Table-main-fund">
+  <h1>Table of Contents</h1>
+    <div class="col-md-4 col-sm-6 col-xs-12 Table-main-item">
+
+       <a href="#" class="col-xs-12 flat-hover ">
+        <p>Previous Accelerate Y Combinator Batch Focused Funds</p>
+        <img src="img/arrow.png">
+       </a> 
+    </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12 Table-main-item">
+
+       <a href="#" class="col-xs-12 flat-hover">
+        <p>Previous Accelerate Y Combinator Batch Focused Funds</p>
+        <img src="img/arrow.png">
+       </a> 
+    </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12 Table-main-item">
+
+       <a href="#" class="col-xs-12 flat-hover">
+        <p>Previous Accelerate Y Combinator Batch Focused Funds</p>
+        <img src="img/arrow.png">
+       </a> 
+    </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12 Table-main-item">
+
+       <a href="#" class="col-xs-12 flat-hover">
+        <p>Previous Accelerate Y Combinator Batch Focused Funds</p>
+        <img src="img/arrow.png">
+       </a> 
+    </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12 Table-main-item">
+
+       <a href="#" class="col-xs-12 flat-hover">
+        <p>Previous Accelerate Y Combinator Batch Focused Funds</p>
+        <img src="img/arrow.png">
+       </a> 
+    </div>
+
+        <div class="col-md-4 col-sm-6 col-xs-12 Table-main-item">
+
+       <a href="#" class="col-xs-12 flat-hover">
+        <p>Previous Accelerate Y Combinator Batch Focused Funds</p>
+        <img src="img/arrow.png">
+       </a> 
+    </div>
+
+
+
+
+
+
+</div>
+</div>
+
+
+<div class="container ">
+ <div class="col-xs-12 Information-main remove-padding">
+  <div class="col-xs-12 info-contect">
+     <h2>Key Information</h2>
+     <p>- Investments in N5-8 of the highest promise startups in the YC S19 batch - Investment terms equivalent or similar to other co-investors - Investments via equity or convertible notes or SAFEs
+
+     - Investments in N5-8 of the highest promise startups in the YC S19 batch - Investment terms equivalent or similar to other co-investors - Investments via equity or convertible notes or SAFEs
+
+
+   - Investments in N5-8 of the highest promise startups in the YC S19 batch - Investment terms equivalent or similar to other co-investors - Investments via equity or convertible notes or SAFEs
+
+
+ - Investments in N5-8 of the highest promise startups in the YC S19 batch - Investment terms equivalent or similar to other co-investors - Investments via equity or convertible notes or SAFEs
+
+- Investments in N5-8 of the highest promise startups in the YC S19 batch - Investment terms equivalent or similar to other co-investors - Investments via equity or convertible notes or SAFEs</p>
+  </div>
+
+    <div class="col-xs-12 invest-cont">
+     <h2>TOP INVESTORS:</h2>
+     <p>Based on # of Top 100 companies in their portfolio</p>
+     <ul>
+       <li>SV Angel</li>
+       <li>Initialized Capital</li>
+       <li>al 6z</li>
+       <li>GV</li>
+       <li>undersCIu</li>
+       <li>Sequoia Capital</li>
+       <li>Sound Ventures / A-Grade Investments</li>
+       <li>Accel</li>
+       <li>Khosla Ventures</li>
+       <li>Index Ventures</li>
+     </ul>
+  </div>
+
+
+<div class="col-xs-12 invest-pro">
+  <p>Endure Club's investments in Y Combinator companies Endure Club has so far funded over 150 startups that have graduated from the Y Combinator accelerator program. Select examples illustrated below* , with a more complete list available in the section below.</p>
+  <img src="img/fund-logo.png">
+
+  <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span><h4>FundersClub Invests In Instacart Seed Round</h4>
+  </div>
+    <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+</div>
+
+
+<div class="col-xs-12 invest-pro">
+  <p>Endure Club's investments in Y Combinator companies Endure Club has so far funded over 150 startups that have graduated from the Y Combinator accelerator program. Select examples illustrated below* , with a more complete list available in the section below.</p>
+  <img src="img/fund-logo.png">
+
+  <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span><h4>FundersClub Invests In Instacart Seed Round</h4>
+  </div>
+    <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+
+      <div class="col-xs-12 remove-padding">
+     <span>June ‘13</span>
+<div class="invest-info-item">
+     <h4>$8.5M Series A</h4><p>Sequoia, Khosla Ventures, Canaan Partners, SV Angel, Paul Buchheit<a href="#">See more</a></p>
+  </div>
+  </div>
+
+</div>
+
+<div class="clearfix"></div>
+<p class="invest-p">*These examples are purely for illustration. Past performance is not indicative of future results. Investing in early-stage companies involves substantial risks and many early-stage investments will be unsuccessful, which is why FundersClub believes it is important to have a diversified portfolio of such investments.</p>
+
+</div>
+
+
+
+</div>
+
+
+<div class="container">
+   <div class="col-xs-12 Partnership-main">
+      <h1>Partnership Manager Bios</h1>
+      <div class="col-xs-12 remove-padding Partnership-item first-item">
+         <img src="img/1.png">
+         <div class="Partnership-info">
+           
+
+          <h3>Alex Mittal</h3>
+         <h4>Co-Founder and CEO of FundersClub</h4>
+         </div>
+         <div class="clearfix"></div>
+         <p>Prior to starting FundersClub, Mr. Mittal was the founding CEO of Innova Dynamics, a VC-backed touchscreen hardware company (acquired by TPK Holding, TPE:3673). Previously, he was the founding CTO of an enterprise software company. He holds degrees in economics and engineering from the Wharton School and Penn Engineering via the University of Pennsylvania's M&T Program, and is an alumni of Y Combinator. He is an advisor to First Round Capital's Dorm Room Fund, a columnist for Inc., and has been featured in Forbes 30 under 30 in Tech, in BusinessWeek as one of America's Best Young Entrepreneurs, in Silicon Valley's 40 under 40, and invited to speak at conferences hosted by the NVCA, ACA, Wired, Guardian, and SXSW. Previously, he was been featured in Forbes 30 under 30 in Tech, in BusinessWeek as one of America's Best Young Entrepreneurs, in Silicon Valley's 40 under 40, and invited to speak at conferences hosted by the NVCA, ACA, Wired, Guardian, and SXSW. Previously, he was also active in science research, has published in peer-reviewed scientific journals, is an inventor on multiple issued patents, and presented at the 2002 Nobel Prize Ceremonies.</p>
+
+      </div>
+
+            <div class="col-xs-12 remove-padding Partnership-item">
+         <img src="img/1.png">
+         <div class="Partnership-info">
+           
+
+          <h3>Alex Mittal</h3>
+         <h4>Co-Founder and CEO of FundersClub</h4>
+         </div>
+         <div class="clearfix"></div>
+         <p>Prior to starting FundersClub, Mr. Mittal was the founding CEO of Innova Dynamics, a VC-backed touchscreen hardware company (acquired by TPK Holding, TPE:3673). Previously, he was the founding CTO of an enterprise software company. He holds degrees in economics and engineering from the Wharton School and Penn Engineering via the University of Pennsylvania's M&T Program, and is an alumni of Y Combinator. He is an advisor to First Round Capital's Dorm Room Fund, a columnist for Inc., and has been featured in Forbes 30 under 30 in Tech, in BusinessWeek as one of America's Best Young Entrepreneurs, in Silicon Valley's 40 under 40, and invited to speak at conferences hosted by the NVCA, ACA, Wired, Guardian, and SXSW. Previously, he was been featured in Forbes 30 under 30 in Tech, in BusinessWeek as one of America's Best Young Entrepreneurs, in Silicon Valley's 40 under 40, and invited to speak at conferences hosted by the NVCA, ACA, Wired, Guardian, and SXSW. Previously, he was also active in science research, has published in peer-reviewed scientific journals, is an inventor on multiple issued patents, and presented at the 2002 Nobel Prize Ceremonies.</p>
+
+      </div>
+
+
+   </div>
+</div>
+
+
+
+<div class="container">
+    <div class="col-xs-12 Fund-Terms-main">
+       <h1>Fund Terms</h1>
+
+       <h3>Min. Investment for FundersClub Investors: $10k</h3>
+       <h3>Min. Raise on FundersClub: $325k</h3>
+       <h3>Max Raise on FundersClub: $2.5M</h3>
+       <h3>Max Fund Investors: 235</h3>
+       <h3>Commission: None</h3>
+       <h3>Avg. Management Fee: 1.75% per year Show details</h3>
+       <h3>Carried Interest: 20.00% Show details</h3>
+       <h3>Administrative Cost:<p> A portion of the fund will be used to pay for third party, out-of-pocket expenses of the fund (e.g., organization, syndication, formation, operations, and liquidation). The total out of pocket costs of the fund are expected to be approximately $50k. </p><a href="#"> Show details</a></h3>
+       <h3>Target Closing Date: 08/3/2019</h3>
+       <h3>Note:<p>  We may not be able to hold incomplete reservations made in the fund for more than 5 business days. We recommend using the Online Payments option if possible to help ensur timely completion of your reservation.</p></h3>
+        
+
+
+
+    </div>
+
+
+</div>
+
+
+<div class="container">
+  
+   <div class="col-xs-12 Previous-Accelerate-main">
+       <h1>Previous Accelerate Y Combinator Batch Focused Funds</h1>
+       
+       <div class="col-xs-12 Previous-items-main first-item">
+        <h2>Accelerate FC XXI: Y Combinator Winter 2019 invested in 7 companies from the batch.</h2>
+         <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+       </div>
+
+
+              <div class="col-xs-12 Previous-items-main">
+<h2>Accelerate FC XXI: Y Combinator Winter 2019 invested in 7 companies from the batch.</h2>
+         <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+       </div>
+
+
+              <div class="col-xs-12 Previous-items-main">
+<h2>Accelerate FC XXI: Y Combinator Winter 2019 invested in 7 companies from the batch.</h2>
+         <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+                  <div class="Previous-item">
+            <img src="img/3.png">
+            <h4>Axdraft</h4>
+            <p>Draft legal docs faster</p>
+         </div>
+
+       </div>
+
+<div class="col-xs-12 Previous-small-main remove-padding">
+   <p>In addition, FundersClub has also invested in many other Y Combinator companies through the FundersClub platform via single-company and multi-company funds, including the below.</p>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+<div class="Previous-small-item"><img src="img/3.png"></div>
+
+</div>
+
+
+
+   </div>
+
+</div>
+
+
+<div class="container">
+   <div class="col-xs-12 Investment-Returns-main">
+      <h1>Investment Returns Data from YC Batch Focused FundersClub Funds</h1>
+      <p>VC returns take many years to fully play out, and this early data should not be viewed as definitive given the inevitable ups and downs still to come. It typically takes startups 4-7 years to see an exit through IPO or acquisition, and it may take even longer, as startups may opt to stay private longer. A long-standing objective of ours is to be returns-driven and to be as about returns as possible within the constraints of the VC industry. Therefore, we are publishing our estimated unrealized historical gross multiples* on invested capital across each fund in this series.</p>
+      <h1>FundersClub's funds targeting YC batches</h1>
+      <p>Unrealized gross multiple* as of 3/31/2019</p>
+      <img src="img/4.png">
+      <p>As shown above, older vintages have more data and you can start to see the portfolios mature. Younger vintages have less data.As shown above, older vintages have more data and you can start to see the portfolios mature. Younger vintages have less data.As shown above, older vintages have more data and you can start to see the portfolios mature. Younger vintages have less data.As shown above, older vintages have more data and you can start to see the portfolios mature. Younger vintages have less data.</p>
+      <h3>Notes:</h3>
+      <p>Data used to assess estimates of investment value have not been verified. The numbers presented are highly subjective and may be inaccurate. As such, FundersClub and/or any third party fund managers will not be held liable for any errors or inaccuracies in the data, or any differences on actual realized outcomes. FundersClub disclaims any obligation or undertaking to provide updates or revisions to reflect any change in its expectations or returns.<a href="#">What is FundersClub's methodolo for calculatin "Current Value Estimates" of investment holdin s?</a>The stated returns are unrealized and based solely on our own estimate of the current value of our fund investments; was not provided or verified by the companies or third party valuation; and does not represent actual return of capital or gain to FundersClub members. </p>
+
+
+
+   </div>
+
+
+</div>
+
+
+
+<div class="container">
+   <div class="col-xs-12 QA-Forum">
+     <h1>Q&A Forum</h1>
+     <p>Use this form to submit a question to this Partnership's fund managers. Please note that not all questions can be answered.</p>
+     <form>
+       <textarea placeholder="Ask your own question - be respectful and constructive"></textarea>
+        <p>what makes a good question ? <a href="#"> Read more about</a></p>
+            <div class="form-group">
+      <input type="checkbox" id="Ask">
+      <label for="Ask">Ask anonymously</label>
+    </div>
+        <button>Submit Question</button>
+     </form>
+
+   </div>
+
+</div>
+
+
+
+<div class="container">
+   <div class="col-xs-12 Code-Conduct-main">
+       <h1>Code of Conduct</h1>
+       <p>FundersClub provided the following information and disclosures.</p>
+       <h2>Do you plan to make investments in the companies that this fund invests in either personally or with another fund?</h2>
+       <p>We do not expect to personally invest directly in companies that are funded by this Accelerate fund outside of FundersClub. We may invest in them with other funds managed by FundersClub, such as other single- or multi-company FundersClub funds. This Accelerate fund specifically targets investing in YC S19 startups that our institutional VC fund, FCVC Fund l, L.P. ("FCVC"), is co-investing in or already invested in. Such other investment funds may have priority access to invest in the YC S19 startups prior to the Accelerate fund, and as a result it may be that some YC S19 startups are in the investment portfolio of such other funds but not in the Accelerate fund. FundersClub Inc. and/or affiliates of FundersClub Inc. and/or employees of FundersClub Inc. may be investors in funds that are investing in the companies that this Accelerate fund is investing in; the terms under which those funds invest in a YC S19 startup may be different than the terms under which the Accelerate fund invests.</p>
+       <h2>Do you plan to invest at the same terms as this fund's investment?</h2>
+       <p>In such scenarios, in a given financing round, we would seek to invest and target investing at the same terms across the various funds that we manage, but we cannot guarantee that every startup will accept investments from all such funds on the same terms, in part due to the rolling timelines of seed round financings.</p>
+       <h2>How will investment amounts in a given company be allocated across funds?</h2>
+       <p>Each fund's position sizing will be decided separately so we will not have ratios applied across funds. FCVC must satisfy its ownership targets before allocations can be made available to this Accelerate fund. As a result, in limited allocation situations, this Accelerate fund may be unable to receive an allocation in certain companies funded by FCVC and/or may receive reduced allocations and/or may invest under different terms than FCVC.</p>
+       <h2>Do you anticipate receiving any advisory shares in the companies in which this fund invests?</h2>
+       <p>No.</p>
+
+       <h2>Are there situations where you will use other capital instead of this fund's capital to invest in an opportunity?</h2>
+       <p>If yes, please describe. We may invest in companies that are funded by this fund with other funds managed by FundersClub.</p>
+
+       <h2>Are you putting your own money into the fund or not? If yes, what percent (%) of the fund and/or what amount of capital ($) will you put into the fund?</h2>
+       <p>No.</p>
+       <p>To the extent that the above answers conflict with the Participation Agreement, the terms of the Participation Agreement will control. Opportunities to invest in this Fund are only offered through the Participation Agreement, which contains a full discussion of the risks and conflicts of investing in the Fund. All investors are encouraged to read the Participation Agreement carefully before investing.</p>
+
+
+
+
+   </div>
+  
+
+</div>
+
+
+<div class="container">
+    <div class="col-xs-12 Documents-main">
+       <h1>Sample Legal Documents</h1>
+       <h4>FundersClub is an online investing platform. You can easily view and e-sign legal docs when you are ready to invest by clicking the Invest button.</h4>
+
+       <div class="col-xs-12 Documents-item remove-padding">
+         <a href="#">
+            <img src="img/pdf.png">
+            <div class="Documents-item-info">
+            <h3>Subscription Agreement</h3>
+            <p>Sample forms for US individual investors</p>
+          </div>
+         </a>
+       </div>
+
+
+
+       <div class="col-xs-12 Documents-item remove-padding">
+       
+            <img src="img/pdf.png">
+            <div class="Documents-item-info">
+            <h3>Subscription Agreement</h3>
+            <p>Sample forms for US individual investors</p>
+          </div>
+      
+       </div>
+
+              <div class="col-xs-12 Documents-item remove-padding">
+       
+            <img src="img/pdf.png">
+            <div class="Documents-item-info">
+            <h3>Subscription Agreement</h3>
+            <p>Sample forms for US individual investors</p>
+          </div>
+      
+       </div>
+
+              <div class="col-xs-12 Documents-item remove-padding">
+       
+            <img src="img/pdf.png">
+            <div class="Documents-item-info">
+            <h3>Subscription Agreement</h3>
+            <p>Sample forms for US individual investors</p>
+          </div>
+      
+       </div>
+
+              <div class="col-xs-12 Documents-item remove-padding">
+       
+            <img src="img/pdf.png">
+            <div class="Documents-item-info">
+            <h3>Subscription Agreement</h3>
+            <p>Sample forms for US individual investors</p>
+          </div>
+      
+       </div>
+
+
+  
+
+
+</div>
+</div>
+
+
+
+
+
+</div>
+
+<span class="scroll-top-btn" style="position: fixed;
+    bottom: 30px;
+    z-index: 9;
+    right: 30px;"><img src="img/up-btn.png"></span>
+
+<div class="container-fluid footer-main">
+   <div class="container remove-padding">
+       <div class="col-md-2">
+          <img src="img/logo.png">
+       </div>
+       <div class="col-md-6">
+        <div class="col-xs-10 col-md-offset-1">
+          <h3>About</h3>
+          <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+       </div>
+     </div>
+       <div class="col-md-4 remove-padding">
+          <div class="col-md-6"><h3>Investors</h3>
+            <ul>
+              <li><a href="#">What We Do</a> </li>
+              <li><a href="#">Returns</a> </li>
+              <li><a href="#">Community</a> </li>
+             <li> <a href="#">How It Works</a> </li>
+             <li><a href="#">Join FundersClub</a> </li>
+           </ul>
+         </div>
+            <div class="col-md-6"><h3>Founders</h3>
+
+            <ul>
+              <li><a href="#">What We Do</a> </li>
+              <li><a href="#">Returns</a> </li>
+              <li><a href="#">Community</a> </li>
+             <li> <a href="#">How It Works</a> </li>
+             <li><a href="#">Join FundersClub</a> </li>
+           </ul>
+            </div>
+       </div>
+
+
+<div class="col-xs-12">
+   <div class="ip-logo">
+   <a href="#"><img src="img/Designed_&.png"></a>
+   <a href="#"><img src="img/Developed_by.png"></a>
+   <a href="#"><img src="img/ip-logo.png"></a>
+   </div>
+
+
+
+</div>
+
+
+   </div>
+
+
+
+
+</div>
+
+<div id="moreInvestors" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Investors</h3>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        
+      </div>
+      <div class="modal-body">
+         <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+
+                  <div class="Investor-pop-up">
+            <img src="img/3.png">
+            <p>Sara Mohsen</p>
+         </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
+
+
+
+<script>
+
+$(document).ready(function() {
+
+
+$(".scroll-top-btn").click(function() {
+        $("html").animate({ scrollTop: 0 }, "slow");
+        });
+
+
+});
+
+$( ".mob-more-btn" ).click(function() {
+  $( ".more-mob-links" ).slideToggle( "fast", function() {
+  
+  });
+})
+
+
+
+
+var isActive = false;
+$('.js-menu').on('click', function() {
+if (isActive) {
+$('.js-menu').removeClass('active');
+
+$('.menu-main').removeClass('mob-menu-open');
+
+} else {
+$('.js-menu').addClass('active');
+$('.menu-main').addClass('mob-menu-open');
+
+}
+isActive = !isActive;
+});
+
+              
+         
+
+
+
+
+
+</script>
+
+      <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

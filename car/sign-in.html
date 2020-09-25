@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+<link rel="stylesheet" href="css/magnific-popup.css">
+    <link href="css/style.css"  rel="stylesheet">
+  </head>
+  <body>
+      <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="car-d.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/car-d.jpg"></div><p>car details</p> </a></li>
+      <li><a href="contact.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/contact.jpg"></div><p>contact</p> </a></li>
+
+           <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/index.jpg"></div><p>home</p> </a></li>
+        
+               
+          
+
+      <li><a href="paypal.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/paypal.jpg"></div><p>paypal</p> </a></li>
+           <li><a href="sign-in.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/sign-in.jpg"></div><p>signin</p> </a></li>
+
+              <li><a href="sing-up.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/sing-up.jpg"></div><p>singup</p> </a></li>
+
+     
+
+                   <li><a href="wishlist.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/wishlist.jpg"></div><p>wishlist</p> </a></li>
+
+
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="images/more.png">
+</span>
+
+    <div class="container-fluid remove-padding">
+      <div class="header">
+        <div class="header-top-strip">
+          <div class="container remove-padding">
+            <div class="header-top-left">
+              <ul class="hidden-xs">
+                <li><a href="account.html"><span><i class="fas fa-sign-in-alt"></i> </span>Login</a></li>
+                <li><a href="register.html"><span> <i class="fas fa-user"></i>  </span>Create an Account</a></li>
+              </ul>
+              <div class="outer-menu visible-xs ">
+                <input class="checkbox-toggle" type="checkbox" />
+                <div class="hamburger">
+                  <div></div>
+                </div>
+                <div class="menu">
+                  <div>
+                    <div>
+                      <ul>
+                        
+                        
+                        <li><a href="#">Home</a> </li>
+                        <li><a href="#">About us</a> </li>
+                        <li><a href="#">Contact us</a> </li>
+                        <li><a href="#">policy</a> </li>
+                        <li><a href="account.html"><span><i class="fas fa-sign-in-alt"></i> </span>Login</a></li>
+                        <li><a href="register.html"><span> <i class="fas fa-user"></i>  </span>Create an Account</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-right">
+              <div class="cart box_1">
+                <a href="checkout.html">
+                  <h3><img src="images/bag.png" alt=""> (<span class="simpleCart_quantity"> 3 </span>)</h3>
+                </a>
+                
+                
+                
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid remove-padding">
+      <div class="container head-main remove-padding">
+        <div class="col-md-3 col-sm-2 col-xs-5 logo-main remove-padding">
+          <img src="images/logo.png" alt="">
+        </div>
+        <div class="col-md-6 col-sm-7 head-links remove-padding hidden-xs">
+          <ul>
+            <li><a href="#">Home</a> </li>
+            <li><a href="#">About us</a> </li>
+            <li><a href="#">Contact us</a> </li>
+            <li><a href="#">policy</a> </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-7 lan-main remove-padding">
+          <ul>
+            <li><a href="#">En</a> </li>
+            <li><a href="#">Ar</a> </li>
+          </ul>
+        </div>
+        
+      </div>
+
+<div class="title-page-mean">
+    <img src="images/hero_bg_1.jpg">
+
+<div class="page-tile">
+  
+   <h3>login</h3>
+
+</div>
+
+</div>
+
+
+
+    </div>
+
+<div class="container remove-padding">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+
+
+      <form action="#" class="p-5 sing-main ">
+
+        <div class="text-center">
+   <img src="images/logo-b.png" alt="">
+
+</div>
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="font-weight-bold" for="email">Email</label>
+                  <input type="email" id="email" class="form-control" placeholder="Email Address">
+                </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="font-weight-bold" for="email">Phone Number</label>
+                  <input type="text" id="subject" class="form-control" placeholder="Enter Subject">
+                </div>
+              </div>
+                            <div class="row form-group">
+                <div class="col-md-12">
+                  <label class="font-weight-bold" for="email">Password</label>
+                  <input type="password" id="subject" class="form-control" placeholder="Enter Subject">
+                </div>
+              </div>
+              
+
+              <a href="#" class="for-got"><i class="fas fa-exclamation-circle"></i> Forgot My Password</a>
+              
+
+
+
+              <div class="row form-group">
+                <div class="col-md-12">
+                  <input type="submit" value="Send Message" class="btn btn-primary  py-2 px-4 rounded-0">
+                </div>
+              </div>
+
+  
+            </form>
+
+      
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="container-fluid fotter-main">
+   <div class="container">
+<div class="col-md-6">
+
+     <ul class="">
+                       <li>
+                    <a href="#">Home</a>
+                  </li>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#">policy</a></li>
+
+
+    </ul>
+</div>
+
+<div class="col-md-6">
+  
+<p class="copy">Copyright ©2018 All rights reserved</p>
+
+</div>
+
+   </div>
+
+
+</div>
+
+
+
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+    <script src="js/owl.carousel.min.js"></script>
+
+ <script src="js/jquery.magnific-popup.min.js"></script>
+    <script>
+    
+    $(document).ready(function() {
+    
+    $("#owl-example").owlCarousel({
+    navigation : true,
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem: true,
+    pagination: false,
+    rewindSpeed: 500,
+    items : 1,
+    nav: true,
+    autoplay: true,
+    });
+
+
+  $('.image-popup').magnificPopup({type:'image'});
+
+
+
+    
+    });
+    </script>
+
+
+    <script>
+    
+    $(document).ready(function() {
+    
+    $(".slide-one-item").owlCarousel({
+    navigation : true,
+    slideSpeed : 300,
+    paginationSpeed : 400,
+    singleItem: true,
+    pagination: false,
+    rewindSpeed: 500,
+    items : 1,
+    nav: true,
+    autoplay: true,
+    });
+    
+    });
+    </script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+  </body>
+</html>

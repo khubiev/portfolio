@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="Error_icn" transform="translate(-1108.003 -954)">
+    <path id="plus_circle_1425_" data-name="plus_circle [#1425]" d="M10,20A10,10,0,1,1,20,10,10.011,10.011,0,0,1,10,20ZM10,2a8,8,0,1,0,8,8A8.009,8.009,0,0,0,10,2Z" transform="translate(1108.003 954)" fill="#fac70c"/>
+    <path id="important_message_1448_" data-name="important_message [#1448]" d="M10,16.007a1,1,0,1,1,1-1A1,1,0,0,1,10,16.007Zm0-3a1,1,0,0,1-1-1v-7a1,1,0,0,1,2,0v7A1,1,0,0,1,10,13.007Z" transform="translate(1108.003 954)" fill="#fac70c"/>
+  </g>
+</svg>

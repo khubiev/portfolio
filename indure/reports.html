@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>project</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="reports.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/reports.jpg"></div><p>reports</p> </a></li>
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact us</p> </a></li>
+      <li><a href="FAQ.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/FAQ.jpg"></div><p>FAQ</p> </a></li>
+      <li><a href="add-reports.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-reports.jpg"></div><p>add reports</p> </a></li>
+      <li><a href="network.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/network.jpg"></div><p>network</p> </a></li>
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="log-in.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+  
+<div class="div container-fluid remove-padding body-cont">
+
+
+<div class="container project-mian remove-padding">
+<div class="head-report container remove-padding">
+   <div class="back-home col-md-4 col-sm-4 hidden-xs">
+  <a href="#" class="make-black-white-effect" > <img src="img/arrow_right.png" alt=""> Back to <img class="" src="img/logo-footer.png" alt=""> Home </a>
+  </div>
+  
+ <div class="col-md-4 col-sm-4 col-xs-12 "> <h3 class="text-center">Company Reports</h3> <div class="title-after-title"></div></div>
+  
+     <div class="back-home col-xs-4 visible-xs ">
+  <a href="#" class="make-black-white-effect" > <img src="img/arrow_right.png" alt="">  Home </a>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-8 add-report"> <a href="#" class="text-right make-black-white-effect"><img src="img/new-file1.png"> New Report</a></div>
+  
+  </div>
+  
+    
+  <div class="col-md-3 col-sm-4 hidden-xs report-side-links">
+     <p>Reports Index</p>
+    <a href="#" class="active">3/4 2017</a>
+     <a href="#">2/3 2017</a>
+      <a href="#">1/2 2017</a>
+       <a href="#">5/1 2017</a>
+        <a href="#">1/12 2016 </a>
+         <a href="#">4/11 2016 </a>
+         <a href="#">3/10 2016 </a>
+         <a href="#">Older... </a>  
+  
+
+     
+
+  
+
+  
+  </div>
+  
+
+
+  
+ <div class="col-md-6 col-sm-7 col-sm-offset-1 col-xs-12 col-md-offset-1 reports">
+ 
+        <div class="center center-for-mob visible-xs">
+  <select name="sources" class="custom-select sources" placeholder="COMPANY">
+    <option value="profile">Company 1</option>
+    <option value="word">Company 2</option>
+    <option value="hashtag">Company 3</option>
+  </select>
+</div>
+
+ 
+
+   <h4>2 Sep Report</h4>
+   <img src="img/eye.png">
+   
+   <p>Nam porttitor blandit accumsan.<br> Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod,<br> id commodo mi consectetur. Curabitur at vestibulum nisi. Nullam vehicula nisi.</p>
+<div class="after-p"></div>
+
+
+ <div class="pdf-file-mian">  <p><img src="img/new-file.png">  Nam dapibus.  </p> </div>
+  <div class="pdf-file-mian">  <p><img src="img/new-file.png">  Lorem ipsum dolor sit amet.  </p> </div>
+   <div class="pdf-file-mian">  <p><img src="img/new-file.png"> Curabitur lobortis id lore.  </p> </div>
+    <div class="pdf-file-mian">  <p><img src="img/new-file.png">  Nam dapibus.  </p> </div>
+    <div class="clearfix"></div>
+<div class="after-attach"></div>
+
+<form class="comment-form">
+
+
+
+<div class="comment-input" style="">
+<input class="effect-1" type="text" placeholder="Your comment">
+<span class="focus-border"></span>
+</div>
+<button type="submit" class="comment-btn">
+    <img src="img/arrowright.png" alt="">
+   </button>
+
+</form>
+<div class="clearfix"></div>
+
+
+<div class="report-mian">
+ <p class="reporter-name">Endure Admin</p>
+ <span class="report-date">12:34 PM | 20 /4</span>
+ <p class="report-text">Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur.</p>
+</div>
+
+<div class="report-mian-comp">
+ <p class="reporter-name">Endure Admin</p>
+ <span class="report-date">12:34 PM | 20 /4</span>
+ <p class="report-text">Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur.</p>
+</div>
+
+<div class="report-mian-comp">
+ <p class="reporter-name">Endure Admin</p>
+ <span class="report-date">12:34 PM | 20 /4</span>
+ <p class="report-text">Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur.</p>
+</div>
+
+
+<div class="report-mian">
+ <p class="reporter-name">Endure Admin</p>
+ <span class="report-date">12:34 PM | 20 /4</span>
+ <p class="report-text">Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium dui. In malesuada enim in dolor euismod, id commodo mi consectetur.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ </div> 
+        
+  
+  
+</div>
+
+
+
+
+
+
+<div class="container-fluid befor-footer set-to-bottom hidden-xs">
+ 
+
+</div>
+
+
+</div>
+  
+  
+
+
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.js"></script> 
+
+<script>
+
+$(document).ready(function(){
+
+
+    
+
+
+
+
+
+
+$(".custom-select").each(function() {
+  var classes = $(this).attr("class"),
+      name    = $(this).attr("name");
+  var template =  '<div class="' + classes + '">';
+      template += '<span class="custom-select-trigger">' + $(this).attr("placeholder") + '</span>';
+      template += '<div class="custom-options">';
+      $(this).find("option").each(function() {
+        template += '<span class="custom-option ' + $(this).attr("class") + '" data-value="' + $(this).attr("value") + '">' + $(this).html() + '</span>';
+      });
+  template += '</div></div>';
+  
+  $(this).wrap('<div class="custom-select-wrapper"></div>');
+  $(this).hide();
+  $(this).after(template);
+});
+$(".custom-option:first-of-type").hover(function() {
+  $(this).parents(".custom-options").addClass("option-hover");
+}, function() {
+  $(this).parents(".custom-options").removeClass("option-hover");
+});
+$(".custom-select-trigger").on("click", function() {
+  $('html').one('click',function() {
+    $(".custom-select").removeClass("opened");
+  });
+  $(this).parents(".custom-select").toggleClass("opened");
+  event.stopPropagation();
+});
+$(".custom-option").on("click", function() {
+  $(this).parents(".custom-select-wrapper").find("select").val($(this).data("value"));
+  $(this).parents(".custom-options").find(".custom-option").removeClass("selection");
+  $(this).addClass("selection");
+  $(this).parents(".custom-select").removeClass("opened");
+  $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+});
+
+
+
+
+
+
+
+
+
+
+});
+
+
+</script>
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

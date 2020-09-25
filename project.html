@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css"  rel="stylesheet">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="img/fiv-icn.png" type="" sizes="16x16">
+
+
+  </head>
+  <body>
+
+
+
+<div class="container-fluid menu-main">
+  
+   <div class="container">
+       <ul>
+          <li><a href="index.html" class="home-link"><span class="number-menu">01</span>Home.</a></li>
+          <li><a href="projects.html" class="work-link"><span class="number-menu">02</span>Work.</a></li>
+          <li><a href="about.html" class="about-link"><span class="number-menu">03</span>About.</a></li>
+          <li><a href="contact.html" class="contact-link"><span class="number-menu">04</span>Contact.</a></li>
+
+
+       </ul>
+
+   </div>
+
+</div>
+
+
+    <div class="logo">
+    <a href="index.html" class="logo-main">
+      <span class="scroll-item"><img class="logo" src="img/logo.svg"><img class="logo" style="display: none;" src="img/logo-w.svg"></span>
+
+   </a>
+    </div>
+    <div class="say-hello">
+      
+<a href="contact.html"><img class="scroll-item" src="img/say-hello.svg"></a>
+
+    </div>
+    <div class="menu">
+      <div class="logo-main">
+        <div class="scroll-item">
+<div id="nav-icon3" >
+  <span></span>
+  <span></span>
+   <span></span>
+
+  <span></span>
+</div>
+</div>
+</div>
+    </div>
+
+
+    <div class="scroll">
+        <img class="scroll-item" src="img/scroll.svg">
+
+    </div>
+
+<div class="container-fluid project-cover copy-cover">
+  <div class="half-circle"></div>
+  <img src="img/copy-mock-up.png">
+
+
+
+
+</div>
+
+<div class="container remove-padding project-pages">
+    
+
+</div>
+
+
+<div class="container-fluid remove-padding responcive">
+
+ 
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="js/jquery.mousefollower.js"></script>
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+
+  $('#nav-icon3').click(function(){
+    $(this).toggleClass('open');
+  });
+
+  $(function(){
+   $('.logo-main, .scroll, .say-hello, .logo-main').mousefollower();
+});
+
+$(".menu").click(function(){
+  $(".menu-main").slideToggle("slow");
+  $(this).toggleClass('menu-w');
+  $(".menu-main .container ul li a").toggleClass("show");
+   $('.logo-main').find('img').toggle();
+});
+  $(window).load(function(){
+    $(".col-3 input").val("");
+    
+    $(".input-effect input, .input-effect textarea").focusout(function(){
+      if($(this).val() != ""){
+        $(this).addClass("has-content");
+      }else{
+        $(this).removeClass("has-content");
+      }
+    })
+  });
+
+$(".cont-img-vic-main").height($(".form-cont").height());
+
+
+
+
+
+
+
+
+
+
+
+        var textarea = document.querySelector('.input-effect textarea');
+
+        textarea.addEventListener('keydown', autosize);
+
+        function autosize() {
+            var el = this;
+            setTimeout(function () {
+                el.style.cssText = 'height:auto; padding:0';
+
+                el.style.cssText = 'height:' + el.scrollHeight + 'px';
+            }, 0);
+        }
+
+
+
+});
+</script>
+</body>
+</html>

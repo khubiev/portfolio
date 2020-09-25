@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>edit profile</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/chosen.css">
+    <link href="css/web-fonts.css" rel="stylesheet">
+    <link href="css/style.css"  rel="stylesheet">        
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="about.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/about.jpg">
+  </div><p>about</p> </a>
+</li>
+
+ <li><a href="Compelet.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Compelet.jpg">
+  </div><p>Compelet</p> </a>
+</li>
+
+ <li><a href="Compelet1.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Compelet1.jpg">
+  </div><p>Compelet1</p> </a>
+</li>
+
+ <li><a href="contact-us.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/contact-us.jpg">
+  </div><p>contact-us</p> </a>
+</li>
+
+ <li><a href="Date.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Date.jpg">
+  </div><p>Date</p> </a>
+</li>
+
+ <li><a href="edit-profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/edit-profile.jpg">
+  </div><p>edit-profile</p> </a>
+</li>
+
+ <li><a href="faq.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/faq.jpg">
+  </div><p>faq</p> </a>
+</li>
+
+ <li><a href="filter.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/filter.jpg">
+  </div><p>filter</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="Lease-your-property.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Lease-your-property.jpg">
+  </div><p>Lease-your-property</p> </a>
+</li>
+
+ <li><a href="profile-Favorites.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/profile-Favorites.jpg">
+  </div><p>profile-Favorites</p> </a>
+</li>
+
+ <li><a href="profile-Finance.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/profile-Finance.jpg">
+  </div><p>profile-Finance</p> </a>
+</li>
+
+ <li><a href="profile-listing.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/profile-listing.jpg">
+  </div><p>profile-listing</p> </a>
+</li>
+
+ <li><a href="profile-Massages.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/profile-Massages.jpg">
+  </div><p>profile-Massages</p> </a>
+</li>
+
+ <li><a href="singin.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/singin.jpg">
+  </div><p>singin</p> </a>
+</li>
+
+ <li><a href="singup.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/singup.jpg">
+  </div><p>singup</p> </a>
+</li>
+
+ <li><a href="space.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/space.jpg">
+  </div><p>space</p> </a>
+</li>
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+      <div class="body-bg"></div>
+
+
+
+<!-- header  -->
+<div class="all-body">
+<div class="container-fluid head-main remove-padding">
+  
+ <div class="container-fluid remove-padding head-main-top">
+  <div class="container">
+     <div class="col-md-3 col-sm-3 col-xs-6 remove-padding lan-main">
+        <select class="my-select">
+           <option>English</option>
+           <option>Arabic</option>
+           <option>Russian</option>
+       </select>
+     </div>
+     <div class="col-md-6 col-sm-6 col-xs-6 hidden-xs remove-padding text-center">
+        <img src="img/slogin.png">
+     </div>
+     <div class="col-md-3 col-sm-3 remove-padding">
+        <ul>
+           <li><a href="#"><span class="icn-facebook"></span></a></li>
+           <li><a href="#"><span class="icn-instagram"></span></a></li>
+           <li><a href="#"><span class="icn-invision"></span></a></li>
+
+        </ul>
+     </div>
+
+  </div>
+ </div>
+ </div>
+
+
+
+
+ <div class="container-fluid head-main-bot remove-padding">
+    <div class="container remove-padding">
+
+       <div class="col-md-2 col-sm-2">
+          <a href="#" class="hidden-xs"><img src="img/logo.svg"></a>
+          <a href="#" class="visible-xs"><img src="img/logom.svg"></a>
+       </div>
+       <div class="col-lg-5 col-md-6 col-sm-6 col-sm-offset-0 col-md-offset-1 col-lg-offset-2 hidden-xs">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SPACES</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li>
+
+          </ul>
+       </div>
+
+       <div class="col-md-3 col-sm-4 hidden-xs profile-main dropdown">
+         <a href="#"  data-toggle="dropdown" class="dropdown-toggle">
+            <div class="pro-img-frame">
+               <img src="img/1.jpg" alt="">
+            </div>
+            <p>Hi, Ahmed Mohamed <span class="icn-down"></span></p>
+         </a>
+
+           <ul class="dropdown-menu">
+    <li><a href="#">My Profile</a></li>
+    <li><a href="#">My Lemon Spaces</a></li>
+    <li><a href="#">Inbox</a></li>
+    <li><a href="#">My Listings</a></li>
+    <li><a href="#">My Favorites</a></li>
+  </ul>
+       </div>
+          
+       </div>
+
+
+    <button class="js-menu menu visible-xs" type="button">
+    <span class="bar"></span>
+    </button>
+    <div class="menu-main-mob visible-xs" >
+
+    <button class="js-menu menu visible-xs active" type="button">
+    <span class="bar"></span>
+    </button>
+
+<!-- not user -->
+
+<div class="col-xs-12 remove-padding menu-cont">
+
+
+
+<div class="profile-mob col-xs-12 remove-padding">
+<div class="profile-mob-head col-xs-12 remove-padding">
+   <img src="img/1.jpg" alt="">
+ <p>Hi, Ahmed Mohamed</p>
+</div>
+
+<div class="profile-mob-links col-xs-12 remove-padding">
+   <a href="#">HOME</a>
+   <a href="#">SPACES</a>
+   <a href="#">ABOUT US</a>
+   <a href="#">CONTACT US</a>
+   
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+      <ul>
+
+
+
+
+
+        <li><a class="mob-shop-link" href="#"> men</a></li>
+
+                <li><a class="mob-shop-link" href="#"> Women</a></li>
+
+                <li><a class="mob-shop-link" href="#"> kids</a></li>
+
+                <li><a class="mob-shop-link" href="#"> Accessories</a></li>
+
+        
+        
+        
+      </ul>
+
+</div>
+
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+<!-- end header  -->
+
+<!-- content  -->
+
+
+   <div class="container contact-main copPro-main remove-padding">
+      <div class="col-xs-12">
+       <h1 class="home-title">EDIT PROFILE</h1>
+      
+    </div>
+
+
+
+
+<div class="col-md-offset-2 col-xs-12 col-sm-12 col-md-8">
+
+<form>
+
+<div class="img-up-main col-xs-12 remove-padding">
+  
+            <div id='img_contain'><img id="blah" align='middle' alt="" title=''/></div>
+            <label class="upload-btn"> <input type='file' id="imgInp" />
+            <div> Upload Img
+              <svg width="20px" height="16px" viewBox="0 0 20 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g class="icon-up-svg" transform="translate(-445.000000, -258.000000)">
+            <g id="Group-12" transform="translate(435.000000, 243.000000)">
+                <g id="Group-4" transform="translate(10.000000, 10.000000)">
+                    <path d="M12,9.5 C12,8.948 12.448,8.5 13,8.5 C13.552,8.5 14,8.948 14,9.5 C14,10.052 13.552,10.5 13,10.5 C12.448,10.5 12,10.052 12,9.5 L12,9.5 Z M16,17 L4,17 L8.518,10.812 L11.354,14.625 L12.75,12.75 L16,17 Z M2,19 L18,19 L18,7 L2,7 L2,19 Z M0,21 L20,21 L20,5 L0,5 L0,21 Z" id="image_picture-[#972]"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
+      </div></label>
+
+
+</div>
+
+  <div class="col-xs-12 input-main">
+     <p>First Name</p>
+     <input type="text">
+  </div>
+
+  <div class="col-xs-12 input-main">
+     <p>First Name</p>
+     <input type="text">
+  </div>
+
+<div class="col-xs-12 remove-padding">
+  <p class="date-p">Date of birth</p>
+  <div class="col-xs-12 col-md-4 col-sm-4 input-main select-style">
+     
+    <select class="my-select">
+           <option>Year</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+   </select>
+  </div>
+
+    <div class="col-xs-12 col-md-4 col-sm-4 input-main select-style">
+
+    <select class="my-select">
+           <option>Month</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+   </select>
+  </div>
+
+    <div class="col-xs-12 col-md-4 col-sm-4 input-main select-style">
+
+    <select class="my-select">
+           <option>Day</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+   </select>
+  </div>
+
+
+</div>
+
+<div class="col-xs-12 remove-padding">
+                           <div class="col-xs-12 col-md-6 col-sm-6 input-main select-style">
+                          <p>Country</p>
+                     <select class="my-select">
+           <option>Cairo</option>
+           <option>2</option>
+           <option>3</option>
+           <option>4</option>
+
+
+        </select>
+           </div>
+
+             <div class="col-xs-12 col-md-6 col-sm-6 input-main">
+     <p>City</p>
+     <input type="text">
+  </div>
+
+</div>
+
+
+             <div class="col-xs-12 input-main">
+     <p>Email</p>
+     <input type="Email">
+  </div>
+
+
+             <div class="col-xs-12 input-main">
+     <p>Mobile number</p>
+     <input type="text">
+  </div>
+
+  <div class="col-xs-12"><h3>Edit password</h3></div>
+
+
+
+             <div class="col-xs-12 input-main">
+     <p>Old password</p>
+     <input type="password">
+  </div>
+
+
+             <div class="col-xs-12 input-main">
+     <p>New password</p>
+     <input type="password">
+  </div>
+
+<div class="col-xs-12 input-main">
+  <button type="submit">SAVE</button>
+</div>
+
+
+
+
+</form>
+
+
+
+   </div>
+</div>
+
+
+
+
+
+
+
+<!-- end content  -->
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid footer-main">
+   <div class="container remove-padding">
+      <div class="col-md-2 col-xs-12 col-sm-2">
+        <img src="img/logo.svg">
+      </div>
+
+      <div class="col-md-2 col-xs-12 col-sm-2">
+        <a href="#">HOME</a>
+        <br>
+        <a href="#">SPACES</a>
+        <br>
+        <a href="#">ABOUT US</a>
+      </div>
+      <div class="col-md-2 col-xs-12 col-sm-2">
+<!--         <a href="#">Company</a>
+        <br>
+        <a href="#">Our Story</a>
+        <br> -->
+        <a href="#">Blog</a>
+        <br>
+        <a href="#">Careers</a>
+        <br>
+        <a href="#">Lease your property</a>
+      </div>
+      <div class="col-md-2 col-xs-12 col-sm-2">
+        <a href="#">FAQs</a>
+        <br>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+        <h4>Follow us on our social media accounts</h4>
+        <ul class="fot-social">
+          <li><a href="#"><span class="icn-facebook"></span> </a> </li>
+          <li><a href="#"><span class="icn-instagram"></span> </a> </li>
+          <li><a href="#"><span class="icn-invision"></span> </a> </li>
+
+        </ul>
+      </div>
+<div class="col-xs-12">
+<p>© Copyright lemon Spaces INC 2019</p>
+<ul class="wip-logo">
+  <li><a href="#"><img src="img/Designed_&.png"></a></li>
+  <li><a href="#"><img src="img/Developed_by.png"></a> </li>
+  <li><a href="#"><img src="img/logo-ip.png"></a> </li>
+</ul>
+
+</div>
+   </div>
+</div>
+
+<div id="navbar1">
+
+   <div class="mob-nav">
+     <ul>
+       <li class="active-nav-btn"><a href="#">
+        <svg class="home-svg" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m498.195312 222.695312c-.011718-.011718-.023437-.023437-.035156-.035156l-208.855468-208.847656c-8.902344-8.90625-20.738282-13.8125-33.328126-13.8125-12.589843 0-24.425781 4.902344-33.332031 13.808594l-208.746093 208.742187c-.070313.070313-.140626.144531-.210938.214844-18.28125 18.386719-18.25 48.21875.089844 66.558594 8.378906 8.382812 19.445312 13.238281 31.277344 13.746093.480468.046876.964843.070313 1.453124.070313h8.324219v153.699219c0 30.414062 24.746094 55.160156 55.167969 55.160156h81.710938c8.28125 0 15-6.714844 15-15v-120.5c0-13.878906 11.289062-25.167969 25.167968-25.167969h48.195313c13.878906 0 25.167969 11.289063 25.167969 25.167969v120.5c0 8.285156 6.714843 15 15 15h81.710937c30.421875 0 55.167969-24.746094 55.167969-55.160156v-153.699219h7.71875c12.585937 0 24.421875-4.902344 33.332031-13.808594 18.359375-18.371093 18.367187-48.253906.023437-66.636719zm0 0"/></svg><br> Home</a></li>
+       <li><a href="#"><span class="icn-love"></span><br>Favorites</a></li>
+       <li><a href="#"><svg class="home-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+<g>
+  <g>
+    <path d="M377.003,15.988H45c-24.82,0-45,20.19-45,45V300.99c0,24.82,20.18,45,45,45c31.49,0,35.72,0,35.72,0h9.28v75.001
+      c0,13.38,16.22,19.99,25.6,10.61c41.88-41.89,12.47-12.47,81.211-81.211c2.82-2.82,6.62-4.4,10.61-4.4h169.581
+      c24.81,0,45-20.18,45-45c0-140.061,0-99.601,0-240.002C422.003,36.178,401.813,15.988,377.003,15.988z M75.001,105.988h212.002
+      c8.29,0,15,6.71,15,15s-6.71,15-15,15H75.001c-8.29,0-15-6.71-15-15S66.711,105.988,75.001,105.988z M227.002,255.99H75.001
+      c-8.29,0-15-6.71-15-15c0-8.29,6.71-15,15-15h152.001c8.29,0,15,6.71,15,15C242.002,249.28,235.292,255.99,227.002,255.99z
+       M347.003,195.989H75.001c-8.29,0-15-6.71-15-15s6.71-15,15-15h272.002c8.29,0,15,6.71,15,15S355.293,195.989,347.003,195.989z"/></g></g><g><g>
+    <path d="M467,75.989h-14.8v225.002c0,41.353-33.847,75.001-75.201,75.001H215.631l-32,29.8h127.157l85.606,85.806
+      c9.405,9.405,25.605,2.804,25.605-10.605v-75.201h45c24.814,0,45-19.986,45-44.8V120.99C512,96.175,491.815,75.989,467,75.989z"/></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+      <g></g><g></g><g></g><g></g>
+</svg><br>Inbox</a></li>
+       <li><a href="#"><img src="img/1.jpg"><br>Profile</a></li>
+
+
+     </ul>
+   </div>
+
+</div>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/chosen.jquery.js"></script>
+
+
+
+
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+
+
+// mob nav
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar1").style.bottom = "0";
+  } else {
+    document.getElementById("navbar1").style.bottom = "-50px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+
+// select plugin
+
+$(".my-select").chosen();
+
+
+// mobile menu
+var isActive = false;
+$('.js-menu').on('click', function() {
+if (isActive) {
+$('.js-menu').removeClass('active');
+$('.menu-main-mob').removeClass('menu-open');
+$('body').removeClass('remove-scroll');
+} else {
+$('.js-menu').addClass('active');
+$('.menu-main-mob').addClass('menu-open');
+$('body').addClass('remove-scroll');
+}
+isActive = !isActive;
+
+$( ".profile-mob-head" ).click(function() {
+$('.profile-mob-links').slideToggle();
+$(this).toggleClass( "pro-open" );
+});
+
+
+
+
+});
+
+
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+    $('#blah').attr('src', e.target.result);
+    $('#blah').hide();
+    $('#blah').fadeIn(500);
+    }
+    reader.readAsDataURL(input.files[0]);
+    }
+    }
+    $("#imgInp").change(function() {
+    readURL(this);
+    });
+
+
+// end master 
+
+
+
+
+	});
+</script>
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Questions</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link href="css/style-rtl.css"  rel="stylesheet">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="ask-q.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/ask-q.jpg">
+  </div><p>ask-q</p> </a>
+</li>
+
+ <li><a href="baheia-expansions.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-expansions.jpg">
+  </div><p>baheia-expansions</p> </a>
+</li>
+
+ <li><a href="baheia-news.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-news.jpg">
+  </div><p>baheia-news</p> </a>
+</li>
+
+ <li><a href="baheia-news-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-news-d.jpg">
+  </div><p>baheia-news-d</p> </a>
+</li>
+
+ <li><a href="Donation.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Donation.jpg">
+  </div><p>Donation</p> </a>
+</li>
+
+ <li><a href="fundraise.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/fundraise.jpg">
+  </div><p>fundraise</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="Job.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Job.jpg">
+  </div><p>Job</p> </a>
+</li>
+
+ <li><a href="job-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/job-d.jpg">
+  </div><p>job-d</p> </a>
+</li>
+
+ <li><a href="Questions.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Questions.jpg">
+  </div><p>Questions</p> </a>
+</li>
+
+ <li><a href="thanks-main.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/thanks-main.jpg">
+  </div><p>thanks-main</p> </a>
+</li>
+
+ <li><a href="Training.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Training.jpg">
+  </div><p>Training</p> </a>
+</li>
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+<div class="head-main">
+    <div class="container-fluid top-head remove-padding">
+       <div class="container">
+          <ul>
+             <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+             <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+             <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+             <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+             <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+          </ul>
+
+          <ul>
+             <li><a href="#">تسجيل دخول</a></li>
+             <li><a href="#">انشاء حساب</a></li> 
+             <li class="hidden-xs"><a href="#">العربية</a></li>
+          </ul>
+
+       </div>
+    </div>
+
+    </div>
+<div class="container-fluid bot-head remove-padding">
+<div class="container remove-padding">
+   <div class="col-md-2 col-sm-2 logo-main col-xs-4">
+      <a href="#"><img src="img/logo.png"></a>
+   </div>
+
+   <div class="col-md-7 col-sm-7 head-links hidden-xs">
+      <ul>
+         <li class="sub-down"><a href="#">عن بهية  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+         <li><a href="#">خدمات طبية  <i class="ri-arrow-drop-down-line"></i></a>
+                   <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div></li>
+         <li><a href="#">تدريب وبحث علمي  <i class="ri-arrow-drop-down-line"></i></a>
+                   <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div></li>
+         <li><a href="#">عن اورام الثدي  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+         <li><a href="#">ساعد بهية  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+      </ul>
+   </div>
+
+   <div class="col-md-3 col-sm-3 col-xs-8 side-btns">
+      <ul>
+         <li><a href="#">تبرع الأن</a> </li>
+         <li><a href="#">تطوع معنا</a> </li>
+         <li class="visible-xs mob-menu-btn"><i class="ri-menu-line"></i> </li>
+      </ul>
+   </div>
+
+
+</div>
+</div>
+
+
+<!-- mob menu -->
+ <div class="mob-menu-main visible-xs">
+    <span class="close-menu"><i class="ri-close-line"></i></span>
+    <div class="clearfix"></div>
+    <ul>
+        <li><a href="#" class="mob-shop-link">عن بهية  <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                <li><a href="#" class="mob-shop-link">خدمات طبية   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                        <li><a href="#" class="mob-shop-link">تدريب وبحث علمي   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                        <li><a href="#" class="mob-shop-link">عن اورام الثدي   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+
+                        <li><a href="#" class="mob-shop-link">ساعد بهية   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+
+        <li>
+           <a href="#">النسخة الانجليزية</a>
+        </li>
+
+
+    </ul>
+ </div>
+
+<!--end mob menu -->
+
+<div class="container-fluid content-main remove-padding">
+   
+
+      <div class="container remove-padding text-center about-item job-main Questions-main">
+
+     <div class="col-xs-12"> <h1 class="title">اسئلة شائعة</h1></div>
+<ul class="que-ask-main">
+   <li><a href="#">اسئلتى   <i class="ri-list-check"></i></a></li>
+   <li><a href="#" data-toggle="modal" data-target="#face-log-in">اسئلى سؤال  ؟</a></li>
+</ul>
+<div id="face-log-in" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-body">
+               <button type="button" class="close" data-dismiss="modal">× اغلاق</button>
+          <h4>سجلى دخولك عبر الفيس بوك</h4>
+        <h5>لمتابعة اسئلتك السابقة وارسال اسئلة جديدة من فضلك سجلي دخولك بحساب الفيس بوك</h5>
+          <img src="img/Facebook-marketing.png" alt=""> 
+          <a href="#">تسجيل الدخول</a>   
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="clearfix"></div>
+
+        <div class="col-xs-12 news-tabs-main">
+           <ul>
+              <li><a href="#" class="active-tab">كل الاقسام</a></li>
+              <li><a href="#">اسئلة طبية</a></li>
+              <li><a href="#">أسئلة صحية</a></li>
+           </ul>
+        </div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding job-item">
+      <h3>ما أنواع أمراض الثدي؟</h3>
+      <p>أمراض الثدي تشمل العيوب الخلقية أو الوراثية ، و الأمراض المكتسبة العيوب أو الأمراض الوراثية: مثل عدم إكتمال نمو الثدي، تفاوت في...</p>
+      <a href="#" data-toggle="modal" data-target="#qu-main-pop">المزيد</a>
+   </div>
+</div>
+
+
+
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding job-item">
+      <h3>متي يجب علي السيدة زيارة عيادة الثدي؟</h3>
+      <p>في حالة وجود: -إفرازات من الحلمة -الآم في الثدي -وجود كتل أو تغير في شكل أو لون الثدي -تاريخ عائلي يسبب قلق للمريضة</p>
+      <a href="#" data-toggle="modal" data-target="#qu-main-pop">المزيد</a>
+   </div>
+</div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding job-item">
+      <h3>ما هي أنواع إفرازات الحلمات؟ وكيف يتم التعامل معها؟</h3>
+      <p>أولاً إفرازات من الحلمات إفرازات الحلمة قد تكون من حلمة واحدة أو الإثنتين، مستمرة....</p>
+       <a href="#" data-toggle="modal" data-target="#qu-main-pop">المزيد</a>
+   </div>
+</div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding job-item">
+      <h3>ما أسباب آلام الثدي؟</h3>
+      <p>ألآم الثدى معتادة فى كثير من السيدات قبل سن اليأس، حتى أن أكثر من نصف السيدات يصبن بهذا فى وقت ما. هناك نوعان رئيسيان...</p>
+      <a href="#" data-toggle="modal" data-target="#qu-main-pop">المزيد</a>
+   </div>
+</div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding job-item">
+      <h3>ما أسباب آلام الثدي المرتبطة بالدورة الشهرية؟</h3>
+      <p>الألم المرتبط بالدورة، يبدأ غالبا أسبوع قبل الدورة ويتحسن بعدها، وقد تشعر المرأة بآلام...</p>
+      <a href="#" data-toggle="modal" data-target="#qu-main-pop">المزيد</a>
+   </div>
+</div>
+
+<div class="col-md-4 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding job-item">
+      <h3>ما أسباب آلام الثدي الغير مرتبطة بالدورة شهرية؟</h3>
+      <p>آلام غير مرتبطة بالدورة: إما آلام من الثدى ذاته أو آلام من العضلات أو الضلوع خلف الثدى...</p>
+      <a href="#" data-toggle="modal" data-target="#qu-main-pop">المزيد</a>
+   </div>
+</div>
+
+<div class="col-xs-12 text-center">
+ <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">«</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item "><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">»</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<!-- footer -->
+<div class="container-fluid remove-padding footer-main">
+   <div class="container remove-padding">
+       <div class="col-md-4 fot-form-main">
+           <h4>لمتابعه اخر اخبار بهية</h4>
+           <form>
+              <input type="Email" placeholder="اكتب البريد الالكترونى">
+              <button>إشتراك</button>
+           </form>
+           <ul>
+              <li><a href="#"><img src="img/google.png"></a></li>
+              <li><a href="#"><img src="img/apple.png"></a></li>
+           </ul>
+       </div>
+       <div class="col-md-4 fot-links">
+          <ul class="col-md-11 col-md-offset-1">
+             <li><a href="#">التبرع</a> </li>
+             <li><a href="#">عن بهية</a> </li>
+             <li><a href="#">خدمات طبية</a> </li>
+             <li><a href="#">التطوع</a> </li>
+             <li><a href="#">عن اورام الثدي</a> </li>
+             <li><a href="#">تدريب وبحث علمي</a> </li>
+             <li><a href="#">برامج التبرع</a> </li>
+             <li><a href="#">اتصل بنا</a> </li>
+             <li><a href="#">الاخبار</a> </li>
+          </ul>
+       </div>
+       <div class="col-md-3 col-md-offset-1 social-fot-main">
+          <h3>تابعنا على مواقع التواصل الاجتماعي</h3>
+          <ul>
+             <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+             <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+             <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+             <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+             <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+          </ul>
+        <p>اتصل بنا ١٨٦٦٠٢ <i class="ri-phone-fill"></i></p>
+       </div>
+       <div class="col-xs-12 copy-main">
+          <ul>
+             <li><a href="#"><img src="img/Designed_&-rtl.png"></a></li>
+             <li><a href="#"><img src="img/Developed_by-rtl.png"></a></li>
+             <li><a href="#"><img src="img/logo-ip-rtl.png"></a></li>
+          </ul>
+
+          <p>حقوق التأليف والنشر © 2020</p>
+       </div>
+
+   </div>
+</div>
+
+
+
+<div id="qu-main-pop" class="modal fade qu-pop" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-body">
+               <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4>ما أنواع أمراض الثدي؟</h4>
+        <p>أمراض الثدي تشمل العيوب الخلقية أو الوراثية ، و الأمراض المكتسبة العيوب أو الأمراض الوراثية: مثل عدم إكتمال نمو الثدي، تفاوت في حجم الثديين /الحلمات، الثدي الإضافي، وتليفات الثدي التي تؤثر في الشكل. و كل هذا يستشار فيه جراح التجميل و بالإمكان تصليحه و علاجه بنسب نجاح و نتائج مرضية جدا. الأمراض المكتسبة: تشمل الإلتهابات الميكروبية، الغير ميكروبية، و الأورام الحميدة و الغير حميدة</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+
+$(".mob-menu-btn" ).click(function() {
+$('.mob-menu-main').addClass('open-menu');
+});
+$(".close-menu" ).click(function() {
+$('.mob-menu-main').removeClass('open-menu');
+});
+
+$( ".mob-shop-link" ).click(function() {
+$(".mob-shop-link").not(this).siblings('.mob-shop-drop-dowm').slideUp();
+$(this).siblings('.mob-shop-drop-dowm').slideToggle();
+
+$(".mob-shop-link").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+
+
+
+
+});
+
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop() > 50){  
+        $(".bot-head").addClass("stick-head");
+    }
+    else{
+       $(".bot-head").removeClass("stick-head");
+    }
+});
+
+
+
+	});
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+</body>
+</html>

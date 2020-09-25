@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>offers</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css"  rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="img/favicon.ico" type="" sizes="16x16">
+  </head>
+  <div class="body-bg"></div>
+  <body>
+    <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="add-item.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-item.jpg"></div><p>add-item</p> </a></li>
+      <li><a href="address.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/address.jpg"></div><p>address</p> </a></li>
+      <li><a href="blog-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/blog-details.jpg"></div><p>blog details</p> </a></li>
+      <li><a href="blogs.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/blogs.jpg"></div><p>Add blogs</p> </a></li>
+        <li><a href="product.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/product.jpg"></div><p>product</p> </a></li>
+      <li><a href="branches.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/branches.jpg"></div><p>branches</p> </a></li>
+      <li><a href="category.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/category.jpg"></div><p>category</p> </a></li>
+      <li><a href="check-out.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/check-out.jpg"></div><p>check out</p> </a></li>
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact us</p> </a></li>
+      <li><a href="edit&remove-address.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/edit&remove-address.jpg"></div><p>edit & remove address</p> </a></li>
+      <li><a href="edit-profile.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/edit-profile.jpg"></div><p>edit profile</p> </a></li>
+      <li><a href="faq.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/faq.jpg"></div><p> faq</p> </a></li>
+      <li><a href="join-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/join-us.jpg"></div><p>join us</p> </a></li>
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="my-Articles.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/my-Articles.jpg"></div><p>my-Articles</p> </a></li>
+      <li><a href="my-orders.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/my-orders.jpg"></div><p>my orders</p> </a></li>
+      <li><a href="my-Prescriptions.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/my-Prescriptions.jpg"></div><p>my Prescriptions</p> </a></li>
+
+
+            <li><a href="my-wishlist.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/my-wishlist.jpg"></div><p>wishlist</p> </a></li>
+      <li><a href="offers.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/offers.jpg"></div><p>offers</p> </a></li>
+      <li><a href="order-history.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/order-history.jpg"></div><p>order history</p> </a></li>
+      <li><a href="order-online-payment.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/order-online-payment.jpg"></div><p>online payment</p> </a></li>
+      <li><a href="order-summary.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/order-summary.jpg"></div><p>order summary</p> </a></li>
+    
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+    <!-- header -->
+    <div class="container-fluid head-main green-bg white-bg">
+      <div class="container remove-padding header-main-cont">
+        <!-- mobile menu  -->
+        <button class="js-menu menu visible-xs" type="button">
+        <span class="bar"></span>
+        </button>
+        <div class="menu-main-mob visible-xs" >
+          <ul>
+            <li><a href="#" class="mob-shop-link">shop</a>
+            <div class="mob-shop-drop-dowm">
+              <a href="#"  class="shop1">Medications</a>
+              <a href="#"  class="shop2">Medical Supplies</a>
+              <a href="#"  class="shop3">Skin Care</a>
+              <a href="#"  class="shop4">Hair Care</a>
+              <a href="#"  class="shop5">Beaut</a>
+              <a href="#"  class="shop6">Perfumes / Deodorants</a>
+              <a href="#"  class="shop7">Mother / Baby Care</a>
+              <a href="#"  class="shop8">General Hygiene</a>
+              <a href="#"  class="shop9">Body / Personal Care</a>
+              <a href="#"  class="shop10">Supplements / Vitamines</a>
+            </div>
+          </li>
+          <li><a href="#">Order Your Prescription</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+        <div class="col-xs-12">
+          <div class="col-xs-12 remove-padding search-main visible-xs">
+            <form>
+              <input type="text" name="search" placeholder="Search Products">
+              <button type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- end mobile menu  -->
+      <div class="col-md-2 col-sm-2 col-xs-4 logo-main">
+        <a href="#"><img class="logo-white hidden-xs" src="img/logo.png"></a>
+        <a href="#"><img class="logo hidden-xs" src="img/logo.png"></a>
+        <a href="#"><img class="visible-xs" src="img/mob-logo.png"></a>
+      </div>
+      <div class="col-md-5 col-sm-5 menu-cont hidden-xs">
+        <ul class="menu-main">
+          <li class="shop-btn"><a href="#" class="shop">Shop</a>
+          <div class="container shop-down remove-padding">
+            <div class="shop-down-main">
+              <div class="container shop-icons-perant remove-padding">
+                <div class="shop-icons-child"><div class="icon-down-1 current" data-tab="tab-1" ><p>Medications</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-2" data-tab="tab-2"><p>Medical Supplies</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-3" data-tab="tab-3"><p>Skin Care</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-4" data-tab="tab-4"><p>Hair Care</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-5" data-tab="tab-5"><p>Beauty</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-6" data-tab="tab-6"><p>Perfumes / Deodorants</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-7" data-tab="tab-7"><p>Mother / Baby Care</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-8" data-tab="tab-8"><p>General Hygiene</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-9" data-tab="tab-9"><p>Body / Personal Care</p></div></div>
+                <div class="shop-icons-child"><div class="icon-down-10" data-tab="tab-10"><p>Supplements / Vitamines</p></div></div>
+              </div>
+              <div class="container remove-padding tabs-main">
+                <div class="col-xs-12 remove-padding current" id="tab-1">
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                    <a href="#">link1</a>
+                    <br>
+                    <a href="#">link2</a>
+                    <br>
+                    <a href="#" class="more-link">More</a>
+                  </div>
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                    <a href="#">link1</a>
+                    <br>
+                    <a href="#">link2</a>
+                    <br>
+                    <a href="#" class="more-link">More</a>
+                  </div>
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                    <a href="#">link1</a>
+                    <br>
+                    <a href="#">link2</a>
+                    <br>
+                    <a href="#" class="more-link">More</a>
+                  </div>
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                    <a href="#">link1</a>
+                    <br>
+                    <a href="#">link2</a>
+                    <br>
+                    <a href="#" class="more-link">More</a>
+                  </div>
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                    <a href="#">link1</a>
+                    <br>
+                    <a href="#">link2</a>
+                    <br>
+                    <a href="#" class="more-link">More</a>
+                  </div>
+                  <div class="col-md-2 col-sm-3">
+                    
+                    <a href="#" class="other-mega-link">link 1</a>
+                    
+                    <a href="#" class="other-mega-link">link 2</a>
+                    
+                    <a href="#" class="other-mega-link">link 3</a>
+                    
+                    <a href="#" class="other-mega-link">link 4</a>
+                  </div>
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                    <a href="#">link1</a>
+                    <br>
+                    <a href="#">link2</a>
+                    <br>
+                    <a href="#" class="more-link">More</a>
+                  </div>
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                    <a href="#">link1</a>
+                    <br>
+                    <a href="#">link2</a>
+                    <br>
+                    <a href="#" class="more-link">More</a>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-md-2 col-sm-3">
+                    <h2>title</h2>
+                    <div class="line-title"></div>
+                  </div>
+                  <div class="col-md-9 col-sm-9 col-md-offset-1 mega-logos">
+                    <img src="img/mego-logo-1.png">
+                    <img src="img/mego-logo-2.png">
+                    <img src="img/mego-logo-3.png">
+                    <img src="img/mego-logo-4.png">
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding" id="tab-2">2</div>
+                <div class="col-xs-12 remove-padding" id="tab-3">3</div>
+                <div class="col-xs-12 remove-padding" id="tab-4">4</div>
+                <div class="col-xs-12 remove-padding" id="tab-5">5</div>
+                <div class="col-xs-12 remove-padding" id="tab-6">6</div>
+                <div class="col-xs-12 remove-padding" id="tab-7">7</div>
+                <div class="col-xs-12 remove-padding" id="tab-8">8</div>
+                <div class="col-xs-12 remove-padding" id="tab-9">9</div>
+                <div class="col-xs-12 remove-padding" id="tab-10">10</div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Order Your Prescription</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </div>
+    <div class="col-md-3 col-sm-3 remove-padding search-main hidden-xs">
+      <form>
+        <input type="text" name="search" placeholder="Search Products">
+        <button type="submit"></button>
+      </form>
+    </div>
+    <div class="col-md-2 col-sm-2 head-icon-main">
+      <ul>
+        <li class="lan-main">
+          <select>
+            <option>English</option>
+            <option>Arabic</option>
+            <option>Rusian</option>
+          </select>
+        </li>
+        <li> <a href="#" class="profile-main text-center pro-button" id="pro-button">
+          <p>Profile</p>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="cart-main text-center" id="cart-button">
+          <p>Cart</p>
+          <span>1</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+<div id="hide-side-bar" class="hide-side-bar">
+<button class="click-me">x</button>
+
+<!-- remove this div if the user not a member  -->
+<!-- <div class="col-xs-12 profile-info">
+  <div class="col-xs-4"><img src="img/vector3.jpg"></div>
+  <div class="col-xs-8">
+    <h1>Clinte Name</h1>
+    <p> Code | 1364</p>
+    <a href="#">Edit My Profile</a>
+  </div>
+</div> -->
+<!--end remove this div if the user not a member  -->
+
+<!-- add this div if the user not a member  -->
+<div class="col-xs-12  log-side-bar">
+  <a href="#" class="login-btn">log in</a>
+  <a href="#" class="singup-btn">sing up</a>
+
+
+ 
+</div>
+<!-- end add this div if the user not a member  -->
+
+
+<!-- add this class "disable-icons" to the div has class "pro-icons-main" when the user not a member   -->
+
+<div class="col-xs-12 pro-icons-main disable-icons">
+  <a href="#" class="orders-icon">My Orders </a>
+  <a href="#" class="wishlist-icon">My Wishlist  </a>
+  <a href="#" class="subscribed-icon">My Subscribed Orders  </a>
+  <a href="#" class="indicator-icon">My Health Indicator  </a>
+  <a href="#" class="prescriptions-icon">My Prescriptions  </a>
+  <a href="#" class="addresses-icon">My Saved Addresses  </a>
+  <a href="#" class="articles-icon remove-border">My Saved Articles  </a>
+</div>
+<!-- add this class to the div has class "pro-icons-main" when the user not a member   -->
+
+<!-- remove this div if the user not a member  -->
+<!-- <div class="col-xs-12">
+  <a href="#" class="sing-out-btn">SING OUT</a>
+</div> -->
+<!--end remove this div if the user not a member  -->
+</div>
+<!-- cart side bar -->
+<div id="hide-side-bar1" class="hide-side-bar1">
+<button class="click-me1">x</button>
+<div class="cart-title">
+  <h1>in my cart <span>(15)</span></h1>
+</div>
+<div class="col-xs-12 cart-side-items">
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-12 remove-padding">
+    <div class="col-xs-3"><img src="img/cart-item.png"></div>
+    <div class="col-xs-9">
+      <p>Lorel Paris</p>
+      <a href="#">Revitalift Anti-Wrinkle + Firming Eye Cream Moisturizer</a>
+      <div class="col-xs-12 remove-padding item-side-det">
+        <p class="price-side-cart">35 EGY</p>
+        <p class="size-side-cart">75 ML</p>
+        <p class="qty-side-cart">QTY | <span>1</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="sub-total-side col-xs-12 remove-padding">
+  <div class="col-xs-12 price-total-main">
+    <p>SUBTOTAL</p>
+    <h2>380 EGP</h2>
+    <div class="clearfix"></div>
+    <span>Shipping is calculated at checkout step</span>
+  </div>
+</div>
+
+<div class="col-xs-12 side-sub-total-link">
+  <div class="col-xs-6"><a href="#" class="checkout">checkout</a></div>
+  <div class="col-xs-6"><a href="#" class="review">review</a></div>
+</div>
+
+</div>
+
+<!-- end header  -->
+<div class="container-fluid content remove-padding">
+
+<!-- latest offer -->
+
+<div class="container remove-padding">
+
+
+
+
+
+
+ <div class=" col-xs-12 remove-padding">
+  <div class="col-lg-3 col-md-4 hidden-xs hidden-sm pro-side-in">
+
+<div class="col-xs-12 profile-info">
+  <div class="col-xs-12"><img src="img/vector3.jpg"></div>
+  <div class="col-xs-12">
+    <h1>Clinte Name</h1>
+    <p> Code | 1364</p>
+    <a href="#">Edit My Profile</a>
+  </div>
+</div>
+
+
+
+
+
+<div class="col-xs-12 pro-icons-main">
+  <a href="#" class="orders-icon">My Orders </a>
+  <a href="#" class="wishlist-icon active-side-link">My Wishlist  </a>
+  <a href="#" class="subscribed-icon">My Subscribed Orders  </a>
+  <a href="#" class="indicator-icon">My Health Indicator  </a>
+  <a href="#" class="prescriptions-icon">My Prescriptions  </a>
+  <a href="#" class="addresses-icon">My Saved Addresses  </a>
+  <a href="#" class="articles-icon remove-border">My Saved Articles  </a>
+</div>
+
+
+</div>
+
+
+<div class="col-lg-9 col-md-8 col-sm-12 remove-padding section text-center pro-main">
+  <h1 class="title">MY WISHLIST <span>(6 ITEMS)</span></h1>
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding product-item">
+       <a href="#" class="item-img">
+         <img src="img/3.jpg">
+          <span class="off-span">Off 30%</span>
+          <span class="recom-span">Recommended</span>
+       </a> 
+       <p>Product brand</p>
+      <a href="#">Product name is and write product name</a>
+       <h5>150 ML</h5>
+       <h3>500EGP<span>70EL</span></h3>
+       <span class="rate-main">
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class=""></div>
+            <div class=""></div>
+      </span>
+       <div class="clearfix"></div>
+       <div class=" col-xs-12">
+         <div class="col-xs-12 add-cart-main remove-padding">
+          <div class="col-xs-7 remove-padding"><a href="#" class="add-cart-btn">Add to cart</a></div>
+          <div class="col-xs-5 remove-padding"><a href="#" class="add-wigh-btn" title="Add to favorite"></a></div>
+       </div>
+     </div>
+   </div>
+    </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding product-item">
+       <a href="#" class="item-img">
+         <img src="img/3.jpg">
+          <span class="off-span">Off 30%</span>
+          <span class="recom-span">Recommended</span>
+       </a> 
+       <p>Product brand</p>
+      <a href="#">Product name is and write product name</a>
+       <h5>150 ML</h5>
+       <h3>500EGP<span>70EL</span></h3>
+       <span class="rate-main">
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class=""></div>
+            <div class=""></div>
+      </span>
+       <div class="clearfix"></div>
+       <div class=" col-xs-12">
+         <div class="col-xs-12 add-cart-main remove-padding">
+          <div class="col-xs-7 remove-padding"><a href="#" class="add-cart-btn">Add to cart</a></div>
+          <div class="col-xs-5 remove-padding"><a href="#" class="add-wigh-btn" title="Add to favorite"></a></div>
+       </div>
+     </div>
+   </div>
+    </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding product-item">
+       <a href="#" class="item-img">
+         <img src="img/3.jpg">
+          <span class="off-span">Off 30%</span>
+          <span class="recom-span">Recommended</span>
+       </a> 
+       <p>Product brand</p>
+      <a href="#">Product name is and write product name</a>
+       <h5>150 ML</h5>
+       <h3>500EGP<span>70EL</span></h3>
+       <span class="rate-main">
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class=""></div>
+            <div class=""></div>
+      </span>
+       <div class="clearfix"></div>
+       <div class=" col-xs-12">
+         <div class="col-xs-12 add-cart-main remove-padding">
+          <div class="col-xs-7 remove-padding"><a href="#" class="add-cart-btn">Add to cart</a></div>
+          <div class="col-xs-5 remove-padding"><a href="#" class="add-wigh-btn" title="Add to favorite"></a></div>
+       </div>
+     </div>
+   </div>
+    </div>
+
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding product-item">
+       <a href="#" class="item-img">
+         <img src="img/3.jpg">
+          <span class="off-span">Off 30%</span>
+          <span class="recom-span">Recommended</span>
+       </a> 
+       <p>Product brand</p>
+      <a href="#">Product name is and write product name</a>
+       <h5>150 ML</h5>
+       <h3>500EGP<span>70EL</span></h3>
+       <span class="rate-main">
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class=""></div>
+            <div class=""></div>
+      </span>
+       <div class="clearfix"></div>
+       <div class=" col-xs-12">
+         <div class="col-xs-12 add-cart-main remove-padding">
+          <div class="col-xs-7 remove-padding"><a href="#" class="add-cart-btn">Add to cart</a></div>
+          <div class="col-xs-5 remove-padding"><a href="#" class="add-wigh-btn" title="Add to favorite"></a></div>
+       </div>
+     </div>
+   </div>
+    </div>
+
+
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+   <div class="col-xs-12 remove-padding product-item">
+       <a href="#" class="item-img">
+         <img src="img/3.jpg">
+          <span class="off-span">Off 30%</span>
+          <span class="recom-span">Recommended</span>
+       </a> 
+       <p>Product brand</p>
+      <a href="#">Product name is and write product name</a>
+       <h5>150 ML</h5>
+       <h3>500EGP<span>70EL</span></h3>
+       <span class="rate-main">
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class="rate-on"></div>
+            <div class=""></div>
+            <div class=""></div>
+      </span>
+       <div class="clearfix"></div>
+       <div class=" col-xs-12">
+         <div class="col-xs-12 add-cart-main remove-padding">
+          <div class="col-xs-7 remove-padding"><a href="#" class="add-cart-btn">Add to cart</a></div>
+          <div class="col-xs-5 remove-padding"><a href="#" class="add-wigh-btn" title="Add to favorite"></a></div>
+       </div>
+     </div>
+   </div>
+    </div>
+
+
+<div class="clearfix"></div>
+
+    <ul class="pagination">
+              <li class="disabled"><a href="#">«</a></li>
+              <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+
+</div>
+
+
+
+  </div>
+
+</div>
+
+
+
+
+ </div>
+
+
+
+
+
+
+
+<!-- end latest offer -->
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<!-- footer -->
+<div class="container-fluid footer-main">
+  <img src="img/foot-bg.png" class="foot-bg">
+  <div class="container remove-padding">
+    <div class="col-md-2 col-sm-2 col-xs-12 fot-links">
+      <a href="#">HOTLINE | 19395</a>
+      <br>
+      <a href="#">CAREERS</a>
+      <br>
+      <a href="#">SHIPPING & DELIVERY</a>
+      
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-12 fot-links">
+      <a href="#">CONTACT US</a>
+      <br>
+      <a href="#">FAQ’S</a>
+      <br>
+      <a href="#">RETURNS & EXCHANGE</a>
+      
+    </div>
+    <div class="col-md-2 col-sm-2 col-xs-12 fot-links">
+      <a href="#">BRANCHES</a>
+      <br>
+      <a href="#">PRIVACY POLICY</a>
+      <br>
+      <a href="#">TERMS & CONDITIONS</a>
+      
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12 col-md-offset-2 news-letter-main">
+      <p>Subscribe now for news letter and get notified
+      with the latest offers and featured products</p>
+      <form class="news-letter-form">
+        <input type="email" placeholder="Email Address">
+        <button type="submit"></button>
+      </form>
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-md-4 col-sm-4 col-xs-12 remove-padding foot-logos">
+      <div class="col-xs-4"><img src="img/fot-1.png" class="img-responsive"></div>
+      <div class="col-xs-4"><img src="img/fot-2.png" class="img-responsive"></div>
+      <div class="col-xs-4"><img src="img/fot-3.png" class="img-responsive"></div>
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12 remove-padding text-center foot-foda-logo">
+      <img src="img/logo-white.png">
+    </div>
+    <div class="col-md-4 col-sm-4 col-xs-12 remove-padding scial-fot">
+      <a href="#" class="face-icon"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"/></svg></a>
+      <a class="tweet-icon" href="#"><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg></a>
+      <a href="#" class="insta-icon" ><svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+      <a href="#" class="tube-icon"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg></a>
+      <div class="clearfix"></div>
+      <p>©2019 Fouda. All Rights Reserved</p>
+    </div>
+  </div>
+</div>
+
+<div class="scrollup">
+  <a href="#"></a>
+</div>
+
+
+<script src="js/jquery-1.11.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.js" type="text/javascript"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/bootstrap-confirmation.js"></script>
+<script src="js/main.js"></script>
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

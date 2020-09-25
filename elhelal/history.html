@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!--<link href="../css/bootstrap-rtl.css" rel="stylesheet">
+<link href="../css/style-arabic.css" rel="stylesheet">-->
+</head>
+
+<body>
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="contact.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact.jpg"></div><p>contact</p> </a></li>
+      <li><a href="history.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/history.jpg"></div><p>history</p> </a></li>
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+           <li><a href="News-d.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/News-d.jpg"></div><p>News details</p> </a></li>
+               <li><a href="News.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/News.jpg"></div><p>News</p> </a></li>   
+               
+                     <li><a href="player.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/player.jpg"></div><p>player</p> </a></li>
+
+      <li><a href="Tables.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Tables.jpg"></div><p>Tables</p> </a></li>
+           <li><a href="team.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/team.jpg"></div><p>team</p> </a></li>
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+  
+<section class="header">
+<div class="hidden-xs">
+ <div class="container">
+  <div class="row">
+  <div class="header-links">
+  <a href="#">ALHILAL MOBILE APP</a>
+  <a href="#">FORUMS</a>
+  <a href="#">CONTACT US</a>
+  <div class="lan">
+<!--  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+   
+    </button>-->
+      <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+     <img src="img/lan.png">
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li><a  href="#">Arabic</a></li>
+      <li><a href="#">English</a></li>
+
+    </ul>
+  </div>
+
+   </div> 
+   
+
+  </div>
+  </div> <!--row-->
+ </div> <!--container-->
+  <div class="container-fluid header-mian remove-the-padding">
+  <div class="container">
+  <img src="img/logo.png">
+  <div class="col-sm-10 col-sm-offset-2 make-the-hight">
+  <a class="" href="#">HOME</a>
+  <a href="#">NEWS</a>
+  <a href="#">TEAMS</a>
+  <a href="#">TABLES & RESULTS</a>
+  <a href="#">CLUB HISTORY</a>
+  </div>
+  </div>
+  </div> <!--container-fluid-->
+  </div>
+  
+  <div class="mobile-menu visible-xs">
+<div class="col-xs-12 remove-the-padding" >
+  
+    <div class="navbar-header">
+    <img class="mob-logo" src="img/logo-mob.png">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+  </div>
+    <div class="collapse navbar-collapse mob-menu">
+    <ul>
+      <li class="active col-xs-12"> <a href="#">HOME </a></li>
+      <li class="col-xs-12"> <a href="#">NEWS</a></li>
+      <li class="col-xs-12"> <a href="#">TEAMS</a></li>
+      <li class="active col-xs-12"><a href="#">TABLES & RESULTS</a></li>
+      <li class="col-xs-12"><a href="#">CLUB HISTORY</a></li>
+      <li class="col-xs-12"><a href="#">FORUMS</a></li>
+      <li class="col-xs-12"><a href="#">CONTACT US </a></li>
+      <li class="active col-xs-12"><a href="#">ALHILAL MOBILE APP</a></li>
+      <li>         <a class="col-xs-12" href="#demo" data-toggle="collapse">  LANGUAGE &nbsp  &nbsp  &nbsp  &nbsp <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+             <div id="demo" class="collapse col-xs-12" >
+<a  class="col-xs-12" href="#" >ARABIC</a>
+<a  href="#" >ENGLISH</a>
+
+</div> </li> 
+  
+    </ul>
+  </div> <!--nav-collapse --> 
+  </div>
+  </div>
+</section>
+<div class="container-fluid nav-bot-bar"></div>
+<div class=" container cover-mian cover-mian-not-home remove-the-padding ">
+  <div class="for-bg col-xs-12 remove-the-padding">
+  <div class="img-responsive col-xs-12 cover-leyer cover-leyer-not-home hidden-xs">
+    <p style="float: right;
+    margin-right: 14%;
+    margin-top: 7%;
+    color: #fff;
+    font-size: 33px; font-weight:900"> Club History</p>
+
+  </div>
+    
+  </div>
+  
+
+  
+  
+</div>
+
+
+
+<div class="container">
+  <div class="row make-margin-bottom">
+<div class="home-news-container col-md-12">
+<p class="col-xs-12 col-md-10 col-md-offset-1 text-center news-content">
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. <br> <br>
+
+<b>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </b><br><br>
+
+<span class="adding-blou-color">
+-----------------------------------------------------------------------------<br>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+-----------------------------------------------------------------------------<br><br></span>
+
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.<br><br>
+
+<h4 class="col-xs-12 col-md-10 col-md-offset-1 text-center">
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</h4>
+
+</p>
+
+</div> 
+
+   
+  
+ 
+   
+   
+   
+   
+
+   
+
+
+  
+
+</div> <!--row-->
+</div> <!--container-->
+
+
+
+
+
+
+
+<section class="footer">
+  <div class="container-fluid blackbg footer-mian remove-the-padding">
+<img  src="img/spon.png" class="center-block img-responsive sponsors">
+<div class="line col-xs-12"></div>
+
+<div class="container">
+<div class="row copy-right-mian">
+
+<div class="col-md-9 col-lg-offset-3 col-md-offset-2 col-sm-offset-1 links-mian">
+<a href="#">Terms of use</a>
+<a href="#">Privacy policy</a>
+<a href="#">cookie policy</a>
+<a href="#">website-statement</a>
+<a href="#">rippleffect</a>
+<a href="#">ostmodern</a>
+</div>
+</div>
+<p class="text-center">ALL RIGHTS RESERVED © 2015</p>
+<img src="img/footer-internetplus.png" class="center-block our-logo">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+</body>
+</html>

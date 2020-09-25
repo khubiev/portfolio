@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/style.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+
+
+      <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+     
+      <li><a href="faqs.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/faqs.jpg"></div><p>faqs</p> </a></li>
+
+           <li><a href="home.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/home.jpg"></div><p>home</p> </a></li>
+        
+               
+                  <li><a href="Experts.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Experts.png"></div><p>Experts</p> </a></li>
+
+      <li><a href="offering.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/offering.jpg"></div><p>offering</p> </a></li>
+           <li><a href="portfolio.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/portfolio.jpg"></div><p>portfolio</p> </a></li>
+
+
+
+
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+    <div class="container header-main hidden-xs">
+      <div class="col-md-9  col-sm-12 remove-padding remove-padding">
+        <ul class="menu-main">
+          <li><a href="#" ><img src="img/Logo-animation.gif" style="height: 60px; transition: width 0.4s ease;" class="logo-img"></a></li>
+          <li class="text-center "><a class="gry-color active-head-link" href="#">About</a></li>
+          <li class="text-center"><a class="gry-color"  href="#">Offering</a></li>
+          <li class="text-center "><a class="gry-color" href="#">Team</a></li>
+          <li class="text-center"><a class="gry-color" href="#">Portfolio</a></li>
+          <li class="text-center "><a class="gry-color" href="#">Experts</a></li>
+          <li class="text-center "><a class="gry-color" href="#">Contact us</a></li>
+          <li class="text-center"><a class="gry-color" href="#">FAQ’s</a></li>
+        </ul>
+        
+      </div>
+    </div>
+    <div class="container-fluid remove-padding visible-xs">
+      
+      <div class="container-fluid mob-menu visible-xs" id="mobile-nav">
+        <a href="#" class="logo-mob"><img src="img/Logo-animation.gif"></a>
+        <div class="outer-menu ">
+          <input class="checkbox-toggle" type="checkbox" />
+          <div class="hamburger">
+            <div></div>
+          </div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li>
+                    <a href="#" class="about-down">Offering </a>
+                    
+                  </li>
+                  
+                  <li><a href="#">Team</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">Experts</a></li>
+                  <li><a href="#">Contact us</a></li>
+                  <li><a href="#"></a>FAQ’s</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="container-fluid remove-padding slider-main">
+      <img class="person-img hidden-sm hidden-xs" src="img/head-bg.png">
+      <img class="vector-img hidden-xs" src="img/slider-bg.jpg">
+      <div class="container">
+        <div class=" col-md-5 remove-padding"  data-aos="fade-up" data-aos-duration="1500">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <h2 class="font-b">Get things done, quick and easy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.</p>
+              </div>
+              <div class="swiper-slide">
+                <h2 class="font-b">Get things done, quick and easy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.</p>
+              </div>
+              <div class="swiper-slide">
+                <h2 class="font-b">Get things done, quick and easy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.</p>
+              </div>
+              <div class="swiper-slide">
+                <h2 class="font-b">Get things done, quick and easy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.</p>
+              </div>
+              <div class="swiper-slide">
+                <h2 class="font-b">Get things done, quick and easy</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor.</p>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container text-center we-main" data-aos="fade-down" data-aos-duration="1500">
+      <div class="col-md-8 col-md-offset-2 remove-padding">
+        <h3 class="font-b">Who we are</h3>
+        <p>Cras quis nulla commodo, aliquam lectus sed, blandit. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium porta. Phasellus at semper turpis. Nunc eu tellus tortor. Etiam at condimentum nisl, vitae sagittis orci. Donec id dignissim nunc. Donec elit ante, eleifend a dolor et, facilisis dolor. In feugiat orci odio, sed lacinia sem elementum quis.</p>
+      </div>
+    </div>
+    <div class="container-fluid remove-padding we-milk">
+      <img src="img/earth-v.png">
+      <div class="container">
+        <h2 data-aos="fade-right" data-aos-duration="1500" class="font-b">we<br> help<br> you<br> milk<br> money</h2>
+      </div>
+    </div>
+    <div class="container remove-padding service-home-main">
+      <div class="col-md-3 col-sm-6" data-aos="flip-up" data-aos-duration="1000">
+        <div class="col-xs-12 text-center">
+          
+          <img src="img/offer-icn-1.png">
+          <h4 class="font-m">Strategic relationships</h4>
+          <p>Being the savage's bowsman, that is, the person who pulled the bow-oar in his bo.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6" data-aos="flip-up" data-aos-duration="1000">
+        <div class="col-xs-12 text-center">
+          
+          <img src="img/offer-icn-2.png">
+          <h4 class="font-m">Business Consultations</h4>
+          <p>In the tumultuous <br> business of cutting-in and attending to a whale, there is much.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6" data-aos="flip-up" data-aos-duration="1000">
+        <div class="col-xs-12 text-center">
+          
+          <img src="img/offer-icn-3.png">
+          <h4 class="font-m">Investments</h4>
+          <p>So strongly and metaphysically did I conceive of my situation then, that while.</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6" data-aos="flip-up" data-aos-duration="1000">
+        <div class=" col-xs-12 text-center">
+          
+          <img src="img/offer-icn-4.png">
+          <h4 class="font-m">Marketing Consultations</h4>
+          <p>The monkey-rope is found in all whalers; but it was only in the Pequod that the.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container remove-padding home-team-main">
+      <div class="team-bg-1"></div>
+      <div class="team-bg-2"></div>
+      <h3 class="font-b text-center" data-aos="fade-down" data-aos-duration="1000">Team</h3>
+      <div class="col-md-6 col-md-offset-3 col-xs-8 col-xs-offset-2" data-aos="fade-down" data-aos-duration="1000">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae tempus odio. Nam gravida diam eros, non ultricies velit varius ut.</p>
+        
+      </div>
+      <div class="clearfix"></div>
+      <div class="container remove-padding team-main">
+        <div class="col-md-3 col-sm-6 col-xs-12" >
+          <a class="col-xs-12"  data-toggle="modal" data-target=".team-pop-up-1">
+            <img src="img/team-img.jpg">
+            <p class="font-m">Name</p>
+            <h5 class="font-h">His Title</h5>
+            <h6>In pellentesque dolor sit amet nisi lacinia euismod.
+            In pellentesque dolor sit</h6>
+            <div class="clearfix"></div>
+            <span> <i class="fab fa-linkedin-in"></i></span>
+            <span> <i class="fab fa-facebook-messenger"></i></span>
+            <span> <i class="fab fa-behance"></i></span>
+            
+          </a>
+          <div class="modal pop-up-tam team-pop-up-1 fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="col-md-4 col-sm-4 col-xs-12 team-pop-img remove-padding"><img src="img/team-img.jpg"></div>
+                <div class="col-md-8 col-sm-8 col-xs-12 team-pop-content">
+                  <h4 class="pop-up-name font-b">First Name, Last Name</h4>
+                  <h4 class="pop-up-title font-b">His Title</h4>
+                  <div class="clearfix"></div>
+                  <div class="pop-bio">
+                    <h4>BIO</h4>
+                    <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel jus.</p>
+                  </div>
+                  <div class="social-pop">
+                    <p>Social Links</p>
+                    <ul>
+                      <li><a href="#"><span> <i class="fab fa-linkedin-in"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-facebook-messenger"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-behance"></i></span></a></li>
+                      
+                      
+                      
+                    </ul>
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12" >
+          <a class="col-xs-12"  data-toggle="modal" data-target=".team-pop-up-2">
+            <img src="img/team-img.jpg">
+            <p class="font-m">Name</p>
+            <h5 class="font-h">His Title</h5>
+            <h6>In pellentesque dolor sit amet nisi lacinia euismod.
+            In pellentesque dolor sit</h6>
+            <div class="clearfix"></div>
+            <span> <i class="fab fa-linkedin-in"></i></span>
+            <span> <i class="fab fa-facebook-messenger"></i></span>
+            <span> <i class="fab fa-behance"></i></span>
+            
+          </a>
+          <div class="modal pop-up-tam team-pop-up-2 fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="col-md-4 col-sm-4 col-xs-12 team-pop-img remove-padding"><img src="img/team-img.jpg"></div>
+                <div class="col-md-8 col-sm-8 col-xs-12 team-pop-content">
+                  <h4 class="pop-up-name font-b">First Name, Last Name</h4>
+                  <h4 class="pop-up-title font-b">His Title</h4>
+                  <div class="clearfix"></div>
+                  <div class="pop-bio">
+                    <h4>BIO</h4>
+                    <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel jus.</p>
+                  </div>
+                  <div class="social-pop">
+                    <p>Social Links</p>
+                    <ul>
+                      <li><a href="#"><span> <i class="fab fa-linkedin-in"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-facebook-messenger"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-behance"></i></span></a></li>
+                      
+                      
+                      
+                    </ul>
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12" >
+          <a class="col-xs-12"  data-toggle="modal" data-target=".team-pop-up-3">
+            <img src="img/team-img.jpg">
+            <p class="font-m">Name</p>
+            <h5 class="font-h">His Title</h5>
+            <h6>In pellentesque dolor sit amet nisi lacinia euismod.
+            In pellentesque dolor sit</h6>
+            <div class="clearfix"></div>
+            <span> <i class="fab fa-linkedin-in"></i></span>
+            <span> <i class="fab fa-facebook-messenger"></i></span>
+            <span> <i class="fab fa-behance"></i></span>
+            
+          </a>
+          <div class="modal pop-up-tam team-pop-up-3 fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="col-md-4 col-sm-4 col-xs-12 team-pop-img remove-padding"><img src="img/team-img.jpg"></div>
+                <div class="col-md-8 col-sm-8 col-xs-12 team-pop-content">
+                  <h4 class="pop-up-name font-b">First Name, Last Name</h4>
+                  <h4 class="pop-up-title font-b">His Title</h4>
+                  <div class="clearfix"></div>
+                  <div class="pop-bio">
+                    <h4>BIO</h4>
+                    <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel jus.</p>
+                  </div>
+                  <div class="social-pop">
+                    <p>Social Links</p>
+                    <ul>
+                      <li><a href="#"><span> <i class="fab fa-linkedin-in"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-facebook-messenger"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-behance"></i></span></a></li>
+                      
+                      
+                      
+                    </ul>
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+          <a class="col-xs-12"  data-toggle="modal" data-target=".team-pop-up-4">
+            <img src="img/team-img.jpg">
+            <p class="font-m">Name</p>
+            <h5 class="font-h">His Title</h5>
+            <h6>In pellentesque dolor sit amet nisi lacinia euismod.
+            In pellentesque dolor sit</h6>
+            <div class="clearfix"></div>
+            <span> <i class="fab fa-linkedin-in"></i></span>
+            <span> <i class="fab fa-facebook-messenger"></i></span>
+            <span> <i class="fab fa-behance"></i></span>
+            
+          </a>
+          <div class="modal pop-up-tam team-pop-up-4 fade" role="dialog">
+            <div class="modal-dialog">
+              <!-- Modal content-->
+              <div class="modal-content">
+                <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fas fa-times"></i></button>
+                <div class="col-md-4 col-sm-4 col-xs-12 team-pop-img remove-padding"><img src="img/team-img.jpg"></div>
+                <div class="col-md-8 col-sm-8 col-xs-12 team-pop-content">
+                  <h4 class="pop-up-name font-b">First Name, Last Name</h4>
+                  <h4 class="pop-up-title font-b">His Title</h4>
+                  <div class="clearfix"></div>
+                  <div class="pop-bio">
+                    <h4>BIO</h4>
+                    <p>In hac habitasse platea dictumst. Vivamus adipiscing fermentum quam volutpat aliquam. Integer et elit eget elit facilisis tristique. Nam vel iaculis mauris. Sed ullamcorper tellus erat, non ultrices sem tincidunt euismod. Fusce rhoncus porttitor velit, eu bibendum nibh aliquet vel. Fusce lorem leo, vehicula at nibh quis, facilisis accumsan turpis.Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet risus. Nam tempus vel odio vitae aliquam. In imperdiet eros id lacus vestibulum vestibulum. Suspendisse fermentum sem sagittis ante venenatis egestas quis vel jus.</p>
+                  </div>
+                  <div class="social-pop">
+                    <p>Social Links</p>
+                    <ul>
+                      <li><a href="#"><span> <i class="fab fa-linkedin-in"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-facebook-messenger"></i></span></a></li>
+                      <li><a href="#"><span> <i class="fab fa-behance"></i></span></a></li>
+                      
+                      
+                      
+                    </ul>
+                  </div>
+                </div>
+                
+                
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid fotter-main remove-padding">
+      <div class="container remove-padding">
+        
+        <div class="col-md-10 col-sm-12 col-xs-12 col-md-offset-1 remove-padding ">
+          <div class="col-md-10 col-sm-10 col-xs-12 remove-padding">
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              
+              <h3 class="font-b">PRODUCT</h3>
+              <a href="#">Features</a>
+              <br>
+              <a href="#"> Use Cases</a>
+              <br>
+              <a href="#"> Pricing</a>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              
+              <h3 class="font-b">USE CASES</h3>
+              <a href="#">ITES</a>
+              <br>
+              <a href="#"> Consultancies</a>
+              <br>
+              <a href="#">  Services Sector</a>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              
+              <h3 class="font-b">SUPPORT</h3>
+              <a href="#">Blog</a>
+              <br>
+              <a href="#"> FAQ’s</a>
+              <br>
+              <a href="#"> Support</a>
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-6">
+              
+              <h3 class="font-b">COMPANY</h3>
+              <a href="#">About</a>
+              <br>
+              <a href="#"> Privacy Policy</a>
+              <br>
+              <a href="#"> Terms of Service</a>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2 col-sm-offset-0 col-xs-6 col-xs-offset-3  col-md-offset-0 text-center fot-logo-main">
+            <img src="img/white-logo.png">
+          </div>
+          <div class="clear-fix"></div>
+          <div class="d-d-1 col-xs-12">
+            <a href="#"><img src="img/Designed_&.png"></a>
+            <a href="#"><img src="img/Developed_by.png"></a>
+            <a href="#"><img src="img/logo-ip.png"></a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+    pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+    },
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+    });
+    </script>
+    <script>
+    $(function() {
+    $(".logo-img").mouseover(
+    function() {
+    $(this).attr("src", "img/Logo-animation3.gif");
+    }
+    );
+    });
+    </script>
+
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+  </body>
+</html>

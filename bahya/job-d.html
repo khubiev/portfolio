@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>job</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link href="css/chosen.min.css"  rel="stylesheet">
+<link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/style-rtl.css"  rel="stylesheet">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="ask-q.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/ask-q.jpg">
+  </div><p>ask-q</p> </a>
+</li>
+
+ <li><a href="baheia-expansions.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-expansions.jpg">
+  </div><p>baheia-expansions</p> </a>
+</li>
+
+ <li><a href="baheia-news.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-news.jpg">
+  </div><p>baheia-news</p> </a>
+</li>
+
+ <li><a href="baheia-news-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-news-d.jpg">
+  </div><p>baheia-news-d</p> </a>
+</li>
+
+ <li><a href="Donation.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Donation.jpg">
+  </div><p>Donation</p> </a>
+</li>
+
+ <li><a href="fundraise.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/fundraise.jpg">
+  </div><p>fundraise</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="Job.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Job.jpg">
+  </div><p>Job</p> </a>
+</li>
+
+ <li><a href="job-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/job-d.jpg">
+  </div><p>job-d</p> </a>
+</li>
+
+ <li><a href="Questions.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Questions.jpg">
+  </div><p>Questions</p> </a>
+</li>
+
+ <li><a href="thanks-main.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/thanks-main.jpg">
+  </div><p>thanks-main</p> </a>
+</li>
+
+ <li><a href="Training.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Training.jpg">
+  </div><p>Training</p> </a>
+</li>
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+<div class="head-main">
+    <div class="container-fluid top-head remove-padding">
+       <div class="container">
+          <ul>
+             <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+             <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+             <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+             <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+             <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+          </ul>
+
+          <ul>
+             <li><a href="#">تسجيل دخول</a></li>
+             <li><a href="#">انشاء حساب</a></li> 
+             <li class="hidden-xs"><a href="#">العربية</a></li>
+          </ul>
+
+       </div>
+    </div>
+
+    </div>
+<div class="container-fluid bot-head remove-padding">
+<div class="container remove-padding">
+   <div class="col-md-2 col-sm-2 logo-main col-xs-4">
+      <a href="#"><img src="img/logo.png"></a>
+   </div>
+
+   <div class="col-md-7 col-sm-7 head-links hidden-xs">
+      <ul>
+         <li class="sub-down"><a href="#">عن بهية  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+         <li><a href="#">خدمات طبية  <i class="ri-arrow-drop-down-line"></i></a>
+                   <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div></li>
+         <li><a href="#">تدريب وبحث علمي  <i class="ri-arrow-drop-down-line"></i></a>
+                   <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div></li>
+         <li><a href="#">عن اورام الثدي  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+         <li><a href="#">ساعد بهية  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+      </ul>
+   </div>
+
+   <div class="col-md-3 col-sm-3 col-xs-8 side-btns">
+      <ul>
+         <li><a href="#">تبرع الأن</a> </li>
+         <li><a href="#">تطوع معنا</a> </li>
+         <li class="visible-xs mob-menu-btn"><i class="ri-menu-line"></i> </li>
+      </ul>
+   </div>
+
+
+</div>
+</div>
+
+
+<!-- mob menu -->
+ <div class="mob-menu-main visible-xs">
+    <span class="close-menu"><i class="ri-close-line"></i></span>
+    <div class="clearfix"></div>
+    <ul>
+        <li><a href="#" class="mob-shop-link">عن بهية  <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                <li><a href="#" class="mob-shop-link">خدمات طبية   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                        <li><a href="#" class="mob-shop-link">تدريب وبحث علمي   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                        <li><a href="#" class="mob-shop-link">عن اورام الثدي   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+
+                        <li><a href="#" class="mob-shop-link">ساعد بهية   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+
+        <li>
+           <a href="#">النسخة الانجليزية</a>
+        </li>
+
+
+    </ul>
+ </div>
+
+<!--end mob menu -->
+
+<div class="container-fluid content-main remove-padding">
+   
+
+
+
+<div class="container contact-main job-d-main board-main call-main">
+
+<div class="col-xs-12 breadcrumb-me">
+   <a href="#">المركز الإعلامي</a>
+   <i class="ri-arrow-left-line"></i>
+   <a href="#">اخبار بهية</a>
+   <i class="ri-arrow-left-line"></i>
+  <p>تفاصيل</p>
+</div>
+
+<div class="container job-d-item">
+<div class="col-xs-12 remove-padding"> <h1 class="title">الملخص</h1></div>
+ <p>As an application and data analyst, you will have face-to-face correspondence with users who need your technical support, as well as collect and store data on numbers, research, logistics, or other behaviors. You use your technical expertise to ensure the quality and accuracy of that data, then process, design and present it in ways to help people, and the organization make better decisions.</p>
+</div>
+
+
+<div class="container job-d-item">
+<div class="col-xs-12 remove-padding"> <h1 class="title">المسؤليات</h1></div>
+ <p>• Administration and monitoring of software applications.<br>
+  • Preparing technical specification as a roadmap for software<br>
+  • Oversee practices and processes to ensure integrity and availability of all data and applications as part of the organization’s information systems.<br>
+  • Make sure that the processes needed for the organization to function and succeed are running smoothly, acting as a technical point of contact to fix application and systems issues - usually on an immediate basis, by investigating and diagnosing system faults and application errors and resolving technical issues. • Monitoring and responding to requests for support.<br>
+ • Following up routine system backups, upgrades and installation of new releases <br> 
+• Providing instructions and training to staff in using applications<br> 
+• Analyzing error trends aimed at reducing or minimizing down time <br>
+• Communicating messages regarding systems issues to users promptly <br>
+• Liaising with software suppliers to fulfil the requirements of the organization <br>
+• Scheduling, assessing and running regular tests and implementing new or upgraded software and assisting with strategic decisions on new systems to enhance the current systems and applications<br> 
+• Identifying and developing functionality changes <br>
+• Maintaining documentation of key databases and linked applications. <br>
+• Problem resolution in both the long and short term <br>
+• Implementation and integration of new applications <br>
+• Identifying organizational need for new applications, and could be involved in the design and development of existing and new applications <br>
+• Managing data set, including creation, updates, and deletion, developing reports, and troubleshooting data issues. <br>
+• Managing users and user roles. <br>
+• Provide quality assurance of imported data. <br>
+• Processing confidential data and information according to guidelines. <br>
+• Helping develop analysis <br>
+• Managing and designing the reporting environment, including data sources, security, and metadata<br>
+ • Supporting the data warehouse in identifying and revising reporting requirements.<br>
+  • Supporting initiatives for data integrity and normalization. <br>
+• Generating reports from single or multiple systems. <br>
+• Troubleshooting the reporting database environment and reports. <br>
+• Evaluating changes and updates to source production systems. <br>
+• Training end users on new reports and dashboards. <br>
+• Providing technical expertise on data storage structures, data mining, and data cleansing.</p>
+</div>
+
+
+<div class="container job-d-item">
+<div class="col-xs-12 remove-padding"> <h1 class="title">المتطلبات</h1></div>
+ <p>• Bachelor’s degree in computer science.<br> • Strong technical skills are essential as is knowledge of applications and languages such as the below: <br>• .Net <br>• SQL <br>• JavaScript <br>• Java & Swift <br>• Laravel 5 <br>• PHP <br>• HTML <br>• CSS <br>• Bootstrap <br>• Angular <br>• Need to keep knowledge up to date, as this is a fast-paced environment and new applications are being introduced constantly <br>• Ability to communicate effectively both verbally and in writing. <br>• Excellent interpersonal skills <br>• Ability to relay technical information to non-technical users <br>• Customer service skills <br>• Problem Solving <br><br>• Analytical Skills <br>• The ability to establish rapport with stakeholders <br>• Attention to detail <br>• Patience and understanding <br>• The ability to work independently but also as a part of a team <br>• Project management skills <br>• A proactive attitude <br>• Ability to work to deadlines and give realistic estimates <br>• Willingness to learn <br>• Very fine eye for detail <br>• Work experience as a data analyst or in related field, and deep understanding of the popular data analysis tools and databases are plus <br>• Ability to analyze existing tools and databases and provide software solution recommendations. <br>• High-level experience in methodologies and processes for managing large-scale databases. <br>• Demonstrated experience in handling large data sets and relational databases. <br>• Understanding of addressing and metadata standards.</p>
+</div>
+
+<div class="col-xs-10 line col-xs-offset-1"></div>
+
+<div class="col-xs-12 remove-padding"> <h1 class="title">قدم لهذه الوظيفة</h1></div>
+  <div class="col-xs-12 ask-q-main fundraise-main job-d-main-form">
+
+<div class="col-xs-12"> <h1 class="title">لتتمكن من التقديم على هذه الوظيفة, فضلا املأ الحقول التالية</h1></div>
+       
+
+<form>
+       <div class="col-xs-12 col-md-6 input-item">
+          <p>الاسم</p>
+          <input type="text">
+        </div>
+
+
+                <div class="col-xs-12 col-md-6 input-item">
+          <p>عدد سنين الخبرة</p>
+          <select class="chosen-select chosen-rtl">
+            <option>5سنوات</option>
+             <option>10 سنوات</option>
+             <option>سنة</option>
+             
+          </select>
+        </div>
+
+               <div class="col-xs-12 col-md-6 input-item">
+          <p>رقم الموبايل</p>
+          <input type="text">
+        </div>
+
+
+                <div class="col-xs-12 col-md-6 input-item">
+          <p>النوع</p>
+          <select class="chosen-select chosen-rtl">
+            <option>افضل ان لا اقول</option>
+             <option>ذكر</option>
+             <option>انثى</option>
+             
+          </select>
+        </div>
+
+
+
+               <div class="col-xs-12 col-md-6 input-item">
+          <p>البريد الالكتروني</p>
+          <input type="Email">
+        </div>
+
+
+        <div class="col-xs-12 col-md-6 input-item">
+          <p>قم برفع الملفات المطلوبة</p>
+
+          <div class="upload-btn-wrapper">
+  <button class="btn">اختر الملفات</button>
+  <input type="file" name="myfile">
+</div>
+
+<div class="col-xs-12 remove-padding uploaded-files">
+
+<div class="col-xs-12 file-item remove-padding"></div>
+
+        </div>
+
+
+</div>
+
+
+                       
+
+
+
+  <button class="contact-btn">انهاء</button>
+
+</form>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+   
+
+
+</div>
+
+
+
+
+<!-- footer -->
+<div class="container-fluid remove-padding footer-main">
+   <div class="container remove-padding">
+       <div class="col-md-4 fot-form-main">
+           <h4>لمتابعه اخر اخبار بهية</h4>
+           <form>
+              <input type="Email" placeholder="اكتب البريد الالكترونى">
+              <button>إشتراك</button>
+           </form>
+           <ul>
+              <li><a href="#"><img src="img/google.png"></a></li>
+              <li><a href="#"><img src="img/apple.png"></a></li>
+           </ul>
+       </div>
+       <div class="col-md-4 fot-links">
+          <ul class="col-md-11 col-md-offset-1">
+             <li><a href="#">التبرع</a> </li>
+             <li><a href="#">عن بهية</a> </li>
+             <li><a href="#">خدمات طبية</a> </li>
+             <li><a href="#">التطوع</a> </li>
+             <li><a href="#">عن اورام الثدي</a> </li>
+             <li><a href="#">تدريب وبحث علمي</a> </li>
+             <li><a href="#">برامج التبرع</a> </li>
+             <li><a href="#">اتصل بنا</a> </li>
+             <li><a href="#">الاخبار</a> </li>
+          </ul>
+       </div>
+       <div class="col-md-3 col-md-offset-1 social-fot-main">
+          <h3>تابعنا على مواقع التواصل الاجتماعي</h3>
+          <ul>
+             <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+             <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+             <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+             <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+             <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+          </ul>
+        <p>اتصل بنا ١٨٦٦٠٢ <i class="ri-phone-fill"></i></p>
+       </div>
+       <div class="col-xs-12 copy-main">
+          <ul>
+             <li><a href="#"><img src="img/Designed_&-rtl.png"></a></li>
+             <li><a href="#"><img src="img/Developed_by-rtl.png"></a></li>
+             <li><a href="#"><img src="img/logo-ip-rtl.png"></a></li>
+          </ul>
+
+          <p>حقوق التأليف والنشر © 2020</p>
+       </div>
+
+   </div>
+</div>
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/chosen.jquery.js"></script> 
+<script src="js/init.js"></script> 
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+        $(".chosen-select").chosen({rtl: true}); 
+
+$( "#datepicker" ).datepicker({
+  changeYear: true,
+  changeMonth: true,
+   yearRange: "1910:2099"
+});
+
+$(".mob-menu-btn" ).click(function() {
+$('.mob-menu-main').addClass('open-menu');
+});
+$(".close-menu" ).click(function() {
+$('.mob-menu-main').removeClass('open-menu');
+});
+
+$( ".mob-shop-link" ).click(function() {
+$(".mob-shop-link").not(this).siblings('.mob-shop-drop-dowm').slideUp();
+$(this).siblings('.mob-shop-drop-dowm').slideToggle();
+
+$(".mob-shop-link").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+
+
+
+
+
+
+});
+
+
+$( ".fundraise-main .days-main ul li" ).click(function() {
+$(this).toggleClass('active-option');
+});
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop() > 50){  
+        $(".bot-head").addClass("stick-head");
+    }
+    else{
+       $(".bot-head").removeClass("stick-head");
+    }
+});
+
+
+$('input[type="file"]'). change(function(e){
+var fileName = e. target. files[0]. name;
+$(".uploaded-files").append('<div class="col-xs-12 file-item remove-padding"><p><i class="ri-attachment-line"></i>'+fileName+'<i class="ri-close-line remove-up-btn"></i></p></div>');
+});
+$(document).on('click', '.remove-up-btn', function(){
+$(this).parent().fadeOut();
+$('input[type="file"]').val("");
+});
+
+
+
+	});
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+</body>
+</html>

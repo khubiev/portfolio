@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>index</title>
+    <!-- my css -->
+
+
+ <!--<link href="css/style.css" rel="stylesheet">-->
+     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/daterangepicker.min.css"/>
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/js-image-slider.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+
+<body>
+
+
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd; margin-bottom: 0;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px;  padding: 0}
+
+    .all-pages-main ul li { float: left;
+    width: 43.5%;
+    padding: 10px;
+    list-style: none;
+    display: inline-block; }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="car.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/car.jpg"></div><p>car details</p> </a></li>
+      <li><a href="fav.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fav.jpg"></div><p>favorite</p> </a></li>
+      <li><a href="fillter.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fillter.jpg"></div><p>fillter</p> </a></li>
+      <li><a href="hosting-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/hosting-1.jpg"></div><p>hosting </p> </a></li>
+        <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="makepayment-new.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/makepayment-new.jpg"></div><p>makepayment new</p> </a></li>
+      <li><a href="my-cars.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/my-cars.jpg"></div><p>my cars</p> </a></li>
+      <li><a href="owner.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/owner.jpg"></div><p>owner</p> </a></li>
+      <li><a href="statement-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/statement-1.jpg"></div><p>statement </p> </a></li>
+      <li><a href="thanks.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/thanks.jpg"></div><p>thanks</p> </a></li>
+      <li><a href="vip.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/vip.jpg"></div><p>vip</p> </a></li>
+
+
+
+
+
+    
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="images/more.png">
+</span>
+
+
+
+
+<div class="header">
+    <div class="Container">
+        <div class="logo">
+
+            <a href="#a"> <img src="images/logo@1x.png"> </a>
+
+        </div>
+
+           <div class="profile-pic-head">
+            <img src="images/avatar.png">
+            <a class="click-drop-down"><p> Khubiev islam</p>
+
+                <div class="propdown"></div>
+            </a>
+
+            <div class="drop-down-mean">
+                <div class="update-profile">
+                <h5>Profile</h5>
+                    <a href="a#"> Update profile </a>
+                    <a href="a#"> Add credit </a>
+                    <a href="a#"> My requests </a>
+                    <a href="a#"> Withdrow </a>
+                    <a href="a#"> Statment </a>
+                    <a href="a#"> My favorites </a>
+                    <a href="a#"> Massages </a>
+                    
+
+                </div>
+
+                <div class="renter-owner-mean">
+                <h5>The renter profile</h5>
+                 <a href="a#"> Renting orders </a>
+                 <h5>The owner profile</h5>
+                    <a href="a#"> My cars </a>
+                    <a href="a#"> Pending request </a>
+                    <h5>General</h5>
+                    <a href="a#"> Logout </a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="sareng">
+            <div class="sari">
+                <img src="images/$@1x.png">
+                <a href="#a"><sub>SAR</sub></a>
+            </div>
+            <!-- end sar -->
+            <div class="eng">
+                <img src="images/GLOBE@1x.png">
+                <a href="#a"><sub>English</sub></a>
+            </div>
+            <!-- end english-->
+        </div>
+        <!-- end sareng -->
+    </div>
+</div>
+<div class="continar">
+    <div class="content">
+
+        <!-- end of the header -->
+
+
+        <div class="mean">
+
+
+            <div id="sliderFrame">
+
+                <div id="slider">
+
+                    <img src="images/4.jpg" alt=""/>
+                    <img src="images/2.jpg" alt=""/>
+
+                    <img src="images/3.jpg" alt=""/>
+                    <img src="images/4.jpg" alt=""/>
+                    <img src="images/4.jpg" alt=""/>
+                    <img src="images/4.jpg" alt=""/>
+                    <img src="images/4.jpg" alt=""/>
+                    <img src="images/4.jpg" alt=""/>
+                    <img src="images/4.jpg" alt=""/>
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="car-det-info">
+                <div class="car-det-img"><img src="images/pro.jpg"></div>
+                <h2> BMW 318i 2005 Silver </h2>
+
+                <p>by <b> Khubiev islam </b> <a href="a#" ><span> jedaah , KSA</span> </a></p>
+                <h5> Typically replies within an hour <br>
+                    Percentage of reply 85%</h5>
+
+            </div>
+
+            <div class="car-info-side">
+                <p>270 <span> SAR </span><img src="images/instant-book-icon.png"></p>
+                <h4 ><img class="down-total-price" src="images/arrow-date.png"> 
+                <img class="up-total-price" src="images/arrow-date-up.png">
+                </h4>
+
+
+            </div>
+
+            <div class="date-side">
+                <div class="date-pick">
+
+                    <input type="text" data-field="date" data-format="dd-MM-yyyy" placeholder="2016-12-1"
+                           disabled_dates='1-3-2017,1-11-2017,1-25-2017,1-20-2017' id="check_in_input">
+
+                    <div class="arrow-1"><img src="images/arrow-1.png"></div>
+
+                    <input type="text" data-field="date" data-format="dd-MM-yyyy" placeholder="2016-12-1"
+                           disabled_dates='1-3-2017,1-11-2017,1-25-2017,1-20-2017' id="check_out_input">
+
+                </div>
+<div class="slide-price-car">
+
+    <div class="price-1">
+      <span>9 nights x 270</span>
+       <h5>2430 SAR</h5>
+    </div>
+    <div class="price-2">
+    <span>Service fee</span>
+    <h5>178 SAR</h5>
+    </div>
+    <div class="price-3">
+    <span>Tax</span>
+    <h5>200 SAR</h5>
+    </div>
+    <div class="line"></div>
+    <div class="price-total">
+    <span>Total</span>
+    <h5>2878 SAR</h5>
+    
+    </div>
+    
+
+
+                
+</div>
+
+
+                <div class="next">
+                    <button type="button">Request to book</button>
+                </div>
+
+
+                <div class="add-to">
+                    <button type="button">Add to Wish list</button>
+                </div>
+
+               <div class="report">
+                    <img src="images/report.png">
+                    <a href="#a" id="report-popup">Report this car</a>
+
+                    <div id="myModal" class="modal">
+
+                        <!-- report popup -->
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+
+                            <h3>Report this ad</h3>
+
+
+                            <select required>
+                                <option value="" disabled selected hidden>Reason of reporting...</option>
+                                <option value="315i">Wrong informaiton</option>
+                                <option value="315i">Car rental company</option>
+                                <option value="315i">Another reason</option>
+
+
+                            </select>
+
+                            <textarea placeholder="Write your report"></textarea>
+
+                            <div class="next">
+                                <button type="button">Report</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+ 
+            <div class="more-icn-head">
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/pas_icn.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            10 passengers
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/sunroof.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Sunroof
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/ac_icn.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Air condition
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean click-me-down">
+
+                    <div class="icon-img">
+                        <img src="images/more_icn.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p class="more-btn hide-show-toggle">
+                            More
+                        </p>
+
+                        <p class="less-btn hide-show-toggle">Less</p>
+
+                    </div>
+
+                </div>
+
+
+                <!--  <div class="less-btn"> <img  class="less-btn" src="images/Less.png"></div>
+                  <div class="more-btn"> <img src="images/more_icn.png">  </div>-->
+
+
+            </div>
+
+            <div class="more-mean">
+
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/speed.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Cruise control
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/Suit.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Suit for
+                            motorcycle
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/tank-icon.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Manual
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/GPS.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            GPS
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/Helmet.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Helmet for
+                            motorcycle
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/Kid-Seat.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Kid Seat
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/Shaded-glass.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Shaded glass
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/auto.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Automatic
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/car-del.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Car delivery
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/Convertible.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Convertible
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/Driver.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Driver
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="icon-mean">
+
+                    <div class="icon-img">
+                        <img src="images/date.png">
+                    </div>
+
+                    <div class="title-icon-mean">
+                        <p>
+                            Discount for
+                            long periods
+                        </p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="details">
+                <h3> details</h3>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit ese cillum dolore eu fugiat
+                    nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
+
+                    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor
+                    sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
+                    ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+
+                    adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor
+                    sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliquaLorem
+                    ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua
+
+
+                </p>
+
+                <div class="line"></div>
+                <div class="car-info-1">
+
+                    <div class="hourse-power">
+                        <h5>Hoursepower:</h5>
+                        <h4>1200 </h4>
+                    </div>
+
+                    <div class="made-km">
+                        <h5>Made K.M:</h5>
+                        <h4>2000 K.M</h4>
+                    </div>
+
+                    <div class="Current-km">
+                        <h5>Current KM</h5>
+                        <h4>160 K.M</h4>
+                    </div>
+
+
+                    <div class="line"></div>
+
+                    <div class="allowed-km">
+                        <h5>Allowed K.M:</h5>
+                        <h4>160 K.M</h4>
+                    </div>
+
+
+                    <div class="line"></div>
+
+                    <div class="Cancelltion">
+                        <h5>Cancelltion Policy:</h5>
+                        <h4 id="policy-popup">Car policy</h4>
+                        <!-- The Modal -->
+                        <div id="myModal-4" class="mamaa">
+
+                            <!-- Modal content -->
+                            <div class="modal-content-4">
+                                <span class="closeee">&times;</span>
+
+                                <p>Some text in the Modal..</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="Contact-input">
+                        <h5>Contact:</h5>
+                        <h4 id="Contact-popup">Send a massage</h4>
+
+
+                        <!-- The Modal -->
+                        <div id="myModal-3" class="mama">
+
+                            <!-- Modal content -->
+                            <div class="modal-content-3">
+                                <span class="closee">&times;</span>
+
+                                <p>Some text in the Modal..</p>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div class="Country-input">
+                        <h5>Country:</h5>
+                        <h4>Egypt</h4>
+                    </div>
+
+
+                    <div class="City-input">
+                        <h5>City:</h5>
+                        <h4>Cairo</h4>
+                    </div>
+
+
+                    <div class="Area-input">
+                        <h5>Area:</h5>
+                        <h4>nasr city</h4>
+                    </div>
+
+
+                </div>
+
+
+                <div class="map"></div>
+
+                <div class="reviews">
+                    <h3> Reviews</h3>
+
+
+                    <div class="reviews-mean">
+                        <img src="images/pro.jpg">
+
+                        <p>Islam khubiev</p>
+                        <span> 29/3/2012</span>
+
+                        <div class="rate-review">
+                            <img src="images/6 finished.png">
+
+                            <div class="text-area">
+                                <p> Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliquaLorem ipsum dolor sit amet, adipisicing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliquaLorem ipsum dolor sit
+                                    amet, adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliquaLorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt
+                                    ut labore et dolore magna aliquaLorem ipsum dolor sit amet, adipisicing elit, sed do
+                                    eiusmod tempor incididunt ut labore et dolore magna aliqua
+
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="reviews-mean">
+                        <img src="images/pro.jpg">
+
+                        <p>Islam khubiev</p>
+                        <span> 29/3/2012</span>
+
+                        <div class="rate-review">
+                            <img src="images/6 finished.png">
+
+                            <div class="text-area">
+                                <p> Lorem ipsum dolor sit amet, adipisicing elit, sed do eiusmod tempor incididunt ut
+                                    labore et dolore magna aliqua</p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+        <!-- end of the mean -->
+
+
+        <!-- footer -->
+
+        <div class="vipfooter">
+
+            <div class="footerbg">
+
+                <div class="getapp">
+
+
+                    <p>Get Almoajer app</p>
+                    <a href="#a"> <img src="images/apple.png"></a>
+                    <a href="#a"> <img src="images/android.png"></a>
+
+                </div>
+
+                <div class="botmenu">
+                    <a href="#a"><p>About</p></a>
+                    <a href="#a"><p>Help</p></a>
+                    <a href="#a"><p>Policies</p></a>
+                    <a href="#a"><p>Terms</p></a>
+
+
+                </div>
+
+                <div class="social">
+                    <a href="# " class="twitter"> </a>
+                    <a href="#" class="google"></a>
+                    <a href="#" class="instagram"> </a>
+                    <a href="#" class="linkedin"> </a>
+                    <a href="#" class="youtube"></a>
+                    <a href="#" class="facebook"> </a>
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- end of the content -->
+
+</div>
+<!-- end of the continar -->
+
+
+<script type="text/javascript" src="js/jQuery1.11.2.js"></script>
+<script src="js/moment.min.js" type="text/javascript"></script>
+<script src="js/jquery.daterangepicker.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script src="js/js-image-slider.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+        var disableddates = $('#check_in_input').attr('disabled_dates').split(',');
+        $('.date-pick').dateRangePicker({
+            format: 'DD-MM-YYYY',
+            autoClose: true,
+            singleMonth: true,
+            separator: ' to ',
+            beforeShowDay: function (t) {
+                var m = t.getMonth(), d = t.getDate(), y = t.getFullYear();
+                if ($.inArray((m + 1) + '-' + d + '-' + y, disableddates) != -1) {
+                    return [false, 'rerserved', ''];
+                }
+                return [true, '', ''];
+            },
+            getValue: function () {
+                if ($('#check_in_input').val() && $('#check_out_input').val())
+                    return $('#check_in_input').val() + ' to ' + $('#check_out_input').val();
+                else
+                    return '';
+            },
+            setValue: function (s, s1, s2) {
+                $('#check_in_input').val(s1);
+                $('#check_out_input').val(s2);
+            }
+        });
+    });
+
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("report-popup");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal.style.display = "none";
+    }
+
+
+    // Get the modal
+    var modal3 = document.getElementById('myModal-3');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("Contact-popup");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closee")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal3.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal3.style.display = "none";
+    };
+
+
+    // Get the modal
+    var modal4 = document.getElementById('myModal-4');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("policy-popup");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("closeee")[0];
+
+    // When the user clicks on the button, open the modal
+    btn.onclick = function () {
+        modal4.style.display = "block";
+    };
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+        modal4.style.display = "none";
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal4 || event.target == modal3 || event.target == modal) {
+            modal4.style.display = "none";
+            modal3.style.display = "none";
+            modal.style.display = "none";
+        }
+    }
+
+</script>
+
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

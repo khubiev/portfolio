@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Article d </title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+
+    <link href="css/icon.css"  rel="stylesheet">
+        <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link href="css/style.css"  rel="stylesheet">  
+     
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="Article.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Article.jpg">
+  </div><p>Article</p> </a>
+</li>
+
+ <li><a href="Article-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Article-d.jpg">
+  </div><p>Article-d</p> </a>
+</li>
+
+ <li><a href="compare.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/compare.jpg">
+  </div><p>compare</p> </a>
+</li>
+
+ <li><a href="edit-profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/edit-profile.jpg">
+  </div><p>edit-profile</p> </a>
+</li>
+
+ <li><a href="icons.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/icons.jpg">
+  </div><p>icons</p> </a>
+</li>
+
+ <li><a href="Login–1.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Login–1.jpg">
+  </div><p>Login–1</p> </a>
+</li>
+
+ <li><a href="Login–5.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Login–5.jpg">
+  </div><p>Login–5</p> </a>
+</li>
+
+ <li><a href="profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/profile.jpg">
+  </div><p>profile</p> </a>
+</li>
+
+ <li><a href="StudyAbroad1.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad1.jpg">
+  </div><p>StudyAbroad1</p> </a>
+</li>
+
+ <li><a href="StudyAbroad2.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad2.jpg">
+  </div><p>StudyAbroad2</p> </a>
+</li>
+
+ <li><a href="StudyAbroad3.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad3.jpg">
+  </div><p>StudyAbroad3</p> </a>
+</li>
+
+ <li><a href="StudyAbroad4.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad4.jpg">
+  </div><p>StudyAbroad4</p> </a>
+</li>
+
+ <li><a href="StudyAbroad5.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad5.jpg">
+  </div><p>StudyAbroad5</p> </a>
+</li>
+
+ <li><a href="StudyAbroad6.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad6.jpg">
+  </div><p>StudyAbroad6</p> </a>
+</li>
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+<div class="body-dark"></div>
+<div class="container-fluid bf-head"></div> 
+<div class="container-fluid remove-padding head-main">
+  <div class="container">
+     <a href="#" class="logo-main"><img src="img/logo.png"></a>
+     <ul class="menu-main">
+        <li class="hidden-xs"><a href="#">Scholarships</a></li>
+        <li class="dropdown  hidden-xs"><a href="#" class="menu-nav-btn opendrop-btn" data-toggle="dropdown">Study Abroad</a>
+           <ul class="dropdown-menu">
+     
+      <li class="level-tow-btn">
+
+        <a href="#">Engineering <span class="icon-7arrowRight"></span></a>
+         <ul class="level-tow">
+            <li><a href="#">Civil Engineering</a></li>
+            <li><a href="#">Electronics Engineering</a></li>
+            <li><a href="#">Mechanical Engineering</a></li>
+            <li><a href="#">Mechatronics Engineering</a></li>
+            <li><a href="#">Computer Engineering</a></li>
+         </ul>
+      </li>
+      <li class=""><a href="#">Arts & Design</a></li>
+      <li class="level-tow-btn"><a href="#">Events, Summits <span class="icon-7arrowRight"></span></a>
+         <ul class="level-tow">
+            <li><a href="#">Civil Engineering</a></li>
+            <li><a href="#">Electronics Engineering</a></li>
+            <li><a href="#">Mechanical Engineering</a></li>
+            <li><a href="#">Mechatronics Engineering</a></li>
+            <li><a href="#">Computer Engineering</a></li>
+         </ul>
+      </li>
+      <li><a href="#">Computer Science & IT</a></li>
+      <li><a href="#">Health & Medicine</a></li>
+      <li><a href="#">Education & Training</a></li>
+      <li><a href="#">Architecture & Building</a></li>
+      <li><a href="#">Business & Managment</a></li>
+      <li><a href="#">Natural Science</a></li>
+      <hr>
+      <li ><a href="#"><img src="img/BrowseCountries.png"> Browse Countries</a></li>
+
+    </ul>
+        </li>
+        <li class="hidden-xs dropdown"><a href="#" class="menu-nav-btn opendrop-btn"  data-toggle="dropdown">Community</a>
+
+<ul class="dropdown-menu Community-head">
+
+<!-- <li>
+<a href="#">
+  <img src="img/discussions.png">
+ <h4>Discussions</h4>
+ <p>Ask experienced people</p>
+</a>
+</li>
+<li>
+<a href="#">
+  <img src="img/menu_videos.png">
+ <h4>Videos</h4>
+ <p>Tips & Tricks about Scholars</p>
+</a>
+</li> -->
+<li>
+<a href="#">
+  <img src="img/menu_articles.png">
+ <h4>Articles</h4>
+ <p>All about scholars</p>
+</a>
+</li>
+
+</ul>
+
+        </li>
+
+<li class="visible-xs menu-btn"> <span class="icon-60otherMenu"></span> </li>
+
+     </ul>
+
+      <ul class="side-head-links">
+        <li><a href="#">العربية</a></li>
+  <li class="dropdown"><a href="#" data-toggle="dropdown" class="icon-57notification opendrop-btn"><span>1</span></a>
+    <ul class="dropdown-menu">
+       <h3>notification</h3>
+      
+
+
+      <li> 
+           <div class="note-item">
+              <span class="icon-18courses"></span>
+              <p>we found a course may you like <a href="#">check it out</a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+      <li> 
+           <div class="note-item">
+              <span class="icon-15check"></span>
+              <p>you earned a verified badge ! <a href="#">check </a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+            <li> 
+           <div class="note-item">
+              <span class="icon-18courses"></span>
+              <p>we found a course may you like <a href="#">check it out</a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+      <li> 
+           <div class="note-item">
+              <span class="icon-15check"></span>
+              <p>you earned a verified badge ! <a href="#">check </a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+            <li> 
+           <div class="note-item">
+              <span class="icon-15check"></span>
+              <p>you earned a verified badge ! <a href="#">check </a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+<div class="col-xs-12 more-note-btn">
+   <a href="#">all notification</a>
+</div>
+
+    </ul>
+        </li>
+     </ul>
+
+  </div>
+
+    <div class="menu-side-main visible-xs">
+   <div class="menu-head">
+     <p>menu</p>
+     <span class="colse-menu-btn icon-82wrong"></span>
+   </div>
+   <div class="menu-main">
+      <ul>
+        
+        <li><a href="#" class="close-menu-link"> Scholarships</a></li>
+        <li><a  class="more-links-btn" href="#">Study Abroad
+           <span class="icon-5arrowDown"></span>
+        </a>
+ <ul class="more-links-main">
+                <li><a href="#">Engineering</a></li>
+                <li><a href="#">Arts & Design</a></li>
+                <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse1">Events, Summits
+<span class="icon-5arrowDown"></span>
+                </a>
+<div class="navbar-collapse1 collapse">
+  <a href="#"> </a><a href="#">link 1</a> 
+  <a href="#">link 2</a> 
+  <a href="#">link 3</a> </div>
+              </li>
+                <li><a href="#">Computer Science & IT</a></li>
+                <li><a href="#">Health & Medicine</a></li>
+                <li><a href="#">Education & Training</a></li>
+                <li><a href="#">Architecture & Building  </a></li>
+                <li><a href="#">Business & Managment </a></li>
+                <li><a href="#">Natural Science </a></li>
+                <li><a href="#"><img src="img/BrowseCountries.png"> Browse Countries</a></li>
+
+
+             </ul>
+        </li>
+        <li><a href="#" class="more-links-btn"> Community 
+        <span class="icon-5arrowDown"></span></a>
+
+<ul  class="more-links-main Community-main-mob">
+
+<!-- <li>
+<a href="#">
+  <img src="img/discussions.png">
+ <h4>Discussions</h4>
+ <p>Ask experienced people</p>
+</a>
+</li>
+<li>
+<a href="#">
+  <img src="img/menu_videos.png">
+ <h4>Videos</h4>
+ <p>Tips & Tricks about Scholars</p>
+</a>
+</li> -->
+<li>
+<a href="#">
+  <img src="img/menu_articles.png">
+ <h4>Articles</h4>
+ <p>All about scholars</p>
+</a>
+</li>
+
+</ul>
+      </li>
+
+
+      </ul>
+
+   </div>
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="container-fluid content-main remove-padding">
+  
+<div class="container remove-padding Article-main-in">
+  <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-sm-12 col-md-12 remove-padding">
+<div class="col-xs-12 ads-main-v remove-padding">
+  <div class="col-md-9 col-xs-12 col-sm-12">
+   <img src="img/ads-main.png">
+ </div>
+</div>
+
+
+<style type="text/css">
+
+.social-side-main {
+    position: absolute;
+    left: -50px;
+}
+
+  .social-side-main a {    width: 38px;
+    height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%; margin-bottom: 12px; cursor: pointer;}
+
+  .social-side-main a.at-svc-facebook {background: #3b5998;}
+  .social-side-main a.at-svc-twitter {    background-color: rgb(29, 161, 242);}
+ .social-side-main a.at-svc-linkedin {
+    background-color: rgb(0, 119, 181);
+ }
+
+.social-side-main a svg { position: relative; top: 5px;
+fill: rgb(255, 255, 255); width: 25px; height: 25px; }
+
+ .social-side-main a.at-svc-whatsapp {    background-color: rgb(77, 194, 71);}
+.social-side-main a.at-svc-link { background-color: #2c2d30 }
+
+
+</style>
+  
+  <div class="col-md-9 col-sm-8 art-main-cont">
+      
+<div class="social-side-main">
+   <ul>
+          <li>
+       <a title="Facebook" class="at-svc-facebook" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-facebook-11" title="Facebook" alt="Facebook" class="at-icon at-icon-facebook" style="">
+        <title id="at-svg-facebook-11">Facebook</title><g><path d="M22 5.16c-.406-.054-1.806-.16-3.43-.16-3.4 0-5.733 1.825-5.733 5.17v2.882H9v3.913h3.837V27h4.604V16.965h3.823l.587-3.913h-4.41v-2.5c0-1.123.347-1.903 2.198-1.903H22V5.16z" fill-rule="evenodd"></path></g></svg></a>
+     </li>
+
+               <li>
+       <a title="Twitter" class="at-svc-twitter" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-twitter-12" title="Twitter" alt="Twitter"><title id="at-svg-twitter-12">Twitter</title><g><path d="M27.996 10.116c-.81.36-1.68.602-2.592.71a4.526 4.526 0 0 0 1.984-2.496 9.037 9.037 0 0 1-2.866 1.095 4.513 4.513 0 0 0-7.69 4.116 12.81 12.81 0 0 1-9.3-4.715 4.49 4.49 0 0 0-.612 2.27 4.51 4.51 0 0 0 2.008 3.755 4.495 4.495 0 0 1-2.044-.564v.057a4.515 4.515 0 0 0 3.62 4.425 4.52 4.52 0 0 1-2.04.077 4.517 4.517 0 0 0 4.217 3.134 9.055 9.055 0 0 1-5.604 1.93A9.18 9.18 0 0 1 6 23.85a12.773 12.773 0 0 0 6.918 2.027c8.3 0 12.84-6.876 12.84-12.84 0-.195-.005-.39-.014-.583a9.172 9.172 0 0 0 2.252-2.336" fill-rule="evenodd"></path></g></svg></a>
+     </li>
+
+                    <li>
+       <a title="LinkedIn" class="at-svc-linkedin" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-linkedin-13" title="LinkedIn" alt="LinkedIn" class="at-icon at-icon-linkedin"><title id="at-svg-linkedin-13">LinkedIn</title><g><path d="M26 25.963h-4.185v-6.55c0-1.56-.027-3.57-2.175-3.57-2.18 0-2.51 1.7-2.51 3.46v6.66h-4.182V12.495h4.012v1.84h.058c.558-1.058 1.924-2.174 3.96-2.174 4.24 0 5.022 2.79 5.022 6.417v7.386zM8.23 10.655a2.426 2.426 0 0 1 0-4.855 2.427 2.427 0 0 1 0 4.855zm-2.098 1.84h4.19v13.468h-4.19V12.495z" fill-rule="evenodd"></path></g></svg></a>
+     </li>
+
+                         <li>
+       <a title="WhatsApp" class="at-svc-whatsapp" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-whatsapp-14" title="WhatsApp" alt="WhatsApp" class="at-icon at-icon-whatsapp"><title id="at-svg-whatsapp-14">WhatsApp</title><g><path d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z" fill-rule="evenodd"></path></g></svg></a>
+     </li>
+
+
+
+
+
+
+                         <li>
+       <a title="Copy Link" class="at-svc-link" ><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" version="1.1" role="img" aria-labelledby="at-svg-link-15" title="Copy Link" alt="Copy Link" class="at-icon at-icon-link"><title id="at-svg-link-15">Copy Link</title><g><path d="M23.476 20.663c0-.324-.114-.6-.34-.825l-2.524-2.524a1.124 1.124 0 0 0-.826-.34c-.34 0-.63.13-.873.388.024.024.1.1.23.225s.217.212.26.26c.046.05.106.126.183.23a.976.976 0 0 1 .2.644c0 .325-.113.6-.34.827-.226.226-.5.34-.825.34-.12 0-.23-.015-.332-.043a.976.976 0 0 1-.31-.158 2.89 2.89 0 0 1-.23-.182 7.506 7.506 0 0 1-.26-.26l-.226-.23c-.267.25-.4.545-.4.885 0 .322.113.597.34.824l2.5 2.512c.218.218.493.328.825.328.323 0 .598-.106.825-.316l1.784-1.772a1.11 1.11 0 0 0 .34-.813zm-8.532-8.556c0-.323-.113-.598-.34-.825l-2.5-2.512a1.124 1.124 0 0 0-.825-.34c-.316 0-.59.11-.826.328L8.67 10.53a1.11 1.11 0 0 0-.34.813c0 .323.113.598.34.825l2.524 2.524c.22.22.494.328.825.328.34 0 .63-.126.873-.376-.024-.025-.1-.1-.23-.225a7.506 7.506 0 0 1-.26-.262 2.89 2.89 0 0 1-.183-.23.976.976 0 0 1-.2-.644c0-.323.113-.598.34-.825.226-.227.5-.34.824-.34a.976.976 0 0 1 .643.2c.106.077.183.137.23.182.05.044.137.13.262.26s.2.207.224.23c.267-.25.4-.545.4-.885zm10.862 8.556c0 .97-.344 1.792-1.032 2.464L22.99 24.9c-.67.67-1.492 1.006-2.463 1.006-.98 0-1.805-.344-2.476-1.032l-2.5-2.512c-.67-.67-1.006-1.493-1.006-2.463 0-.997.356-1.842 1.068-2.538l-1.068-1.068c-.696.712-1.538 1.068-2.525 1.068-.97 0-1.797-.34-2.476-1.02L7.02 13.82C6.34 13.138 6 12.314 6 11.343c0-.97.344-1.792 1.032-2.464l1.784-1.773c.67-.67 1.492-1.007 2.463-1.007.978 0 1.803.344 2.475 1.032l2.5 2.512c.67.67 1.007 1.492 1.007 2.463 0 .995-.356 1.84-1.068 2.537l1.068 1.068c.696-.712 1.537-1.068 2.524-1.068.97 0 1.797.34 2.476 1.02l2.524 2.523c.68.68 1.02 1.505 1.02 2.476z" fill-rule="evenodd"></path></g></svg></a>
+     </li>
+
+
+
+
+
+
+
+   </ul>
+</div>
+
+  <div class="col-xs-12 remove-padding art-main-cont-item art-cont-item">
+     <h1>Easy Ways to Make Your Website More Accessible Today [Infographic]</h1>
+     <span>12 July 2018 . Getting Visa</span>
+     <img src="img/18.png">
+     <h2>Headline in the Article</h2>
+     <h4>Subheadline in the article</h4>
+     <p>You can insert the headline or the subheadline into your article with one click, also you can’t modify the sizes but you can modify the styles bold, italic and underline styles. You can also use 3 colors, Dark Gray that we use right now, Light gray and finally the brand color.
+
+When you add a hyperlink it will be like that, <a href="#"> Click Here, </a>You’re free to insert images, videos and hyperlinks anywhere in the article. The video will be added from Youtube.
+
+But you cannot use a different color, or add a button in the article.
+You can add bullets and numbering for the data, but you cannot modify it’s style.
+
+When you upload a new photo the photo uploader will provide you with the right sizes for the article, if your photo with a different size, the uploader will crop and fit the photo before submitting.
+
+Make sure to keep white spaces bettween text paragraphs to be readable
+
+This will make all articles consistent.
+
+Downthere is the article when created from newsletter. This happens automatically.
+Hover on the scholarship to show Share button
+</p>
+<h5>1</h5>
+<h4>Scholarship title will be written here</h4>
+<h5>Location:<span> Location</span></h5>
+<h5>Apply Now:<span> https://www.marj3.com/?p=10528</span></h5>
+<h5>2</h5>
+<h4>Scholarship title will be written here</h4>
+<h5>Location : <span> Location</span></h5>
+<h5>Apply Now : <span> https://www.marj3.com/?p=10528</span></h5>
+  </div>
+
+  <div class="col-xs-12 remove-padding art-main-cont-item dis-like-main-art">
+     <ul>
+        <li><span class="icon-73thumbsUp"></span>15</li>
+       <li><span class="icon-72thumbDown"></span>0</li>
+     </ul>
+
+
+  </div>
+
+
+  <div class="col-xs-12 remove-padding art-main-cont-item published-art-main"> 
+      <div class="published-art-info">
+      <img src="img/1.png">
+      <p>Published By</p>
+      <h4>Marj3 Team</h4>
+    </div>
+  </div>
+
+
+<div class="col-xs-12 ads-main-v remove-padding">
+  
+   <img src="img/ads-main.png">
+
+</div>
+
+
+<div class="col-xs-12 remove-padding text-center">
+<a href="#" class="report-btn-art" data-toggle="modal" data-target="#report-pop">
+<svg style=" width: 15px; height: 15px; position: relative; top:1px; fill: #333" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+<g><g>
+    <path d="M503.839,395.379l-195.7-338.962C297.257,37.569,277.766,26.315,256,26.315c-21.765,0-41.257,11.254-52.139,30.102
+      L8.162,395.378c-10.883,18.85-10.883,41.356,0,60.205c10.883,18.849,30.373,30.102,52.139,30.102h391.398
+      c21.765,0,41.256-11.254,52.14-30.101C514.722,436.734,514.722,414.228,503.839,395.379z M477.861,440.586
+      c-5.461,9.458-15.241,15.104-26.162,15.104H60.301c-10.922,0-20.702-5.646-26.162-15.104c-5.46-9.458-5.46-20.75,0-30.208
+      L229.84,71.416c5.46-9.458,15.24-15.104,26.161-15.104c10.92,0,20.701,5.646,26.161,15.104l195.7,338.962
+      C483.321,419.836,483.321,431.128,477.861,440.586z"/>
+  </g></g><g>
+  <g>
+    <rect x="241.001" y="176.01" width="29.996" height="149.982"/>
+  </g></g><g><g>
+    <path d="M256,355.99c-11.027,0-19.998,8.971-19.998,19.998s8.971,19.998,19.998,19.998c11.026,0,19.998-8.971,19.998-19.998
+      S267.027,355.99,256,355.99z"/>
+  </g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+</svg>
+
+Report Problem</a>
+</div>
+
+<div id="report-pop" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <p>tell us why you need to report the program</p>
+        <textarea></textarea>
+        <div class="col-xs-12 remove-padding text-center" data-dismiss="modal"
+         data-toggle="modal" data-target="#report-pop-thanks"><button>submit</button></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<div id="report-pop-thanks" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-body">
+   <span class="icon-32favoriteHeart"></span>
+        <h4>Thanks for your help!</h4>
+
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+
+
+
+
+  <div class="col-md-3 col-sm-4 col-xs-12 art-main-side-bar faculty-side-bar">
+
+
+<div class="col-xs-12 remove-padding reated-topic-main">
+            <h4>RELATED</h4>
+             <div class="col-xs-12 remove-padding reated-topic-item">
+                <img src="img/4.png">
+                <a href="#">Birith Council Challenge | Win a prize of 20,000GBP and more</a>
+             </div>
+
+                          <div class="col-xs-12 remove-padding reated-topic-item">
+                <img src="img/4.png">
+                <a href="#">Birith Council Challenge | Win a prize of 20,000GBP and more</a>
+             </div>
+
+
+                          <div class="col-xs-12 remove-padding reated-topic-item">
+                <img src="img/4.png">
+                <a href="#">Birith Council Challenge | Win a prize of 20,000GBP and more</a>
+             </div>
+
+
+                          <div class="col-xs-12 remove-padding reated-topic-item">
+                <img src="img/4.png">
+                <a href="#">Birith Council Challenge | Win a prize of 20,000GBP and more</a>
+             </div>
+             <a href="#" class="see-all-link">SEE ALL <span class="icon-23right"></span></a>
+          </div>
+
+
+<div class="col-xs-12 remove-padding side-banner">
+   <img src="img/side-ad.png">
+</div>
+
+  </div>
+
+
+
+ </div>
+
+</div>
+
+
+<div class="container-fluid art-main-cont rel-art-main remove-padding">
+  <div class="container remove-padding">
+     <div class="col-lg-10 col-lg-offset-1 remove-padding">
+
+<h1>Here’s What To Read Next</h1>
+
+      <div class="col-xs-12 remove-padding art-main-cont-item">
+
+
+         <div class="col-xs-12 remove-padding">
+            <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+
+            <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+
+
+            <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+
+            <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+
+            <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+
+            <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+
+
+                        <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+
+
+                        <div class="col-xs-12 col-md-3 col-sm-6 Article-item">
+              <div class="Article-item-inside">
+               <img src="img/8.png">
+               <a href="#">The Way I Found The Right Scholarship on Time</a>
+               <div class="col-xs-12 remove-padding">
+                   <img src="img/5.png">
+                   <p>Mohamed Moustafa</p>
+                   <span>12 July . Category</span>
+               </div>
+             </div>
+            </div>
+         </div>
+
+
+      </div> 
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="container-fluid footer-main remove-padding">
+  
+    <div class="container remove-padding">
+       <div class="col-md-3 col-sm-4 col-xs-12">
+          <img class="fot-logo" src="img/logo.png">
+          <p>Marj3 is the #1 platform for scholarships 
+            and opportunities in the MENA region.</p>
+       </div>
+       <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-0 col-xs-6">
+          <h3>Marj3</h3>
+          <a href="#">About Marj3</a>
+          <br>
+          <a href="#">Partners</a>
+          <br>
+          <a href="#">Team</a>
+          <br>
+          <a href="#">FAQ</a>
+          <br>
+          <a href="#">Terms & Conditions</a>
+       </div>
+       <div class="col-md-2 col-sm-2 col-xs-6">
+          <h3>Connect</h3>
+          <a href="#">Publish a Scholarship for free</a>
+          <br>
+          <a href="#">Feature your Scholarship</a>
+          <br>
+          <a href="#">Marj3 Events</a>
+          <br>
+          <a href="#">Contact Us</a>
+       </div>
+       <div class="col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-12">
+          <h3>Follow Marj3 in social media</h3>
+          <ul class="fot-social">
+             <li><a href="#" class="icon-31facebook"></a></li>
+             <li><a href="#" class="icon-76twitter"></a></li>
+             <li><a href="#" class="icon-47linkedin"></a></li>
+          </ul>
+          <h3>Download Marj3 App</h3>
+          <ul>
+             <li><a href="#"><img src="img/google_play.png"></a></li>
+             <li><a href="#"><img src="img/app_store.png"></a></li>
+          </ul>
+       </div>
+
+
+    </div>
+
+
+</div>
+
+<style type="text/css">
+  .dropdown.open a {
+    background-color: #fff;
+    color: #333 !important;
+    border-radius: 3px 3px 0 0;
+
+}
+
+.dropdown.open a:after {
+    content: '\0046';
+}
+
+.head-main ul.side-head-links li a { background-color: transparent !important; color: #fff !important }
+
+
+</style>
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/multi-select.js"></script>
+    <script src="js/datepicker/jquery.datetimepicker.full.min.js"></script>
+
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+ $(this).scrollTop(0);
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 1) {
+        $(".head-main").addClass("darkHeader");
+    } else {
+        $(".head-main").removeClass("darkHeader");
+    }
+});
+
+
+// $('.opendrop-btn').click(function() {
+//   $(this).toggleClass('over-all')
+//     if ($('.dropdown').hasClass('open')){
+//         $('.body-dark').removeClass('body-dark-on'); 
+//     } else {
+//         // $('.body-dark').addClass('body-dark-on'); 
+//       }
+// });
+
+// $('.body-dark, .dropdown-menu').click(function() { 
+// $('.body-dark').removeClass('body-dark-on');
+// $('.opendrop-btn').removeClass('over-all')
+
+// });
+
+
+     $(".menu-btn").click(function(){
+$(".menu-side-main").addClass('open-menu');
+$(".body-bg").addClass('body-overlay')
+});
+
+$(".body-bg, .colse-menu-btn, .close-menu-link").click(function(){
+$(".menu-side-main").removeClass('open-menu');
+$('.body-bg').removeClass('body-overlay');
+});
+
+$( ".more-links-btn" ).click(function() {
+  event.preventDefault();
+$(".more-links-btn").not(this).siblings('.more-links-main').slideUp();
+$(this).siblings('.more-links-main').slideToggle();
+
+$(".more-links-btn").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+  }); 
+
+
+
+
+});
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

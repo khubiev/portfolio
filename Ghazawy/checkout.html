@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>checkout</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/chosen.css">
+    <link href="css/slick.css" rel="stylesheet">
+   <link href="css/slick-theme.css" rel="stylesheet">
+
+<link href="css/Ghazawy.css"  rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">        
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="404.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/404.jpg"></div><p>404</p> </a></li>
+
+      <li><a href="add-addresses.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-addresses.jpg"></div><p>add addresses</p> </a></li>
+
+      <li><a href="addresses.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/addresses.jpg"></div><p>addresses</p> </a></li>
+
+      <li><a href="cart.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/cart.jpg"></div><p>cart</p> </a></li>
+       
+        <li><a href="checkout.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/checkout.jpg"></div><p>checkout</p> </a></li>
+
+
+      <li><a href="confirmed-order.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/confirmed-order.jpg"></div><p>confirmed order</p> </a></li>
+
+
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+
+      <li><a href="index-rtl.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index-rtl.jpg"></div><p>home RTL</p> </a></li>
+
+      <li><a href="login.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+           <li><a href="main-grid.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/main-grid.jpg"></div><p>main grid</p> </a></li>
+
+            <li><a href="No-content.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/No-content.jpg"></div><p>No content</p> </a></li>
+
+            <li><a href="Orders.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Orders.jpg"></div><p>Orders</p> </a></li>
+
+           <li><a href="points.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/points.jpg"></div><p>points</p> </a></li>
+
+          <li><a href="product.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/product.jpg"></div><p>product</p> </a></li>
+
+
+          <li><a href="product-rtl.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/product-rtl.jpg"></div><p>product RTL</p> </a></li>
+
+            <li><a href="profile.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/profile.jpg"></div><p>profile</p> </a></li>
+
+            <li><a href="Redemption.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Redemption.jpg"></div><p>Redemption</p> </a></li>
+
+           <li><a href="Tickets.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Tickets.jpg"></div><p>Tickets</p> </a></li>
+
+          <li><a href="Tickets-Details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Tickets-Details.jpg"></div><p>Tickets Details</p> </a></li>
+
+           <li><a href="wishlist.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/wishlist.jpg"></div><p>wishlist</p> </a></li>
+
+   </ul>
+
+</div>
+
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+      <div class="body-bg"></div>
+
+
+<div class="menu-side-main">
+   <div class="menu-head">
+     <p>Menu</p>
+     <span class="colse-menu-btn icon-false"></span>
+   </div>
+   <div class="menu-main1">
+      <ul>
+        <li class="menu-links"><a href="#" class="close-menu-link">Mobile & Tablets</a></li>
+        <li class="menu-links"><a href="#" class="close-menu-link" > Large Home Appliances</a></li>
+        <li class="menu-links"><a href="#" class="close-menu-link">TVs & Recivers</a></li>
+        <li class="menu-links"><a href="#" class="close-menu-link">Computers & Gaming</a></li>
+        <li class="menu-links"><a href="#" class="close-menu-link">Small Home Appliances</a></li>
+        <li class="menu-links"><a  class="more-links-btn" href="#">Watches<span class="icon-play-button"></span>
+        </a>
+ <ul class="more-links-main">
+                   <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+             </ul>
+        </li>
+         <li class="menu-links"><a class="more-links-btn" href="#"><i class="fas fa-plus-square"></i> More<span class="icon-play-button"></span></a>
+ <ul class="more-links-main">
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+             </ul>
+
+         </li>
+      </ul>
+
+   </div>
+
+
+
+</div>
+
+<!-- header  -->
+
+<div class="container-fluid head-main remove-padding">
+  
+ <div class="container-fluid head-main-top">
+  <div class="container">
+    <a href="#" class="lan-btn">English<img src="img/flag.png"></a>
+    <p>في كل بيت <span>تلاقيه</span></p>
+    <ul><li><a href="#" class="singin-btn" data-toggle="modal" data-target="#login">log in</a></li>
+    <li><a href="#" data-toggle="modal" data-target="#login" class="singup-btn">Sign up</a></li>
+
+                    <li class="menu-btn"><div id="button1">
+       <div class="icn-first-space" ></div>
+      <div class="icn-space" ></div>
+</div>
+  <div id="button">
+        <div class="icn-first-space"></div>
+      <div class="icn-space"></div>
+  
+  </div></li>
+
+    </ul>  
+ </div>
+ </div>
+
+
+
+
+
+ <div class="container-fluid head-main-bot">
+    <div class="container remove-padding">
+       <div class="col-md-2 col-sm-3 col-xs-6 logo-main">
+          <a href="#"><img src="img/logo.png"></a>
+       </div>
+
+       <div class="col-md-8 col-sm-7 search-main">
+          <form> <input type="text" name="search"> <button><span class="icon-search"></span></button></form>
+       </div>
+
+       <div class="col-md-2 col-sm-2">
+          <ul>
+             <li class="mob-search"><a href="#" class="icon-search"></a></li>
+             <li><a href="#" class="icon-heart"></a></li>
+             <li class="cart-down-btn"><a href="#" class="icon-cart"></a>
+               <span>99</span>
+
+<div class="cart-down">
+ 
+ <ul>
+  <li>
+    <span class="remove-cart-item icon-delete"></span>
+    <a href="#">
+       <img src="img/3.png">
+       <p> UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a> 
+ </li>
+      <li>
+        <span class="remove-cart-item icon-delete"></span>
+        <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a> 
+</li>
+
+  <li>
+    <span class="remove-cart-item icon-delete"></span>
+        <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a> 
+</li>
+  <li>
+<span class="remove-cart-item icon-delete"></span>
+        <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a> 
+</li>
+  <li>
+    <span class="remove-cart-item icon-delete"></span>
+        <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a> 
+  </li>
+
+        <li>
+          <span class="remove-cart-item icon-delete"></span>
+        <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a> 
+    </li>
+
+      <li> 
+        <span class="remove-cart-item icon-delete"></span>
+            <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a> 
+    </li>
+
+      <li>
+      <span class="remove-cart-item icon-delete"></span> 
+            <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a>
+    </li>
+      <li>  
+        <span class="remove-cart-item icon-delete"></span>
+            <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a>
+    </li>
+      <li>  
+        <span class="remove-cart-item icon-delete"></span>
+            <a href="#">
+       <img src="img/3.png">
+       <p>UnionAir 32 Inch HD LED TV - M-LD-32UN-PB816-EXD</p>
+       <h4>1,999 EGP</h4>
+    </a>  
+    </li> 
+
+</ul>
+<div class="col-xs-12 remove-padding cart-top-btn-main">
+<a href="#" class="btn-outline">Continue Shopping</a>
+<a href="#" class="btn-solid">CHECHOUT</a>
+</div>
+
+</div>
+
+             </li>
+
+             
+
+          </ul>
+       </div>
+    </div>
+ </div>
+
+ <div class="container-fluid menu-main">
+   <div class="container remove-padding">
+       <ul>
+          <li><a href="#">Mobile & Tablets<span class="icon-caret-down"></span></a>
+            <div class="sub-menu-main">
+               <div class="sub-menu-con">
+                  <ul>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                  </ul>
+               </div>
+            </div>
+
+          </li>
+          <li><a href="#">Large Home Appliances<span class="icon-caret-down"></span></a>
+                      <div class="sub-menu-main">
+               <div class="sub-menu-con">
+                  <ul>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                  </ul>
+               </div>
+            </div></li>
+          <li><a href="#">TVs & Recivers<span class="icon-caret-down"></span></a>
+                      <div class="sub-menu-main">
+               <div class="sub-menu-con">
+                  <ul>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                  </ul>
+               </div>
+            </div></li>
+          <li><a href="#">Computers & Gaming<span class="icon-caret-down"></span></a>
+            <div class="sub-menu-main">
+               <div class="sub-menu-con">
+                  <ul>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                  </ul>
+               </div>
+            </div>
+          </li>
+          <li><a href="#">Small Home Appliances<span class="icon-caret-down"></span></a>
+            <div class="sub-menu-main">
+               <div class="sub-menu-con">
+                  <ul>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                  </ul>
+               </div>
+            </div>
+          </li>
+          <li  class="more-down-menu"><a href="#">Watches<span class="icon-caret-down"></span></a>
+            <div class="sub-menu-main">
+               <div class="sub-menu-con">
+                  <ul>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                  </ul>
+               </div>
+            </div>
+          </li>
+          <li class="more-down-menu"><a href="#">More<span class="icon-plus"></span></a>
+            <div class="sub-menu-main">
+               <div class="sub-menu-con">
+                  <ul>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                    <li><a href="#">Exampele for category<span class="icon-play-button"></span></a></li>
+                  </ul>
+               </div>
+            </div>
+          </li>
+       </ul>
+   </div>
+
+</div>
+
+
+
+</div>
+<!-- end header  -->
+
+
+
+<div class="container-fluid content-main remove-padding">
+
+
+
+<div class="container ">
+  <div class="breadcrumb-me remove-padding">
+      <a href="#" class="swipe-effect">Home</a>&ensp;<span class="icon-play-button"> </span>&ensp;
+      <a class="swipe-effect" href="#">Pants</a>&ensp;<span class="icon-play-button">   </span>&ensp;
+      <p>Cart</p></div>
+
+</div>
+
+  
+
+
+   
+        <div class="container remove-padding checkout-main">
+          
+<div class="col-xs-12 remove-padding">
+<form>
+<div class="col-md-9 col-xs-12 col-sm-12 Method-main remove-padding">
+<div class="col-xs-12 methed-item">
+  <h3>Items total</h3>
+  <h2>EGP480</h2>
+</div>
+<div class="clearfix"></div>
+<div class="col-xs-12 remove-padding methed-item">
+  <div class="col-md-3 col-xs-12 col-sm-12"><p>Address</p></div>
+  <div class="col-md-5 col-xs-12 col-sm-12">
+    <div class="col-xs-12 remove-padding input-item">
+
+
+   <select class="my-select">
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+
+
+
+   </select> 
+</div>
+  </div>
+  <div class="col-md-4 col-xs-12 col-sm-12">
+   <a href="#" class="btn-outline">or Add address</a>
+  </div>
+</div>
+<div class="col-xs-12 remove-padding methed-item">
+  <div class="col-md-3 col-xs-12 col-sm-12"><p>Promotion code</p></div>
+  <div class="col-md-5 col-xs-12 col-sm-12 input-item"><input type="text" name="">
+  <!-- true false toggle  -->
+   <span class="code-r-w"><img src="img/done.svg"></span>
+   <!-- <span class="code-r-w"><img src="img/close.svg"></span> -->
+  <!-- true false toggle  -->
+  </div>
+  <div class="col-md-4 col-xs-12 col-sm-12">
+    <a href="#" class="btn-solid">Apply promotion code</a>
+  </div>
+</div>
+<div class="col-xs-12 remove-padding methed-item payment-methed">
+  <div class="col-md-3 col-xs-12 col-sm-12"><p>Payment method</p></div>
+  <div class="col-md-9 col-xs-12 col-sm-12"><div class="remove-padding col-xs-12">
+  <div class="col-xs-12 remove-padding input-item radio-main-methed">
+  
+    <div class="radio-item">
+    <input type="radio" id="test1" name="radio-group" checked>
+    <label for="test1">Paypal</label>
+  </div>
+<div class="clearfix"></div>
+  <div class="radio-item">
+    <input type="radio" id="test2" name="radio-group">
+    <label for="test2">Credit card</label>
+  </div>
+  <div class="clearfix"></div>
+  <div class="radio-item">
+    <input type="radio" id="test3" name="radio-group">
+    <label for="test3">Fawrey</label>
+  </div>
+
+  <div class="clearfix"></div>
+  <div class="radio-item">
+    <input type="radio" id="test4" name="radio-group">
+    <label for="test4">Cash on delivery</label>
+  </div>
+
+
+</div>
+
+
+
+  </div>
+</div>
+
+</div>
+</div>
+<div class="col-md-3 col-xs-12 col-sm-12 Checkout-side-bar ">
+<div class="col-xs-12 Checkout-side-item">
+<p>Items total:</p>
+<h4>EGP480</h4>
+<div class="clearfix"></div>
+<p>Shipping fees:</p>
+<h4>EGP23</h4>
+<div class="clearfix"></div>
+<p>Coupon:</p>
+<h4>- EGP150</h4>
+<div class="clearfix"></div>
+</div>
+<div class="col-xs-12 Checkout-side-item">
+<p>total:</p>
+<h4>EGP350</h4>
+<div class="clearfix"></div>
+<p>Paid from wallet:</p>
+<h4>EGP<span>232</span></h4>
+<div class="clearfix"></div>
+</div>
+<div class="col-xs-12 Checkout-side-item side-to-pay-co">
+<p>To Pay</p>
+<h4>EGP150</h4>
+<div class="clearfix"></div>
+</div>
+<div class="col-xs-12 Checkout-side-item Checkout-point-hint">
+<p>You’re 150 pound away to earn 500 point <a href="#"> learn more</a></p>
+<div class="clearfix"></div>
+</div>
+<button type="submit" class="btn-solid">place order</button>
+
+</div>
+</div>
+</form>
+
+</div>
+
+
+        </div>
+
+
+
+
+
+
+
+   
+
+
+   
+
+
+
+
+
+</div>
+
+
+
+<div class="container-fluid footer-main">
+   <div class="container remove-padding">
+      <div class="col-md-2 col-sm-2 col-xs-12">
+         <img src="img/logo1.png">
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-12">
+         <h1>Categories</h1>
+         <a href="#">Mobile & Tablets</a>
+         <br>
+         <a href="#">Large Home Appliances</a>
+         <br>
+         <a href="#">TVs & Recivers</a>
+         <br>
+         <a href="#">Computers & Gaming</a>
+         <br>
+         <a href="#">Small Home Appliances</a>
+         <br>
+         <a href="#">Watches</a>
+
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-12">
+         <div class="col-xs-12">
+                 <h1>Support</h1>
+         <a href="#">About us</a>
+         <br>
+         <a href="#">Privacy Policy</a>
+         <br>
+         <a href="#">Contact us</a>
+       </div>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-12">
+                 <h1>Contact us</h1>
+         <p>26A Pagoda St, TANGS, Singapore, 058187</p>
+         <br>
+         <a href="#">+02 123 456 7890</a>
+
+
+      </div>
+      <div class="col-md-4 col-sm-4 col-xs-12">
+        <div class="col-xs-12">
+         <h1>Follow us</h1>
+         <p>You Can Follow Us On Our Socialmedia accounts</p>
+         <ul>
+          <li><a href="#" class="icon-facebook"></a></li>
+          <li><a href="#" class="icon-whatsapp"></a></li>
+          <li><a href="#" class="icon-instagram"></a></li>
+
+         </ul>
+       </div>
+      </div>
+
+<div class="copy-sectoin col-xs-12 remove-padding">
+   <p>© Copyright El Ghazawy INC 2019</p>
+   <ul>
+    <li><a href="#"><img src="img/Designed_&.png"></a></li>
+    <li><a href="#"><img src="img/Developed_by.png"></a></li>
+    <li><a href="#"><img src="img/logo-ip.png"></a></li>
+    
+  </ul>
+</div>
+
+
+   </div>
+
+</div>
+
+
+
+<div id="login" class="modal fade login-main" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+        
+       
+      
+      <div class="modal-body">
+            <div class="col-xs-12 remove-padding tabs-title-main">
+    <div class="slider-top current col-xs-6 remove-padding sing-in-tab-btn" data-tab="tab-1" >Log in</div>
+    <div class="slider-top col-xs-6 remove-padding sing-up-tab-btn" data-tab="tab-2" >Sign up</div>
+
+   
+    
+  </div>
+  <div class="col-xs-12 slide-tabs remove-padding current" id="tab-1">
+    
+<h3>we see you are not logged in so we recommend to login to have a full advantage of our serivce on the website</h3>    
+
+     <form>
+        <div class="col-xs-12 remove-padding input-item">
+    <p>Label</p>
+   <input type="text">
+  </div> 
+
+
+  <div class="col-xs-12 remove-padding input-item">
+
+     <p>password</p>
+   <input id="password-field" type="password">
+   <span toggle="#password-field" class="pass-icon icon-eye-close"></span>
+    </div>
+<a href="#" class="forgot-link">Forgot Your Password?</a>
+
+
+<button  class="btn-solid">log in</button>
+
+
+     </form>
+
+<div class="col-xs-12 remove-padding text-center">
+   <h4>Or use social account</h4>
+   <ul>
+      <li class="log-face"><a href="#"><span class="icon-facebook"></span></a></li>
+      <li class="log-google"><a href="#"><img src="img/google.svg"></a></li>
+    </ul>
+
+    <button type="button" class="close" data-dismiss="modal">Not now</button>
+
+</div>
+
+
+  </div>
+  <div class="col-xs-12 slide-tabs remove-padding" id="tab-2">
+    
+    
+<h3>Please fill the next fields to create your account</h3>    
+
+     <form>
+        <div class="col-xs-12 remove-padding input-item">
+    <p>Name</p>
+   <input type="text">
+  </div> 
+
+          <div class="col-xs-12 remove-padding input-item">
+    <p>Mobile number</p>
+   <input type="text">
+  </div> 
+
+          <div class="col-xs-12 remove-padding input-item">
+    <p>E-mail</p>
+   <input type="text">
+  </div> 
+
+
+  <div class="col-xs-12 remove-padding input-item">
+
+     <p>password</p>
+   <input id="password-field" type="password">
+   <span toggle="#password-field" class="pass-icon icon-eye-close"></span>
+    </div>
+
+
+<button  class="btn-solid">Sign up</button>
+
+
+     </form>
+
+<div class="col-xs-12 remove-padding text-center">
+   <h4>Or use social account</h4>
+   <ul>
+      <li class="log-face"><a href="#"><span class="icon-facebook"></span></a></li>
+      <li class="log-google"><a href="#"><img src="img/google.svg"></a></li>
+    </ul>
+
+    <button type="button" class="close" data-dismiss="modal">Not now</button>
+
+</div>
+
+
+  </div>
+   
+        
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/chosen.jquery.js"></script>
+<script src="js/slick.min.js"></script>
+
+
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+$(".pass-icon").click(function() {
+
+  $(this).toggleClass("icon-eye-close icon-eye");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
+
+$(".menu-btn").click(function(){
+$(".menu-side-main").addClass('open-menu');
+$(".body-bg").addClass('body-overlay')
+});
+
+$(".body-bg, .colse-menu-btn, .close-menu-link").click(function(){
+$(".menu-side-main").removeClass('open-menu');
+$(".search-main").removeClass('search-mob-show');
+$('.body-bg').removeClass('body-overlay');
+});
+
+$( ".more-links-btn" ).click(function() {
+  event.preventDefault();
+$(".more-links-btn").not(this).siblings('.more-links-main').slideUp();
+$(this).siblings('.more-links-main').slideToggle();
+$(".more-links-btn").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+  });
+
+   $(".mob-search").click(function(){
+      event.preventDefault();
+      $(".search-main").addClass("search-mob-show");
+      $(".body-bg").addClass('body-overlay')
+      });
+
+
+
+
+
+
+$('.singup-btn').click(function () { 
+$('.slider-top').removeClass('current');
+$('.slide-tabs').removeClass('current');
+$('.sing-up-tab-btn').addClass('current');
+$("#tab-2").addClass('current');
+
+});
+
+$('.singin-btn').click(function () { 
+$('.slider-top').removeClass('current');
+$('.slide-tabs').removeClass('current');
+$('.sing-in-tab-btn').addClass('current');
+$("#tab-1").addClass('current');
+
+});
+
+
+
+$('.slider-top').click(function () {
+var tab_id = $(this).attr('data-tab');
+$('.slider-top').removeClass('current');
+$('.slide-tabs').removeClass('current');
+$(this).addClass('current');
+$("#" + tab_id).addClass('current');
+});
+
+
+
+$('.remove-cart-item').click(function () {
+   $(this).next().remove();
+
+});
+
+
+// end master
+
+$(".my-select").chosen();
+
+
+
+
+	});
+</script>
+      <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script> 
+
+</body>
+</html>

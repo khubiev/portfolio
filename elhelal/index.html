@@ -1,0 +1,761 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Untitled Document</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<!--<link href="../css/bootstrap-rtl.css" rel="stylesheet">
+<link href="../css/style-arabic.css" rel="stylesheet">-->
+</head>
+
+<body>
+
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="contact.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact.jpg"></div><p>contact</p> </a></li>
+      <li><a href="history.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/history.jpg"></div><p>history</p> </a></li>
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+           <li><a href="News-d.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/News-d.jpg"></div><p>News details</p> </a></li>
+               <li><a href="News.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/News.jpg"></div><p>News</p> </a></li>   
+               
+                     <li><a href="player.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/player.jpg"></div><p>player</p> </a></li>
+
+      <li><a href="Tables.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Tables.jpg"></div><p>Tables</p> </a></li>
+           <li><a href="team.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/team.jpg"></div><p>team</p> </a></li>
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+<section class="header">
+<div class="hidden-xs">
+ <div class="container">
+  <div class="row">
+  <div class="header-links">
+  <a href="#">ALHILAL MOBILE APP</a>
+  <a href="#">FORUMS</a>
+  <a href="#">CONTACT US</a>
+  <div class="lan">
+<!--  <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+   
+    </button>-->
+      <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">
+     <img src="img/lan.png">
+    </button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li><a  href="#">Arabic</a></li>
+      <li><a href="#">English</a></li>
+
+    </ul>
+  </div>
+
+   </div> 
+   
+
+  </div>
+  </div> <!--row-->
+ </div> <!--container-->
+  <div class="container-fluid header-mian remove-the-padding">
+  <div class="container">
+  <img src="img/logo.png">
+  <div class="col-sm-10 col-sm-offset-2 make-the-hight">
+ 
+
+ 
+ <a href="#">NEWS</a>
+  <a href="#">TEAMS</a> 
+ <a href="#">TABLES & RESULTS</a> 
+  
+  
+ <a href="#">CLUB HISTORY</a>
+  
+  <span class="dropdown dropdown_new">
+  <a href="#" class="dropdown-toggle gallery" data-toggle="dropdown">GALLERY</a>
+ 
+          <ul class="dropdown-menu menu-mian">
+            <li><a href="#">Action</a></li>
+
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+  </span>
+ 
+ 
+
+  
+  
+
+  
+  
+  </div>
+  </div>
+  </div> <!--container-fluid-->
+  </div>
+  
+  <div class="mobile-menu visible-xs">
+<div class="col-xs-12 remove-the-padding" >
+  
+    <div class="navbar-header">
+    <img class="mob-logo" src="img/logo-mob.png">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+  </div>
+    <div class="collapse navbar-collapse mob-menu">
+    <ul>
+      <li class="active col-xs-12"> <a href="#">HOME </a></li>
+      <li class="col-xs-12"> <a href="#">NEWS</a></li>
+      <li class="col-xs-12"> <a href="#">TEAMS</a></li>
+      <li class="active col-xs-12"><a href="#">TABLES & RESULTS</a></li>
+      <li class="col-xs-12"><a href="#">CLUB HISTORY</a></li>
+      <li class="col-xs-12"><a href="#">FORUMS</a></li>
+      <li class="col-xs-12"><a href="#">CONTACT US </a></li>
+      <li class="active col-xs-12"><a href="#">ALHILAL MOBILE APP</a></li>
+      <li>         <a class="col-xs-12" href="#demo" data-toggle="collapse">  LANGUAGE &nbsp  &nbsp  &nbsp  &nbsp <span class="glyphicon glyphicon-triangle-bottom"></span></a>
+             <div id="demo" class="collapse col-xs-12" >
+<a  class="col-xs-12" href="#" >ARABIC</a>
+<a  href="#" >ENGLISH</a>
+
+</div> </li> 
+  
+    </ul>
+  </div> <!--nav-collapse --> 
+  </div>
+  </div>
+</section>
+<div class="container nav-bot-bar"></div>
+<div class="container cover-mian remove-the-padding hidden-xs">
+  <div class="for-bg col-xs-12 remove-the-padding">
+  <div class="img-responsive col-xs-12 cover-leyer">
+  <div class="col-lg-4  col-md-5  col-sm-6 next-match-mian">
+    
+  <h4 class="dont-miss"> DON'T MISS</h4>
+  <div class="under-dont-miss"></div>
+    
+    
+  <div class="home-club-name"><img src="img/logo-mob.png" class="img-responsive">
+  <h5 class="text-center">Al Hilal</h5>
+  </div>
+    
+  <h2 class="text-center">VS</h2>
+    
+  <div class="club-name"><img src="img/logo-mob2.png" class="img-responsive">
+  <h5 class="text-center">Al Tawan</h5>
+  </div>
+    
+    
+  <h5 class=" col-xs-12 dont-miss" ><b>League: Abdul Latif Jameel</b></h5>
+  <p class=" col-xs-12 dont-miss" >31/12/2016 Sat - 07:50 pm</p>
+    
+    
+  </div>
+  </div>
+    
+  </div>
+  
+  
+  
+  
+</div>
+
+
+<!--mobile cover-->
+<div class="visible-xs col-xs-12 match-card-mobile">
+  <div class="col-xs-12">
+  <h4 class="text-center"><b> DON'T MISS </b></h4>
+  <div class="under-dont-miss center-block"></div>
+  </div>
+  
+  <div class="col-xs-5 club-name-mob">
+  <img src="img/logo-mob2.png" class="img-responsive center-block">
+  <h5 class="text-center">Al Tawan</h5>
+  </div>
+  <div class="col-xs-2 remove-the-padding">
+  <h2 class="text-center">VS</h2>
+  </div>
+  
+  <div class="col-xs-5 home-club-name-mob">
+  <img src="img/logo-mob.png" class="img-responsive center-block">
+  <h5 class="text-center">Al Hilal</h5>
+  </div>
+  <h5 class="col-xs-12 text-center" ><b>League: Abdul Latif Jameel</b></h5>
+  <p class="col-xs-12 text-center" >31/12/2016 Sat - 07:50 pm</p>
+  
+  
+</div>
+
+
+
+
+<div class="container ads-mian">
+  <img src="img/ads.png" class="col-xs-10 col-xs-offset-1">
+</div>
+  <div class="container strok"></div>
+<div class="container">
+  <div class="row make-margin-bottom">
+
+  <div class="Triangle center-block"></div>
+   <div class="home-news-container col-md-6">
+   <div class="col-xs-12 home-news">
+   <div class="news-head-bg img-responsive">
+   <p> <img src="img/let-icn.png"><b>&nbsp &nbsp Latest news</b> </p>
+   </div>
+   
+   <div class="col-md-10 col-md-offset-1 remove-the-padding ved-img-mian">
+  <a href="#"> <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img" >
+   <img src="img/ved-l-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="title-news-mian col-md-10 col-md-offset-1 remove-the-padding">
+  <a href="#"> <h3><b>‘i’m not playing but can’t switch off’</b></h3></a>
+   <p><div class="line-prph"></div> &nbsp &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+   </div>
+   
+   <div class="ved-new-small-container remove-the-padding col-xs-12">
+   <div class="ved-new-small-mian col-md-10 col-md-offset-1 remove-the-padding">
+      <div class="col-xs-4  remove-the-padding ved-img-mian">
+ <a href="#" class="col-xs-12 remove-the-padding">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-8">
+  <a class="col-xs-12 remove-the-padding" href="#"> <h4><b>‘i’m not playing but can’t switch off’</b></h4></a>
+    <p><div class="line-prph"></div> &nbsp &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+   </div>
+   </div>
+ </div>
+  <div class="ved-new-small-container remove-the-padding col-xs-12">
+   <div class="ved-new-small-mian col-md-10 col-md-offset-1 remove-the-padding">
+      <div class="col-xs-4  remove-the-padding ved-img-mian">
+ <a href="#" class="col-xs-12 remove-the-padding">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-8">
+  <a class="col-xs-12 remove-the-padding" href="#"> <h4><b>‘i’m not playing but can’t switch off’</b></h4></a>
+    <p><div class="line-prph"></div> &nbsp &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+   </div>
+   </div>
+ </div>
+  <div class="ved-new-small-container remove-the-padding col-xs-12">
+   <div class="ved-new-small-mian col-md-10 col-md-offset-1 remove-the-padding">
+      <div class="col-xs-4  remove-the-padding ved-img-mian">
+ <a href="#" class="col-xs-12 remove-the-padding">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-8">
+  <a class="col-xs-12 remove-the-padding" href="#"> <h4><b>‘i’m not playing but can’t switch off’</b></h4></a>
+    <p><div class="line-prph"></div> &nbsp &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+   </div>
+   </div>
+ </div>
+  <div class="ved-new-small-container remove-the-padding col-xs-12">
+   <div class="ved-new-small-mian col-md-10 col-md-offset-1 remove-the-padding">
+      <div class="col-xs-4  remove-the-padding ved-img-mian">
+ <a href="#" class="col-xs-12 remove-the-padding">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-8">
+  <a class="col-xs-12 remove-the-padding" href="#"> <h4><b>‘i’m not playing but can’t switch off’</b></h4></a>
+    <p><div class="line-prph"></div> &nbsp &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+   </div>
+   </div>
+ </div>
+  <div class="ved-new-small-container remove-the-padding col-xs-12">
+   <div class="ved-new-small-mian col-md-10 col-md-offset-1 remove-the-padding">
+      <div class="col-xs-4  remove-the-padding ved-img-mian">
+ <a href="#" class="col-xs-12 remove-the-padding">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-8">
+  <a class="col-xs-12 remove-the-padding" href="#"> <h4><b>‘i’m not playing but can’t switch off’</b></h4></a>
+    <p><div class="line-prph"></div> &nbsp &nbsp &nbsp Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor </p>
+   </div>
+   </div>
+ </div>
+
+ 
+
+   
+   </div>
+   </div> <!--home-news-containe-->
+   
+   <div class="club-vedio-container col-md-2 hidden-xs hidden-sm">
+   <div class="club-vedio col-xs-12">
+    <div class="ved-new-small-mian col-xs-12  remove-the-padding">
+      <div class="col-xs-12  remove-the-padding ved-img-mian">
+ <a href="#">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-12 remove-the-padding">
+  <a href="#"> <h5><b>‘i’m not playing but can’t switch off’</b></h5></a>
+   
+   </div>
+   </div>
+     <div class="ved-new-small-mian col-xs-12  remove-the-padding">
+      <div class="col-xs-12  remove-the-padding ved-img-mian">
+ <a href="#">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-12 remove-the-padding">
+  <a href="#"> <h5><b>‘i’m not playing but can’t switch off’</b></h5></a>
+   
+   </div>
+   </div>
+     <div class="ved-new-small-mian col-xs-12  remove-the-padding">
+      <div class="col-xs-12  remove-the-padding ved-img-mian">
+ <a href="#">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-12 remove-the-padding">
+  <a href="#"> <h5><b>‘i’m not playing but can’t switch off’</b></h5></a>
+   
+   </div>
+   </div>
+     <div class="ved-new-small-mian col-xs-12  remove-the-padding">
+      <div class="col-xs-12  remove-the-padding ved-img-mian">
+ <a href="#">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-12 remove-the-padding">
+  <a href="#"> <h5><b>‘i’m not playing but can’t switch off’</b></h5></a>
+   
+   </div>
+   </div>
+     <div class="ved-new-small-mian col-xs-12  remove-the-padding">
+      <div class="col-xs-12  remove-the-padding ved-img-mian">
+ <a href="#">  <img src="img/helal.jpg" class="col-md-12  img-responsive remove-the-padding the-img control-hight" >
+   <img src="img/ved-m-icn.png" class="img-responsive ved-icn"></a>
+   </div>
+   <div class="ved-new-small-title col-xs-12 remove-the-padding">
+  <a href="#"> <h5><b>‘i’m not playing but can’t switch off’</b></h5></a>
+   
+   </div>
+   </div>
+   </div>
+   </div> <!--club-vedio-containe-->
+   
+  <div class="side-bar-container col-md-4">
+   <div class="col-xs-12 side-bar">
+   <img src="img/side-ads.jpg" class="img-responsive text-center center-block hidden-sm hidden-xs">
+
+   <h4><b>FOLLOW ALHILAL</b></h4>
+   <div class="line-bot-follow"></div>
+   <div class="social-mian remove-the-padding col-xs-12">
+   <a href="#" class="face col-xs-2 col-xs-offset-1 img-responsive"></a>
+      <a href="#" class="youtube col-xs-2 img-responsive"></a>
+         <a href="#" class="google-plus col-xs-2  img-responsive"></a>
+            <a href="#" class="twitter col-xs-2  img-responsive"></a>
+               <a href="#" class="instagram col-xs-2 img-responsive"></a>
+
+   </div>
+         <h4><b>VIRTUAL TOUR</b></h4>
+   <div class="line-bot-follow"></div>
+   <div class="Virtual-mian col-xs-12 remove-the-padding center-block">
+   <img src="img/Virtual-icn.png" class=" img-responsive center-block">
+ 
+   
+
+   </div>
+   
+   
+   </div>
+   
+
+   
+   
+   </div> <!--side-ads-->
+
+  
+
+</div> <!--row-->
+</div> <!--container-->
+<div class="container-fluid strok"></div>
+<div class="Triangle1 center-block"></div>
+<div class="container-fluid table-mian">
+  <div class="container">
+  <div class="league-mian col-xs-12- col-sm-12 col-md-6 remove-the-padding">
+  <h3><b>JAMEEL LEAGUE</b></h3>
+  <img class="gameel img-responsive" src="img/gameel-icn.png">
+    
+    
+  <h4 class="col-md-3 col-sm-12 col-xs-12 remove-the-padding"><b>Other<br> Champions : </b></h4>
+    
+  <div class="col-sm-8 col-xs-8 col-xs-offset-2 col-sm-offset-2 col-md-6 col-md-offset-0 ads-bot-margin">
+  <div class="img-responsive col-xs-6 col-md-3"><img src="img/other-1.png" class=" center-block"></div>
+  <div class="img-responsive col-xs-6 col-md-3"><img src="img/other-2.png" class=" center-block"></div>
+  </div>
+    
+    
+    
+    
+    
+    
+  </div>
+    
+  <div class="table-content col-md-6 col-xs-12 col-sm-12 remove-the-padding">
+    
+    
+    
+    
+    
+    <table class="table table-bordered">
+      
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Team</th>
+          <th class=" col-xs-2 text-center">Rank</th>
+          <th class=" col-xs-1 text-center">Pt's</th>
+          <th class=" col-xs-2 text-center">Played</th>
+          <th class=" col-xs-3"></th>
+          </tr>
+        </thead>
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Al Hilal</th>
+          <th class=" col-xs-2 text-center">1</th>
+          <th class="  col-xs-1 text-center">34</th>
+          <th class=" col-xs-2 text-center">14</th>
+          <th class=" col-xs-2"><a href="#"> Matches </a></th>
+          </tr>
+        </thead>
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Al Ittihad</th>
+          <th class=" col-xs-2 text-center">1</th>
+          <th class="  col-xs-1 text-center">34</th>
+          <th class=" col-xs-2 text-center">14</th>
+          <th class=" col-xs-2"><a href="#"> Matches </a></th>
+          </tr>
+        </thead>
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Al Ittihad</th>
+          <th class=" col-xs-2 text-center">1</th>
+          <th class="  col-xs-1 text-center">34</th>
+          <th class=" col-xs-2 text-center">14</th>
+          <th class=" col-xs-2"><a href="#"> Matches </a></th>
+          </tr>
+        </thead>
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Al Hilal</th>
+          <th class=" col-xs-2 text-center">1</th>
+          <th class="  col-xs-1 text-center">34</th>
+          <th class=" col-xs-2 text-center">14</th>
+          <th class=" col-xs-2"><a href="#"> Matches </a></th>
+          </tr>
+        </thead>
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Al Ittihad</th>
+          <th class=" col-xs-2 text-center">1</th>
+          <th class="  col-xs-1 text-center">34</th>
+          <th class=" col-xs-2 text-center">14</th>
+          <th class=" col-xs-2"><a href="#"> Matches </a></th>
+          </tr>
+        </thead>
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Al Ittihad</th>
+          <th class=" col-xs-2 text-center">1</th>
+          <th class="  col-xs-1 text-center">34</th>
+          <th class=" col-xs-2 text-center">14</th>
+          <th class=" col-xs-2"><a href="#"> Matches </a></th>
+          </tr>
+        </thead>
+      <thead>
+        <tr>
+          <th class=" col-xs-4">Al Ittihad</th>
+          <th class=" col-xs-2 text-center">1</th>
+          <th class="  col-xs-1 text-center">34</th>
+          <th class=" col-xs-2 text-center">14</th>
+          <th class=" col-xs-2"><a href="#"> Matches </a></th>
+          </tr>
+        </thead>
+      
+      
+      </table>
+    
+    
+  </div> <!--table-->
+    
+  </div> <!--container-->
+  
+</div> <!--table-mian-->
+
+
+
+<div class="container-fluid strok"></div>
+<div class="Triangle-down center-block"></div>
+
+<div class="container tweets-mian">
+  <div class="col-xs-6 ads-mian-bot hidden-xs hidden-sm">
+    <img src="img/side-ads.jpg" class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+  </div>
+  
+  <div class="tweets col-xs-12 col-sm-12 col-md-6 remove-the-padding">
+    <div class="news-head-bg">
+      <p><b>Tweets of the Day</b></p>
+    </div>
+    
+    <div class="twwets-content">
+      <div class="photo-tweet col-md-2 col-xs-3" >
+        <img src="img/hector.png" class="img-responsive">
+      </div>
+      <h5><b>Hectorbellerin</b></h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+      <a href="#"><b>pic.twitter.com/hu5sdfpvv</b></a>
+    </div>
+    <div class="twwets-content">
+      <div class="photo-tweet col-md-2 col-xs-3" >
+        <img src="img/hector.png" class="img-responsive">
+      </div>
+      <h5><b>Hectorbellerin</b></h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+      <a href="#"><b>pic.twitter.com/hu5sdfpvv</b></a>
+    </div>
+    <div class="twwets-content">
+      <div class="photo-tweet col-md-2 col-xs-3" >
+        <img src="img/hector.png" class="img-responsive">
+      </div>
+      <h5><b>Hectorbellerin</b></h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.</p>
+      <a href="#"><b>pic.twitter.com/hu5sdfpvv</b></a>
+    </div>
+    
+    
+  </div>
+  
+</div>
+
+
+
+<section class="footer">
+  <div class="container-fluid blackbg footer-mian remove-the-padding">
+   <div class="container make-margin-bottom make-margin-top text-center sponsors-mian">
+   
+    
+   <a href="#" class="make-margin-bottom col-xs-2"><img src="img/1.png"></a>
+   <a href="#" class="make-margin-bottom col-xs-2"><img src="img/2.png"></a>
+   <a href="#" class="make-margin-bottom col-xs-2"><img src="img/3.png"></a>
+   <a href="#" class="make-margin-bottom col-xs-2"><img src="img/4.png"></a>
+   <a href="#" class="make-margin-bottom col-xs-2"><img src="img/5.png"></a><a href="#" class="make-margin-bottom col-xs-2"><img src="img/6.png"></a><a href="#" class="make-margin-bottom col-xs-2"><img src="img/1.png"></a>
+   
+   <a href="#" class="make-margin-bottom col-xs-2"><img src="img/2.png"></a>
+   
+      <a href="#" class="make-margin-bottom col-xs-2"><img src="img/3.png"></a><a href="#" class="make-margin-bottom col-xs-2"><img src="img/4.png"></a><a href="#" class="make-margin-bottom col-xs-2"><img src="img/6.png"></a>
+   
+   <a href="#" class="make-margin-bottom col-xs-2"><img src="img/4.png"></a>
+
+
+   
+
+
+   
+   </div>
+   
+<!--<img  src="img/spon.png" class="center-block img-responsive sponsors">-->
+<div class="line col-xs-12"></div>
+
+<div class="container">
+<div class="row copy-right-mian">
+
+<div class="col-md-9 col-lg-offset-3 col-md-offset-2 col-sm-offset-1 links-mian">
+<a href="#">Terms of use</a>
+<a href="#">Privacy policy</a>
+<a href="#">cookie policy</a>
+<a href="#">website-statement</a>
+<a href="#">rippleffect</a>
+<a href="#">ostmodern</a>
+</div>
+</div>
+<p class="text-center">ALL RIGHTS RESERVED © 2015</p>
+<img src="img/footer-internetplus.png" class="center-block our-logo">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script>
+$('span.dropdown_new').hover(function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+}, function() {
+  $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+});
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

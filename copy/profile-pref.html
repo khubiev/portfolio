@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/style.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link href="css/chosen.min.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+
+          <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="address.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/address.jpg"></div><p>address</p> </a></li>
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact</p> </a></li>
+
+           <li><a href="Control-panel.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Control-panel.jpg"></div><p>Control panel</p> </a></li>
+        
+               
+          
+
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+           <li><a href="payment-input.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/payment-input.jpg"></div><p>payment-input</p> </a></li>
+
+              <li><a href="profile-pref.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/profile.jpg"></div><p>profile</p> </a></li>
+
+     
+
+<li><a href="upload-3.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-3.jpg"></div><p>upload-3</p> </a></li>
+
+<li><a href="upload-4.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-4.jpg"></div><p>upload-4</p> </a></li>
+
+<li><a href="upload-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-1.jpg"></div><p>upload-1</p> </a></li>
+
+<li><a href="wallet.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/wallet.jpg"></div><p>wallet</p> </a></li>
+
+
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+    <div class="container-fluid remove-padding control-head-main head-main hidden-xs">
+      <div class="container" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500"><a href="#"><img src="img/Logo_white.png"> </a>
+      <div class="menu-links">
+        <ul>
+          <li><a href="#">EN</a></li>
+          <li><a href="#">اطبع ملف</a></li>
+          <li><a href="#">لوحة التحكم</a></li>
+          <li><a href="#">تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  <div class="container-fluid mob-menu visible-xs" id="mobile-nav">
+    <a href="#" class="logo-mob"><img src="img/Logo_white.png"></a>
+    <div class="outer-menu ">
+      <input class="checkbox-toggle" type="checkbox" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">اطبع ملف</a></li>
+              <li><a href="#">لوحة التحكم</a></li>
+              <li><a href="#">تسجيل الخروج</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid pro-cont">
+    
+    <div class="container remove-padding">
+      
+      <div class="col-md-3 col-sm-4 pro-side" data-aos="fade-left"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+        <ul>
+          <li class=""><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 19"><path d="M15.71,6.92,9.41.59a2,2,0,0,0-2.83,0L.29,6.85A1,1,0,0,0,0,7.56v9.66A1.83,1.83,0,0,0,2,19H5a1.83,1.83,0,0,0,2-1.79v-1a1,1,0,0,1,2,0v1A1.83,1.83,0,0,0,11,19h3a1.83,1.83,0,0,0,2-1.79V7.63A1,1,0,0,0,15.71,6.92ZM14,16.21c0,.55-.45.79-1,.79H12c-.55,0-1-.24-1-.79v-1A2.19,2.19,0,0,0,9,13H7a2.19,2.19,0,0,0-2,2.21v1c0,.55-.45.79-1,.79H3c-.55,0-1-.24-1-.79V8.15a.5.5,0,0,1,.15-.35L7.28,2.66a1,1,0,0,1,1.41,0l5.16,5.16a.5.5,0,0,1,.15.35Z" transform="translate(0 0)"/></svg><a href="#">لوحة التحكم</a></li>
+          <li  class="active-side-pro"><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="18 9 18 0 16 0 16 9 14 9 14 11 16 11 16 20 18 20 18 11 20 11 20 9 18 9"/><polygon points="4 0 2 0 2 9 0 9 0 11 2 11 2 20 4 20 4 11 6 11 6 9 4 9 4 0"/><polygon points="11 0 9 0 9 4 7 4 7 6 9 6 9 20 11 20 11 6 13 6 13 4 11 4 11 0"/></svg><a href="#">إعدادات الحساب</a></li>
+          
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 93.59 81.56"><path d="M342.8,213.57c-.08-1.4-1.8-3.89-2.68-3.86-5.63.24-5.68-3.22-5.46-7.2.12-2.16-.2-4.35.06-6.49.6-4.94-1.16-6.66-6.35-6.59-20.81.28-41.63.13-62.44.09-3.27,0-7.71.56-7.69-4.08s4.42-4.08,7.72-4.09c21.31,0,42.63-.06,63.94,0,3.25,0,4.9-.76,4.86-4.44s-2.13-3.92-4.87-3.91c-11.16,0-22.31,0-33.47,0v0c-11,0-22-.14-33,0-9.08.15-13.81,4.92-13.88,14q-.2,26.47,0,53a18.56,18.56,0,0,0,1.56,7.17c2.73,6.17,8.46,7.08,14.26,7.11,21.15.13,42.29,0,63.44.19,4.75,0,6.22-1.91,5.88-6.29-.22-2.81,0-5.66,0-8.49-.06-3.05.72-4.94,4.34-5.37,1.44-.17,3.64-2.45,3.75-3.9A128,128,0,0,0,342.8,213.57ZM320,246q-27,0-54,0c-7.14,0-8.28-1.19-8.3-8.06,0-11.67.1-23.33-.07-35-.06-3.8.92-5.31,5.08-5.17,9.65.32,19.33.1,29,.1v0c9.67,0,19.33.08,29,0,3.48,0,5.79.46,5.58,4.81-.17,3.68.25,6.72-5.18,6.9-9.66.32-14.45,5.14-14.25,13.13.18,7.24,4.58,11.18,13.89,11.82,3.6.25,5.58,1.11,5.53,5.17C326.25,245.14,325.67,246,320,246Zm14.35-23.17c-.06,1.09-1.68,2.66-2.88,3-1.84.51-5.92.24-5.92.3-2.31-.12-4.71.09-6.89-.49-1.26-.34-2.94-1.89-3-3s1.3-3.58,2.25-3.69a94.06,94.06,0,0,1,14.72-.53C333.34,218.43,334.48,221.32,334.39,222.84Z" transform="translate(-249.47 -173.01)"/></svg><a href="#">محفظتي</a></li>
+          <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 20"><circle cx="7" cy="7.22" r="2"/><path d="M7,0A7,7,0,0,0,0,7c0,3.87,3.13,13,7,13s7-9.13,7-13A7,7,0,0,0,7,0ZM7,18C5.18,18,2,11,2,7A5,5,0,0,1,12,7C12,11,8.82,18,7,18Z"/></svg><a href="#">دفتر العنواين</a></li>
+          <li><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16"><rect x="6" y="8" width="8" height="2"/><path d="M14,4V0H6V4H0V16H20V4ZM8,2h4V4H8ZM18,14H2V6H18Z"/></svg><a href="#">طلباتي</a></li>
+          
+          <li><svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 17.08"><path d="M16.93,9.08c.39,0,.39-.82,0-1.21L14.51,5.56a2,2,0,0,0-2.83.05L9.19,8.05c-.39.39-.07,1-.07,1.44,1,.39,1.11.39,1.5,0L11.24,9a.53.53,0,0,1,.9.35v6.93c0,.55.41.83,1,.83s1-.28,1-.83v-7A.47.47,0,0,1,15,8.89l.58.39C15.92,9.68,16.55,10.08,16.93,9.08Z" transform="translate(0 0)"/><path d="M18.62,3A6.88,6.88,0,0,0,6.55,4.26a4.4,4.4,0,0,0-4.24.68A5.08,5.08,0,0,0,0,9.23,5,5,0,0,0,5,14H9a1,1,0,0,0,1-.95A1.06,1.06,0,0,0,9,12H5.17A3.12,3.12,0,0,1,2.05,9.55,3,3,0,0,1,5,6a3,3,0,0,1,1.05.2L6,7a1,1,0,0,0,2,.16c.06-.52.15-1.17.28-1.84.81-4,8.23-4.85,9.53.49.47,1.94-.64,3.76-1.6,4.92A1,1,0,0,0,17.73,12C19.83,10,21.14,6.49,18.62,3Z" transform="translate(0 0)"/></svg><a href="#">ارفع ملف</a></li>
+        </ul>
+      </div>
+      <div class="col-md-9 col-sm-8 profile-pref-main">
+        <div class="col-xs-12 remove-padding update-info-main">
+          
+          <form data-aos="fade-right"
+     data-aos-easing="linear"
+     data-aos-duration="500" id="form1" runat="server">
+            <div id='img_contain'><img id="blah" align='middle' alt="" title=''/></div>
+            <label class="upload-btn"> <input type='file' id="imgInp" />
+            <div>
+              <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><polygon points="17.4 15.7 17.4 13 15.7 13 15.7 15.7 13 15.7 13 17.4 15.7 17.4 15.7 20 17.4 20 17.4 17.4 20 17.4 20 15.7 17.4 15.7" style="fill:#4d88c7"/><path d="M13.9,13.9h0A6.9,6.9,0,0,0,9.6,7.4,3.5,3.5,0,0,0,7.7,1.7h8v9.6h1.7V0H0V17.4H11.3V15.7H1.7V13.9h0A5.2,5.2,0,0,1,6.9,8.6H7a5.2,5.2,0,0,1,5.2,5.2h1.7ZM4.3,7.4A8.6,8.6,0,0,0,1.7,9.2V1.7H6.2A3.4,3.4,0,0,0,4.3,7.4ZM7,6.9H6.9a1.7,1.7,0,1,1,.1,0Z" transform="translate(0 0)" style="fill:#4d88c7"/></svg>
+            حمل صورة </div></label>
+            <div class="clearfix"></div>
+            <div class="col-md-6">
+              
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>رقم الجوال</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>رقم الجوال</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>رقم الجوال</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-md-6 custom-select">
+              
+              <select data-placeholder="دولة الإقامة" class="chosen-select-no-single">
+                <option value=""></option>
+                <option>عنوان 1</option>
+                <option>عنوان 1</option>
+                <option>عنوان 1</option>
+                <option>عنوان 1</option>
+                <option>عنوان 1</option>
+                <option>عنوان 1</option>
+                <option>عنوان 1</option>
+                <option>عنوان 1</option>
+              </select>
+            </div>
+            <div class="clearfix"></div>
+            <div class="cntr">
+              <p>افضل استلام البريد باللغة</p>
+              <label for="rdo-1" class="btn-radio">
+                <input type="radio" id="rdo-1" name="radio-grp">
+                <svg width="15px" height="15px" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="9"></circle>
+                <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+              <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+            </svg>
+            <span>العربية</span>
+          </label>
+          <label for="rdo-2" class="btn-radio">
+            <input type="radio" id="rdo-2" name="radio-grp">
+            <svg width="15px" height="15px" viewBox="0 0 20 20">
+              <circle cx="10" cy="10" r="9"></circle>
+            <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+          <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+        </svg>
+        <span>الإنجليزية</span>
+      </label>
+    </div>
+    <button class="update-btn">تحديث    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><circle cx="4.7" cy="2.4" r="0.6" style=""/><path class="update-btn-svg" d="M10.8,0h-7L3.4.2.2,3.4a.6.6,0,0,0-.2.4v7A1.2,1.2,0,0,0,1.2,12h9.6A1.2,1.2,0,0,0,12,10.8V1.2A1.2,1.2,0,0,0,10.8,0ZM3.6,1.7l.5-.5H8.4V3a.6.6,0,0,1-.6.6H4.2A.6.6,0,0,1,3.6,3Zm4.8,9.1H3.6V9a.6.6,0,0,1,.6-.6H7.8a.6.6,0,0,1,.6.6Zm2.4-.6a.6.6,0,0,1-.6.6H9.6V8.4A1.2,1.2,0,0,0,8.4,7.2H3.6A1.2,1.2,0,0,0,2.4,8.4v2.4H1.8a.6.6,0,0,1-.6-.6V4L2.4,2.9v.7A1.2,1.2,0,0,0,3.6,4.8H8.4A1.2,1.2,0,0,0,9.6,3.6V1.2h.6a.6.6,0,0,1,.6.6Z" transform="translate(0 0)"/></svg></button>
+  </form>
+</div>
+
+
+
+<div class="col-md-6 col-xs-12 update-mail-main" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-xs-12 update-mail-cont remove-padding">
+  <h3>تحديث البريد الإلكتروني</h3>
+<form>
+            <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>Mail@domain.com</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+
+                        <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>البريد الإلكتروني الجديد</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+
+                        <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="password" placeholder="">
+                <label>كلمة المرور</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+    <button class="update-btn">تحديث    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><circle cx="4.7" cy="2.4" r="0.6" style=""/><path class="update-btn-svg" d="M10.8,0h-7L3.4.2.2,3.4a.6.6,0,0,0-.2.4v7A1.2,1.2,0,0,0,1.2,12h9.6A1.2,1.2,0,0,0,12,10.8V1.2A1.2,1.2,0,0,0,10.8,0ZM3.6,1.7l.5-.5H8.4V3a.6.6,0,0,1-.6.6H4.2A.6.6,0,0,1,3.6,3Zm4.8,9.1H3.6V9a.6.6,0,0,1,.6-.6H7.8a.6.6,0,0,1,.6.6Zm2.4-.6a.6.6,0,0,1-.6.6H9.6V8.4A1.2,1.2,0,0,0,8.4,7.2H3.6A1.2,1.2,0,0,0,2.4,8.4v2.4H1.8a.6.6,0,0,1-.6-.6V4L2.4,2.9v.7A1.2,1.2,0,0,0,3.6,4.8H8.4A1.2,1.2,0,0,0,9.6,3.6V1.2h.6a.6.6,0,0,1,.6.6Z" transform="translate(0 0)"/></svg></button>
+
+          </form>
+          </div>
+
+</div>
+
+
+
+
+<div class="col-md-6 col-xs-12 update-pass-main" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-xs-12 update-pass-cont remove-padding">
+  <h3>تحديث كلمة المرور</h3>
+<form>
+            <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="password" placeholder="">
+                <label>كلمة المرور الحالية</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+
+                        <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="password" placeholder="">
+                <label>كلمة المرور الجديدة</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+
+                        <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="password" placeholder="">
+                <label>تأكيد كلمة المرور الجديدة</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+    <button class="update-btn">تحديث    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><circle cx="4.7" cy="2.4" r="0.6" style=""/><path class="update-btn-svg" d="M10.8,0h-7L3.4.2.2,3.4a.6.6,0,0,0-.2.4v7A1.2,1.2,0,0,0,1.2,12h9.6A1.2,1.2,0,0,0,12,10.8V1.2A1.2,1.2,0,0,0,10.8,0ZM3.6,1.7l.5-.5H8.4V3a.6.6,0,0,1-.6.6H4.2A.6.6,0,0,1,3.6,3Zm4.8,9.1H3.6V9a.6.6,0,0,1,.6-.6H7.8a.6.6,0,0,1,.6.6Zm2.4-.6a.6.6,0,0,1-.6.6H9.6V8.4A1.2,1.2,0,0,0,8.4,7.2H3.6A1.2,1.2,0,0,0,2.4,8.4v2.4H1.8a.6.6,0,0,1-.6-.6V4L2.4,2.9v.7A1.2,1.2,0,0,0,3.6,4.8H8.4A1.2,1.2,0,0,0,9.6,3.6V1.2h.6a.6.6,0,0,1,.6.6Z" transform="translate(0 0)"/></svg></button>
+
+          </form>
+          </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+</div>
+<div class="container-fluid footer-main">
+
+<div class="container remove-padding">
+
+<div class="col-lg-2 col-md-3 col-sm-4 fot-logo-main remove-padding">
+<a href="#" class="logo-fot"><img src="img/Logo_white.png"> </a>
+<p>تقديم خدمات الطباعة في المملكة العربية السعودية</p>
+</div>
+<div class="col-lg-2 col-sm-3 col-lg-offset-1 col-md-2 col-md-offset-1 fot-links">
+<h4>روابط مهمة</h4>
+<a href="#">
+  من نحن
+</a>
+<br>
+<a href="#">
+  الاسئله المتكررة
+</a>
+<br>
+
+<a href="#">
+  نقطة الإستلام
+</a>
+<br>
+
+<a href="#">
+  سياسه الخصوصية
+</a>
+<br>
+
+<a href="#">
+  الشروط و الاحكام
+</a>
+<br>
+
+<a href="#">
+  
+  تواصل معنا
+</a>
+<br>
+
+
+</div>
+<div class="col-lg-5 col-sm-5 col-lg-offset-2 col-md-5 col-md-offset-1 fot-info">
+
+<h3>طباعة منصة عبر الإنترنت
+</h3>
+<p>المكتب الإداري لشركة اطبع التجارية، مركز السدحان، شارع موسى بن نصير، حي السليمانية، الرياض
+للدعم الفني أو الشكاوى يمكنك التواصل معنا عبر ( support@print.sa ) أو الواتساب 966599139318</p>
+<ul class="social-icn">
+  <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+  <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+  <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+  
+  <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+  
+  <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+  
+  
+  
+</ul>
+</div>
+</div>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/chosen.jquery.js"></script>
+<script src="js/init.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+  AOS.init();
+</script>
+<script>
+$(document).ready(function() {
+$(".chosen-select").chosen({rtl: true});
+});
+</script>
+<script>
+$(document).ready(function() {
+function readURL(input) {
+if (input.files && input.files[0]) {
+var reader = new FileReader();
+reader.onload = function(e) {
+$('#blah').attr('src', e.target.result);
+$('#blah').hide();
+$('#blah').fadeIn(500);
+}
+reader.readAsDataURL(input.files[0]);
+}
+}
+$("#imgInp").change(function() {
+readURL(this);
+});
+
+
+// JavaScript for label effects only
+  $(window).load(function(){
+    $(".input-effect input").val("");
+    
+    $(".input-effect input").focusout(function(){
+      if($(this).val() != ""){
+        $(this).addClass("has-content");
+      }else{
+        $(this).removeClass("has-content");
+      }
+    })
+  });
+
+
+
+});
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

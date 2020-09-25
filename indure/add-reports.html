@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>project</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+      <li><a href="reports.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/reports.jpg"></div><p>reports</p> </a></li>
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact us</p> </a></li>
+      <li><a href="FAQ.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/FAQ.jpg"></div><p>FAQ</p> </a></li>
+      <li><a href="add-reports.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-reports.jpg"></div><p>add reports</p> </a></li>
+      <li><a href="network.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/network.jpg"></div><p>network</p> </a></li>
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="log-in.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+  
+<div class="div container-fluid remove-padding body-cont">
+
+
+<div class="container add-report-mian">
+
+  <div class="col-lg-4 col-lg-offset-4 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1">
+  <h4 class="center-block">Add new report</h4>
+  <div class="after-add-title"></div>
+  <form>
+  <div class="report-input">
+   <input class="effect-2" type="text" placeholder="Report details">
+   <span class="focus-border"></span>
+   </div>
+   <div class="upload-btn-wrapper">
+  <button class="btn"><img src="img/new-file1.png"> Upload a file</button>
+  <input type="file" name="myfile" />
+</div>
+
+<div class="file-added">
+  <img src="img/new-file.png">
+  <p> The File Name And Some Words About</p>
+  <span class="remove-added"><i class="fa fa-times"></i></span>
+  <span class="edit"><i class="fa fa-pencil"></i></span>
+  
+</div>
+ <div class="clearfix"></div>
+ <div class="file-added">
+  <img src="img/new-file.png">
+  <p> The File Name And Some Words About</p>
+  <span class="remove-added"><i class="fa fa-times"></i></span>
+  <span class="edit"><i class="fa fa-pencil"></i></span>
+  
+</div>
+ <div class="clearfix"></div>
+ <div class="file-added">
+  <img src="img/new-file.png">
+  <p> The File Name And Some Words About</p>
+  <span class="remove-added"><i class="fa fa-times"></i></span>
+  <span class="edit"><i class="fa fa-pencil"></i></span>
+  
+</div>
+ <div class="clearfix"></div>
+ <div class="file-added">
+  <img src="img/new-file.png">
+  <p> The File Name And Some Words About</p>
+  <span class="remove-added"><i class="fa fa-times"></i></span>
+  <span class="edit"><i class="fa fa-pencil"></i></span>
+  
+</div>
+ <div class="clearfix"></div>
+ <div class="file-added">
+  <img src="img/new-file.png">
+  <p> The File Name And Some Words About</p>
+  <span class="remove-added"><i class="fa fa-times"></i></span>
+  <span class="edit"><i class="fa fa-pencil"></i></span>
+  
+</div>
+ <div class="clearfix"></div>
+ 
+   <a href="#" class="back-home-add make-black-white-effect"><img src="img/arrow_right1.png"> Back</a>
+   
+   <button type="submit" class="sub-btn">Submit</button>
+ 
+  
+  </form>
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!--<div class="container-fluid befor-footer set-to-bottom">
+ 
+
+</div>-->
+<!--<section>
+ <div class="container-fluid footer">
+   <div class="container footer-mian">
+    <ul class="footer-links col-md-8 col-sm-10">
+     <li><a href="#">Startups Application</a></li>
+     <li><a href="#">Company Login</a></li>
+     <li><a href="#">About</a></li>
+     <li><a href="#">Contact us</a></li>
+     <li><a href="#" class="sub"><b>Subscripe to our newsletter</b></a></li>
+    </ul>
+    <div class="footer-logo">
+   <a href="#"><img src="img/logo-footer.png" ></a>
+   </div>
+   </div>
+ </div>
+
+</section>-->
+
+</div>
+  
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.js"></script>
+
+<script>
+
+
+$(document).ready(function(){
+
+
+
+
+$('.remove-added').on('click', function(){
+    $(this).parent().fadeOut();
+});
+
+
+});
+
+</script>  
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+</body>
+</html>

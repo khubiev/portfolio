@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/slick.css"  rel="stylesheet">
+        <link href="css/slick-theme.css"  rel="stylesheet">
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <link href="css/style.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+    
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="communities.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/communities.jpg">
+  </div><p>communities</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="register.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/register.jpg">
+  </div><p>register</p> </a>
+</li>
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+    
+<div class="all-body">
+
+  <!-- start header  -->
+
+      <div class="search-main remove-padding">
+        <div class="container">
+          <form>
+            <input type="text" name="" placeholder="What are you looking for ? ">
+            <button>serch</button>
+          </form>
+        </div>
+      </div>
+
+<div class="menu-side-main">
+   <div class="menu-head">
+     <p>All pages</p>
+     <span class="colse-menu-btn flat-hover"><i class="fas fa-times"></i></span>
+   </div>
+   <div class="menu-main">
+      <ul>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="slider"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="service"><i class="fas fa-cog"></i> Services</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="count"><i class="fas fa-retweet"></i> rents</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="faq"><i class="fas fa-life-ring"></i> Faqs</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="apply"><i class="fas fa-sign-in-alt"></i> Apply</a></li>
+        <li><a  class="more-links-btn" href="#"> <i class="fas fa-clipboard-check"></i> Why choose us
+<span><i class="fas fa-chevron-down"></i></span>
+        </a>
+ <ul class="more-links-main">
+                <li><a href="#">My account</a></li>
+                <li><a href="#">My Surveys</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our offer to customers</a></li>
+                <li><a href="#">Realising your potential</a></li>
+                <li><a href="#">Twenty11 communities</a></li>
+                <li><a href="#">Tenancy Sustainment Licence </a></li>
+               <li> <a href="#">Report Anti Social Behavior </a></li>
+             </ul>
+        </li>
+         <li><a class="more-links-btn" href="#"><i class="fas fa-plus-square"></i> More<span><i class="fas fa-chevron-down"></i></span></a>
+ <ul class="more-links-main">
+                <li><a href="#">My account</a></li>
+                <li><a href="#">My Surveys</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our offer to customers</a></li>
+                <li><a href="#">Realising your potential</a></li>
+                <li><a href="#">Twenty11 communities</a></li>
+                <li><a href="#">Tenancy Sustainment Licence </a></li>
+               <li> <a href="#">Report Anti Social Behavior </a></li>
+             </ul>
+
+         </li>
+      </ul>
+
+   </div>
+   <div class="menu-footer">
+     <ul class="social-links">
+      <li>
+        <a href="#" class="flat-hover"><i class="fab fa-facebook-f"></i></a></li>
+         <li>
+          <a href="#" class="flat-hover"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+   </div>
+
+
+
+</div>
+
+
+      <div class="body-bg"></div>
+
+<div class="container-fluid head-main">
+   <div class="container remove-padding">
+      <a href="#"><img data-aos="fade-right"     data-aos-easing="linear"
+     data-aos-duration="500" src="img/logo.png"></a>
+
+      <ul>
+
+          <li data-aos="flip-right"     data-aos-easing="linear"
+     data-aos-duration="500" class="search-btn search-link"> <i class="fas fa-search"></i></li>
+          <li data-aos="flip-right"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200" class="sing-btn"><a href="#"><i class="fas fa-user-alt"></i></a></li>
+                    <li data-aos="flip-right"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="400" class="menu-btn"><div id="button1">
+       <div class="icn-first-space" ></div>
+      <div class="icn-space" ></div>
+</div>
+  <div id="button">
+        <div class="icn-first-space"></div>
+      <div class="icn-space"></div>
+  
+  </div></li>
+      </ul>
+   </div>
+
+</div>
+
+
+
+<!-- end header  --> 
+
+<!-- slider  -->
+
+<div class="container-fluid remove-padding block" id="slider">
+
+<div class="container-fluid slider-main remove-padding home-slider">
+ 
+
+
+  <div id="myCarousel" class="carousel slide" data-interval="2000" data-ride="carousel">
+
+<div class="container arrow-slider-main">
+    
+  <a data-aos="flip-left"     data-aos-easing="linear"
+     data-aos-duration="500" class="left carousel-control" href="#myCarousel" data-slide="prev">
+     <i class="fas fa-chevron-left"></i>
+    </a>
+ 
+  
+    <a data-aos="flip-left"     data-aos-easing="linear"
+     data-aos-duration="500" class="right carousel-control" href="#myCarousel"   data-slide="next">
+     <i class="fas fa-chevron-right"></i>
+    </a>
+   
+</div>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+      
+        <div class="slider-data container">
+          
+          <h3 class="anmi-1">Not just a housing company</h3>
+          <span class="anmi-1">
+            we want to truly help realize the potential in our communities, with an emphasis on customer
+            engagement that generates positive results and is focused on what’s important to local people.
+          </span>
+          <a class="slider-link" href="#">About Us </a>
+        </div>
+      
+        <img src="img/Slider1.jpg" >
+      </div>
+
+      <div class="item">
+         <div class="slider-data container">
+          
+          <h3>We offer rent and provide support</h3>
+          <span>We offer rents, tenancies, coaching and support that change as people’s circumstances change.</span>
+          <a class="slider-link" href="#">Apply Now</a>
+        </div>
+        <img src="img/Slider-2.jpg" >
+      </div>
+
+
+            <div class="item">
+         <div class="slider-data container">
+          
+          <h3>Community Engagement</h3>
+          <span>We offer rents, tenancies, coaching and support that change as people’s circumstances change.</span>
+          <a class="slider-link" href="#">Apply Now</a>
+        </div>
+        <img src="img/Slider-3.jpg" >
+      </div>
+    
+
+    </div>
+
+  
+</div>
+
+</div>
+</div>
+
+
+<!-- end slider -->
+
+<div class="container remove-padding call-to-main">
+
+   <div class="col-md-3 col-sm-3 col-xs-12 remove-padding" data-aos="flip-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+      <a href="#" class="call-to-item ">
+        <div>
+        <img src="img/2.svg" class="pay-icon">
+        <h4>Pay Rent</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla</p>
+      
+        <span><i class="fas fa-arrow-right"></i></span>
+      </div>
+      </a>
+   </div>
+
+      <div class="col-md-3 col-sm-3 col-xs-12 remove-padding" data-aos="flip-up"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+      <a href="#" class="call-to-item">
+        <div>
+        <img src="img/1.svg">
+        <h4>Apply</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla</p>
+      
+        <span><i class="fas fa-arrow-right"></i></span>
+      </div>
+      </a>
+   </div>
+
+      <div class="col-md-3 col-sm-3 col-xs-12 remove-padding" data-aos="flip-up"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="400">
+      <a href="#" class="call-to-item">
+        <div>
+        <img src="img/3.svg">
+        <h4>Report</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla</p>
+      
+        <span><i class="fas fa-arrow-right"></i></span>
+      </div>
+      </a>
+   </div>
+
+
+      <div class="col-md-3 col-sm-3 col-xs-12 remove-padding" data-aos="flip-up"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="600">
+      <a href="#" class="call-to-item">
+        <div>
+        <img src="img/4.svg">
+        <h4>Request</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla</p>
+      
+        <span><i class="fas fa-arrow-right"></i></span>
+      </div>
+      </a>
+   </div>
+</div>
+
+
+<!-- end call to action  -->
+
+
+<div class="container-fluid services-main section block" id="service">
+
+
+   <div class="container remove-padding">
+
+               <p data-aos="zoom-in"     data-aos-easing="linear"
+     data-aos-duration="500">What would you like to do?</p>
+          <h1 data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500">Services</h1>
+           
+          <div class="line-title text-center" data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>
+      <div class="col-md-4 col-sm-12 col-xs-12 services-item"
+      data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500">
+        <div class="ser-img-frame">
+           <img src="img/1.png">
+        </div>
+        <div class="ser-info">
+           <h3>FLEXIBLE RENT</h3>
+           <p>I'm using dummy text for the flipped side, as there are no details provided on the Twenty11 website</p>
+        </div>
+</div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 services-item"
+      data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+        <div class="ser-img-frame">
+           <img src="img/2.png">
+        </div>
+        <div class="ser-info">
+           <h3>WORK AND OPPORTUNITIES </h3>
+           <p>I'm using dummy text for the flipped side, as there are no details provided on the Twenty11 website</p>
+        </div>
+</div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 services-item" 
+      data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="400">
+        <div class="ser-img-frame">
+           <img src="img/3.png">
+        </div>
+        <div class="ser-info">
+           <h3>COMMUNITY ENGAGEMENT</h3>
+           <p>I'm using dummy text for the flipped side, as there are no details provided on the Twenty11 website</p>
+        </div>
+</div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 services-item"
+      data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500">
+        <div class="ser-img-frame">
+           <img src="img/4.png">
+        </div>
+        <div class="ser-info">
+           <h3>COACHING AND MENTORING</h3>
+           <p>I'm using dummy text for the flipped side, as there are no details provided on the Twenty11 website</p>
+        </div>
+</div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 services-item"
+      data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+        <div class="ser-img-frame">
+           <img src="img/5.png">
+        </div>
+        <div class="ser-info">
+           <h3>DIGITAL PREFERENCE</h3>
+           <p>I'm using dummy text for the flipped side, as there are no details provided on the Twenty11 website</p>
+        </div>
+</div>
+
+      <div class="col-md-4 col-sm-12 col-xs-12 services-item"
+      data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="400">
+        <div class="ser-img-frame">
+           <img src="img/6.png">
+        </div>
+        <div class="ser-info">
+           <h3>INDIVIDUALITY AND TAILORING</h3>
+           <p>I'm using dummy text for the flipped side, as there are no details provided on the Twenty11 website</p>
+        </div>
+</div>
+
+
+
+   </div>
+
+
+</div>
+
+
+<div class="container-fluid join-main">
+   <img src="img/1.jpg">
+
+
+   <div class="container remove-padding">
+      <div class="col-md-6 col-md-offset-6">
+        <p data-aos="fade-down"     data-aos-easing="linear"
+     data-aos-duration="500">JOINING THE TEAM</p>
+
+   <h4 data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="500">We’re all about positive and productive relationships. To deliver great services, we want to work with motivated,
+interesting and skilled people. If you have a positive attitude to work, are keen to help
+others and recognize that teamwork is the key to success, we’d like to hear from you.</h4>
+   <div data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="500"> <a href="#">View Vacancies</a></div>
+      </div>
+   </div>
+
+
+</div>
+
+
+
+
+<!--end service  -->
+
+
+
+
+
+<div class="container-fluid section counter-main block" id="count">
+   <div class="container remove-padding">
+               
+          <p data-aos="zoom-in"     data-aos-easing="linear"
+     data-aos-duration="500">Counter</p>
+          <h1 data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500"> Tweny11 in Numbers</h1>
+           
+          <div class="line-title text-center" class="line-title text-center" data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>
+
+
+
+          <div class="col-xs-12 remove-padding count-container">
+<div class="col-md-3 col-sm-6 col-xs-6 cont-item">
+    <h3><span class="counter">6581</span></h3>
+    <p data-aos="zoom-in"data-aos-easing="linear" data-aos-duration="500">Homes</p>
+
+          <div class="line-title" class="line-title text-center" data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>
+</div>
+
+<div class="col-md-3 col-sm-6 col-xs-6 cont-item">
+    <h3><span class="counter"> 35128</span></h3>
+    <p data-aos="zoom-in"data-aos-easing="linear" data-aos-duration="500" data-aos-delay="100">Happy Residents
+</p>
+  
+          <div class="line-title" class="line-title text-center" data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>
+</div>
+
+
+<div class="col-md-3 col-sm-6 col-xs-6 cont-item">
+    <h3><span class="counter"> 2318</span> </h3>
+    <p data-aos="zoom-in"data-aos-easing="linear" data-aos-duration="500" data-aos-delay="200">Repairs Completed
+</p>
+  
+          <div class="line-title" class="line-title text-center" data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>
+</div>
+
+<div class="col-md-3 col-sm-6 col-xs-6 cont-item">
+    <h3><span class="counter">98</span>%</h3>
+    <p data-aos="zoom-in"data-aos-easing="linear" data-aos-duration="500" data-aos-delay="300">Customer Satisfaction</p>
+
+          <div class="line-title" class="line-title text-center" data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>
+</div>
+
+</div>
+   </div>
+
+</div>
+
+<!-- end counter  -->
+
+<div class="container-fluid slider-main-general ">
+   <div class="container" data-aos="flip-down"data-aos-easing="linear" data-aos-duration="500">
+     
+  <div class="slick-carousel">
+    <div class="slide-content"><p>Twenty11 is a brand new landlord</p></div>
+    <div class="slide-content"><p>Our homes are based in the Wycombe district</p></div>
+    <div class="slide-content"><p>We set rents that are based on a household’s ability to pay</p></div>
+    <div class="slide-content"><p>We have flexible tenancy agreements</p></div>
+    <div class="slide-content"><p>We offer bespoke life coaching through our Community Potential Specialist</p></div>
+</div>
+   </div>
+</div>
+
+<!-- end general slider  -->
+
+
+
+<div class="container-fluid section faqs-main block" id="faq">
+   <div class="container remove-padding">
+               
+          <p data-aos="zoom-in"     data-aos-easing="linear"
+     data-aos-duration="500">Frequently asked Questions</p>
+          <h1 data-aos="flip-down"     data-aos-easing="linear"
+     data-aos-duration="500">FAQ</h1>
+           
+          <div class="line-title text-center" class="line-title" class="line-title text-center" data-aos="fade-up"     data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>
+
+
+<div class="col-xs-12 remove-padding faq-main">
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500">
+    <h2>How do you decide on the rent I will pay?</h2>
+    <p>We’ll set your rent based on the income of your household, so that you have a rent you can afford. The rent will stay the same unless your circumstances change significantly, such as if your household changes or you experience something life changing. In some situations, this might mean we offer you a lower rent for a short period. Either way, keep us up to date with your family situation and we can discuss the rent with you should things change.</p>
+    <a href="#">Read More</a>
+
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+    <h2>What is the Community Potential Specialist?</h2>
+    <p>Our Community Potential Specialist is available to work with you to understand what you want to achieve, what you believe your potential is, and what you think the barriers are which prevent you from realising it.
+
+The Community Potential Specialist will then work with you to draw up a Personal Success Plan and work together to achieve it – including identifying where partner organisations can provide services to meet specific needs, for example:</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500">
+    <h2>Will my tenancy be renewed at the end of its term?</h2>
+    <p>This will depend on your behaviour and the outcome of our assessments that will take place throughout your tenancy, based on things such as whether you have kept to your tenancy conditions, is your home still suitable for your needs, and also your points on your Tenancy Sustainment Licence. How you and your household behave is therefore critical to our decision as to whether you will continue as a Twenty11 tenant.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+    <h2>How do you review my tenancy and make a decision?</h2>
+    <p>We will carry out regular assessments throughout your tenancy and will take into account whether you have kept to your tenancy conditions and your points on your Tenancy Sustainment Licence, including for both positive and negative behaviours. If you don’t agree with a decision about your tenancy, you may be able to go through our appeals process.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500">
+    <h2>Can I add or remove someone to/from my tenancy?</h2>
+    <p>A Twenty11 sole tenancy cannot be changed to a joint one. However, we will consider such requests at the end of the tenancy term if the intention is to grant a new tenancy. In exceptional circumstances, we may allow a joint tenancy to become a sole tenancy. This can be done by a Court Order made, for example, during proceedings of divorce, separation or dissolution of a civil partnership. In these circumstances, a Deed of Assignment must be completed and signed by both joint tenants, and a copy of the Court Order must be attached to the Deed of Assignment.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+    <h2>Who is the ‘Realising Potential’ approach for and can I apply?</h2>
+    <p>Our ‘Realising Potential’ programme is designed for Twenty11 customers who pay rent that is lower than market rent.
+
+During the pilot period (the first six months) you will have at least one meeting with our Community Potential Specialist. After that, it’s up to you whether you want to take part. It’s also open to almost everyone living in a Twenty11 home, our tenants, their partners and dependants, but not those staying on a temporary basis e.g. visiting or market rent homes as above.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500">
+    <h2>How do I sign up for the ‘Realising Potential’ approach?</h2>
+    <p>Within the first few weeks of moving into your new Twenty11 home, a meeting will be arranged with the Community Potential Specialist, who will visit your home to welcome you to Twenty11 and the ‘Realising Potential’ approach.
+
+The Community Potential Specialist will discuss and help you draw up your Personal Success Plan, which sets out your goals and aspirations, as well as the steps you will take to get there. It will also set out what help and support Twenty11 and partner organisations will provide to help you realise your potential.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+    <h2>How often do we have to meet/speak?</h2>
+    <p>You and the Community Potential Specialist will agree how regularly you will need to contact each other or meet, based on what is in your Personal Success Plan. This can be up to six meetings, unless otherwise agreed in your Personal Success Plan.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500">
+    <h2>How long does the support last for?</h2>
+    <p>As long as the Community Potential Specialist believes we can help make a measurable, meaningful difference and you are committed to your Personal Success Plan. This can be up to six months and will need to be identified through your Personal Success Plan progress updates.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+
+<div class="col-md-6 col-sm-6 col-xs-12 fq-item" data-aos="fade-up" data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200">
+    <h2>How will you measure success?</h2>
+    <p>Over time, we will be able to see, through anonymised case studies, how customers living in Twenty11 homes have improved their individual circumstances. As numbers increase, we hope to see changes in communities, with increased community activity and peer support, a reduction in anti-social behaviour and sustainment of tenancies.</p>
+    <a href="#">Read More</a>
+
+
+</div>
+</div>
+
+        </div>
+
+      </div>
+
+
+      <div class="container-fluid section apply-main block" id="apply">
+          <div class="container apply-main-cont">
+                 <p data-aos="zoom-in" data-aos-easing="linear"
+     data-aos-duration="500">HURRY UP!</p>
+          <h1 data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">Apply now</h1>
+           
+          <div class="line-title text-center" 
+          data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div>  
+
+<ul>
+   <li data-aos="flip-up" data-aos-easing="linear"
+     data-aos-duration="500"><a href="#" class="flat-hover">Register with bucks</a> </li>
+   <li data-aos="flip-down" data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200"><a href="#" class="comp-btn flat-hover">complete registration </a></li>
+</ul>
+
+          </div>
+
+      </div>
+
+<div class="container-fluid contact-main" id="contact">
+   <div class="container remove-padding">
+      <h1>Get in Touch</h1>
+      <p>Subscribe to mailinglist to receive updates on new arrivals,<br>
+special offers and other discount information</p>
+
+<form>
+  <input type="email" name="" placeholder="Enter your e-mail">
+  <button type="submit">Send</button>
+
+</form>
+
+   </div>
+
+
+
+</div>
+
+<div class="container-fluid footer-main">
+   <div class="container text-center">
+      <ul class="social-main-fot">
+            <li><a href="#" class="flat-hover"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#" class="flat-hover"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+      <ul class="link-bot-main">
+        
+           <li><a href="#">Policies</a> </li>
+           <li><a href="#">Site Map</a> </li>
+           <li><a href="#">A to Z</a> </li>
+           <li><a href="#">Faqs</a> </li>
+         
+      </ul>
+
+      <p>Copyright © 2019 Twenty11. All rights reserved.</p>
+
+
+   </div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/jquery.countup.min.js"></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+
+
+<script>
+
+$(document).ready(function() {
+
+  AOS.init();
+
+  $('.counter').countUp();
+
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
+$(".body-bg").click(function(){
+$(".search-main").slideUp("fast");
+$('.body-bg').removeClass('body-overlay');
+});
+$(".search-link").click(function(){
+event.preventDefault();
+$(".search-main").slideToggle("fast");
+$(".body-bg").addClass('body-overlay')
+});
+
+
+$(".menu-btn").click(function(){
+$(".menu-side-main").addClass('open-menu');
+$(".body-bg").addClass('body-overlay')
+});
+
+$(".body-bg, .colse-menu-btn, .close-menu-link").click(function(){
+$(".menu-side-main").removeClass('open-menu');
+$('.body-bg').removeClass('body-overlay');
+});
+
+
+
+
+
+      $(".accord-title").click(function(){
+      $(this).next().slideToggle("fast")
+      .siblings(".accord-main:visible").slideUp("fast");
+      });
+      $(".body-bg").click(function(){
+      $(".search-main").slideUp("fast");
+      $('.body-bg').removeClass('body-overlay');
+      });
+      $(".search-link").click(function(){
+      event.preventDefault();
+      $(".search-main").slideDown("fast");
+      $(".body-bg").addClass('body-overlay')
+      });
+
+
+$( ".more-links-btn" ).click(function() {
+  event.preventDefault();
+$(".more-links-btn").not(this).siblings('.more-links-main').slideUp();
+$(this).siblings('.more-links-main').slideToggle();
+
+$(".more-links-btn").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+  });
+
+  $('.slick-carousel').slick({
+    arrows: false,
+    rows: 1,
+    slidesPerRow: 1,
+    centerPadding: "0px",
+    dots: true,
+    slidesToShow: 1,
+    touchThreshold: 500,
+    fade:true,
+    cssEase: 'linear',
+    speed:500,
+    infinite: true,  
+    autoplay: true,
+  autoplaySpeed: 2500,
+  });
+
+
+
+});
+
+
+        var lia = $("a.scroll-to");
+        $(function () {
+            //calc body padding depend on nav height
+            $("body").css("paddingTop", $("nav").innerHeight() + 10);
+
+            //smothely scroll element
+            lia.click(function (e) {
+                // $(this).addClass("active-link").siblings().removeClass("active-link");
+                $("html, body").animate({
+                    scrollTop: $("#" + $(this).data("scroll")).offset().top - 90
+                }, 1000);
+            });
+
+            //Sunc nanbar links with sections
+            $(window).scroll(function () {
+                $(".block").each(function () {
+                    if ($(window).scrollTop() > $(this).offset().top - 100) {
+                        var blockId = $(this).attr("id");
+                        $('a.scroll-to').removeClass("active-link");
+                        if (!$('a.scroll-to[data-scroll="' + blockId + '"]').hasClass("active-link")) {
+                            $('a.scroll-to[data-scroll="' + blockId + '"]').addClass("active-link")
+                        }
+                    }
+                });
+            });
+              
+      $("a.scroll-to").click(function (event) {
+        // your custom code
+        event.preventDefault();
+    });
+
+
+
+
+              
+              });
+
+
+
+
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

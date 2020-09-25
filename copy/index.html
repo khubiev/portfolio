@@ -1,0 +1,1301 @@
+﻿<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/style.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  </head>
+  <body>
+
+      <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="address.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/address.jpg"></div><p>address</p> </a></li>
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact</p> </a></li>
+
+           <li><a href="Control-panel.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/Control-panel.jpg"></div><p>Control panel</p> </a></li>
+        
+               
+          
+
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+           <li><a href="payment-input.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/payment-input.jpg"></div><p>payment-input</p> </a></li>
+
+              <li><a href="profile-pref.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/profile.jpg"></div><p>profile</p> </a></li>
+
+     
+
+<li><a href="upload-3.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-3.jpg"></div><p>upload-3</p> </a></li>
+
+<li><a href="upload-4.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-4.jpg"></div><p>upload-4</p> </a></li>
+
+<li><a href="upload-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/upload-1.jpg"></div><p>upload-1</p> </a></li>
+
+<li><a href="wallet.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/wallet.jpg"></div><p>wallet</p> </a></li>
+
+
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+    <!-- 
+    <div class="container-fluid head-main home-head remove-bg" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">>
+      <div class="container">
+        <a href="#" class="logo"><img src="img/Logo_white.png"> </a>
+        <div class="sing-main">
+          <a href="#" data-toggle="modal" data-target="#sing-up-pop">تسجيل الدخول</a>
+          <div id="sing-up-pop" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="log-bg"></div>
+                <div class="col-xs-12 col-md-6 col-sm-6 fild-main">
+                  
+                  <h4>إنشاء حساب</h4>
+                  <form>
+                    <div class="col-xs-12 remove-padding">
+                      <div class="input-effect">
+                        <input class="effect-19" type="text" placeholder="">
+                        <label>رقم الجوال</label>
+                        <span class="focus-border">
+                          <i></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 remove-padding">
+                      <div class="input-effect">
+                        <input class="effect-19" type="text" placeholder="">
+                        <label>رقم الجوال</label>
+                        <span class="focus-border">
+                          <i></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="col-xs-12 remove-padding">
+                      <div class="input-effect">
+                        <input class="effect-19" type="text" placeholder="">
+                        <label>رقم الجوال</label>
+                        <span class="focus-border">
+                          <i></i>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="cntr">
+                      <p>افضل استلام البريد باللغة</p>
+                      <label for="rdo-1" class="btn-radio">
+                        <input type="radio" id="rdo-1" name="radio-grp">
+                        <svg width="15px" height="15px" viewBox="0 0 20 20">
+                          <circle cx="10" cy="10" r="9"></circle>
+                        <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                      <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                    </svg>
+                    <span>العربية</span>
+                  </label>
+                  <label for="rdo-2" class="btn-radio">
+                    <input type="radio" id="rdo-2" name="radio-grp">
+                    <svg width="15px" height="15px" viewBox="0 0 20 20">
+                      <circle cx="10" cy="10" r="9"></circle>
+                    <path d="M10,7 C8.34314575,7 7,8.34314575 7,10 C7,11.6568542 8.34314575,13 10,13 C11.6568542,13 13,11.6568542 13,10 C13,8.34314575 11.6568542,7 10,7 Z" class="inner"></path>
+                  <path d="M10,1 L10,1 L10,1 C14.9705627,1 19,5.02943725 19,10 L19,10 L19,10 C19,14.9705627 14.9705627,19 10,19 L10,19 L10,19 C5.02943725,19 1,14.9705627 1,10 L1,10 L1,10 C1,5.02943725 5.02943725,1 10,1 L10,1 Z" class="outer"></path>
+                </svg>
+                <span>الإنجليزية</span>
+              </label>
+            </div>
+            <div class="col-xs-12 remove-padding ">
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>رقم الجوال</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>رقم الجوال</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+            <div class="col-xs-12 remove-padding">
+              <div class="input-effect">
+                <input class="effect-19" type="text" placeholder="">
+                <label>رقم الجوال</label>
+                <span class="focus-border">
+                  <i></i>
+                </span>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <button type="submit">انشاء الحساب</button>
+          </form>
+        </div>
+        <div class="col-xs-12 col-md-6 col-sm-6 have-an-account">
+          <div class="col-xs-12">
+            <p>هل لديك حساب؟</p>
+            <a data-toggle="modal" data-target="#sing-in-pop" data-dismiss="modal" href="#">تسجل الدخول</a>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#" class="sing-up" data-toggle="modal" data-target="#sing-in-pop"> تسجيل الاشتراك</a>
+  <div id="sing-in-pop" class="modal fade" role="dialog">
+   
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="log-bg"></div>
+            <div class="col-xs-12 col-md-6 col-sm-6 fild-main">
+              
+              <h4>إنشاء حساب</h4>
+              <form>
+                
+                <div class="col-xs-12 remove-padding">
+                  <div class="input-effect">
+                    <input class="effect-19" type="text" placeholder="">
+                    <label>رقم الجوال</label>
+                    <span class="focus-border">
+                      <i></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding">
+                  <div class="input-effect">
+                    <input class="effect-19" type="text" placeholder="">
+                    <label>رقم الجوال</label>
+                    <span class="focus-border">
+                      <i></i>
+                    </span>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <button type="submit">انشاء الحساب</button>
+                <a href="#" class="forgot-pass" style="background-color: transparent !important;">
+                  <i class="fas fa-info-circle"></i>
+                  نسيت كلمة المرورs
+                </a>
+              </form>
+            </div>
+            <div class="col-xs-12 col-md-6 col-sm-6 have-an-account">
+              <div class="col-xs-12">
+                <p>هل لديك حساب؟</p>
+                <span class="log-in-note">لا يستغرق انشاء حساب اكثر من دقيقه.</span>
+                <a data-toggle="modal" data-target="#sing-up-pop" data-dismiss="modal" href="#">تسجل الدخول</a>
+              </div>
+              
+            </div>
+          </div>
+    
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+-->
+
+    <div class="container-fluid remove-padding control-head-main head-main hidden-xs home-head-in" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">>
+      <div class="container"><a href="#"><img src="img/Logo_white.png"> </a>
+      <div class="menu-links">
+        <ul>
+          <li><a href="#">EN</a></li>
+          <li><a href="#">اطبع ملف</a></li>
+          <li><a href="#">لوحة التحكم</a></li>
+          <li><a href="#">تسجيل الخروج</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+
+
+    <div class="container-fluid mob-menu visible-xs" id="mobile-nav">
+    <a href="#" class="logo-mob"><img src="img/Logo_white.png"></a>
+    <div class="outer-menu ">
+      <input class="checkbox-toggle" type="checkbox" />
+      <div class="hamburger">
+        <div></div>
+      </div>
+      <div class="menu">
+        <div>
+          <div>
+            <ul>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">اطبع ملف</a></li>
+              <li><a href="#">لوحة التحكم</a></li>
+              <li><a href="#">تسجيل الخروج</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="container-fluid content home-cont">
+<div class="info-text text-center">
+<h2 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">اطبع | وجهتك المفضلة للطباعة الإلكترونية</h3>
+<h3 data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">منصة اطبع تقدم كافة خدمات الطباعة أونلاين بخطوات سهلة، <br>وأسعار منافسة وجودة عالية مع خدمة التوصيل السريع</h2>
+</div>
+</div>
+
+<div class="container service-home remove-padding">
+<h3 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">نقدم لك أفضل خدمات الطباعة</h3>
+<h4 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">منصة اطبع تقدم أفضل خدمات الطباعة لك وبجودة عالية وسهولة تواكب التقدم التقني  <br>بالإضافة إلى تنوع الخيارات المقدمة</h4>
+<div class="col-xs-12 service-grid remove-padding">
+
+<div class="col-md-4 col-sm-6 service-item" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-md- col-sm-2 remove-padding">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65"><defs><style>.cls-1-vec-1{fill:#e1294c;}.cls-2-vec-2{fill:#4d88c7;}</style></defs><title>1</title><polygon class="cls-1-vec-1" points="13 33 13 46 19.5 46 19.5 39.5 45.42 39.5 45.42 33 19.5 33 13 33"/><rect class="cls-1-vec-1" x="45.46" y="33" width="6.5" height="13"/><path class="cls-2-vec-2" d="M0,13V65H65V13ZM58,58H6V19H58Z"/><rect class="cls-2-vec-2" x="6" width="52" height="6"/></svg>
+  </div>
+  <div class="col-md-9 col-sm-9 col-md-offset-1 col-sm-offset-1 remove-padding">
+    <h4>إمكانية التحكم بالمطبوعات</h4>
+    <p>يمكنك تحميل أكثر من ملف في وقت واحد باختلاف صيغ الملفات وأحجامها. ولتنوع التفضيلات في إخراج الوثائق، أتحنا لعملائنا تحديد حجم ونوع الورق وشكل التغليف المناسب لمطبوعاتهم.</p>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 service-item" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-md-2 col-sm-2 remove-padding">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 57"><defs><style>.cls-11{fill:#e1294c;}.cls-22{fill:#fff;}.cls-33 {fill:#4d88c7;}</style></defs><title>2</title><path id="desktop-_232_" data-name="desktop-[#232]" class="cls-11" d="M43,31.58A2.4,2.4,0,0,1,40.63,34H7.38A2.4,2.4,0,0,1,5,31.58V7.42A2.4,2.4,0,0,1,7.38,5H40.63A2.4,2.4,0,0,1,43,7.42ZM43.18,0H4.78A4.83,4.83,0,0,0,0,4.85l0,0V33.7l0,0A4.74,4.74,0,0,0,4.78,38.4H19.18a2.47,2.47,0,0,1,2.43,2.45v0a2.41,2.41,0,0,1-2.43,2.38H12a2.41,2.41,0,0,0-2.37,2.45v0A2.35,2.35,0,0,0,12,48H36a2.39,2.39,0,0,0,2.43-2.35v0A2.45,2.45,0,0,0,36,43.2h-7.2a2.33,2.33,0,0,1-2.37-2.35v0a2.39,2.39,0,0,1,2.37-2.42h14.4l0,0A4.76,4.76,0,0,0,48,33.7h0V4.9h0A4.85,4.85,0,0,0,43.19,0Z"/><rect id="Rectangle-3" class="cls-22" x="40" y="12" width="22" height="41"/><path id="phone-_225_" data-name="phone-[#225]" class="cls-33" d="M60,15.38A2.38,2.38,0,0,0,57.63,13H43.38A2.38,2.38,0,0,0,41,15.38V48.63A2.38,2.38,0,0,0,43.38,51H57.63A2.38,2.38,0,0,0,60,48.63Zm5-1.57V52.2A4.82,4.82,0,0,1,60.17,57H40.83A4.82,4.82,0,0,1,36,52.2V13.8A4.82,4.82,0,0,1,40.83,9H60.17A4.82,4.82,0,0,1,65,13.8ZM53,44.5A2.5,2.5,0,1,1,50.5,42,2.5,2.5,0,0,1,53,44.5Z"/></svg>
+  </div>
+  <div class="col-md-9 col-sm-9 col-md-offset-1 col-sm-offset-1 remove-padding">
+    <h4>سهولة استخدام المنصة</h4>
+    <p>تم تصميم المنصة بحيث يتم الوصول إلى جميع أجزائها بكل يسر سواءً من الكمبيوتر أو الجوال، كما جعلنا استخدامها بخطوات قليلة مرنة وذلك بدءًا من التسجيل معنا وحتى وصول مطبوعك إليك.</p>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 service-item" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-md-2 col-sm-2 remove-padding">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 58"><defs><style>.cls-111{fill:#fff;}.cls-222{fill:#4d88c7;}.cls-333{mask:url(#mask);}.cls-444{fill:#e1294c;}</style><mask id="mask" x="0" y="0" width="65" height="58" maskUnits="userSpaceOnUse"><g id="mask-2"><path id="path-1" class="cls-111" d="M6.89,6.39A6.46,6.46,0,0,1,13.42,0H52.57a6.46,6.46,0,0,1,6.52,6.39V9.58a3.26,3.26,0,0,1-6.52,0A3.23,3.23,0,0,0,49.3,6.39H16.68a3.23,3.23,0,0,0-3.26,3.19,3.26,3.26,0,0,1-6.52,0ZM32,45.22a6.39,6.39,0,1,1,6.4-6.39A6.39,6.39,0,0,1,32,45.22ZM52.2,24.58c6.78,0,6.89,1.59,6.89,6.88Zm6.89,20.64c0,6.76-1.58,6.88-6.89,6.88ZM19,52.1,5.91,38.34,19,24.58H46L59.09,38.34,46,52.1Zm-6.21,0c-6.77,0-6.89-1.58-6.89-6.88ZM5.91,31.46c0-6.77,1.6-6.88,6.89-6.88Zm.59-11.8A6.44,6.44,0,0,0,0,26.05V51.61A6.44,6.44,0,0,0,6.5,58h52A6.44,6.44,0,0,0,65,51.61V26.05a6.44,6.44,0,0,0-6.5-6.39Z"/></g></mask></defs><title>3</title><g id="Page-1"><g id="Home-Copy"><g id="we-provide"><g id="_3" data-name="3"><g id="Mask-2-2" data-name="Mask"><path id="path-1-2" data-name="path-1" class="cls-222" d="M6.89,6.39A6.46,6.46,0,0,1,13.42,0H52.57a6.46,6.46,0,0,1,6.52,6.39V9.58a3.26,3.26,0,0,1-6.52,0A3.23,3.23,0,0,0,49.3,6.39H16.68a3.23,3.23,0,0,0-3.26,3.19,3.26,3.26,0,0,1-6.52,0ZM32,45.22a6.39,6.39,0,1,1,6.4-6.39A6.39,6.39,0,0,1,32,45.22ZM52.2,24.58c6.78,0,6.89,1.59,6.89,6.88Zm6.89,20.64c0,6.76-1.58,6.88-6.89,6.88ZM19,52.1,5.91,38.34,19,24.58H46L59.09,38.34,46,52.1Zm-6.21,0c-6.77,0-6.89-1.58-6.89-6.88ZM5.91,31.46c0-6.77,1.6-6.88,6.89-6.88Zm.59-11.8A6.44,6.44,0,0,0,0,26.05V51.61A6.44,6.44,0,0,0,6.5,58h52A6.44,6.44,0,0,0,65,51.61V26.05a6.44,6.44,0,0,0-6.5-6.39Z"/></g><g class="cls-333"><rect id="Rectangle-8" class="cls-444" width="64" height="18"/></g></g></g></g></g></svg>
+  </div>
+  <div class="col-md-9 col-sm-9 col-md-offset-1 col-sm-offset-1 remove-padding">
+    <h4>أسعار في متناول الجميع</h4>
+    <p>تعتبر أسعارنا مناسبة وفي ذات الوقت منافسة. لذا حرصنا أن تكون أسعار خدماتنا هي الأقل وذلك بعد دراسة أسعار السوق خلصنا إلى هذه الأسعار وهي الأقل على مستوى خدمات الطباعة عامة.</p>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 service-item" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-md-2 col-sm-2 remove-padding">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 63"><defs><style>.cls-1111{fill:#4d88c7;}.cls-2222{fill:#ce004a;}</style></defs><title>5</title><path class="cls-1111" d="M60,58V12H44V0H5V58H0v5H65V58ZM39,5V58H9.67V4.67H39ZM55,58H44V17H55Z" transform="translate(0 0)"/><rect class="cls-2222" x="21" y="19" width="6" height="6"/><rect class="cls-2222" x="21" y="33.12" width="6" height="6"/><rect class="cls-2222" x="20.75" y="45.08" width="6.5" height="12.92"/></svg>
+  </div>
+  <div class="col-md-9 col-sm-9 col-md-offset-1 col-sm-offset-1 remove-padding">
+    <h4>عمومية خدمات الطباعة</h4>
+    <p>لعلمنا بأهمية الطباعة لجميع الأشخاص ولمختلف المجالات، أتحنا هذه الخدمة لهم فهي لا تنحصر على فئة معينة من المستفيدين، بل تشمل كافة الأفراد والمؤسسات والجهات التعليمية وغيرهم.</p>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 service-item" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-md-2 col-sm-2 remove-padding">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65"><defs><style>.cls-11111{fill:#e1294c;}.cls-22222{fill:#4d88c7;}</style></defs><title>6</title><g id="Page-1"><g id="Home-Copy"><g id="we-provide"><g id="_6" data-name="6"><polygon id="Rectangle-11" class="cls-11111" points="17 4 29 12.65 29 57 17 48.35 17 4"/><path id="map_round-_667_" data-name="map_round-[#667]" class="cls-22222" d="M59,53.13C59,54.92,57.21,58,55.42,58H33V19H55.42c1.79,0,3.58-.17,3.58,1.62ZM26,53l-6-8V8l6,7.65ZM12,45H8.69C7,45,6,41.92,6,40.13V7.63C6,5.84,7,6,8.69,6H12ZM58.17,13H33.26c-1.9,0-3.71-1.64-4.94-3.09l-7.2-8A6.16,6.16,0,0,0,16.17,0h-10C2.58,0,0,1.28,0,4.88v39C0,47.47,2.58,52,6.17,52H12c2,0,3.81.07,5,1.59l6.66,8.61a6.93,6.93,0,0,0,5,2.8H58.17C61.76,65,65,60.47,65,56.88v-39C65,14.28,61.76,13,58.17,13Z"/></g></g></g></g></svg>
+  </div>
+  <div class="col-md-9 col-sm-9 col-md-offset-1 col-sm-offset-1  remove-padding">
+    <h4>تنوع طرق التوصيل</h4>
+    <p>نسعى لاختصار المسافة والوصول إليك كما نسعى لراحتك، ففي أي دولة تتواجد بها ستجد خدامتنا متاحة لك. لذا نوعنا طرق التوصيل بين نقاط الإستلام المجانية أو التوصيل السريع أو الشحن لمنطقتك.</p>
+  </div>
+</div>
+<div class="col-md-4 col-sm-6 service-item" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <div class="col-md-2 col-sm-2 remove-padding">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.04 63.73"><defs><style>.cls-1{fill:#e1294c;}.cls-2{fill:#4d88c7;}</style></defs><title>4</title><path id="path-1" class="cls-1" d="M42.25,1.29H23.42a6.29,6.29,0,0,0-6.27,6.3v3.15a3.14,3.14,0,1,0,6.27,0,3.15,3.15,0,0,1,3.14-3.15H39.11a3.15,3.15,0,0,1,3.14,3.15V36a3.15,3.15,0,0,1-3.14,3.15,3.15,3.15,0,0,0,0,6.3h3.14a6.29,6.29,0,0,0,6.27-6.3V7.59a6.29,6.29,0,0,0-6.27-6.3" transform="translate(-0.48 -1.29)"/><path class="cls-2" d="M25.67,18h-19A6.25,6.25,0,0,0,.48,24.19v34.6A6.25,6.25,0,0,0,6.71,65h19a6.25,6.25,0,0,0,6.23-6.23V24.19A6.25,6.25,0,0,0,25.67,18Zm.26,37.84a3.32,3.32,0,0,1-3.31,3.31H9.67a3.32,3.32,0,0,1-3.31-3.31V27.18a3.32,3.32,0,0,1,3.31-3.31H22.62a3.32,3.32,0,0,1,3.31,3.31Z" transform="translate(-0.48 -1.29)"/><circle class="cls-2" cx="16.66" cy="46.99" r="2.9"/></svg>
+  </div>
+  <div class="col-md-9 col-sm-9 col-md-offset-1 col-sm-offset-1 remove-padding">
+    <h4>سهولة الدفع</h4>
+    <p>يمكنك اختيار أي من وسائل الدفع الآمنة والسريعة المتوفرة في المنصة، حيث أتحنا الدفع عن طريق البطاقة الائتمانية والمحفظة ويمكن شحن محفظتك عن طريق التحويل البنكي أو البطاقة الإئتمانية.</p>
+  </div>
+</div>
+</div>
+</div>
+<div class="container-fluid how-print-main remove-padding">
+
+<div class="container remove-padding text-center">
+<h3 class="how-to-title-one" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">كيف اطبع؟</h3>
+<h5 class="how-to-title-tow" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">يمكنك البدء بطباعة مستنداتك الآن في 4 خطوات فقط!</h5>
+<div class="col-xs-12 remove-padding">
+  <div class="line-in"></div>
+  <div class="col-md-3 col-sm-3">
+    <h2>01</h2>
+    <div class="how-victor" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 65"><defs><style>.cls-7{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="-268.82" y1="423.91" x2="-267.82" y2="421.77" gradientTransform="matrix(65, 0, 0, -65, 17472, 27522)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#84bde5"/><stop offset="1" stop-color="#4d88c7"/></linearGradient></defs><title>file_arrow_up_[#1718]</title><g id="Page-1"><g id="Home-Copy"><g id="who-i-print"><path id="file_arrow_up-_1718_" data-name="file_arrow_up-[#1718]" class="cls-7" d="M59.09,55.86c0,1.78-1,3.23-2.82,3.23H29.73v-20a1.78,1.78,0,0,1,3-1.18L36.07,41a3.29,3.29,0,0,0,4.62-.13l.07,0a3.23,3.23,0,0,0-.12-4.56l-9.27-8.77a6.52,6.52,0,0,0-9,0l-9.22,8.78A3.23,3.23,0,0,0,13,40.78h0a3.23,3.23,0,0,0,4.59.16l3-3.07a1.49,1.49,0,0,1,2.54,1.19v20H10.54c-1.78,0-3.64-1.45-3.64-3.23V10.12c0-1.78,1.86-3.23,3.64-3.23h29v13c0,3.6,3.34,6.52,6.94,6.52H59.09Zm5.7,2.64V20.83a3.06,3.06,0,0,0-.73-2.27L46.71.94A3.19,3.19,0,0,0,44.44,0H6.89A6.91,6.91,0,0,0,.21,6.5H0v52H.21A6.81,6.81,0,0,0,6.79,65H58.72A6.32,6.32,0,0,0,65,58.5Z"/></g></g></g></svg>
+    </div>
+    <div class="clearfix"></div>
+    <div class="dot-vic"></div>
+    <h3 data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">ارفع المستند</h3>
+    <p data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+      بعـد تسجيل الدخول إلى حسابك قم برفع الملف بصيغة pdf بأمان وخصوصية عالية.
+    </p>
+  </div>
+  <div class="col-md-3 col-sm-3">
+    <h2>02</h2>
+    <div class="how-victor" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+      
+      <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 65"><defs><style>.cls-9{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="-268.78" y1="423.93" x2="-267.78" y2="421.8" gradientTransform="matrix(65, 0, 0, -65, 17472, 27522)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#84bde5"/><stop offset="1" stop-color="#4d88c7"/></linearGradient></defs><title>option_bar_settings_[#1399]</title><g id="Page-1"><g id="Home-Copy"><g id="who-i-print"><path id="option_bar_settings-_1399_" data-name="option_bar_settings-[#1399]" class="cls-9" d="M58.67,13V0H52.33V13H46v6.5h6.33V65h6.33V19.5H65V13Zm-23-13H29.33V29.25H23v6.5h6.33V65h6.33V35.75H42v-6.5H35.67Zm-23,45.5H19V52H12.67V65H6.33V52H0V45.5H6.33V0h6.33Z"/></g></g></g></svg>
+    </div>
+    <div class="clearfix"></div>
+    <div class="dot-vic"></div>
+    <h3 data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">حدد خيارات الطباعة</h3>
+    <p data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+      مثل نوع الطباعة وحجم الورق ونوع التغليف مع اختيار آلية التوصيل.
+    </p>
+    
+  </div>        <div class="col-md-3 col-sm-3">
+  <h2>03</h2>
+  <div class="how-victor" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 65"><defs><style>.cls-6{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="-268.83" y1="423.9" x2="-267.83" y2="421.77" gradientTransform="matrix(65, 0, 0, -65, 17472, 27522)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#84bde5"/><stop offset="1" stop-color="#4d88c7"/></linearGradient></defs><title>shopping_bag_play]_[#1141]</title><g id="Page-1"><g id="Home-Copy"><g id="who-i-print"><path id="shopping_bag_play_-_1141_" data-name="shopping_bag_play]-[#1141]" class="cls-6" d="M38,45.38l-6.71,3.93a3.25,3.25,0,0,1-4.92-2.72V38.72A3.25,3.25,0,0,1,31.32,36L38,39.94a3.14,3.14,0,0,1,0,5.44ZM57.89,55.66a3.24,3.24,0,0,1-3.24,3.25H9.33a3.24,3.24,0,0,1-3.24-3.25v-26a3.24,3.24,0,0,1,3.24-3.25H54.65a3.24,3.24,0,0,1,3.24,3.25ZM32.14,6.09c7.32,0,13.68,6.72,15.59,13.2H16.25c1.45-6.48,8.12-13.2,15.89-13.2ZM58.5,19.65H54.85C52.86,9.93,43.44,0,32.5,0,21.22,0,11.57,9.93,10,19.65H6.5A6.67,6.67,0,0,0,0,26.33V58.73A6.31,6.31,0,0,0,6.5,65h52A6.32,6.32,0,0,0,65,58.73V26.33a6.67,6.67,0,0,0-6.5-6.69Z"/></g></g></g></svg>
+  </div>
+  <div class="clearfix"></div>
+  <div class="dot-vic"></div>
+  <h3 data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">اختر طريقة الدفع</h3>
+  <p data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    باستخدام بطاقة الفيزا أو الماستر كارد أو شحن المحفظة عن طريق التحويل البنكي.
+  </p>
+</div>        <div class="col-md-3 col-sm-3">
+<h2>04</h2>
+<div class="how-victor" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 65 65"><defs><style>.cls-32{fill:url(#linear-gradient);}</style><linearGradient id="linear-gradient" x1="-268.84" y1="423.9" x2="-267.84" y2="421.77" gradientTransform="matrix(65, 0, 0, -65, 17472, 27522)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#84bde5"/><stop offset="1" stop-color="#4d88c7"/></linearGradient></defs><title>inbox_down_round_[#1550]</title><g id="Page-1"><g id="Home-Copy"><g id="who-i-print"><path id="inbox_down_round-_1550_" data-name="inbox_down_round-[#1550]" class="cls-32" d="M55,33V23l3,10Zm3,21.83A3.21,3.21,0,0,1,54.75,58H9.25A3.21,3.21,0,0,1,6,54.83V39h9.75A3.21,3.21,0,0,1,19,42.17v3.17a6.42,6.42,0,0,0,6.5,6.33h13A6.42,6.42,0,0,0,45,45.33V42.17A3.21,3.21,0,0,1,48.25,39H58ZM9,23V33H6ZM16,9.25A3.23,3.23,0,0,1,19.2,6h9.64l.07,10a1.6,1.6,0,0,1-2.73,1.16l-1-1a3.17,3.17,0,0,0-4.53,0,3.29,3.29,0,0,0,0,4.6l6.79,6.89a6.33,6.33,0,0,0,9,0l7-7.09a3.29,3.29,0,0,0,0-4.56,3.17,3.17,0,0,0-4.56,0l-1.19,1.21A1.6,1.6,0,0,1,35,16l0-10H44.8A3.23,3.23,0,0,1,48,9.25V32H44.8a6.45,6.45,0,0,0-6.4,6.5v3.25A3.23,3.23,0,0,1,35.2,45H28.8a3.23,3.23,0,0,1-3.2-3.25V38.5A6.45,6.45,0,0,0,19.2,32H16ZM58.5,13H55.25V6.5A6.5,6.5,0,0,0,48.75,0H16.25a6.5,6.5,0,0,0-6.5,6.5V13H6.5L0,32.5v26A6.5,6.5,0,0,0,6.5,65h52A6.5,6.5,0,0,0,65,58.5v-26Z"/></g></g></g></svg>
+</div>
+<div class="clearfix"></div>
+<div class="dot-vic"></div>
+<h3 data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">استلم مطبوعاتك</h3>
+<p data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+  استلمها بكل سهولة عن طريق نقاط الاستلام أو التوصيل السريع أو الشحن لمنطقتك.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid remove-padding">
+
+<iframe width="100%" height="455" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+</iframe>
+</div>
+<div class="container-fluid cont-print-main">
+<div class="before-shaddow"></div>
+<div class="container-fluid" style="    background-color: #fff;
+width: 100%;
+position: absolute;
+bottom: 0;
+height: 200px;"></div>
+<div class="container remove-padding">
+<h2 class="title-print" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">حاسبة الأسعار</h2>
+<h4 class="title-print-tow" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+استخدم حاسبة الأسعار لحساب القيمة التقريبية لطباعة <br>مستنداتك في منصة اطبع.
+</h4>
+<div class="col-md-10 col-md-offset-1 col-xs-12">
+<form>
+
+  <div class="frist-tab-main"    data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <div class="first-tab-child active">
+      <input type='radio' name='islam' class='check5' value='0' checked="checked" />
+      <div class="first-tab-cont" >A0</div>
+    </div>
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam' value='1' class='check5'/>
+      <div>A1</div>
+    </div>
+    
+    <div  class="first-tab-child">
+      
+      <input type='radio' name='islam' value='2' class='check5'/>
+      <div>A2</div>
+    </div>
+    <div  class="first-tab-child">
+      <input type='radio' name='islam' value='3' class='check5'/>
+      <div>A3</div>
+    </div>
+    <div  class="first-tab-child">
+      
+      <input type='radio' name='islam' value='4' class='check5'/>
+      <div>A4</div>
+    </div>
+    
+    <div  class="first-tab-child">
+      
+      <input type='radio' name='islam' value='5'  class='check5'/>
+      <div>A5</div>
+    </div>
+  </div>
+
+<h3 class="print-title">نوع الورق</h3>
+
+  <div class="frist-tab-main tab-tow" data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <div class="first-tab-child active">
+      <input type='radio' name='islam' class='check4' value='6' checked="checked" />
+      <div class="first-tab-cont" >عادي</div>
+    </div>
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam' value='7'  class='check4'/>
+      <div>لماع</div>
+    </div>
+    
+    <div  class="first-tab-child">
+      
+      <input type='radio' name='islam' value='8'  class='check4'/>
+      <div>مقوي</div>
+    </div>
+    <div  class="first-tab-child">
+      <input type='radio' name='islam'  class='check4' value='9'/>
+      <div>لاصق</div>
+    </div>
+  </div>
+
+<h3 class="print-title">لون الطباعة</h3>
+
+
+  <div class="frist-tab-main tab-tow" data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <div class="first-tab-child active">
+      <input type='radio' name='islam' class='check3' value='6' checked="checked" />
+      <div class="first-tab-cont" >اسود</div>
+    </div>
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam'  class='check3' value='7'/>
+      <div>ملون</div>
+    </div>
+    
+  </div>
+
+<h3 class="print-title">تخطيط الصفحة</h3>
+
+  <div class="frist-tab-main tab-three" data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <div class="first-tab-child active">
+      <input type='radio' name='islam'  class='check2' value='6' checked="checked" />
+      <div class="first-tab-cont" >
+        <div class="full-p-v"><div class="vic-1"></div></div>
+        
+      </div>
+    </div>
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam' value='7' class='check2'/>
+      <div class="first-tab-cont">
+        <div class="full-p-v">
+          <div class="vic-2">
+            <div class="vic-shape-1"></div>
+            <div class="vic-shape-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam' value='7' class='check2'/>
+      <div class="first-tab-cont">
+        <div class="full-p-v">
+          <div class="vic-3">
+            <div class="vic-shape-1"></div>
+            <div class="vic-shape-2"></div>
+            <div class="vic-shape-3"></div>
+            <div class="vic-shape-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam' value='7' class='check2'/>
+      <div class="first-tab-cont">
+        <div class="full-p-v vir-vic">
+          <div class="vic-4">
+            <div class="vic-shape-1"></div>
+            <div class="vic-shape-2"></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam' value='7' class='check2'/>
+      <div class="first-tab-cont">
+        <div class="full-p-v vir-vic">
+          <div class="vic-3">
+            <div class="vic-shape-1"></div>
+            <div class="vic-shape-2"></div>
+            <div class="vic-shape-3"></div>
+            <div class="vic-shape-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+<h3 class="print-title">جوانب الطباعة</h3>
+<form>
+  
+  <div class="frist-tab-main tab-tow" data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <div class="first-tab-child active">
+      <input type='radio' name='islam' class='check1' value='6' checked="checked" />
+      <div class="first-tab-cont" >وجه</div>
+    </div>
+    <div  class="first-tab-child">
+      
+      <input  type='radio' name='islam' class='check1' value='7'/>
+      <div>وجهين</div>
+    </div>
+    
+  </div>
+
+<h3 class="print-title">خيارات التغليف</h3>
+<form>
+  
+  <div class="frist-tab-main tab-for" data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <div class="fuor-tab-child active-tab-4">
+      <input type='radio' name='size' class='check' value='1' checked="checked" />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/1.png">
+        </div>
+        <p>ملف ٣ اخرام</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='2' />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/2.png">
+        </div>
+        <p>ملف خرمين</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='3' />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/3.png">
+        </div>
+        <p>تخييط</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='4' />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/4.png">
+        </div>
+        <p>كعب حراري</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='5' />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/5.png">
+        </div>
+        <p>كعب مسمار</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='6'  />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/6.png">
+        </div>
+        <p>بلاستك حلازوني</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='7'  />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/7.png">
+        </div>
+        <p>سلك</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='8'  />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/8.png">
+        </div>
+        <p>تدبيس جانبي</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='9' />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/9.png">
+        </div>
+        <p>تدبيس ركن</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='10' />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/10.png">
+        </div>
+        <p>كيس شفاف</p>
+        
+      </div>
+    </div>
+    <div class="fuor-tab-child">
+      <input type='radio' name='size' class='check' value='11' />
+      <div class="first-tab-cont" >
+        <div class="print-img">
+          <img src="img/11.png">
+        </div>
+        <p>بدون تغليف</p>
+        
+      </div>
+    </div>
+    
+  </div>
+</form>
+</form>
+<div class="col-xs-12 remove-padding min-max-conta">
+<div class="col-md-6 col-sm-6 col-xs-12 min-max-main">
+  <p>عدد الصفحات</p>
+  <div class="min-max-input" data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    
+    <button type="button" id="sub" class="sub">-</button>
+    <input class="text-center" type="text" id="1" value="1" min="1" max="1000" />
+    <button type="button" id="add" class="add">+</button>
+    
+  </div>
+</div>
+<div class="col-md-6 col-sm-6 col-xs-12 min-max-main">
+  <p>عدد النسخ</p>
+  <div class="min-max-input" data-aos="flip-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    
+    <button type="button" id="sub-2" class="sub">-</button>
+    <input class="text-center" type="text" id="2" value="2" min="1" max="1000" />
+    <button type="button" id="add-2" class="add">+</button>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="col-xs-12 remove-padding count-main">
+  
+  <div class="col-md-5 col-sm-8">   <div data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500" class="count-num">
+    <p >السعر</p>
+    <h3>6.00 ريال</h3>
+  </div></div>
+  <div class="col-md-2 col-sm-4" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">
+    <button type="submit">متابعة</button>
+  </div>
+  <div class="clearfix"></div>
+  <span data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500">* السعر لا يشمل ضريبة القيمة المضافة</span>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="container text-center slider-main">
+
+<h1 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500" >آراء المستخدمين</h1>
+<h4 data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="500">انظر ماذا يقول عملاؤنا</h4>
+<div>  <div class="slick-carousel-1" data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="500" dir="rtl">
+<div class="slide-content"> 
+<div class="col-xs-12">
+<div class="clint-info">
+<img src="img/mona.jpg">
+<h2>مني زكي </h2>
+<h3>ممثلة مصرية</h3>
+<div class="clearfix"></div>
+<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+</div>
+
+</div>
+
+</div>
+<div class="slide-content">
+<div class="col-xs-12">
+<div class="clint-info">
+<img src="img/mona.jpg">
+<h2>مني زكي </h2>
+<h3>ممثلة مصرية</h3>
+<div class="clearfix"></div>
+<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+</div>
+
+</div>
+</div>
+<div class="slide-content">
+<div class="col-xs-12">
+<div class="clint-info">
+<img src="img/mona.jpg">
+<h2>مني زكي </h2>
+<h3>ممثلة مصرية</h3>
+<div class="clearfix"></div>
+<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+</div>
+
+</div>
+</div>
+<div class="slide-content">
+
+
+<div class="col-xs-12">
+<div class="clint-info">
+<img src="img/mona.jpg">
+<h2>مني زكي </h2>
+<h3>ممثلة مصرية</h3>
+<div class="clearfix"></div>
+<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+</div>
+
+</div>
+
+</div>
+<div class="slide-content">
+
+<div class="col-xs-12">
+<div class="clint-info">
+<img src="img/mona.jpg">
+<h2>مني زكي </h2>
+<h3>ممثلة مصرية</h3>
+<div class="clearfix"></div>
+<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+</div>
+
+</div>
+</div>
+<div class="slide-content">
+
+<div class="col-xs-12">
+<div class="clint-info">
+<img src="img/mona.jpg">
+<h2>مني زكي </h2>
+<h3>ممثلة مصرية</h3>
+<div class="clearfix"></div>
+<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+</div>
+
+</div>
+</div>
+<div class="slide-content">
+
+<div class="col-xs-12">
+<div class="clint-info">
+<img src="img/mona.jpg">
+<h2>مني زكي </h2>
+<h3>ممثلة مصرية</h3>
+<div class="clearfix"></div>
+<p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق.</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid remove-padding print-now">
+<a href="#">
+<div class="container">
+<h1>هل انت جاهز للطباعة؟  <b>إبدا من هنا</b></h1>
+</div>
+</a>
+</div>
+</div>
+<div class="container-fluid footer-main">
+
+<div class="container remove-padding">
+
+<div class="col-lg-2 col-md-3 col-sm-4 fot-logo-main remove-padding">
+<a href="#" class="logo-fot"><img src="img/Logo_white.png"> </a>
+<p>تقديم خدمات الطباعة في المملكة العربية السعودية</p>
+</div>
+<div class="col-lg-2 col-sm-3 col-lg-offset-1 col-md-2 col-md-offset-1 fot-links">
+<h4>روابط مهمة</h4>
+<a href="#">
+من نحن
+</a>
+<br>
+<a href="#">
+الاسئله المتكررة
+</a>
+<br>
+
+<a href="#">
+نقطة الإستلام
+</a>
+<br>
+
+<a href="#">
+سياسه الخصوصية
+</a>
+<br>
+
+<a href="#">
+الشروط و الاحكام
+</a>
+<br>
+
+<a href="#">
+
+تواصل معنا
+</a>
+<br>
+
+
+</div>
+<div class="col-lg-5 col-sm-5 col-lg-offset-2 col-md-5 col-md-offset-1 fot-info">
+
+<h3>طباعة منصة عبر الإنترنت
+</h3>
+<p>المكتب الإداري لشركة اطبع التجارية، مركز السدحان، شارع موسى بن نصير، حي السليمانية، الرياض
+للدعم الفني أو الشكاوى يمكنك التواصل معنا عبر ( support@print.sa ) أو الواتساب 966599139318</p>
+<ul class="social-icn">
+<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+<li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+
+<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+
+<li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+
+
+
+</ul>
+</div>
+</div>
+</div>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+  AOS.init();
+</script>
+
+
+
+<script>
+  
+
+       $(document).ready(function () {
+            filter_by_size('A4')
+            filter_by_type('typ4')
+        });
+
+        function filter_by_size(index) {
+            $('.paper_size').hide();
+            $('.' + index).show();
+        }
+
+        function filter_by_type(index) {
+            var size =$(".active input[name='size']").attr('sub_name');
+            $('.type.paper_size').hide();
+            $('.' + index +'.'+size).show();
+
+        }
+
+</script>
+
+<script>
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+var size; 
+
+$("input[name='size']").change( function() {
+
+  // $(this).attr('checked', true);
+  current_value=$(this).attr('value'); 
+ size=current_value; 
+  alert (current_value);
+  $(this).parent().toggleClass('yourClass');
+  // $('.check').not(this).attr('checked', false);
+  // var value=$("input[name='size']").val(current_value); 
+  // var value=$("input[name='size']").val();
+  alert(value); 
+
+});
+
+
+
+
+
+
+$('.check1').change( function() {
+
+  $(this).attr('checked', true);
+  $('.check1').not(this).attr('checked', false);
+});
+
+
+
+$('.check2').change( function() {
+
+  $(this).attr('checked', true);
+  $('.check2').not(this).attr('checked', false);
+});
+
+
+
+$('.check3').change( function() {
+
+  $(this).attr('checked', true);
+  $('.check3').not(this).attr('checked', false);
+});
+
+
+
+$('.check4').change( function() {
+
+  $(this).attr('checked', true);
+  $('.check4').not(this).attr('checked', false);
+});
+
+
+$('.check5').change( function() {
+
+  $(this).attr('checked', true);
+  $('.check5').not(this).attr('checked', false);
+});
+
+
+
+$(function() {
+$( '.first-tab-child' ).on( 'click', function() {
+$( this ).parent().find( '.first-tab-child.active' ).removeClass( 'active' );
+$( this ).addClass( 'active' );
+});
+});
+$(function() {
+$( '.fuor-tab-child' ).on( 'click', function() {
+$( this ).parent().find( '.fuor-tab-child.active-tab-4' ).removeClass( 'active-tab-4' );
+$( this ).addClass( 'active-tab-4' );
+});
+});
+$('.add').click(function () {
+if ($(this).prev().val() < 1000) {
+$(this).prev().val(+$(this).prev().val() + 1);
+}
+});
+$('.sub').click(function () {
+if ($(this).next().val() > 1) {
+if ($(this).next().val() > 1) $(this).next().val(+$(this).next().val() - 1);
+}
+});
+
+$('.slick-carousel-1').slick({
+arrows: true,
+dots: false,
+slidesToShow: 3,
+slidesToScroll: 1,
+infinite: false,
+centerPadding: '30px',
+rtl:true,
+responsive: [
+{
+breakpoint: 1024,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 1,
+
+}
+},
+{
+breakpoint: 900,
+settings: {
+slidesToShow: 2,
+slidesToScroll: 1
+}
+},
+{
+breakpoint: 700,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+]
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

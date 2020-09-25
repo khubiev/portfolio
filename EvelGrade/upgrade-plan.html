@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>upgrade plan</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <link href="css/style.css"  rel="stylesheet">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+ <style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="edit-Organization-data.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/edit-Organization-data.jpg">
+  </div><p>edit-Organization-data</p> </a>
+</li>
+
+ <li><a href="grade-sturcture.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/grade-sturcture.jpg">
+  </div><p>grade-sturcture</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="index-rtl.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index-rtl.jpg">
+  </div><p>index-rtl</p> </a>
+</li>
+
+ <li><a href="invite-new-user.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/invite-new-user.jpg">
+  </div><p>invite-new-user</p> </a>
+</li>
+
+ <li><a href="login.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/login.jpg">
+  </div><p>login</p> </a>
+</li>
+
+ <li><a href="new-job-deiscription.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/new-job-deiscription.jpg">
+  </div><p>new-job-deiscription</p> </a>
+</li>
+
+ <li><a href="Organization-Dashboard.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Organization-Dashboard.jpg">
+  </div><p>Organization-Dashboard</p> </a>
+</li>
+
+ <li><a href="payment.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/payment.jpg">
+  </div><p>payment</p> </a>
+</li>
+
+ <li><a href="register-organization-data.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/register-organization-data.jpg">
+  </div><p>register-organization-data</p> </a>
+</li>
+
+ <li><a href="singUp.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/singUp.jpg">
+  </div><p>singUp</p> </a>
+</li>
+
+ <li><a href="under-construction-page.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/under-construction-page.jpg">
+  </div><p>under-construction-page</p> </a>
+</li>
+
+ <li><a href="upgrade-plan.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/upgrade-plan.jpg">
+  </div><p>upgrade-plan</p> </a>
+</li>
+
+ <li><a href="User-Profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/User-Profile.jpg">
+  </div><p>User-Profile</p> </a>
+</li>
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>  
+<div id="app">
+
+<div class="container-fluid head remove-padding">
+   
+   <div class="container remove-padding">
+        <div class="logo-main col-md-3 col-xs-6 col-sm-3">
+           <a href="#"><img src="img/logo.png"></a>
+        </div>
+        <div class="menu-main col-md-7 col-sm-7 menu-open" v-bind:class="{selected: isSelected}">
+           <ul>
+              <li><a href="#" class="activeLink">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">plans</a></li>
+              <li><a href="#">clients</a></li>
+              <li><a href="#">Articles</a></li>
+              <li class="dropdown"><a href="#"  data-toggle="dropdown">Lan <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+    <li><a href="#">Ar</a></li>
+    <li><a href="#">En</a></li>
+  </ul>
+              </li>
+<li class="log-in-main">
+             <a href="#">login</a>
+</li>
+
+           </ul>
+        </div>
+
+        <div class="col-md-2 col-sm-2 try-link-main">
+           <a href="#">Try it now</a>
+        </div>
+
+        <span id="open-colse-menu-mob" 
+        :class="{ selected: isSelected}"
+        @click="isSelected = !isSelected"
+       ></span>
+
+   </div>
+
+</div>
+
+<div class="container-fluid content-main remove-padding">
+ 
+   <div class="container-fluid log-main reg-main remove-padding">
+<div class="container remove-padding">
+  
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12 col-sm-12">
+    
+      <form>
+<div class="col-xs-12 remove-padding upgrade-item">
+   <div class="col-md-3 col-sm-3 col-xs-12">
+      <h1>Basic<span>Plan</span></h1>
+      <p>Paid Monthly</p>
+   </div>
+ 
+    <div class="col-md-9 remove-padding col-sm-9 col-xs-12">
+        <div class="col-md-offset-1 col-md-7 col-sm-offset-1 col-sm-7 col-xs-12">
+           <p><i class="ri-checkbox-circle-fill"></i>add a team</p>
+           <p><i class="ri-checkbox-circle-fill"></i>add a team</p>
+
+           <span>* Now you are using this plan monthly</span>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+           <h4>$40 <span>\ MONTH</span></h4>
+        </div>
+          
+        </div>
+</div>
+
+<div class="col-xs-12 remove-padding upgrade-item checkbox-upg" 
+:class="{ selected1: isSelected1}"
+ @click="isSelected1 = !isSelected1">
+  <input type="checkbox" checked="checked">
+   <div class="col-md-3 col-sm-3 col-xs-12">
+    <p>Upgrade to</p>
+      <h1>Premium</h1>
+      
+   </div>
+ 
+    <div class="col-md-9 col-sm-9 col-xs-12 remove-padding">
+        <div class="col-md-offset-1 col-md-7 col-sm-offset-1 col-sm-7 col-xs-12">
+           <p><i class="ri-checkbox-circle-fill"></i>add a team</p>
+           <p><i class="ri-checkbox-circle-fill"></i>add a team</p>
+             <p><i class="ri-checkbox-circle-fill"></i>add a team</p>
+           <p><i class="ri-checkbox-circle-fill"></i>add a team</p>
+           
+           <a href="#">View more</a>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12 text-center">
+          <h5>add to subcription</h5>
+           <h4>+ 15$</h4>
+        </div>
+          
+        </div>
+</div>
+
+        
+         <button>Upgrade</button>
+        <a href="#" class="go-back-btn"><i class="ri-arrow-left-line"></i> Back to dashboard</a>
+      </form>
+  </div>
+</div>
+   </div>
+
+</div>
+
+
+</div>
+
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/vue.js"></script>
+
+
+
+<script>
+
+ new Vue({
+  el: '#app',
+  
+    data: {
+    'isSelected': false,
+  },
+
+      data: {
+    'isSelected1': false,
+  }
+
+})
+
+  
+
+</script>
+
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

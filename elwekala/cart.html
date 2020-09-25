@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>cart</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+    <link href="css/style.css"  rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; font-family: sans-serif; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; font-family: sans-serif; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="add-product.1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-product.1.jpg"></div><p>add product 1</p> </a></li>
+
+      <li><a href="add-product.2.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-product.2.jpg"></div><p>add product 2</p> </a></li>
+
+      <li><a href="add-product.3.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-product.3.jpg"></div><p>add product 3</p> </a></li>
+
+      <li><a href="cart.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/cart.jpg"></div><p>cart</p> </a></li>
+       
+        <li><a href="category.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/category.jpg"></div><p>category</p> </a></li>
+
+
+      <li><a href="category-fon-found.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/category-fon-found.jpg"></div><p>Not found</p> </a></li>
+
+
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+
+      <li><a href="login.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+      <li><a href="my-products.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/my-products.jpg"></div><p>my-products</p> </a></li>
+
+      <li><a href="orders.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/orders.jpg"></div><p>orders</p> </a></li>
+
+            <li><a href="product.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/product.jpg"></div><p>product</p> </a></li>
+
+            <li><a href="profile.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/profile.jpg"></div><p>profile</p> </a></li>
+
+            <li><a href="register.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/register.jpg"></div><p>register</p> </a></li>
+
+           <li><a href="wishlist.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/wishlist.jpg"></div><p>wishlist</p> </a></li>       
+
+
+
+    
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+       <!-- header not mobile -->
+    <div class="container-fluid header remove-padding hidden-xs">
+      <div class="container-fluid top-head-main remove-padding hidden-xs">
+        <div class="container top-head remove-padding">
+          <div class="info-top">
+            <ul>
+              <li><a href="#" class="eng-text"><i class="fas fa-envelope"></i> elwekalaeg@gmail.com</a></li>
+              <li><a href="#" class="eng-text"><i class="fas fa-phone"></i> 01000427757</a></li>
+            </ul>
+          </div>
+          
+          <div class="links-top">
+            <ul>
+              <li><a href="#" class="">منتجاتي</a></li>
+              <li><a href="#" class="">طلباتي</a></li>
+              <li><a href="#" class="">الأمنيات</a></li>
+              <li class="sing-btn"><a href="#" class="sing-link">حسابي</a>
+              
+            </li>
+            <li  class="note">
+              <div class="note-btn"> <span class="fas fa-bell"></span>
+              <span class="cont-num" style="">5</span>
+              <div class="note-main-cont">
+                <div class="note-main">
+                  <div class="cart-item col-xs-12 remove-padding">
+                    <div class="cart-item-info col-xs-8 remove-padding">
+                      <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                      <p>تم حذف هذا المنتج </p>
+                    </div>
+                    <div class="cart-img col-xs-4 remove-padding">
+                      <a href="#">  <img src="img/1.png"></a>
+                    </div>
+                  </div>
+                  <div class="cart-item col-xs-12 remove-padding">
+                    <div class="cart-item-info col-xs-8 remove-padding">
+                      <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                      <p>تم قبول هذه القطعة</p>
+                    </div>
+                    <div class="cart-img col-xs-4 remove-padding">
+                      <a href="#">  <img src="img/1.png"></a>
+                    </div>
+                  </div>
+                  <div class="cart-item col-xs-12 remove-padding">
+                    <div class="cart-item-info col-xs-8 remove-padding">
+                      <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                      <p>تم حجز هذه القطعة</p>
+                    </div>
+                    <div class="cart-img col-xs-4 remove-padding">
+                      <a href="#">  <img src="img/1.png"></a>
+                    </div>
+                  </div>
+                  <div class="cart-item col-xs-12 remove-padding">
+                    <div class="cart-item-info col-xs-8 remove-padding">
+                      <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                      <p>تم بيع هذه هذا المنتج </p>
+                    </div>
+                    <div class="cart-img col-xs-4 remove-padding">
+                      <a href="#">  <img src="img/1.png"></a>
+                    </div>
+                  </div>
+                  <div class="cart-item col-xs-12 remove-padding">
+                    <div class="cart-item-info update-pro col-xs-12 remove-padding">
+                      <h2><a href="#"><i class="fas fa-info-circle"></i>&nbsp رجاء تعديل الحساب</a></h2>
+                      
+                    </div>
+                    
+                  </div>
+                  
+                  
+                </div>
+              </div>
+            </div>
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container remove-padding search-main">
+    <div class="col-md-4  col-sm-5 logo-section">
+      
+      <a href="#" class="logo"><img src="img/logo.png"></a>
+      <a href="#" class="add-pro">اضف منتج  <i class="fas fa-plus"></i></a>
+      
+      <div class="cart-icon-main">
+        <a href="#" class="cart"> <img src="img/bg-cart.png"><span class="eng-text">19</span>
+        <div class="cart-down">
+          <div class="cart-main">
+            <div class="cart-item col-xs-12 remove-padding">
+              <div class="cart-item-info col-xs-8 remove-padding">
+                <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                <p class="eng-text">445</p>
+              </div>
+              <div class="cart-img col-xs-4 remove-padding">
+                <a href="#">  <img src="img/1.png"></a>
+              </div>
+            </div>
+            <div class="cart-item col-xs-12 remove-padding">
+              <div class="cart-item-info col-xs-8 remove-padding">
+                <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                <p class="eng-text">445</p>
+              </div>
+              <div class="cart-img col-xs-4 remove-padding">
+                <a href="#">  <img src="img/1.png"></a>
+              </div>
+            </div>
+            <div class="cart-item col-xs-12 remove-padding">
+              <div class="cart-item-info col-xs-8 remove-padding">
+                <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                <p class="eng-text">445</p>
+              </div>
+              <div class="cart-img col-xs-4 remove-padding">
+                <a href="#">  <img src="img/1.png"></a>
+              </div>
+            </div>
+            <div class="cart-item col-xs-12 remove-padding">
+              <div class="cart-item-info col-xs-8 remove-padding">
+                <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                <p class="eng-text">445</p>
+              </div>
+              <div class="cart-img col-xs-4 remove-padding">
+                <a href="#">  <img src="img/1.png"></a>
+              </div>
+            </div>
+            <div class="cart-item col-xs-12 remove-padding">
+              <div class="cart-item-info col-xs-8 remove-padding">
+                <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                <p class="eng-text">445</p>
+              </div>
+              <div class="cart-img col-xs-4 remove-padding">
+                <a href="#">  <img src="img/1.png"></a>
+              </div>
+            </div>
+            <div class="cart-item col-xs-12 remove-padding">
+              <div class="cart-item-info col-xs-8 remove-padding">
+                <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+                <p class="eng-text">445</p>
+              </div>
+              <div class="cart-img col-xs-4 remove-padding">
+                <a href="#">  <img src="img/1.png"></a>
+              </div>
+            </div>
+            <div class="total-price col-xs-12 ">
+              <p>الاجمالي  :<span class="eng-text">152</span></p>
+              <a href="#" class="pay-btn">الدفع</a>
+              <a href="#" class="show-cart-btn">عرض سلة المشتريات</a>
+            </div>
+            
+            
+          </div>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+  <div class="col-md-8 col-sm-7 serach-form">
+    <form>
+      <div class="col-md-4 col-sm-4 remove-padding">
+        <select>
+          <option disabled="" selected="" hidden="">الاقسام</option>
+          <option>الكل</option>
+          <option>حريمي</option>
+          <option>رجالي</option>
+          <option>اطفال</option>
+          <option>الكل</option>
+          <option>حريمي</option>
+          <option>رجالي</option>
+          <option>اطفال</option>
+          <option>الكل</option>
+          <option>حريمي</option>
+          <option>رجالي</option>
+          <option>اطفال</option>
+          <option>الكل</option>
+          <option>حريمي</option>
+          <option>رجالي</option>
+          <option>اطفال</option>
+          <option>الكل</option>
+          <option>حريمي</option>
+          <option>رجالي</option>
+          <option>اطفال</option>
+          <option>الكل</option>
+          <option>حريمي</option>
+          <option>رجالي</option>
+          <option>اطفال</option>
+          <option>الكل</option>
+          <option>حريمي</option>
+          <option>رجالي</option>
+          <option>اطفال</option>
+        </select>
+      </div>
+      <div class="col-md-7  col-sm-6 remove-padding">
+        <input type="text" name="" placeholder="ابحث عن">
+      </div>
+      <div class="col-md-1  col-sm-2 remove-padding">
+        <button>بحث</button>
+      </div>
+      
+    </form>
+    
+  </div>
+  
+</div>
+</div>
+<div class="container-fluid menu-main hidden-xs">
+<div class="container menu-items">
+  
+  
+  <div class="site-title">
+    <a href="#" class="logo"><img src="img/logo.png"></a>
+    <a href="#" class="cart"><img src="img/bg-cart.png"><span class="eng-text">19</span>
+  </a>
+</div>
+
+<div class="menu-perant">
+  
+  <div class="remove-padding sub-menu-main  head-main">
+    
+    <div class="menu-main-cont" >
+      
+      <a href="#" class="home"><span>الرئيسية</span></a>
+      
+      <div class="down-me">
+        <a href="#" class="dropbtn"><span> حريمي  &nbsp <i class="fa fa-angle-down"></i></span></a>
+        <div class="sub-drop-dowm">
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+        </div>
+      </div>
+      
+      <div class="down-me">
+        <a href="#" class="dropbtn"><span>فساتين أفراح &nbsp <i class="fa fa-angle-down"></i></span></a>
+        <div class="sub-drop-dowm">
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+        </div>
+      </div>
+      
+      <div class="down-me">
+        <a href="#" class="dropbtn"><span>أطفال &nbsp <i class="fa fa-angle-down"></i></span></a>
+        <div class="sub-drop-dowm">
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+        </div>
+      </div>
+      
+      
+      <div class="down-me">
+        <a href="#" class="dropbtn"><span>رجالي&nbsp <i class="fa fa-angle-down"></i></span></a>
+        <div class="sub-drop-dowm">
+          <a href="#"><span>      لعنوان
+          </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+          
+          
+        </div>
+      </div>
+      
+      
+      <div class="down-me ">
+        <a href="#" class="dropbtn"><span>الاقسام &nbsp <i class="fa fa-angle-down"></i></span></a>
+        <div class="sub-drop-dowm last-sub">
+          <a href="#"><span>العنوان </span></a>
+          <a href="#"><span>العنوان  </span></a>
+          <a href="#"><span>لعنوان  </span></a>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+</div>
+</div>
+<!-- header mobile -->
+<div class="container-fluid mobile-main visible-xs">
+<div class="menu-top">
+<a href="#" class="logo"><img src="img/logo.png"></a>
+<a href="#" class="cart"><img src="img/bg-cart.png"><span class="eng-text">19</span></a>
+<a href="#" class="add-pro"><i class="fas fa-plus"></i></a>
+<div  class="note">
+  <div class="note-btn"> <span class="fas fa-bell"></span>
+  <span class="cont-num" style="">5</span>
+</div>
+
+<div class="note-main-cont">
+  <div class="note-main">
+    <div class="cart-item col-xs-12 remove-padding">
+      <div class="cart-item-info col-xs-8 remove-padding">
+        <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+        <p>تم حذف هذا المنتج </p>
+      </div>
+      <div class="cart-img col-xs-4 remove-padding">
+        <a href="#">  <img src="img/1.png"></a>
+      </div>
+    </div>
+    <div class="cart-item col-xs-12 remove-padding">
+      <div class="cart-item-info col-xs-8 remove-padding">
+        <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+        <p>تم قبول هذه القطعة</p>
+      </div>
+      <div class="cart-img col-xs-4 remove-padding">
+        <a href="#">  <img src="img/1.png"></a>
+      </div>
+    </div>
+    <div class="cart-item col-xs-12 remove-padding">
+      <div class="cart-item-info col-xs-8 remove-padding">
+        <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+        <p>تم حجز هذه القطعة</p>
+      </div>
+      <div class="cart-img col-xs-4 remove-padding">
+        <a href="#">  <img src="img/1.png"></a>
+      </div>
+    </div>
+    <div class="cart-item col-xs-12 remove-padding">
+      <div class="cart-item-info col-xs-8 remove-padding">
+        <h2><a href="#"> جاكت وتر بورف مستورد </a></h2>
+        <p>تم بيع هذه هذا المنتج </p>
+      </div>
+      <div class="cart-img col-xs-4 remove-padding">
+        <a href="#">  <img src="img/1.png"></a>
+      </div>
+    </div>
+    <div class="cart-item col-xs-12 remove-padding">
+      <div class="cart-item-info update-pro col-xs-12 remove-padding">
+        <h2><a href="#"><i class="fas fa-info-circle"></i>&nbsp رجاء تعديل الحساب</a></h2>
+        
+      </div>
+      
+    </div>
+    
+    
+  </div>
+</div>
+
+
+</div>
+<a href="#" class="add-pro profile-btn"><i class="fas fa-user"></i></a>
+<form>
+<input type="text" class="col-xs-10" name="" placeholder="ابحث عن">
+<button type="submit" class="search-btn col-xs-2">بحث</button>
+</form>
+
+</div>
+<button class="js-menu menu" type="button">
+<span class="bar"></span>
+</button>
+<div class="menu-main-mob">
+<ul>
+<li><a href="#">الرئيسية</a></li>
+<li><a href="#" class="down-mob">حريمي   &nbsp <i class="fas fa-caret-down"></i></span></a>
+<div class="mob-sub-drop-dowm" style="display: none">
+  <a href="#"><span>لعنوان  </span></a>
+  <a href="#"><span>لعنوان  </span></a>
+  <a href="#"><span>لعنوان  </span></a>
+  <a href="#"><span>لعنوان  </span></a>
+  <a href="#"><span>لعنوان  </span></a>
+</div>
+</li>
+<li><a href="#" class="down-mob">فساتين   &nbsp <i class="fas fa-caret-down"></i></span></a>
+<div class="mob-sub-drop-dowm" style="display: none">
+<a href="#"><span>لعنوان  </span></a>
+<a href="#"><span>لعنوان  </span></a>
+<a href="#"><span>لعنوان  </span></a>
+<a href="#"><span>لعنوان  </span></a>
+
+</div>
+</li>
+<li><a href="#" class="down-mob">   أفراح   &nbsp <i class="fas fa-caret-down"></i></span></a>
+<div class="mob-sub-drop-dowm" style="display: none">
+<a href="#"><span>لعنوان  </span></a>
+<a href="#"><span>لعنوان  </span></a>
+<a href="#"><span>لعنوان  </span></a>
+<a href="#"><span>لعنوان  </span></a>
+<a href="#"><span>لعنوان  </span></a>
+</div>
+</li>
+<li><a href="#">أطفال</a></li>
+<li><a href="#">رجالي</a></li>
+<li><a href="#">   الاقسام</a></li>
+</ul>
+<div class="mobile-botto-links">
+<a href="#" class="">منتجاتي</a>
+<a href="#" class="">طلباتي</a>
+<a href="#" class="">الأمنيات</a>
+<br>
+<a href="#" class="eng-text"><i class="fas fa-envelope"></i> elwekalaeg@gmail.com</a>
+<a href="#" class="eng-text"><i class="fas fa-phone"></i> 01000427757</a>
+</div>
+</div>
+</div>
+<!-- end header -->
+<!-- main -->
+<div class=" container-fluid main-body" >
+
+
+<div class="container remove-padding">
+
+
+
+
+
+   <div class="container remove-padding items-main cart-main-grid">
+
+  <div class="col-xs-12 text-center main-grid-perant product-slider-main">
+  <h2 class="no-background"><span>سلة المشتريات</span></h2>
+</div>
+
+
+
+<div class="col-xs-12">
+
+
+    <div class="col-xs-12 col-md-9 col-sm-8 cart-items-main">
+      <div class="col-xs-12 list-item-main">
+       <div class="col-md-1 col-sm-2 col-xs-4 del-main" data-toggle="confirmation" data-original-title="" data-title="هل انت متأكد ؟ " data-btn-ok-label="نعم" data-btn-cancel-label="لا">  <i class="fas fa-trash" aria-hidden="true"></i>  </div>
+       <div class="col-md-2 col-sm-4 col-xs-8 pro-img-main"><a href="#"> <img src="img/1.png"> </a></div>
+       <div class="col-md-5  col-sm-6 col-xs-12 pro-title-main"> 
+       <a href="#">  <h1>بلوزة حمالات سواريه H&M </h1></a>
+         <p>العرض 45 سم الطول 65  سم يلبس ل 60 كيلو...... </p>
+       </div>
+       <div class="col-md-2 col-xs-6  col-sm-6 pro-price-main cart-price">
+            <h1>50 جم </h1>
+       </div>
+
+            <div class="col-md-2 col-xs-6  col-sm-6  pro-price-main ">
+            <h1>50 جم </h1>
+       </div>
+   
+
+
+
+
+</div>
+
+      <div class="col-xs-12 list-item-main">
+       <div class="col-md-1 col-sm-2 col-xs-4 del-main" data-toggle="confirmation" data-original-title="" data-title="هل انت متأكد ؟ " data-btn-ok-label="نعم" data-btn-cancel-label="لا">  <i class="fas fa-trash" aria-hidden="true"></i>  </div>
+       <div class="col-md-2 col-sm-4 col-xs-8 pro-img-main"><a href="#"> <img src="img/1.png"> </a></div>
+       <div class="col-md-5  col-sm-6 col-xs-12 pro-title-main"> 
+       <a href="#">  <h1>بلوزة حمالات سواريه H&M </h1></a>
+         <p>العرض 45 سم الطول 65  سم يلبس ل 60 كيلو...... </p>
+       </div>
+       <div class="col-md-2 col-xs-6  col-sm-6 pro-price-main cart-price">
+            <h1>50 جم </h1>
+       </div>
+
+            <div class="col-md-2 col-xs-6  col-sm-6  pro-price-main ">
+            <h1>50 جم </h1>
+       </div>
+   
+
+
+
+
+</div>
+
+      <div class="col-xs-12 list-item-main">
+       <div class="col-md-1 col-sm-2 col-xs-4 del-main" data-toggle="confirmation" data-original-title="" data-title="هل انت متأكد ؟ " data-btn-ok-label="نعم" data-btn-cancel-label="لا">  <i class="fas fa-trash" aria-hidden="true"></i>  </div>
+       <div class="col-md-2 col-sm-4 col-xs-8 pro-img-main"><a href="#"> <img src="img/1.png"> </a></div>
+       <div class="col-md-5  col-sm-6 col-xs-12 pro-title-main"> 
+       <a href="#">  <h1>بلوزة حمالات سواريه H&M </h1></a>
+         <p>العرض 45 سم الطول 65  سم يلبس ل 60 كيلو...... </p>
+       </div>
+       <div class="col-md-2 col-xs-6  col-sm-6 pro-price-main cart-price">
+            <h1>50 جم </h1>
+       </div>
+
+            <div class="col-md-2 col-xs-6  col-sm-6  pro-price-main ">
+            <h1>50 جم </h1>
+       </div>
+   
+
+
+
+
+</div>
+
+      <div class="col-xs-12 list-item-main">
+       <div class="col-md-1 col-sm-2 col-xs-4 del-main" data-toggle="confirmation" data-original-title="" data-title="هل انت متأكد ؟ " data-btn-ok-label="نعم" data-btn-cancel-label="لا">  <i class="fas fa-trash" aria-hidden="true"></i>  </div>
+       <div class="col-md-2 col-sm-4 col-xs-8 pro-img-main"><a href="#"> <img src="img/1.png"> </a></div>
+       <div class="col-md-5  col-sm-6 col-xs-12 pro-title-main"> 
+       <a href="#">  <h1>بلوزة حمالات سواريه H&M </h1></a>
+         <p>العرض 45 سم الطول 65  سم يلبس ل 60 كيلو...... </p>
+       </div>
+       <div class="col-md-2 col-xs-6  col-sm-6 pro-price-main cart-price">
+            <h1>50 جم </h1>
+       </div>
+
+            <div class="col-md-2 col-xs-6  col-sm-6  pro-price-main ">
+            <h1>50 جم </h1>
+       </div>
+   
+
+
+
+
+</div>
+
+      <div class="col-xs-12 list-item-main">
+       <div class="col-md-1 col-sm-2 col-xs-4 del-main" data-toggle="confirmation" data-original-title="" data-title="هل انت متأكد ؟ " data-btn-ok-label="نعم" data-btn-cancel-label="لا">  <i class="fas fa-trash" aria-hidden="true"></i>  </div>
+       <div class="col-md-2 col-sm-4 col-xs-8 pro-img-main"><a href="#"> <img src="img/1.png"> </a></div>
+       <div class="col-md-5  col-sm-6 col-xs-12 pro-title-main"> 
+       <a href="#">  <h1>بلوزة حمالات سواريه H&M </h1></a>
+         <p>العرض 45 سم الطول 65  سم يلبس ل 60 كيلو...... </p>
+       </div>
+       <div class="col-md-2 col-xs-6  col-sm-6 pro-price-main cart-price">
+            <h1>50 جم </h1>
+       </div>
+
+            <div class="col-md-2 col-xs-6  col-sm-6  pro-price-main ">
+            <h1>50 جم </h1>
+       </div>
+   
+
+
+
+
+</div>
+   </div>
+
+
+
+                                        <div class="col-md-3 col-sm-4 col-xs-12 cart-side-bar">
+                                            <h3>المجموع</h3>
+
+                                            <div class="total text-center">
+                                                <h2>215 جنيه</h2>
+                                                <span>+ مصاريف الشحن</span>
+
+                                            </div>
+                                            <a href="#" class="con-order">حجز الطلب</a>
+                                            <p class="address-text">التوصيل لعنوان :<span><br>المريوطية , هرم , الجيزة , 
+رقم 7 ..</span> <a href="#">تعديل العنوان</a></p>
+
+                                            <p class="del-price">مصاريف الشحن داخل القاهرة <span>30 جنيه</span></p>
+                                            <a class="more-info-del" href="#">اعرف اكتر عن مصاريف الشحن</a>
+                                            <a class="return-pol" href="#">سياسة الاسترجاع</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<br>
+
+<br>
+
+</div>
+
+<div class="container-fluid footer-main">
+  
+   <div class="container">
+     <div class="col-md-4 col-sm-4 col-xs-12">
+         <h1>عن الوكالة
+</h1>
+         <p>أول و أكبر منصة إلكترونية  لبيع الملابس الجديدة و المستعملة
+خدنا من الوكالة بس اسمها، لكن وكالتنا مختلفة تماما
+الوكالة بتساعدك في بيع لبسك المركون جديد و مستعمل و تستفاد منه بدل ركنته 
+وتقدر تشتري من عندنا كل اللي نفسك فيه بالسعر اللي يناسبك
+بدأنا 17\1\2015 و مكملين
+</p>
+
+     </div>
+     <div class="col-md-4 col-sm-4 col-xs-12">
+        <h1>روابط تهمك</h1>
+        <a href="#">كيفية البيع في الوكالة</a>
+        <br>
+        <a href="#">سياسة الاسترجاع</a>
+        <br>
+        
+        <a href="#">الاسئلة الشائعة</a>
+        <br>
+        <a href="#">تواصل معنا</a>
+
+     </div>     
+
+     <div class="col-md-4 col-sm-4 col-xs-12">
+           <h1>الأقسام</h1>
+        <a href="#">حريمي</a>
+       <br>
+        <a href="#">رجالي</a>
+        <br>
+        <a href="#">طفالي</a>
+     </div>     
+
+
+
+
+   </div>
+
+</div>
+
+<div class="container-fluid copy-right-main">
+    <div class="container"> 
+
+<div class="col-md-6 col-sm-6 col-xs-12 social-fot">
+    <a href="#"><i class="fab fa-facebook-f"></i> </a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+
+</div> 
+<div class="col-md-6 col-sm-6 col-xs-12 d-d-1 text-left">
+  
+   <a href="#"><img src="img/Designed_&.png"></a>
+    <a href="#"><img src="img/Developed_by.png"></a>
+    <a href="#"><img src="img/logo-ip.png"></a>
+
+</div>
+
+
+</div>
+</div>
+
+
+<a href="javascript:" id="return-to-top"><i class="fas fa-angle-up"></i></a>
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/bootstrap-confirmation.js"></script>
+
+
+
+
+
+<script type="text/javascript">
+$( document ).ready(function() {
+$(window).scroll(function(){
+if ($(window).scrollTop() >= 134) {
+$('.menu-main').addClass('fixed-header');
+$('.site-title').addClass('visible-title');
+$('.menu-perant').addClass('move-menu');
+}
+else {
+$('.menu-main').removeClass('fixed-header');
+$('.site-title').removeClass('visible-title');
+$('.menu-perant').removeClass('move-menu');
+}
+});
+$(window).scroll(function() {
+if ($(this).scrollTop() >= 134) {
+$('#return-to-top').show();
+} else {
+$('#return-to-top').hide();
+}
+});
+$('#return-to-top').click(function() {
+$('body,html').animate({
+scrollTop : 0
+}, 500);
+});
+var isActive = false;
+$('.js-menu').on('click', function() {
+if (isActive) {
+$(this).removeClass('active');
+$('.menu-main-mob').removeClass('menu-open');
+$('body').removeClass('remove-scroll');
+} else {
+$(this).addClass('active');
+$('.menu-main-mob').addClass('menu-open');
+$('body').addClass('remove-scroll');
+}
+isActive = !isActive;
+});
+$( ".down-mob" ).click(function() {
+$(this).siblings('.mob-sub-drop-dowm').slideToggle( "slow" );
+});
+$('.slick-carousel-1').slick({
+arrows: true,
+dots: false,
+slidesToShow: 1,
+slidesToScroll: 1,
+infinite: false,
+centerPadding: '30px',
+rtl:true,
+autoplay: true,
+});
+
+
+$( ".del-main" ).click(function() {
+$(this).parent().hide();
+});
+
+
+
+});
+
+
+  $('[data-toggle=confirmation]').confirmation({
+    rootSelector: '[data-toggle=confirmation]',
+    container: 'body'
+  });
+
+
+</script>
+
+
+      <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

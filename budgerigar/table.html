@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/chosen.css">
+  <link rel="stylesheet" href="css/ImageSelect.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="css/style.css"  rel="stylesheet">
+  </head>
+  <body>
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+      <li><a href="photo-grid.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/photo-grid.jpg"></div><p>photo grid</p> </a></li>
+      <li><a href="table.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/table.jpg"></div><p>table</p> </a></li>
+      <li><a href="photo-with-text.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/photo-with-text.jpg"></div><p>photo with text</p> </a></li>
+           <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+<div class="container-fluid header-main-cont remove-padding">
+  <div class="container-fluid top-head-main remove-padding">
+     
+<div class="container">
+    
+<!-- <div class="col-md-4 remove-padding">
+    <a href="#" class="flat-hover lan-link">Arabic</a>
+
+<div class="cont-main">
+<select class="my-select">
+ <option selected="selected" data-img-src="img/eg.png"></option>
+ <option data-img-src="img/eg.png">1</option>
+ <option data-img-src="img/eg.png">1</option>
+ <option data-img-src="img/eg.png">1</option>
+</select>
+</div>
+
+        
+      </div>
+ -->
+
+<div class="top-info-links">
+     <p>Secretary/Treasurer  : </p>&nbsp; 
+     <a href="#"> Ghalib Al-Nasser</a>
+    &nbsp;
+     |
+     &nbsp;
+     
+     <a href="#"><img src="img/email.png"></a>
+</div>
+
+</div>
+  </div> 
+
+  <div class="container-fluid header-main remove-padding">
+       <div class="container ">
+            <div class="col-md-2 col-sm-4 remove-padding logo-main">
+                <a href="#"><img src="img/logo-top.png"></a>
+            </div>
+
+       <div class="col-md-8 col-md-offset-2 col-sm-8  links-main hidden-xs remove-padding">
+     
+     <ul class="links-cos">
+         <li><a href="#" class="active-top-link">winners</a></li>
+         <li><a href="#">About</a></li>
+         <li><a href="#">Meetings</a></li>
+         <li><a href="#">Standards</a></li>
+         <li><a href="#">News & Events</a></li>
+     </ul>
+
+
+
+
+
+
+
+</div>
+
+
+
+        <div class="outer-menu visible-xs">
+          <input class="checkbox-toggle" type="checkbox" />
+          <div class="hamburger">
+            <div></div>
+          </div>
+          <div class="menu">
+            <div>
+              <div>
+                <ul>
+                  <li><a href="#">winners</a></li>
+       
+                  
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Meetings</a></li>
+                  <li><a href="#">Standards</a></li>
+                  <li><a href="#">News & Events</a></li>
+                 
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+       </div>
+
+
+
+
+  </div>
+
+  </div>  
+
+<div class="container-fluid body-main remove-padding">
+    
+  <div class="container remove-padding photo-text-main">
+       
+       <div class="breadcrumb-main">
+
+<div class="breadcrumb-me remove-padding">
+  <a href="#" class="swipe-effect">Women</a>&ensp;<span class="nas-arrow-right"> </span>&ensp;
+  <a  class="swipe-effect" href="#">Pants</a>&ensp;<span class="nas-arrow-right">   </span>&ensp;
+  <p>The Sideswept Dhoti</p></div>
+
+
+</div>
+
+
+
+<h3>The Aims Of The World Budgerigar Organisation</h3>
+
+<div class="container table-main">
+
+<table>
+
+  <thead>
+    <tr class="top-head-table">
+      <th scope="col" width="35%">Variety</th>
+      <th scope="col" width="13%">Condition size<br> type&balance </th>
+      <th scope="col" width="13%">Shape & <br> size of head</th>
+      <th scope="col" width="13%">Mask&Spots</th>
+      <th scope="col" width="13%">Colour</th>
+      <th scope="col" width="13%"> Variety<br> markings</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+        <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+        <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+
+        <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+            <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+            <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+            <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+            <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+            <tr>
+      <td data-label="Variety">YELLOW & WHITE (Suffused) in all shades (including Opaline & Cinnamon)</td>
+      <td data-label=" Condition size type&balance">30</td>
+      <td data-label="Shape & size of head"> 30</td>
+      <td data-label="Mask&Spots">30</td>
+      <td data-label="Colour">30</td>
+      <td data-label="Variety markings">30</td>
+    </tr>
+
+
+
+
+
+
+
+
+
+
+  </tbody>
+</table>
+
+</div>
+</div>
+
+
+</div>
+
+
+
+<div class="container-fluid footer-main">
+      <div class="container remove-padding">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                 <img src="img/logo-fot.png">
+
+            </div>
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                 <a href="#">About</a>
+                 <br>
+                 <a href="#">Meetings</a>
+                 <br>
+                 <a href="#">Standards</a>
+                 <br>
+                 <a href="#">News & events</a>
+                 <br>
+                 <a href="#">winners</a>
+                 
+
+            </div>
+
+
+                    <div class="col-md-4 col-sm-4 col-xs-12">
+                                  <p>WBO Mirror Sites:<p>
+                 <a href="#">Russia</a>
+                 <br>
+                 <a href="#">WBO Colour Standards in Spanish</a>
+
+            </div>
+
+<div class="clearfix"></div>
+
+<div class="copy-right">
+     <a href="#"><img src="img/Designed_&.png"></a>
+     <a href="#"><img src="img/Developed_by.png"></a>
+     <a href="#"><img src="img/logo-ip.png"></a>
+
+
+</div>
+
+
+
+      </div>
+
+
+</div>
+
+
+
+
+<div class="scrollup">
+  <a href="#"><i class="fas fa-long-arrow-alt-up"></i></a>
+
+</div>
+
+    
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/chosen.jquery.js"></script>
+    <script src="js/ImageSelect.jquery.js"></script> 
+    <script>
+
+    </script>
+
+    <script>
+
+          AOS.init({
+    once: true
+    })
+    
+    $(document).ready( function() {
+    var lia = $("a.scroll-to");
+    $(function () {
+    $("body").css("paddingTop", $("nav").innerHeight() + 10);
+    
+    lia.click(function (e) {
+    $(this).addClass("active-link").siblings().removeClass("active-link");
+    $("html, body").animate({
+    scrollTop : $("#" + $(this).data("scroll")).offset().top -90
+    },1000);
+    }) ;
+    
+    //Sunc nanbar links with sections
+    $(window).scroll(function () {
+    $(".block").each(function () {
+    if($(window).scrollTop() > $(this).offset().top -100) {
+    var blockId = $(this).attr("id");
+    $('a.scroll-to').removeClass("active-link");
+    if (!$('a.scroll-to[data-scroll="'+ blockId+'"]').hasClass("active-link")){
+    $('a.scroll-to[data-scroll="'+ blockId+'"]').addClass("active-link")
+    }
+    }
+    });
+    });
+    
+    });
+    
+    $("a.scroll-to").click(function(event) {
+    event.preventDefault();
+    });
+$(".my-select").chosen();
+    // slider
+
+    $('.slick-carousel').slick({
+    arrows: false,
+    dots: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [
+    {
+    breakpoint: 1200,
+    settings: {
+    slidesToShow: 3,
+    slidesToScroll: 1
+    }
+    },
+    {
+    breakpoint: 991,
+    settings: {
+    slidesToShow: 2,
+    slidesToScroll: 1
+    }
+    },
+    {
+    breakpoint: 500,
+    settings: {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerPadding: '60px',
+    },
+    },
+    ]
+    });
+
+
+
+
+    });
+
+
+     $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('.scrollup').fadeIn();
+        } else {
+            $('.scrollup').fadeOut();
+        }
+    });
+
+    $('.scrollup').click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+
+
+
+
+
+
+    </script>
+
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+    
+  </body>
+</html>

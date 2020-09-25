@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>payment-page-event-ticket</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/slick.css" rel="stylesheet">
+    <link href="css/slick-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/chosen.css">
+  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="css/style.css"  rel="stylesheet">
+  </head>
+  <body class="light-gry-bg">
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="Merchant.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Merchant.jpg">
+  </div><p>Merchant</p> </a>
+</li>
+
+ <li><a href="payment-page-event-ticket.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/payment-page-event-ticket.jpg">
+  </div><p>payment-page-event-ticket</p> </a>
+</li>
+
+ <li><a href="payment-page-recurring.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/payment-page-recurring.jpg">
+  </div><p>payment-page-recurring</p> </a>
+</li>
+
+ <li><a href="sing-up.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/sing-up.jpg">
+  </div><p>sing-up</p> </a>
+</li>
+
+ <li><a href="cowpay-front/index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="cowpay-front/img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+  <div class="container-fluid p-head">
+    <div class="container">
+      <div class="col-md-offset-1 col-md-10">
+     <a href="#"><img src="img/LOGO.png"></a>
+     <div class="payment-head-links">
+        <a href="#" class="active-link">Payment details</a>
+        <span><i class="fas fa-angle-double-right"></i></span>
+        <a href="#">Billing information</a>
+     </div>
+   </div>
+</div>
+  </div>
+
+
+ 
+ <div class="container-fluid remove-padding">
+    <div class="container remove-padding">
+       <div class="col-md-10 col-md-offset-1 col-xs-12 col-sm-12 col-sm-offset-0 ticket-container">
+         
+        <form>
+            
+           
+              <div class="col-xs-12 col-md-8 co-sm-12 col-xs-12">
+                 <div class="col-xs-12 payement-ticket-main remove-padding">
+                  
+                 <div class="col-xs-12 ticket-info">
+                   <img src="img/1.png">
+                   <p>Payment name: <span>Long time ticket name</span></p>
+                   <p>Payment description: 
+                    <br>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm
+                      od tempor incididunt ut labore</span></p>
+                      <p>Merchant: <span>Sam Smith</span></p>
+                      <p>Deadine: <span>Jan 20, 2020</span></p>
+                      <p class="ticket-date">Frequency:</p>
+                      <select>
+                         <option>Sat 5:00pm - 7:00 pm</option>
+                         <option>Sat 7:00pm - 9:00 pm</option>
+                         <option>Sat 9:00pm - 11:00 pm</option>
+                      </select>
+                 </div>
+                 
+            <div class="col-xs-12 teckit-type-main remove-padding">
+                <p>Available ticket types</p>
+
+                <div class="col-xs-12 remove-padding teckit-type-item">
+                  <p>Name: <span>Front area</span></p>
+                  
+                 
+                  <div class="col-xs-12 remove-padding">
+                         <p>Price: <span>$55.00</span></p>
+                   
+                    <span class="down-up-toggle" ><i class="fas fa-angle-down"></i></span>
+                    <div class="col-xs-12 remove-padding teckit-type-more-info">
+                    <p>Description: <br> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</span></p> 
+                    <p>Number of tickets available: <span>60</span></p>
+                    <hr> 
+                    <p>Choose quantity:</p>
+                                           <select>
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                      </select>
+                  </div>
+                  </div>
+               
+
+
+
+                </div>
+
+
+                                <div class="col-xs-12 remove-padding teckit-type-item">
+                  <p>Name: <span>Front area</span></p>
+                  
+                 
+                  <div class="col-xs-12 remove-padding">
+                    <p>Price: <span>$55.00</span></p>
+                   
+                    <span class="down-up-toggle" ><i class="fas fa-angle-down"></i></span>
+                    <div class="col-xs-12 remove-padding teckit-type-more-info">
+                    <p>Description: <br> <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do</span></p> 
+                    <p>Number of tickets available: <span>60</span></p>
+                    <hr> 
+                    <p>Choose quantity:</p>
+                                           <select>
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                      </select>
+                  </div>
+                  </div>
+               
+
+
+
+                </div>
+
+<p>Notes: <br><span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+tempor incididunt ut labore</span></p>
+
+
+            </div>
+                            
+
+                            
+
+               </div>
+
+
+
+
+         </div>
+          <div class="col-md-4 col-sm-12 col-xs-12">
+             <div class="col-xs-12 remove-padding teckit-side-bar-main">
+                <h3>Promocodes</h3>
+                
+                <div class="col-xs-12 remove-padding promo-form-main">
+                  <p>Enter promo-code</p>
+                <input class="promo-input" type="text">
+                <button type="">Apply</button>
+              </div>
+                <div class="col-xs-12 teckit-side-info">
+                   <p>Front area (2x): $110.00</p>
+                   <p>Back area (1x): $45.00</p>
+                   <p>Price: $155.00</p>
+                   <p>Discount: $10.00</p>
+                   <p>Total: $145.00</p>
+                </div>
+
+                <div class="col-xs-12 remove-padding info-teckit-input">
+                    <p>Name</p>
+                    <input type="text">
+
+                </div>
+
+                        <div class="col-xs-12 remove-padding info-teckit-input">
+                    <p>Mobile number</p>
+                    <input type="text">
+
+                </div>
+
+                                      <div class="col-xs-12 remove-padding info-teckit-input">
+                    <p>Mobile number</p>
+                    <input type="text">
+
+                </div>
+
+
+
+<div class=" col-xs-12 remove-padding">
+  
+    <input type="radio" id="Credit" name="payment" checked>
+    <label for="Credit">Credit Card <img src="img/visa-and-mastercard.png"></label>
+
+</div>
+<div class=" col-xs-12 remove-padding">
+      <input type="radio" id="Cash" name="payment">
+    <label for="Cash"> Cash at Fawry <img src="img/fawry-icn.png"></label>
+
+</div>
+
+<div class=" col-xs-12 remove-padding">
+      <input type="radio" id="Collection" name="payment">
+    <label for="Collection"> Collection from home <img src="img/bike-icn.png"></label>
+
+</div>
+
+
+
+<div class="col-xs-12 Credit-show remove-padding">
+  <h4>Card data</h4>
+                     <div class="col-xs-12 remove-padding number-teckit-input">
+                    <p>Card number</p>
+                    <input type="text">
+                    <img src="img/credit-card-placeholder.svg">
+
+                </div>
+
+                     <div class="col-xs-5 remove-padding Expiry-date-main info-teckit-input">
+                    <p>Expiry date</p>
+                    
+                    <input type="text">
+                 <span>/</span> 
+                 
+                    <input type="text">
+                 
+
+                </div>
+
+                     <div class="col-xs-5 info-teckit-input cvv-input-main">
+                    <p>Card </p>
+                    <input type="text">
+
+
+                </div>
+
+                     <div class="col-xs-2 remove-padding number-teckit-input ">
+                    
+                    <img class="cvv-img" src="img/cvv.svg">
+
+
+                </div>
+
+
+
+<button type="button" class="submit-payment-btn" data-toggle="modal" data-target="#true-false-pop-up">Complete payment</button>
+
+</div>
+
+
+             </div>
+
+
+
+          </div>
+
+        </form>
+       </div>
+    </div>
+
+ </div>
+
+
+
+<div class="clearfix"></div>
+
+
+<div class="container-fluid m-footer text-center">
+    <img src="img/LOGO.png">
+ <p>  Powered by  <a href="#">COWPAY</a></p>
+
+
+</div>
+
+<div id="true-false-pop-up" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      
+        
+        
+      
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <!-- true -->
+        <img src="img/check.png">
+
+        <h4>Your payment was successful</h4>
+        <p>Congrats! You will receive an email confirmation with the next steps</p>
+<!-- folse
+
+<img src="img/warning-sign.png">
+        <h4>Your payment failed</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</p> -->
+
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+    
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/chosen.jquery.js"></script>
+        <script src="js/init.js"></script>
+    <script>
+
+    </script>
+
+    <script>
+
+
+    
+    $(document).ready( function() {
+
+  $(".my-select").chosen();
+
+
+$(".down-up-toggle").click(function() {
+$(this).siblings('.teckit-type-more-info').slideToggle( "fast" );
+$(this).toggleClass('links-colapsed')
+});
+
+  $(function() {
+   $("input[name='payment']").click(function() {
+     if ($("#Credit").is(":checked")) {
+     $(".Credit-show").slideDown();
+   
+     } else {
+         $(".Credit-show").slideUp();
+     
+     }
+   });
+ });
+
+    });
+
+    </script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+    
+  </body>
+</html>

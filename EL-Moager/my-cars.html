@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>index</title>
+    <!-- my css -->
+     <!--<link href="css/style.css" rel="stylesheet">-->
+     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/daterangepicker.min.css"/>
+
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+
+<body class="logn-body">
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd; margin-bottom: 0;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px;  padding: 0}
+
+    .all-pages-main ul li { float: left;
+    width: 43.5%;
+    padding: 10px;
+    list-style: none;
+    display: inline-block; }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="car.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/car.jpg"></div><p>car details</p> </a></li>
+      <li><a href="fav.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fav.jpg"></div><p>favorite</p> </a></li>
+      <li><a href="fillter.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fillter.jpg"></div><p>fillter</p> </a></li>
+      <li><a href="hosting-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/hosting-1.jpg"></div><p>hosting </p> </a></li>
+        <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="makepayment-new.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/makepayment-new.jpg"></div><p>makepayment new</p> </a></li>
+      <li><a href="my-cars.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/my-cars.jpg"></div><p>my cars</p> </a></li>
+      <li><a href="owner.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/owner.jpg"></div><p>owner</p> </a></li>
+      <li><a href="statement-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/statement-1.jpg"></div><p>statement </p> </a></li>
+      <li><a href="thanks.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/thanks.jpg"></div><p>thanks</p> </a></li>
+      <li><a href="vip.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/vip.jpg"></div><p>vip</p> </a></li>
+
+
+
+
+
+    
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="images/more.png">
+</span>
+
+
+
+
+<div class="header">
+    <div class="Container">
+        <div class="logo">
+
+            <a href="#a"> <img src="images/logo@1x.png"> </a>
+
+        </div>
+
+    <div class="profile-pic-head">
+            <img src="images/avatar.png">
+            <a class="click-drop-down"><p> Khubiev islam</p>
+
+                <div class="propdown"></div>
+            </a>
+
+            <div class="drop-down-mean">
+                <div class="update-profile">
+                <h5>Profile</h5>
+                    <a href="a#"> Update profile </a>
+                    <a href="a#"> Add credit </a>
+                    <a href="a#"> My requests </a>
+                    <a href="a#"> Withdrow </a>
+                    <a href="a#"> Statment </a>
+                    <a href="a#"> My favorites </a>
+                    <a href="a#"> Massages </a>
+                    
+
+                </div>
+
+                <div class="renter-owner-mean">
+                <h5>The renter profile</h5>
+                 <a href="a#"> Renting orders </a>
+                 <h5>The owner profile</h5>
+                    <a href="a#"> My cars </a>
+                    <a href="a#"> Pending request </a>
+                    <h5>General</h5>
+                    <a href="a#"> Logout </a>
+
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="sareng">
+            <div class="sari">
+                <img src="images/$@1x.png">
+                <a href="#a"><sub>SAR</sub></a>
+            </div>
+            <!-- end sar -->
+            <div class="eng">
+                <img src="images/GLOBE@1x.png">
+                <a href="#a"><sub>English</sub></a>
+            </div>
+            <!-- end english-->
+        </div>
+        <!-- end sareng -->
+    </div>
+</div>
+<div class="continar">
+    <div class="content">
+
+        <!-- end of the header -->
+
+        <div class="mean">
+            <div class="profile-mean">
+                <div class="probg">
+                    <div class="propicbg"></div>
+                    <p><a
+                            href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/account%20settings.html">
+                        Khubiev islam </a></p>
+
+                    <h3>Balance 350 <span>SAR</span></h3>
+
+                    <div class="general-p">
+                        <p><a href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/add-creadit.html">
+                            Add Credit </a></p>
+
+                        <p><a href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/withdraw-1.html">Withdraw
+                            money </a></p>
+
+                        <p><a href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/req.html">My Requests </a>
+                        </p>
+
+                        <p><a href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/statement-1.html">Statements </a>
+                        </p>
+                    </div>
+                    <!-- general-p -->
+
+                    <div class="renter-p">
+                        <h4>The renter Profile</h4>
+
+                        <p><a href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/renter.html">Renting
+                            orders </a></p>
+                    </div>
+                    <!-- renter-p -->
+
+                    <div class="owner-p">
+                        <h4>The owner Profile</h4>
+
+                        <p><a class="active"
+                              href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/my-cars.html">My Cars </a>
+                        </p>
+
+                        <p><a href="file:///C:/Users/Islam-AFC/Desktop/EL-Moager1%20asl%20old/owner.html">Renting
+                            Orders</a></p>
+                    </div>
+                    <!-- owner-p -->
+
+                </div>
+                <!-- side nav -->
+
+
+                <div class="pro-mean-2">
+
+
+                    <div class="Added-balance-1" id="maher_bg">
+                        <img src="images/1.png">
+
+                        <p> BMW 318i 2005 Silver</p>
+
+                        <h4> in jeddah </h4>
+
+                        <div class="date">
+                            <img src="images/CALENDAR_icn.png" datepicker_target="1" class="datepicker_image" title="">
+
+                            <input id="date-range1" size="40" class="show-only-calender-input"
+                                   disabled_dates='1-3-2017,1-11-2017,1-25-2017,1-20-2017' readonly
+                                    >
+
+                        </div>
+
+                        <div class="on">
+
+                            <label class="switch">
+                                <input type="checkbox" id="maher" onClick="btncheck();" checked>
+
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+
+                    </div>
+                    <!--Added-balance-->
+
+                    <div class="Added-balance-1">
+                        <img src="images/1.png">
+
+                        <p> BMW 318i 2005 Silver</p>
+
+                        <h4> in jeddah </h4>
+
+                        <div class="date">
+                            <img src="images/CALENDAR_icn.png" datepicker_target="2" class="datepicker_image" title="">
+
+                            <input id="date-range2" size="40" class="show-only-calender-input"
+                                   disabled_dates='1-3-2017,1-11-2017,1-25-2017,1-20-2017' readonly>
+
+                        </div>
+
+                        <div class="on">
+
+                            <label class="switch">
+                                <input type="checkbox" checked>
+
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="Added-balance-1">
+                        <img src="images/1.png">
+
+                        <p> BMW 318i 2005 Silver</p>
+
+                        <h4> in jeddah </h4>
+
+                        <div class="date">
+                            <img src="images/CALENDAR_icn.png" datepicker_target="3" class="datepicker_image" title="">
+
+                            <input id="date-range3" size="40" class="show-only-calender-input"
+                                   disabled_dates='1-3-2017,1-11-2017,1-25-2017,1-20-2017' readonly
+                                    >
+
+
+                        </div>
+
+                        <div class="on">
+
+                            <label class="switch">
+                                <input type="checkbox" checked>
+
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+
+                    </div>
+                    <div class="Added-balance-1">
+                        <img src="images/1.png">
+
+                        <p> BMW 318i 2005 Silver</p>
+
+                        <h4> in jeddah </h4>
+
+                        <div class="date">
+                            <input id="date-range4" class="date-range-div show-only-calender-input" size="40"
+                                   disabled_dates='1-3-2017,1-11-2017,1-25-2017,1-20-2017' readonly
+                                    >
+                            <img src="images/CALENDAR_icn.png" datepicker_target="4"
+                                 class="datepicker_image date_target" title="">
+
+
+                        </div>
+
+                        <div class="on">
+
+                            <label class="switch">
+                                <input type="checkbox" checked>
+
+                                <div class="slider round"></div>
+                            </label>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+            <!--pro-mean -->
+
+
+        </div>
+        <!--profile-mean-->
+
+
+    </div>
+    <!-- end of the mean -->
+
+
+    <!-- footer -->
+
+    <div class="vipfooter">
+
+        <div class="footerbg">
+
+            <div class="getapp">
+
+
+                <p>Get Almoajer app</p>
+                <a href="#a"> <img src="images/apple.png"></a>
+                <a href="#a"> <img src="images/android.png"></a>
+
+            </div>
+
+            <div class="botmenu">
+                <a href="#a"><p>About</p></a>
+                <a href="#a"><p>Help</p></a>
+                <a href="#a"><p>Policies</p></a>
+                <a href="#a"><p>Terms</p></a>
+
+
+            </div>
+
+            <div class="social">
+                <a href="# " class="twitter"> </a>
+                <a href="#" class="google"></a>
+                <a href="#" class="instagram"> </a>
+                <a href="#" class="linkedin"> </a>
+                <a href="#" class="youtube"></a>
+                <a href="#" class="facebook"> </a>
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+</div>
+<!-- end of the content -->
+
+</div><!-- end of the continar -->
+
+
+<script type="text/javascript" src="js/jQuery1.11.2.js"></script>
+<script src="js/moment.min.js" type="text/javascript"></script>
+<script src="js/jquery.daterangepicker.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script>
+
+	 function btncheck()
+	{
+	  if (document.getElementById('maher').checked) 
+		  {
+			  document.getElementById('maher_bg').style.backgroundColor = "white";
+		  } else {
+			  document.getElementById('maher_bg').style.backgroundColor = "#ddd";
+		  }
+	}
+	 
+	 
+
+    $(document).on('click', '.datepicker_image', function (evt) {
+       $('.date-picker-wrapper').hide(); 
+
+
+
+        var id = $(this).attr('datepicker_target');
+	
+				/*if($('#date-range' + id).length > 0) {
+					evt.stopPropagation();
+					 $('#date-range' + id).data('dateRangePicker').close();
+						$('#date-range' + id).data('dateRangePicker').open();
+					
+					$('#date-range16').data('dateRangePicker').close();
+$('#date-range16').data('dateRangePicker').open(); 
+
+			}
+		else{ }*/
+			        var disableddates = $('#date-range' + id).attr('disabled_dates').split(',');
+        $('#date-range' + id).dateRangePicker({
+            autoClose: true,
+            showShortcuts: false,
+            singleMonth: true,
+            beforeShowDay: function (t) {
+                var m = t.getMonth(), d = t.getDate(), y = t.getFullYear();
+                if ($.inArray((m + 1) + '-' + d + '-' + y, disableddates) != -1) {
+                    return [false, 'rerserved', ''];
+                }
+                return [false, '', ''];
+            }
+        });
+
+        $(".single-month .default-top").text('Car is not allowed on those days');
+        $('#date-range' + id).data('dateRangePicker').open();
+			
+
+    });
+</script>
+
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

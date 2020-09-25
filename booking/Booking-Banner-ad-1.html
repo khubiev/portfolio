@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Booking Banner ad 1</title>
+    <!-- main css -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+     <link href="css/remixicon.css" rel="stylesheet">
+
+    <!-- end main css -->
+    <!-- this page only css -->
+    <link href="css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <link href="css/chosen.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style1.css">
+    <!-- end this page only css -->
+    <!-- main css -->
+    <link href="css/style.css"  rel="stylesheet">        
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+    <!-- end main css -->
+
+  </head>
+  <body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="Booking-Banner-ad-1.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Booking-Banner-ad-1.jpg">
+  </div><p>Booking-Banner-ad-1</p> </a>
+</li>
+
+ <li><a href="Booking-Banner-ad-2.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Booking-Banner-ad-2.jpg">
+  </div><p>Booking-Banner-ad-2</p> </a>
+</li>
+
+ <li><a href="Booking-Banner-ad-3.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Booking-Banner-ad-3.jpg">
+  </div><p>Booking-Banner-ad-3</p> </a>
+</li>
+
+ <li><a href="Booking-Banner-ad-3-draft.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Booking-Banner-ad-3-draft.jpg">
+  </div><p>Booking-Banner-ad-3-draft</p> </a>
+</li>
+
+ <li><a href="Booking-Banner-ad-4.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Booking-Banner-ad-4.jpg">
+  </div><p>Booking-Banner-ad-4</p> </a>
+</li>
+
+ <li><a href="CompleteProfile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/CompleteProfile.jpg">
+  </div><p>CompleteProfile</p> </a>
+</li>
+
+ <li><a href="Contact-us.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Contact-us.jpg">
+  </div><p>Contact-us</p> </a>
+</li>
+
+ <li><a href="Favourites.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Favourites.jpg">
+  </div><p>Favourites</p> </a>
+</li>
+
+ <li><a href="home-landing.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/home-landing.jpg">
+  </div><p>home-landing</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="List-View.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/List-View.jpg">
+  </div><p>List-View</p> </a>
+</li>
+
+ <li><a href="login.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/login.jpg">
+  </div><p>login</p> </a>
+</li>
+
+ <li><a href="My-ads.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/My-ads.jpg">
+  </div><p>My-ads</p> </a>
+</li>
+
+ <li><a href="My-Banners.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/My-Banners.jpg">
+  </div><p>My-Banners</p> </a>
+</li>
+
+ <li><a href="Packages.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Packages.jpg">
+  </div><p>Packages</p> </a>
+</li>
+
+ <li><a href="Profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Profile.jpg">
+  </div><p>Profile</p> </a>
+</li>
+
+ <li><a href="Register.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Register.jpg">
+  </div><p>Register</p> </a>
+</li>
+
+ <li><a href="thiank-you.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/thiank-you.jpg">
+  </div><p>thiank-you</p> </a>
+</li>
+
+ <li><a href="Verification.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Verification.jpg">
+  </div><p>Verification</p> </a>
+</li>
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+ <!--header  -->    
+<div class="container-fluid removae-padding header">
+   <div class="container">
+      <a href="#"><img src="img/logo.png"></a>
+
+      <ul>
+        <!-- will change letter  -->
+                  <li> 
+<div class="dropdown">
+          <p data-toggle="dropdown" class="dropdown-toggle"><span class="cont-p"> EG </span> - <span class="lang-p">AR </span> <span><i class="ri-earth-line"></i></span></p> 
+  <div class="dropdown-menu">
+<form>
+  
+
+
+
+  <select  class="my-select lang chosen-rtl">
+   <option value="AR">Arabic</option>
+   <option value="FR">France</option>
+   <option value="RU">Russian</option>
+   <option value="EN">English</option>
+
+</select>
+
+  <select  class="my-select cont chosen-rtl">
+   <option value="EG">Egypt</option>
+   <option value="FR">France</option>
+   <option value="RUS">Russia</option>
+   <option value="ENG">England</option>
+
+</select>
+
+
+<button> Select</button>
+
+</form>
+  </div>
+</div>
+         </li>
+         <!-- end will change letter  -->
+         <li><a href="#" class="profile-head"><p class="hidden-xs">User name</p><img src="img/5.jpg"> </a></li>
+         <li class="ad-post-btn"><a href="#"><i class="ri-price-tag-3-line"></i> Post Ad</a></li>
+      </ul>
+   </div>
+</div>
+
+<!-- end header  -->
+<!-- content -->
+<div class="container-fluid content-main remove-padding">
+  
+    <div class="container remove-padding contant-main banner-step-1">
+       
+
+       <div class="col-md-10 remove-padding col-md-offset-1 col-sm-offset-0 col-sm-12 col-xs-12 contact-form-main">
+           
+         <div class="col-xs-12  banner-step-2-info">
+            <h1>Advertisment Purchase<span>Step 1 of 2</span> </h1>
+         </div>
+
+           <form>
+<div class="col-xs-12 remove-padding">
+
+  <div class="col-md-8 col-sm-12 col-xs-12 banner-type-main-cont">
+<h3>Product Type</h3>
+
+<div class="col-xs-12 remove-padding banner-type-main"  id="tabs">
+
+
+                         <div class="mathed-main" id="tab4">
+                <div class="col-xs-12 remove-padding input-check-main mathed-active">
+                <input type="radio" name="payment" checked="checked">
+                <div class="pament-way-main text-center"><p>Splash Ad</p></div>   
+                </div>
+                
+           </div>
+
+                       <div class="mathed-main" id="tab3">
+                <div class="col-xs-12 remove-padding input-check-main">
+                <input type="radio" name="payment">
+                <div class="pament-way-main text-center"><p>Home Page Top Banner</p></div>   
+                </div>
+                
+           </div>
+
+
+            <div class="mathed-main" id="tab1">
+                <div class="col-xs-12 remove-padding input-check-main ">
+                  <input type="radio" name="payment" >
+                  <div class="pament-way-main text-center">
+                  <p>Category,Sub and Internal Banner</p>
+                      
+                  </div>
+               </div>
+              
+            </div>
+            
+
+
+
+
+
+    </div>
+
+</div>
+
+<div class="col-md-3 col-xs-12 col-md-offset-1 col-sm-12 text-center tabs-img-banner">
+  
+   <div class="col-xs-12 price-item-box remove-padding tab1C">
+     <img src="img/subcategory.png" class="img-responsive">
+     <div class="col-xs-12 cost-main-ads">
+        <h3>Your Cost</h3>
+        <div class="col-xs-12 remove-padding">
+        <p>Splash Banner</p>
+        <h5>12 KWD</h5>
+        </div>
+
+     </div>
+   </div>
+
+<div class="col-xs-12 price-item-box remove-padding tab3C">
+     <img src="img/subcategory.png" class="img-responsive">
+          <div class="col-xs-12 cost-main-ads">
+        <h3>Your Cost</h3>
+        <div class="col-xs-12 remove-padding">
+        <p>Home page banner</p>
+        <h5>12 KWD</h5>
+        </div>
+
+        </div>
+     </div>
+
+
+<div class="col-xs-12 price-item-box remove-padding tab4C">
+     <img src="img/subcategory.png" class="img-responsive">
+          <div class="col-xs-12 cost-main-ads">
+        <h3>Your Cost</h3>
+           <div class="col-xs-12 remove-padding">
+        <p>Category banner</p>
+        <h5>12 KWD</h5>
+        </div>
+        <div class="col-xs-12 remove-padding">
+        <p>Sub- Category banner</p>
+        <h5>12 KWD</h5>
+        </div>
+
+                <div class="col-xs-12 remove-padding">
+        <p>Internal banner</p>
+        <h5>12 KWD</h5>
+     </div>
+</div>
+
+</div>
+ </div>
+
+
+<div class="col-md-8 col-sm-12 col-xs-12 remove-padding banner-type-main-cont">
+
+<div class="col-xs-12">
+  
+   <a href="#" data-toggle="modal" data-target="#bannerInfo" class="more-info-banner">
+    <span><i class="ri-information-line"></i></span> Get more Information about every ad type</a>
+</div>
+
+
+
+
+</div>
+
+
+<div class="col-md-8 col-sm-12 col-xs-12 pick-type-main remove-padding select-date">
+    <div class="col-xs-12 step-1-input-title">
+           <h2><span>*</span>Publishing Calender</h2>
+
+  </div>
+   <div class="col-md-6 col-sm-12 col-xs-12">
+<select id="pick_type" name="pick_type" required class="my-select" >
+   <option value="0">A Day</option>
+   <option value="1">Multiple Days</option>
+   <option value="2">Range</option>
+
+</select>
+   </div>
+
+   <div class="col-md-6 col-sm-12 col-xs-12">
+    <i class="ri-calendar-todo-fill"></i>
+
+     <input autocomplete="off" type="text" id="my-date-pick" 
+       class="datepicker-here"
+      name="show" data-language='en'
+      placeholder="Select a date">
+
+   </div>
+
+</div>
+
+
+
+
+
+
+    <div class="col-md-8 col-sm-12 col-xs-12 remove-padding Category-select">
+
+
+
+
+<div class="col-md-6 col-sm-12 col-xs-12">
+          <div class="step-1-input-title">
+          <h2><span>*</span>Category</h2>
+
+  </div>
+
+  <input type="text" id="category_input_hidden_ids" placeholder="Type to filter" name="category_id" />
+</div>
+
+
+<div class="col-md-6 col-sm-12 col-xs-12">
+          <div class="step-1-input-title">
+          <h2>Ad Type</h2>
+
+  </div>
+
+  <select class="my-select">
+    <option>option 1</option>
+    <option>option 2</option>
+    <option>option 3</option>
+ </select>
+</div>
+
+
+
+
+    
+    </div>
+
+
+
+              <div class="col-md-8 col-sm-8 col-xs-12">
+                  <button type="submit">Submit</button>
+                  <p>By clicking this button, you agree to<br><a href="#"> Terms and conditions.</a></p>
+
+              </div>
+           </form>
+
+
+       </div>
+
+
+
+</div>
+</div>
+</div>
+
+<!-- end content -->
+
+<!-- footer  -->
+<div class="container-fluid footer-main">
+  
+ <div class="container remove-padding">
+    <div class="col-md-2 col-sm-2 col-xs-6">
+       <h3>Quick Links</h3>
+       <a href="#">FAQs</a>
+       <br>
+       <a href="#">Support</a>
+       <br>
+       <a href="#">SiteMap</a>
+       <br>
+       <a href="#">Community</a>
+    </div>
+
+    <div class="col-md-2 col-sm-2 col-xs-6">
+       <h3>Company</h3>
+       <a href="#">About Us</a>
+       <br>
+       <a href="#">Team</a>
+       <br>
+       <a href="#">Careers</a>
+       <br>
+       <a href="#">Contact Us</a>
+    </div>
+
+    <div class="col-md-3 col-sm-4 col-xs-12 Newsletter-main">
+       <h3>Our Newsletter</h3>
+       <p>Subscribe to our newsletter and
+we will inform you about newsest ads
+and hot deals</p>
+
+<form>
+  <input type="email" placeholder="Type your mail here">
+  <button><span><i class="ri-arrow-right-s-line"></i></span></button>
+</form>
+    </div>
+
+  <div class="col-md-3 col-md-offset-2 remove-padding col-sm-offset-0 col-xs-offset-0 col-sm-4 col-xs-12">
+    <h3>Download Our Application</h3>
+     <ul class="down-app-main">
+        <li><a href="#" class="flat-hover"><img src="img/app-store.png"></a></li>
+        <li><a href="#" class="flat-hover"><img src="img/google-play.png"></a></li>
+
+
+     </ul>
+
+  </div>
+
+
+
+   <div class="col-xs-12 remove-padding">
+    <div class="col-md-4 col-sm-4 col-xs-12">
+       <ul class="social-fot-main">
+          <li><a href="#" class="flat-hover"><i class="ri-whatsapp-line"></i></a></li>
+          <li><a href="#" class="flat-hover"><i class="ri-twitter-line"></i></a></li>
+          <li><a href="#" class="flat-hover"><i class="ri-facebook-box-fill"></i></a></li>
+          <li><a href="#" class="flat-hover"><i class="ri-instagram-fill"></i></a></li>
+          <li><a href="#" class="flat-hover"><i class="ri-snapchat-line"></i></a></li>
+
+       </ul>
+    </div>
+
+    <div class="col-md-4 col-sm-4 col-xs-12 remove-padding">
+       <ul class="Resevered-main">
+          <li><p>2019 <b>808080</b>.</p></li>
+          <li><p>All Rights Resevered.</p></li>
+          <li><p>Design by <a href="#"><b> 80-Tech</b></a></p></li>
+
+                  
+       </ul>
+     </div>
+
+     <div class="col-md-4 col-sm-4 col-xs-12 scroll-up-main">
+        
+           <span class="scroll-top ">Back to Top<i class="ri-arrow-up-line"></i></span>
+      
+     </div>
+ </div>
+
+ </div>
+
+
+
+
+</div>
+
+
+
+<div id="bannerInfo" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+     
+        
+        
+      
+      <div class="modal-body">
+        <div class="container remove-padding">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">        
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h1>Product Type</h1></div>
+
+        <div class="col-xs-12 col-md-10 col-md-offset-1 remove-padding">
+           <div class="col-md-4 col-xs-6 col-sm-6 text-center">
+              <p class="tab1C inactive-p">Subcategory Banner</p>
+              <img src="img/subcategory.png" class="img-responsive">
+           </div>
+
+
+
+                      <div class="col-md-4 col-xs-6 col-sm-6 text-center">
+              <p class="tab3C">Home Page Top Banner</p>
+               <img src="img/home-page.png" class="img-responsive">
+           </div>
+
+
+                      <div class="col-md-4 col-xs-6 col-sm-6 text-center">
+              <p class="tab4C">Splash Ad</p>
+              <img src="img/splash-ad.png" class="img-responsive">
+           </div>
+
+
+
+   
+   
+  
+ 
+        </div>
+
+      </div>
+      </div>
+ 
+    </div>
+
+  </div>
+</div>
+<!-- main js -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<!-- end main js -->
+
+<!-- only this page js -->
+<script src="js/datepicker.min.js"></script>
+<script src="js/datepicker.en.js"></script>
+<script src="js/chosen.jquery.js"></script>
+<script src="js/icontains.js"  type="text/javascript"></script>
+<script src="js/comboTreePlugin.js"  type="text/javascript"></script>
+<!-- end only this page js -->
+
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+
+
+// master 
+
+    $(".scroll-top").click(function() {
+        $("html").animate({ scrollTop: 0 }, "slow");
+        });
+
+    // change lan and cont
+
+$( ".lang" ).change(function() {
+    $(".lang-p").html($(".lang option:selected").val());
+});
+
+$( ".cont" ).change(function() {
+    $(".cont-p").html($(".cont option:selected").val());
+});
+
+// end master 
+
+// select plusgin
+
+$(".my-select").chosen(); 
+
+// input tabs
+
+$(".input-check-main").click(function(){
+   $(".input-check-main").removeClass("mathed-active"); 
+  $(this).addClass("mathed-active");
+});
+
+// banner tab 
+
+$('#tabs .mathed-main:not(:first)').addClass('inactive');
+$('.tabs-img-banner .price-item-box').hide();
+$('.tabs-img-banner .price-item-box:first').show();
+    
+$('#tabs .mathed-main').click(function(){
+    var t = $(this).attr('id');
+  if($(this).hasClass('inactive')){ 
+    $('#tabs .mathed-main').addClass('inactive');           
+    $(this).removeClass('inactive');
+    
+    $('.tabs-img-banner .price-item-box').hide();
+    $('.hints-main').hide();
+    $('.'+ t + 'C').fadeIn('slow');
+     $('#bannerInfo p').removeClass('inactive-p');
+    $('.'+ t + 'C').addClass('inactive-p');
+    
+ }
+});
+
+
+$('.input-check-main').click(function() {
+  if ($('#tab1 .input-check-main, #tab2 .input-check-main').hasClass('mathed-active')){
+    $('.Category-select').show();
+  } else {
+    $('.Category-select').hide();
+  }
+});
+
+
+
+
+
+// select tab
+
+$('.tab-content').hide();
+$('#tab-1').show();
+
+$('#select-box').change(function () {
+   dropdown = $('#select-box').val();
+  $('.tab-content').hide();
+  $('#' + "tab-" + dropdown).show();                                    
+});
+
+// datepicker
+
+
+
+// Access instance of plugin
+$('#my-date-pick').data('datepicker')
+
+    $(document).on('change', '#pick_type', function () {
+            var pick_type = parseInt($('option:selected', this).val());
+            $('#my-date-pick').data('datepicker').clear();
+            ;
+            if (pick_type == 1) {
+                $('#my-date-pick').data('datepicker').update(
+                    {
+                        multipleDates: true,
+                        multipleDates: 3,
+                        multipleDatesSeparator: ', ',
+                    }
+                );
+            } else if (pick_type == 2) {
+                $('#my-date-pick').data('datepicker').update(
+                    {
+                        range: true,
+                        multipleDatesSeparator: ' - ',
+                    }
+                );
+            } else {
+                $('#my-date-pick').data('datepicker').update(
+                    {
+                        range: false,
+                        multipleDates: false,
+                        multipleDatesSeparator: '',
+                    }
+                );
+            }
+
+
+        });
+
+
+// gategory select
+
+
+
+var SampleJSONData = [
+    {
+        id: 0,
+        title: 'choice 1  '
+    }, {
+        id: 1,
+        title: 'choice 2',
+        subs: [
+            {
+                id: 10,
+                title: 'choice 2 1'
+            }, {
+                id: 11,
+                title: 'choice 2 2'
+            }, {
+                id: 12,
+                title: 'choice 2 3'
+            }
+        ]
+    }, {
+        id: 2,
+        title: 'choice 3'
+    }, {
+        id: 3,
+        title: 'choice 4'
+    }, {
+        id: 4,
+        title: 'choice 5'
+    }, {
+        id: 5,
+        title: 'choice 6',
+        subs: [
+            {
+                id: 50,
+                title: 'choice 6 1'
+            }, {
+                id: 51,
+                title: 'choice 6 2',
+                subs: [
+                    {
+                        id: 510,
+                        title: 'choice 6 2 1'
+                    }, {
+                        id: 511,
+                        title: 'choice 6 2 2'
+                    }, {
+                        id: 512,
+                        title: 'choice 6 2 3'
+                    }
+                ]
+            }
+        ]
+    }, {
+        id: 6,
+        title: 'choice 7'
+    }
+];
+var comboTree1, comboTree2;
+
+jQuery(document).ready(function($) {
+
+// Multi
+
+    // comboTree1 = $('#justAnInputBox').comboTree({
+    //   source : SampleJSONData,
+    //   isMultiple: true,
+    //   cascadeSelect: false
+    // });
+    
+// Multi With Cascade
+
+    // comboTree3 = $('#justAnInputBox1').comboTree({
+    //   source : SampleJSONData,
+    //   isMultiple: true,
+    //   cascadeSelect: true
+    // });
+
+
+// Single
+
+    comboTree2 = $('#category_input_hidden_ids').comboTree({
+      source : SampleJSONData,
+      isMultiple: false
+    });
+});
+
+
+
+
+
+
+	});
+
+
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+/*       Khaled Customization */
+.image_dev2 img:hover, .image_dev img:hover, .Vip_image img:hover {
+    opacity: 0.5;
+    cursor: url(../images/cancel-image.png), auto;
+}
+
+.show-only-calender-input {
+    height: 0;
+    width: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.date-picker-wrapper .month-wrapper {
+
+    width: 500px !important;
+   
+}
+
+.rerserved {
+    background-color: #dd4b39 !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    width: 31px !important;
+    height: 21px !important;
+    line-height: 22px !important;
+    font-size: 14px !important;
+    border-radius: 100% !important;
+    margin: 1px !important;
+}
+
+.single-date table, .single-month table {
+    width: 100% !important;
+}
+
+.single-month .month-wrapper {
+    width: auto !important;
+    height: auto !important;
+}
+
+
+
+.pro-mean-2 .Added-balance-1 .on {
+    margin-top: -42px !important;
+
+}
+
+.hidden-input {
+    /*Opacity settings for all browsers*/
+    opacity: 0;
+    -moz-opacity: 0;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0)
+}
+
+.btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border: 0; background-color:#43c4ba}
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+	border: 0;
+	background-color:#ddd
+}

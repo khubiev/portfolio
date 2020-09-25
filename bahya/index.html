@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>home</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-rtl.css" rel="stylesheet">
+     <link href="css/slick.css" rel="stylesheet">
+    <link href="css/style-rtl.css"  rel="stylesheet">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="ask-q.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/ask-q.jpg">
+  </div><p>ask-q</p> </a>
+</li>
+
+ <li><a href="baheia-expansions.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-expansions.jpg">
+  </div><p>baheia-expansions</p> </a>
+</li>
+
+ <li><a href="baheia-news.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-news.jpg">
+  </div><p>baheia-news</p> </a>
+</li>
+
+ <li><a href="baheia-news-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/baheia-news-d.jpg">
+  </div><p>baheia-news-d</p> </a>
+</li>
+
+ <li><a href="Donation.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Donation.jpg">
+  </div><p>Donation</p> </a>
+</li>
+
+ <li><a href="fundraise.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/fundraise.jpg">
+  </div><p>fundraise</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="Job.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Job.jpg">
+  </div><p>Job</p> </a>
+</li>
+
+ <li><a href="job-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/job-d.jpg">
+  </div><p>job-d</p> </a>
+</li>
+
+ <li><a href="Questions.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Questions.jpg">
+  </div><p>Questions</p> </a>
+</li>
+
+ <li><a href="thanks-main.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/thanks-main.jpg">
+  </div><p>thanks-main</p> </a>
+</li>
+
+ <li><a href="Training.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Training.jpg">
+  </div><p>Training</p> </a>
+</li>
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+<div class="head-main">
+    <div class="container-fluid top-head remove-padding">
+       <div class="container">
+          <ul>
+             <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+             <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+             <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+             <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+             <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+          </ul>
+
+          <ul>
+             <li><a href="#">تسجيل دخول</a></li>
+             <li><a href="#">انشاء حساب</a></li> 
+             <li class="hidden-xs"><a href="#">العربية</a></li>
+          </ul>
+
+       </div>
+    </div>
+
+    </div>
+<div class="container-fluid bot-head remove-padding">
+<div class="container remove-padding">
+   <div class="col-md-2 col-sm-2 logo-main col-xs-4">
+      <a href="#"><img src="img/logo.png"></a>
+   </div>
+
+   <div class="col-md-7 col-sm-7 head-links hidden-xs">
+      <ul>
+         <li class="sub-down"><a href="#">عن بهية  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+         <li><a href="#">خدمات طبية  <i class="ri-arrow-drop-down-line"></i></a>
+                   <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div></li>
+         <li><a href="#">تدريب وبحث علمي  <i class="ri-arrow-drop-down-line"></i></a>
+                   <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div></li>
+         <li><a href="#">عن اورام الثدي  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+         <li><a href="#">ساعد بهية  <i class="ri-arrow-drop-down-line"></i></a>
+          <div class="dropdown">
+      <ul>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+             <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+        <li><a href="#">العنوان المناسب</a></li>
+      </ul>
+    </div>
+         </li>
+      </ul>
+   </div>
+
+   <div class="col-md-3 col-sm-3 col-xs-8 side-btns">
+      <ul>
+         <li><a href="#">تبرع الأن</a> </li>
+         <li><a href="#">تطوع معنا</a> </li>
+         <li class="visible-xs mob-menu-btn"><i class="ri-menu-line"></i> </li>
+      </ul>
+   </div>
+
+
+</div>
+</div>
+
+
+<!-- mob menu -->
+ <div class="mob-menu-main visible-xs">
+    <span class="close-menu"><i class="ri-close-line"></i></span>
+    <div class="clearfix"></div>
+    <ul>
+        <li><a href="#" class="mob-shop-link">عن بهية  <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                <li><a href="#" class="mob-shop-link">خدمات طبية   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                        <li><a href="#" class="mob-shop-link">تدريب وبحث علمي   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+                        <li><a href="#" class="mob-shop-link">عن اورام الثدي   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+
+                        <li><a href="#" class="mob-shop-link">ساعد بهية   <i class="ri-arrow-drop-down-line"></i></a>
+           <div class="mob-shop-drop-dowm">
+            
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+        <a href="#">العنوان المناسب</a>
+      
+           </div>
+        </li>
+
+
+        <li>
+           <a href="#">النسخة الانجليزية</a>
+        </li>
+
+
+    </ul>
+ </div>
+
+<!--end mob menu -->
+
+<div class="container-fluid content-main remove-padding">
+   <div class="container full-slider-main">
+       <div id="myCarousel" class="carousel slide" data-ride="carousel"
+       data-interval="500000">
+  <!-- Indicators -->
+
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="img/1.jpg" alt="">
+      <div class="container slider-slogin-main">
+         <div class="slider-slogin">
+            <h1>يا بهية</h1>
+            <h2>الكشف المبكر بينقذ حياة امك  <br>وا ختك وبنتك وجدتك</h2>
+            <a href="#">تبرع الان</a>
+         </div>
+      </div>
+    </div>
+
+        <div class="item">
+      <img src="img/1.jpg" alt="">
+            <div class="container slider-slogin-main">
+         <div class="slider-slogin">
+            <h1>يا بهية</h1>
+            <h2>الكشف المبكر بينقذ حياة امك  <br>وا ختك وبنتك وجدتك</h2>
+            <a href="#">تبرع الان</a>
+         </div>
+      </div>
+    </div>
+
+        <div class="item">
+      <img src="img/1.jpg" alt="">
+            <div class="container slider-slogin-main">
+         <div class="slider-slogin">
+            <h1>يا بهية</h1>
+            <h2>الكشف المبكر بينقذ حياة امك  <br>وا ختك وبنتك وجدتك</h2>
+            <a href="#">تبرع الان</a>
+         </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+  </ol>
+
+
+</div>
+   </div>
+
+
+   <div class="container about-main text-center">
+      <h1 class="title"><img src="img/title.png">عن بهية</h1>
+      <p>مؤسسة بهية هي مؤسسة خيرية تهدف إلى نشر التوعية عن سرطان الثدي وعلاج السيدات اللاتي تعاني من سرطان الثدي بالمجان وذلك بدايةً من الكشف المبكر مرورًا بإجراء العمليات الجراحية ثم العلاج الكيماوي والإشعاعي وجلسات العلاج الطبيعي حتى تتعافى المريضة تمامًا وتعود إلى حياتها الطبيعية</p>
+   </div>
+
+
+<!-- <div class="container donate-home-main">
+<h1 class="title text-center">تبرعك ينقذ حياة اسرة</h1>
+
+    <div class="col-md-6 col-xs-12 col-sm-12 donate-home-form">
+       <h3>تبرع الأن</h3>
+       <form>
+<div class="col-xs-12 col-sm-6 col-md-6">
+
+            <div class="checkbox-item col-xs-12">
+  <input class="inp-cbx" checked="checked" id="cbx" type="checkbox" style="display: none;"><label class="cbx" for="cbx"><span><svg width="12px" height="10px" viewBox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>التبرع من بنك داخل مصر</span></label>
+</div>
+
+</div>
+
+<div class="col-xs-12 col-sm-6 col-md-6">
+<div class="checkbox-item col-xs-12">
+  <input class="inp-cbx" id="cbx1" type="checkbox" style="display: none;"><label class="cbx" for="cbx1"><span><svg width="12px" height="10px" viewBox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>التبرع من بنك خارج مصر</span></label>
+</div>
+</div>
+
+<div class="col-xs-12">
+
+<ul class="step-form">
+   <li class="active-form-option"><span>قيمه التبرع</span><i class="ri-arrow-left-line"></i></li>
+    <li><span>البيانات الشخصية</span><i class="ri-arrow-left-line"></i></li>
+     <li><span>الدفع</span><i class="ri-arrow-left-line"></i></li>
+</ul>
+
+<div class="col-xs-12 remove-padding val-form-main">
+   <ul>
+      <li class="col-xs-4 remove-padding active-val-link">
+         <div class="col-xs-12 remove-padding">
+         <input type="radio" checked="checked" name="val">
+         <p>٥٠٠ جنيه</p>
+       </div>
+      </li>
+
+            <li class="col-xs-4 remove-padding">
+         <div class="col-xs-12 remove-padding">
+         <input type="radio" name="val">
+         <p>١٠٠٠ جنيه</p>
+       </div>
+      </li>
+
+
+            <li class="col-xs-4 remove-padding">
+         <div class="col-xs-12 remove-padding">
+         <input type="radio" name="val">
+         <p>٢٠٠٠ جنيه</p>
+       </div>
+      </li>
+
+            <li class="col-xs-4 remove-padding">
+         <div class="col-xs-12 remove-padding">
+         <input type="radio" name="val">
+         <p>٥٠٠٠ جنيه</p>
+       </div>
+      </li>
+
+            <li class="col-xs-4 remove-padding">
+         <div class="col-xs-12 remove-padding">
+         <input type="radio" name="val">
+         <p>١٠٠٠٠ جنيه</p>
+       </div>
+      </li>
+
+            <li class="col-xs-4 remove-padding">
+         <div class="col-xs-12 remove-padding">
+         <input type="radio" name="val">
+         <p>قيمة اخرى</p>
+       </div>
+      </li>
+
+
+   </ul>
+
+
+    <div class="switch">
+      <input id="switch-1" type="checkbox" class="switch-input">
+      <label for="switch-1" class="switch-label"><p>تبرع شهريا</p></label>
+    </div>
+
+    <button type="submit">التالي</button>
+
+</div>
+
+
+</div>
+
+       </form>
+    </div>
+    <div class="col-md-6 hidden-xs hidden-sm donate-home-bg remove-padding">
+       <img src="img/5.png">
+    </div>
+
+</div> -->
+
+
+
+<div class="container donate-section-main text-center">
+  <h1 class="title">تبرعك ينقذ حياة اسرة</h1>
+   <div class="col-xs-12 remove-padding">
+   <img src="img/14.png">
+    <div class="col-md-5 col-sm-6 col-xs-12">
+        <h3>تبرعك يساهم فى حياة اسرة تبرعك يساهم فى حياة اسرة</h3>
+        <a href="#">تبرع الان</a>
+    </div>
+  </div>
+</div>
+
+
+   <div class="container cont-main text-center">
+     <h1 class="title">مستشفي بهية لعلاج سرطان الثدي</h1>
+     <div class="col-md-3 col-sm-6 col-xs-6">
+        <h3>اجمالي حالات بهية</h3>
+        <h2 class="counter">105634</h2>
+     </div>
+     <div class="col-md-3 col-sm-6 col-xs-6">
+        <h3>العلاج الكيماوى</h3>
+        <h2 class="counter">36634</h2>
+     </div>
+     <div class="col-md-3 col-sm-6 col-xs-6">
+        <h3>العلاج الإشعاعي</h3>
+        <h2 class="counter">65634</h2>
+     </div>
+     <div class="col-md-3 col-sm-6 col-xs-6">
+        <h3>العلاج الجراحي</h3>
+        <h2 class="counter">5634</h2>
+     </div>
+
+   </div>
+
+   <div class="container text-center ved-main">
+     <h1 class="title">حلم الـ ١٠٠ الف بهية</h1>
+<iframe src="https://www.youtube.com/embed/fwP6MIVA2bE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+   </div>
+
+
+   <div class="container fighters-main remove-padding text-center">
+     <div class="col-xs-12"> <h1 class="title">محاربات بهية</h1></div>
+         <div class="slick-carousel">
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>رحاب محاربة من محاربات بهية</p>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>رحاب محاربة من محاربات بهية</p>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>رحاب محاربة من محاربات بهية</p>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>رحاب محاربة من محاربات بهية</p>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>رحاب محاربة من محاربات بهية</p>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>رحاب محاربة من محاربات بهية</p>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>رحاب محاربة من محاربات بهية</p>
+      </a>
+   </div>
+</div>
+
+</div>
+   </div>
+  
+
+
+
+   <div class="container fighters-main remove-padding text-center">
+     <div class="col-xs-12"> <h1 class="title">اخبار بهية</h1></div>
+         <div class="slick-carousel2">
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>بهية تدعم ذوي القدرات الخاصة للمرة الثانية على التوالي</p>
+         <span>للمرة الثانية على التوالي مؤسسة بهية تقدم ندوة توعية لسيدات الجمعية المصرية للصُم وضعاف السمع، وذلك إيمانًا بدور بهية التوعوي عن سرطان الثدي وعقب الندوة تم إجراء الكشف المبكر لهن للإطمئنان على صحتهن</span>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>بهية تدعم ذوي القدرات الخاصة للمرة الثانية على التوالي</p>
+         <span>للمرة الثانية على التوالي مؤسسة بهية تقدم ندوة توعية لسيدات الجمعية المصرية للصُم وضعاف السمع، وذلك إيمانًا بدور بهية التوعوي عن سرطان الثدي وعقب الندوة تم إجراء الكشف المبكر لهن للإطمئنان على صحتهن</span>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>بهية تدعم ذوي القدرات الخاصة للمرة الثانية على التوالي</p>
+         <span>للمرة الثانية على التوالي مؤسسة بهية تقدم ندوة توعية لسيدات الجمعية المصرية للصُم وضعاف السمع، وذلك إيمانًا بدور بهية التوعوي عن سرطان الثدي وعقب الندوة تم إجراء الكشف المبكر لهن للإطمئنان على صحتهن</span>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>بهية تدعم ذوي القدرات الخاصة للمرة الثانية على التوالي</p>
+         <span>للمرة الثانية على التوالي مؤسسة بهية تقدم ندوة توعية لسيدات الجمعية المصرية للصُم وضعاف السمع، وذلك إيمانًا بدور بهية التوعوي عن سرطان الثدي وعقب الندوة تم إجراء الكشف المبكر لهن للإطمئنان على صحتهن</span>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>بهية تدعم ذوي القدرات الخاصة للمرة الثانية على التوالي</p>
+         <span>للمرة الثانية على التوالي مؤسسة بهية تقدم ندوة توعية لسيدات الجمعية المصرية للصُم وضعاف السمع، وذلك إيمانًا بدور بهية التوعوي عن سرطان الثدي وعقب الندوة تم إجراء الكشف المبكر لهن للإطمئنان على صحتهن</span>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>بهية تدعم ذوي القدرات الخاصة للمرة الثانية على التوالي</p>
+         <span>للمرة الثانية على التوالي مؤسسة بهية تقدم ندوة توعية لسيدات الجمعية المصرية للصُم وضعاف السمع، وذلك إيمانًا بدور بهية التوعوي عن سرطان الثدي وعقب الندوة تم إجراء الكشف المبكر لهن للإطمئنان على صحتهن</span>
+      </a>
+   </div>
+</div>
+
+<div class="slide-content">
+   <div class="col-xs-12">
+      <a href="#">
+         <div class="img-frame">
+            <img src="img/2.png">
+         </div>
+         <p>بهية تدعم ذوي القدرات الخاصة للمرة الثانية على التوالي</p>
+         <span>للمرة الثانية على التوالي مؤسسة بهية تقدم ندوة توعية لسيدات الجمعية المصرية للصُم وضعاف السمع، وذلك إيمانًا بدور بهية التوعوي عن سرطان الثدي وعقب الندوة تم إجراء الكشف المبكر لهن للإطمئنان على صحتهن</span>
+      </a>
+   </div>
+</div>
+
+</div>
+   </div>
+
+
+
+<div class="container sponser-main text-center">
+   <h1 class="title">الرعاة</h1>
+
+         <div class="slick-carousel3">
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+
+</div>
+
+</div>
+
+
+<div class="container sponser-main text-center">
+   <h1 class="title">الشركاء</h1>
+
+
+         <div class="slick-carousel3">
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/4.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/4.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/4.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/4.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/4.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/3.png"></a>
+</div>
+
+<div class="slide-content">
+<a href="#"><img src="img/4.png"></a>
+</div>
+
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<!-- footer -->
+<div class="container-fluid remove-padding footer-main">
+   <div class="container remove-padding">
+       <div class="col-md-4 fot-form-main">
+           <h4>لمتابعه اخر اخبار بهية</h4>
+           <form>
+              <input type="Email" placeholder="اكتب البريد الالكترونى">
+              <button>إشتراك</button>
+           </form>
+           <ul>
+              <li><a href="#"><img src="img/google.png"></a></li>
+              <li><a href="#"><img src="img/apple.png"></a></li>
+           </ul>
+       </div>
+       <div class="col-md-4 fot-links">
+          <ul class="col-md-11 col-md-offset-1">
+             <li><a href="#">التبرع</a> </li>
+             <li><a href="#">عن بهية</a> </li>
+             <li><a href="#">خدمات طبية</a> </li>
+             <li><a href="#">التطوع</a> </li>
+             <li><a href="#">عن اورام الثدي</a> </li>
+             <li><a href="#">تدريب وبحث علمي</a> </li>
+             <li><a href="#">برامج التبرع</a> </li>
+             <li><a href="#">اتصل بنا</a> </li>
+             <li><a href="#">الاخبار</a> </li>
+          </ul>
+       </div>
+       <div class="col-md-3 col-md-offset-1 social-fot-main">
+          <h3>تابعنا على مواقع التواصل الاجتماعي</h3>
+          <ul>
+             <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+             <li><a href="#"><i class="ri-youtube-fill"></i></a></li>
+             <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+             <li><a href="#"><i class="ri-facebook-box-fill"></i></a></li>
+             <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+          </ul>
+        <p>اتصل بنا ١٨٦٦٠٢ <i class="ri-phone-fill"></i></p>
+       </div>
+       <div class="col-xs-12 copy-main">
+          <ul>
+             <li><a href="#"><img src="img/Designed_&-rtl.png"></a></li>
+             <li><a href="#"><img src="img/Developed_by-rtl.png"></a></li>
+             <li><a href="#"><img src="img/logo-ip-rtl.png"></a></li>
+          </ul>
+
+          <p>حقوق التأليف والنشر © 2020</p>
+       </div>
+
+   </div>
+</div>
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/jquery.countup.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script type="text/javascript">
+	
+
+$(document).ready(function() {
+$('.counter').countUp();
+
+$(".mob-menu-btn" ).click(function() {
+$('.mob-menu-main').addClass('open-menu');
+});
+$(".close-menu" ).click(function() {
+$('.mob-menu-main').removeClass('open-menu');
+});
+
+$( ".mob-shop-link" ).click(function() {
+$(".mob-shop-link").not(this).siblings('.mob-shop-drop-dowm').slideUp();
+$(this).siblings('.mob-shop-drop-dowm').slideToggle();
+
+$(".mob-shop-link").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+
+
+
+
+});
+
+$( ".val-form-main li" ).click(function() {
+
+$(".val-form-main li").removeClass('active-val-link');
+$(this).addClass('active-val-link');
+});
+
+
+
+$(window).scroll(function() {
+
+    if ($(this).scrollTop() > 50){  
+        $(".bot-head").addClass("stick-head");
+    }
+    else{
+       $(".bot-head").removeClass("stick-head");
+    }
+});
+
+
+$('.slick-carousel').slick({
+arrows: true,
+slidesToShow: 5,
+rtl:true,
+slidesToScroll: 1,
+autoplay: false,responsive: [
+{
+breakpoint: 1600,
+settings: {
+slidesToShow: 4,
+slidesToScroll: 1,
+}
+},
+{
+breakpoint: 900,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 1
+}
+},
+{
+breakpoint: 700,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+]
+});
+
+$('.slick-carousel2').slick({
+arrows: true,
+slidesToShow: 4,
+rtl:true,
+slidesToScroll: 1,
+autoplay: false,responsive: [
+{
+breakpoint: 1600,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 1,
+}
+},
+{
+breakpoint: 900,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 1
+}
+},
+{
+breakpoint: 700,
+settings: {
+slidesToShow: 1,
+slidesToScroll: 1
+}
+}
+]
+});
+
+
+$('.slick-carousel3').slick({
+arrows: false,
+slidesToShow: 5,
+autoplay:true,
+ autoplaySpeed:1000,
+  speed:600,
+rtl:true,
+slidesToScroll: 1,
+responsive: [
+{
+breakpoint: 1200,
+settings: {
+slidesToShow: 4,
+slidesToScroll: 1,
+}
+},
+{
+breakpoint: 900,
+settings: {
+slidesToShow: 3,
+slidesToScroll: 1
+}
+},
+{
+breakpoint: 700,
+settings: {
+slidesToShow: 2,
+slidesToScroll: 1
+}
+}
+]
+});
+
+
+	});
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+</body>
+</html>

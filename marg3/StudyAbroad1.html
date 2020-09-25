@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>StudyAbroad1</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+
+    <link href="css/icon.css"  rel="stylesheet">
+        <link rel="stylesheet" href="css/multi-select.css">
+    <link rel="stylesheet" href="js/jquery-ui/jquery-ui.min.css">
+    <link href="css/style.css"  rel="stylesheet">  
+     
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="Article.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Article.jpg">
+  </div><p>Article</p> </a>
+</li>
+
+ <li><a href="Article-d.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Article-d.jpg">
+  </div><p>Article-d</p> </a>
+</li>
+
+ <li><a href="compare.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/compare.jpg">
+  </div><p>compare</p> </a>
+</li>
+
+ <li><a href="edit-profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/edit-profile.jpg">
+  </div><p>edit-profile</p> </a>
+</li>
+
+ <li><a href="icons.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/icons.jpg">
+  </div><p>icons</p> </a>
+</li>
+
+ <li><a href="Login–1.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Login–1.jpg">
+  </div><p>Login–1</p> </a>
+</li>
+
+ <li><a href="Login–5.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/Login–5.jpg">
+  </div><p>Login–5</p> </a>
+</li>
+
+ <li><a href="profile.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/profile.jpg">
+  </div><p>profile</p> </a>
+</li>
+
+ <li><a href="StudyAbroad1.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad1.jpg">
+  </div><p>StudyAbroad1</p> </a>
+</li>
+
+ <li><a href="StudyAbroad2.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad2.jpg">
+  </div><p>StudyAbroad2</p> </a>
+</li>
+
+ <li><a href="StudyAbroad3.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad3.jpg">
+  </div><p>StudyAbroad3</p> </a>
+</li>
+
+ <li><a href="StudyAbroad4.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad4.jpg">
+  </div><p>StudyAbroad4</p> </a>
+</li>
+
+ <li><a href="StudyAbroad5.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad5.jpg">
+  </div><p>StudyAbroad5</p> </a>
+</li>
+
+ <li><a href="StudyAbroad6.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/StudyAbroad6.jpg">
+  </div><p>StudyAbroad6</p> </a>
+</li>
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+    
+<div class="body-dark"></div>
+<div class="container-fluid bf-head"></div> 
+<div class="container-fluid remove-padding head-main">
+  <div class="container">
+     <a href="#" class="logo-main"><img src="img/logo.png"></a>
+     <ul class="menu-main">
+        <li class="hidden-xs"><a href="#">Scholarships</a></li>
+        <li class="dropdown  hidden-xs"><a href="#" class="menu-nav-btn opendrop-btn" data-toggle="dropdown">Study Abroad</a>
+           <ul class="dropdown-menu">
+     
+      <li class="level-tow-btn">
+
+        <a href="#">Engineering <span class="icon-7arrowRight"></span></a>
+         <ul class="level-tow">
+            <li><a href="#">Civil Engineering</a></li>
+            <li><a href="#">Electronics Engineering</a></li>
+            <li><a href="#">Mechanical Engineering</a></li>
+            <li><a href="#">Mechatronics Engineering</a></li>
+            <li><a href="#">Computer Engineering</a></li>
+         </ul>
+      </li>
+      <li class=""><a href="#">Arts & Design</a></li>
+      <li class="level-tow-btn"><a href="#">Events, Summits <span class="icon-7arrowRight"></span></a>
+         <ul class="level-tow">
+            <li><a href="#">Civil Engineering</a></li>
+            <li><a href="#">Electronics Engineering</a></li>
+            <li><a href="#">Mechanical Engineering</a></li>
+            <li><a href="#">Mechatronics Engineering</a></li>
+            <li><a href="#">Computer Engineering</a></li>
+         </ul>
+      </li>
+      <li><a href="#">Computer Science & IT</a></li>
+      <li><a href="#">Health & Medicine</a></li>
+      <li><a href="#">Education & Training</a></li>
+      <li><a href="#">Architecture & Building</a></li>
+      <li><a href="#">Business & Managment</a></li>
+      <li><a href="#">Natural Science</a></li>
+      <hr>
+      <li ><a href="#"><img src="img/BrowseCountries.png"> Browse Countries</a></li>
+
+    </ul>
+        </li>
+        <li class="hidden-xs dropdown"><a href="#" class="menu-nav-btn opendrop-btn"  data-toggle="dropdown">Community</a>
+
+<ul class="dropdown-menu Community-head">
+
+<!-- <li>
+<a href="#">
+  <img src="img/discussions.png">
+ <h4>Discussions</h4>
+ <p>Ask experienced people</p>
+</a>
+</li>
+<li>
+<a href="#">
+  <img src="img/menu_videos.png">
+ <h4>Videos</h4>
+ <p>Tips & Tricks about Scholars</p>
+</a>
+</li> -->
+<li>
+<a href="#">
+  <img src="img/menu_articles.png">
+ <h4>Articles</h4>
+ <p>All about scholars</p>
+</a>
+</li>
+
+</ul>
+
+        </li>
+
+<li class="visible-xs menu-btn"> <span class="icon-60otherMenu"></span> </li>
+
+     </ul>
+
+      <ul class="side-head-links">
+        <li><a href="#">العربية</a></li>
+  <li class="dropdown"><a href="#" data-toggle="dropdown" class="icon-57notification opendrop-btn"><span>1</span></a>
+    <ul class="dropdown-menu">
+       <h3>notification</h3>
+      
+
+
+      <li> 
+           <div class="note-item">
+              <span class="icon-18courses"></span>
+              <p>we found a course may you like <a href="#">check it out</a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+      <li> 
+           <div class="note-item">
+              <span class="icon-15check"></span>
+              <p>you earned a verified badge ! <a href="#">check </a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+            <li> 
+           <div class="note-item">
+              <span class="icon-18courses"></span>
+              <p>we found a course may you like <a href="#">check it out</a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+      <li> 
+           <div class="note-item">
+              <span class="icon-15check"></span>
+              <p>you earned a verified badge ! <a href="#">check </a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+
+            <li> 
+           <div class="note-item">
+              <span class="icon-15check"></span>
+              <p>you earned a verified badge ! <a href="#">check </a></p>
+              <h5>5 min</h5>
+           </div>
+      </li>
+<div class="col-xs-12 more-note-btn">
+   <a href="#">all notification</a>
+</div>
+
+    </ul>
+        </li>
+     </ul>
+
+  </div>
+
+    <div class="menu-side-main visible-xs">
+   <div class="menu-head">
+     <p>menu</p>
+     <span class="colse-menu-btn icon-82wrong"></span>
+   </div>
+   <div class="menu-main">
+      <ul>
+        
+        <li><a href="#" class="close-menu-link"> Scholarships</a></li>
+        <li><a  class="more-links-btn" href="#">Study Abroad
+           <span class="icon-5arrowDown"></span>
+        </a>
+ <ul class="more-links-main">
+                <li><a href="#">Engineering</a></li>
+                <li><a href="#">Arts & Design</a></li>
+                <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse1">Events, Summits
+<span class="icon-5arrowDown"></span>
+                </a>
+<div class="navbar-collapse1 collapse">
+  <a href="#"> </a><a href="#">link 1</a> 
+  <a href="#">link 2</a> 
+  <a href="#">link 3</a> </div>
+              </li>
+                <li><a href="#">Computer Science & IT</a></li>
+                <li><a href="#">Health & Medicine</a></li>
+                <li><a href="#">Education & Training</a></li>
+                <li><a href="#">Architecture & Building  </a></li>
+                <li><a href="#">Business & Managment </a></li>
+                <li><a href="#">Natural Science </a></li>
+                <li><a href="#"><img src="img/BrowseCountries.png"> Browse Countries</a></li>
+
+
+             </ul>
+        </li>
+        <li><a href="#" class="more-links-btn"> Community 
+        <span class="icon-5arrowDown"></span></a>
+
+<ul  class="more-links-main Community-main-mob">
+
+<!-- <li>
+<a href="#">
+  <img src="img/discussions.png">
+ <h4>Discussions</h4>
+ <p>Ask experienced people</p>
+</a>
+</li>
+<li>
+<a href="#">
+  <img src="img/menu_videos.png">
+ <h4>Videos</h4>
+ <p>Tips & Tricks about Scholars</p>
+</a>
+</li> -->
+<li>
+<a href="#">
+  <img src="img/menu_articles.png">
+ <h4>Articles</h4>
+ <p>All about scholars</p>
+</a>
+</li>
+
+</ul>
+      </li>
+
+
+      </ul>
+
+   </div>
+
+
+
+
+</div>
+
+
+</div>
+<div class="container-fluid page-title-main">
+   <img src="img/18.png">
+   <div class="container">
+      <h1>3540 Programs</h1>
+   </div>
+</div>
+
+<div class="container-fluid content-main">
+  
+<div class="container remove-padding">
+  <div class="col-md-4 col-lg-3 col-sm-5 fillter-main">
+    <div class="col-xs-12 remove-padding filter-head">
+<h3><span class="icon-34filters"></span>Filters</h3>
+<a href="#">Reset All</a>
+</div>
+
+<div class="col-xs-12 remove-padding">
+   <div class="checkbox-item">
+  <input class="inp-cbx" id="cbx" type="checkbox" style="display: none;" /><label class="cbx" for="cbx"><span><svg width="12px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>
+<div class="gri-div">GUARANTEE</div>  Guaranteed Only
+</span></label>
+</div>
+</div>
+
+
+<div class="col-xs-12 remove-padding">
+   <div class="checkbox-item">
+  <input class="inp-cbx" id="cbx1" type="checkbox" style="display: none;" /><label class="cbx" for="cbx1"><span><svg width="12px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>
+ <div class="gri-div">%</div> Have Discounts Only</span></label>
+</div>
+</div>
+
+
+  <h3><span class="icon-18courses"></span>Degree Level</h3>
+<div class="col-xs-12 remove-padding filter-item">
+  <div class="select-menu js-select-menu" id="looking-for">
+                                        <input class="menu-state js-menu-state" id="looking-for-menu-state" type="checkbox" />
+                                        <label class="select-label js-select-label" data-default-label="Select Type" data-label="Select Type" for="looking-for-menu-state">
+                                            <div class="arrow"></div>
+                                        </label>
+                                        <ul class="menu js-select-options">
+                                            <li class="menu-item filter">
+                                                <input class="js-filter-input" type="text" placeholder="Search in types" />
+                                            </li>
+        <button class="discheck-all" type="button"> Reset </button>
+
+<div class="select-content">
+
+                                            <li class="js-filterable  " data-filter-criteria="Degree Scholarship"  >
+                                                <label class="menu-item">
+                                                    <input class="checkbox js-option" type="checkbox" value="Degree Scholarship"/>
+                                                    <div class="choice-input"></div><span>Degree Scholarships</span>
+                                                </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Fellowships"  >
+                                                <label class="menu-item">
+                                                    <input class="checkbox js-option" type="checkbox" value="Fellowships"/>
+                                                    <div class="choice-input"></div><span>Fellowships</span>
+                                                </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Competitions"  >
+                                                <label class="menu-item">
+                                                    <input class="checkbox js-option" type="checkbox" value="Competitions"/>
+                                                    <div class="choice-input"></div><span>Competitions</span>
+                                                </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Career Development"  >
+                                                <label class="menu-item">
+                                                    <input class="checkbox js-option" type="checkbox" value="Career Development"/>
+                                                    <div class="choice-input"></div><span>Career Development</span>
+                                                </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Post-Degree Scholarships"  >
+                                                <label class="menu-item">
+                                                    <input class="checkbox js-option" type="checkbox" value="Post-Degree Scholarships"/>
+                                                    <div class="choice-input"></div><span>Post-Degree Scholarships</span>
+                                                </label>
+                                            </li>
+</div>
+                                        </ul>
+                                    </div>
+
+</div>
+
+
+  <h3><span class="icon-58opportunityLocation"> </span>Opportunity Location</h3>
+
+<div class="col-xs-12 remove-padding filter-item">
+    <div class="select-menu js-select-menu" id="unique-id">
+<input class="menu-state js-menu-state" id="unique-id-menu-state" type="checkbox" />
+<label class="select-label js-select-label" data-default-label="Select Country" data-label="Select Country" for="unique-id-menu-state">
+<div class="arrow"></div>
+</label>
+                                        
+<ul class="menu js-select-options">
+<li class="menu-item filter">
+<input class="js-filter-input" type="text" placeholder="Search in countries" />
+ </li>
+     <button class="discheck-all" type="button"> Reset </button>
+
+
+<div class="select-content">
+<li class="js-filterable  " data-filter-criteria="Palestine"  >
+<label class="menu-item">
+<input class="checkbox js-option" type="checkbox" value="Palestine"/>
+<div class="choice-input"></div><span>Palestine</span>
+</label>
+</li>
+<li class="js-filterable  " data-filter-criteria="Egypt"  >
+<label class="menu-item">
+<input class="checkbox js-option" type="checkbox" value="Egypt"/>
+<div class="choice-input"></div><span>Egypt</span>
+</label>
+</li>
+<li class="js-filterable  " data-filter-criteria="Syria"  > <label class="menu-item">
+<input class="checkbox js-option" type="checkbox" value="Syria"/>
+<div class="choice-input"></div><span>Syria</span>
+</label>
+</li>
+  <li class="js-filterable  " data-filter-criteria="Saudi Arabia"  >
+  <label class="menu-item">
+  <input class="checkbox js-option" type="checkbox" value="Saudi Arabia"/>
+  <div class="choice-input"></div><span>Saudi Arabia</span>
+  </label>
+  </li>
+ <li class="js-filterable  " data-filter-criteria="Kuwait"  >
+ <label class="menu-item">
+<input class="checkbox js-option" type="checkbox" value="Kuwait"/>
+<div class="choice-input"></div><span>Kuwait</span>
+</label>
+</li>
+<li class="js-filterable  " data-filter-criteria="Jordan"  >
+<label class="menu-item">
+<input class="checkbox js-option" type="checkbox" value="Jordan"/>
+<div class="choice-input"></div><span>Jordan</span>
+</label>
+</li>
+</div>
+</ul>
+</div>
+
+</div>
+
+
+
+
+
+
+
+  <h3><span class="icon-81work"> </span>Specializations</h3>
+
+
+
+<div class="col-xs-12 filter-item remove-padding">
+  <div class="select-menu js-select-menu" id="special-id">
+                                        <input class="menu-state js-menu-state" id="special-id-menu-state" type="checkbox" />
+                                        <label class="select-label js-select-label" data-default-label="Select Specialization" data-label="Select Specialization" for="special-id-menu-state">
+                                    <div class="arrow"></div>
+                                  </label>
+                                        <ul class="menu js-select-options">
+                                            <li class="menu-item filter">
+                                                <input class="js-filter-input" type="text" placeholder="Search in specializations" />
+                                            </li>
+                                                 <button class="discheck-all" type="button"> Reset </button>
+
+
+<div class="select-content">
+
+                                            <li class="js-filterable  " data-filter-criteria="Engineering"  >
+                                                <label class="menu-item">
+                                        <input class="checkbox js-option" type="checkbox" value="Engineering"/>
+                                        <div class="choice-input"></div><span>Engineering</span>
+                                      </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Civil/Construction"  >
+                                                <label class="menu-item">
+                                        <input class="checkbox js-option" type="checkbox" value="Civil/Construction"/>
+                                        <div class="choice-input"></div><span>Civil/Construction</span>
+                                      </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Mechanical"  >
+                                                <label class="menu-item">
+                                        <input class="checkbox js-option" type="checkbox" value="Mechanical"/>
+                                        <div class="choice-input"></div><span>Mechanical</span>
+                                      </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Computer Engineering"  >
+                                                <label class="menu-item">
+                                        <input class="checkbox js-option" type="checkbox" value="Computer Engineering"/>
+                                        <div class="choice-input"></div><span>Computer Engineering</span>
+                                      </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Life Sciences"  >
+                                                <label class="menu-item">
+                                        <input class="checkbox js-option" type="checkbox" value="Life Sciences"/>
+                                        <div class="choice-input"></div><span>Life Sciences</span>
+                                      </label>
+                                            </li>
+                                            <li class="js-filterable  " data-filter-criteria="Medicine"  >
+                                                <label class="menu-item">
+                                        <input class="checkbox js-option" type="checkbox" value="Life Sciences"/>
+                                        <div class="choice-input"></div><span>Medicine</span>
+                                      </label>
+                                            </li>
+</div>
+                                        </ul>
+                                    </div>
+
+
+</div>
+
+
+<!-- <div class="line"></div>
+
+<h4>ADVANCED FILTERS</h4> -->
+
+<div class="duration-main">
+  <h3><span class="icon-25duration"></span>Duration</h3>
+    <div class="radio">
+    <input id="radio-4" name="radio" type="radio" checked>
+    <label for="radio-4" class="radio-label">All</label>
+  </div>
+
+  <div class="radio">
+    <input id="radio-5" name="radio" type="radio" readonly>
+    <label  for="radio-5" class="radio-label"> < Month</label>
+  </div>
+
+  <div class="radio">
+    <input id="radio-6" name="radio" type="radio">
+    <label for="radio-6" class="radio-label">1 Month to 6 Month</label>
+  </div>
+
+    <div class="radio">
+    <input id="radio-9" name="radio" type="radio">
+    <label for="radio-9" class="radio-label">+1 year</label>
+  </div>
+
+</div>
+
+<div class="age-main">
+ <h3><span class="icon-25duration"></span>Duration</h3>
+<div class="col-xs-12 remove-padding">
+   <div class="checkbox-item">
+  <input class="inp-cbx" id="cbx2" type="checkbox" style="display: none;" /><label class="cbx" for="cbx2"><span><svg width="12px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>
+Full-Time</span></label>
+</div>
+</div>
+
+
+<div class="col-xs-12 remove-padding">
+   <div class="checkbox-item">
+  <input class="inp-cbx" id="cbx3" type="checkbox" style="display: none;" /><label class="cbx" for="cbx3"><span><svg width="12px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>
+Part-Time</span></label>
+</div>
+</div>
+
+
+
+
+</div>
+
+
+<div class="col-xs-12 remove-padding range-main">
+   <h3><span class="icon-36fundingType"></span>tuition fees/year</h3>
+   <div class="widget-range">
+      
+          <input class="first_limit" readonly name="" type="text" value="1200 $">
+          <input class="last_limit" readonly name="" type="text" value="20000 $">
+       </div>
+      <div class="ranger"></div>
+
+  </div>
+
+
+<div class="col-xs-12 remove-padding">
+   <div class="checkbox-item">
+  <input class="inp-cbx" id="cbx4" type="checkbox" style="display: none;" /><label class="cbx" for="cbx4"><span><svg width="12px" height="10px" viewbox="0 0 12 10"><polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>
+Show only Opportunities don't require English Tests</span></label>
+</div>
+</div>
+
+
+
+<button class="search-btn">Search</button>
+
+
+
+
+  </div>
+
+<span class="fillter-toggle visible-xs"></span>
+  
+  <div class="col-md-8 col-lg-9 col-sm-7 grid-main">
+    <div class="col-xs-12 filter-title"><h1>3540 programs</h1></div>
+      
+      <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
+          <div class="col-xs-12 grid-item">
+             <div class="grid-up">
+               <img src="img/2.png">
+                <span>GUARANTEE</span>
+                <a href="#" class="icon-32favoriteHeart"></a>
+                <div class="grid-logo-main">
+                  <div class="grid-img-fram"> <img src="img/3.png"></div>
+                   <p>University of Western</p>
+                </div>
+             </div>
+             <div class="grid-info">
+                <h4>Canada</h4>
+                <h6><span class="icon-33featured"></span>Featured</h6>
+                <div class="clearfix"></div>
+                <a href="#" class="grid-name-link">BA Computer Science</a>
+                <h3>12,000$<span>/year</span></h3>
+                <div class="clearfix"></div>
+                <div class="grid-event-info">
+                  <p><span class="icon-25duration"></span>Duration 4 Years</p>
+                  <p><span class="icon-71starts"></span>Starts 23 Sep</p>
+                  <p><span class="icon-74time"></span>5 Days (6 Jul)</p>
+                </div>
+                <a href="#" class="compare-link active-compare">
+                   <span class="icon-16compare"></span>
+                   <h5>Added</h5>
+                </a>
+             </div>
+          </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
+          <div class="col-xs-12 grid-item">
+             <div class="grid-up">
+               <img src="img/4.png">
+                <span>GUARANTEE</span>
+                <a href="#" class="icon-32favoriteHeart"></a>
+                <div class="grid-logo-main">
+                  <div class="grid-img-fram"> <img src="img/3.png"></div>
+                   <p>University of Western</p>
+                </div>
+             </div>
+             <div class="grid-info">
+                <h4>Canada</h4>
+                <h6><span class="icon-33featured"></span>Featured</h6>
+                <div class="clearfix"></div>
+                <a href="#" class="grid-name-link">BA Computer Science</a>
+                <h3>12,000$<span>/year</span></h3>
+                <div class="clearfix"></div>
+                <div class="grid-event-info">
+                  <p><span class="icon-25duration"></span>Duration 4 Years</p>
+                  <p><span class="icon-71starts"></span>Starts 23 Sep</p>
+                  <p><span class="icon-74time"></span>5 Days (6 Jul)</p>
+                </div>
+                <a href="#" class="compare-link">
+                   <span class="icon-16compare"></span>
+                   <h5>compare</h5>
+                </a>
+             </div>
+          </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
+          <div class="col-xs-12 grid-item">
+             <div class="grid-up">
+               <img src="img/5.png">
+                <span>GUARANTEE</span>
+                <a href="#" class="icon-32favoriteHeart"></a>
+                <div class="grid-logo-main">
+                  <div class="grid-img-fram"> <img src="img/3.png"></div>
+                   <p>University of Western</p>
+                </div>
+             </div>
+             <div class="grid-info">
+                <h4>Canada</h4>
+                <h6><span class="icon-33featured"></span>Featured</h6>
+                <div class="clearfix"></div>
+                <a href="#" class="grid-name-link">BA Computer Science</a>
+                <h3>12,000$<span>/year</span></h3>
+                <div class="clearfix"></div>
+                <div class="grid-event-info">
+                  <p><span class="icon-25duration"></span>Duration 4 Years</p>
+                  <p><span class="icon-71starts"></span>Starts 23 Sep</p>
+                  <p><span class="icon-74time"></span>5 Days (6 Jul)</p>
+                </div>
+                <a href="#" class="compare-link active-compare">
+                   <span class="icon-16compare"></span>
+                   <h5>Added</h5>
+                </a>
+             </div>
+          </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
+          <div class="col-xs-12 grid-item">
+             <div class="grid-up">
+               <img src="img/6.png">
+                <span>GUARANTEE</span>
+                <a href="#" class="icon-32favoriteHeart"></a>
+                <div class="grid-logo-main">
+                  <div class="grid-img-fram"> <img src="img/3.png"></div>
+                   <p>University of Western</p>
+                </div>
+             </div>
+             <div class="grid-info">
+                <h4>Canada</h4>
+                <h6><span class="icon-33featured"></span>Featured</h6>
+                <div class="clearfix"></div>
+                <a href="#" class="grid-name-link">BA Computer Science</a>
+                <h3>12,000$<span>/year</span></h3>
+                <div class="clearfix"></div>
+                <div class="grid-event-info">
+                  <p><span class="icon-25duration"></span>Duration 4 Years</p>
+                  <p><span class="icon-71starts"></span>Starts 23 Sep</p>
+                  <p><span class="icon-74time"></span>5 Days (6 Jul)</p>
+                </div>
+                <a href="#" class="compare-link active-compare">
+                   <span class="icon-16compare"></span>
+                   <h5>Added</h5>
+                </a>
+             </div>
+          </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
+          <div class="col-xs-12 grid-item">
+             <div class="grid-up">
+               <img src="img/7.png">
+                <span>GUARANTEE</span>
+                <a href="#" class="icon-32favoriteHeart"></a>
+                <div class="grid-logo-main">
+                  <div class="grid-img-fram"> <img src="img/3.png"></div>
+                   <p>University of Western</p>
+                </div>
+             </div>
+             <div class="grid-info">
+                <h4>Canada</h4>
+                <h6><span class="icon-33featured"></span>Featured</h6>
+                <div class="clearfix"></div>
+                <a href="#" class="grid-name-link">BA Computer Science</a>
+                <h3>12,000$<span>/year</span></h3>
+                <div class="clearfix"></div>
+                <div class="grid-event-info">
+                  <p><span class="icon-25duration"></span>Duration 4 Years</p>
+                  <p><span class="icon-71starts"></span>Starts 23 Sep</p>
+                  <p><span class="icon-74time"></span>5 Days (6 Jul)</p>
+                </div>
+                <a href="#" class="compare-link">
+                   <span class="icon-16compare"></span>
+                   <h5>compare</h5>
+                </a>
+             </div>
+          </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
+          <div class="col-xs-12 grid-item">
+             <div class="grid-up">
+               <img src="img/8.png">
+                <span>GUARANTEE</span>
+                <a href="#" class="icon-32favoriteHeart"></a>
+                <div class="grid-logo-main">
+                  <div class="grid-img-fram"> <img src="img/3.png"></div>
+                   <p>University of Western</p>
+                </div>
+             </div>
+             <div class="grid-info">
+                <h4>Canada</h4>
+                <h6><span class="icon-33featured"></span>Featured</h6>
+                <div class="clearfix"></div>
+                <a href="#" class="grid-name-link">BA Computer Science</a>
+                <h3>12,000$<span>/year</span></h3>
+                <div class="clearfix"></div>
+                <div class="grid-event-info">
+                  <p><span class="icon-25duration"></span>Duration 4 Years</p>
+                  <p><span class="icon-71starts"></span>Starts 23 Sep</p>
+                  <p><span class="icon-74time"></span>5 Days (6 Jul)</p>
+                </div>
+                <a href="#" class="compare-link">
+                   <span class="icon-16compare"></span>
+                   <h5>compare</h5>
+                </a>
+             </div>
+          </div>
+      </div>
+
+  <div class="col-xs-12 more-items-btn-main">
+      <a href="#"><span class="icon-49loadingMore"></span> Loading more</a>
+  </div>
+
+
+  </div>
+
+ </div>
+
+</div>
+
+
+<div class="container-fluid comp-main-bot">
+   <div class="container">
+      <ul>
+         <li>
+             <p>BA Computer Science BA Computer Science12sd BA Computerdsd Science BA Computer Science</p>
+            <span class="icon-82wrong del-copm-btn"></span>
+         </li>
+
+                  <li>
+             <p>BA Computer Science</p>
+            <span class="icon-82wrong del-copm-btn"></span>
+         </li>
+
+                  <li>
+             <p>BA Computer Science</p>
+            <span class="icon-82wrong del-copm-btn"></span>
+         </li>
+      </ul>
+
+
+<div class="comp-bot-side">
+   <a href="#">Compare</a>
+   <a href="#">Remove All</a>
+   <a href="#"><span class="icon-5arrowDown"></span></a>
+</div>
+
+   </div>
+</div>
+
+
+<div class="container-fluid footer-main remove-padding">
+  
+    <div class="container remove-padding">
+       <div class="col-md-3 col-sm-4 col-xs-12">
+          <img class="fot-logo" src="img/logo.png">
+          <p>Marj3 is the #1 platform for scholarships 
+            and opportunities in the MENA region.</p>
+       </div>
+       <div class="col-md-2 col-md-offset-1 col-sm-2 col-sm-offset-0 col-xs-6">
+          <h3>Marj3</h3>
+          <a href="#">About Marj3</a>
+          <br>
+          <a href="#">Partners</a>
+          <br>
+          <a href="#">Team</a>
+          <br>
+          <a href="#">FAQ</a>
+          <br>
+          <a href="#">Terms & Conditions</a>
+       </div>
+       <div class="col-md-2 col-sm-2 col-xs-6">
+          <h3>Connect</h3>
+          <a href="#">Publish a Scholarship for free</a>
+          <br>
+          <a href="#">Feature your Scholarship</a>
+          <br>
+          <a href="#">Marj3 Events</a>
+          <br>
+          <a href="#">Contact Us</a>
+       </div>
+       <div class="col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-0 col-xs-12">
+          <h3>Follow Marj3 in social media</h3>
+          <ul class="fot-social">
+             <li><a href="#" class="icon-31facebook"></a></li>
+             <li><a href="#" class="icon-76twitter"></a></li>
+             <li><a href="#" class="icon-47linkedin"></a></li>
+          </ul>
+          <h3>Download Marj3 App</h3>
+          <ul>
+             <li><a href="#"><img src="img/google_play.png"></a></li>
+             <li><a href="#"><img src="img/app_store.png"></a></li>
+          </ul>
+       </div>
+
+
+    </div>
+
+
+</div>
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/multi-select.js"></script>
+    <script src="js/datepicker/jquery.datetimepicker.full.min.js"></script>
+
+    <script src="js/jquery-ui/jquery-ui.min.js"></script>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+ $(this).scrollTop(0);
+
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 1) {
+        $(".head-main").addClass("darkHeader");
+    } else {
+        $(".head-main").removeClass("darkHeader");
+    }
+});
+
+
+// $('.opendrop-btn').click(function() {
+//   $(this).toggleClass('over-all')
+//     if ($('.dropdown').hasClass('open')){
+//         $('.body-dark').removeClass('body-dark-on'); 
+//     } else {
+//         // $('.body-dark').addClass('body-dark-on'); 
+//       }
+// });
+
+// $('.body-dark, .dropdown-menu').click(function() { 
+// $('.body-dark').removeClass('body-dark-on');
+// $('.opendrop-btn').removeClass('over-all')
+
+// });
+
+
+     $(".menu-btn").click(function(){
+$(".menu-side-main").addClass('open-menu');
+$(".body-bg").addClass('body-overlay')
+});
+
+$(".body-bg, .colse-menu-btn, .close-menu-link").click(function(){
+$(".menu-side-main").removeClass('open-menu');
+$('.body-bg').removeClass('body-overlay');
+});
+
+$( ".more-links-btn" ).click(function() {
+  event.preventDefault();
+$(".more-links-btn").not(this).siblings('.more-links-main').slideUp();
+$(this).siblings('.more-links-main').slideToggle();
+
+$(".more-links-btn").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+  }); 
+
+          $('#study-id .discheck-all').click(function() {
+            $('#study-id .js-option').attr('checked', false);
+            $('#study-id label.select-label.js-select-label').attr('data-label','No Chosen');
+
+        });
+
+
+                    $('#unique-id .discheck-all').click(function() {
+            $('#unique-id .js-option').attr('checked', false);
+            $('#unique-id label.select-label.js-select-label').attr('data-label','No Chosen');
+
+        });
+
+        $('#looking-for .discheck-all').click(function() {
+            $('#looking-for .js-option').attr('checked', false);
+            $('#looking-for label.select-label.js-select-label').attr('data-label','No Chosen');
+
+        });
+
+
+    $('#special-id .discheck-all').click(function() {
+      $('#special-id .js-option').attr('checked', false);
+  $('#special-id label.select-label.js-select-label').attr('data-label','No Chosen');
+
+        });
+
+$('.fillter-toggle').click(function() {
+$( '.fillter-main' ).toggleClass('open-fillter');
+$( 'html, body' ).toggleClass('hide-scroll');
+$( this ).toggleClass('colse-btn');
+});
+
+
+    $(".ranger").slider({
+        orientation: "horizontal",
+        range: !0,
+        values: [1200, 20000],
+        min: 1,
+        max: 40000,
+        slide: function(t, e) {
+            $(this).prev().find(".first_limit").val(e.values[0] + "$"), $(this).prev().find(".last_limit").val(e.values[1] + "$")
+        }
+    });
+
+
+});
+
+</script>
+
+<script type="text/javascript">
+  
+
+
+$(document).ready(function(){
+    $('.icon-5arrowDown').click(function() {
+      $('.comp-main-bot').hide();
+    });
+});
+</script>
+
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+</body>
+</html>

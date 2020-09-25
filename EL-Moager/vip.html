@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>index</title>
+    <!-- my css -->
+     <!--<link href="css/style.css" rel="stylesheet">-->
+     <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+
+</head>
+
+
+<body class="logn-body">
+
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 999999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 99999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd; margin-bottom: 0;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px;  padding: 0}
+
+    .all-pages-main ul li { float: left;
+    width: 43.5%;
+    padding: 10px;
+    list-style: none;
+    display: inline-block; }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 100px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+      <li><a href="car.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/car.jpg"></div><p>car details</p> </a></li>
+      <li><a href="fav.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fav.jpg"></div><p>favorite</p> </a></li>
+      <li><a href="fillter.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/fillter.jpg"></div><p>fillter</p> </a></li>
+      <li><a href="hosting-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/hosting-1.jpg"></div><p>hosting </p> </a></li>
+        <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="makepayment-new.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/makepayment-new.jpg"></div><p>makepayment new</p> </a></li>
+      <li><a href="my-cars.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/my-cars.jpg"></div><p>my cars</p> </a></li>
+      <li><a href="owner.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/owner.jpg"></div><p>owner</p> </a></li>
+      <li><a href="statement-1.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/statement-1.jpg"></div><p>statement </p> </a></li>
+      <li><a href="thanks.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/thanks.jpg"></div><p>thanks</p> </a></li>
+      <li><a href="vip.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="images/shots/vip.jpg"></div><p>vip</p> </a></li>
+
+
+
+
+
+    
+
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="images/more.png">
+</span>
+
+
+
+<div class="header">
+    <div class="Container">
+        <div class="logo">
+            <a href="#a"> <img src="images/logo@1x.png"> </a></div>
+        <div class="rent"><a href="#a"><sub>Rent your car</sub></a></div>
+        <div class="Signup"><a href="#a"><sub>Sign up</sub></a></div>
+        <div class="Login"><a href="#a"><sub>Login</sub></a></div>
+        <div class="sareng">
+            <div class="sari">
+                <img src="images/$@1x.png">
+                <a href="#a"><sub>SAR</sub></a>
+            </div>
+            <!-- end sar -->
+            <div class="eng">
+                <img src="images/GLOBE@1x.png">
+                <a href="#a"><sub>English</sub></a>
+            </div>
+            <!-- end english-->
+
+        </div>
+        <!-- end sareng -->
+
+    </div>
+</div>
+<div class="continar">
+    <div class="content">
+
+        <!-- end of the header -->
+
+
+        <div class="mean">
+
+
+            <div class="bgvipimg">
+                <div class="overlayimg">
+                    <h2>Pay 350 SAR</h2>
+                    <span>to</span>
+
+                    <div class="propic"></div>
+                    <p class="name"> Khubiev islam</p>
+                    <a class="call" href="#a">
+                        <div class="callicn "><img class="down-call" src="images/call.png"><h6 class="down-call"> Call
+                            mobile </h6></div>
+                    </a>
+                    <!--    <a class="sms" href="#a"><div class="smsicn"><img src="images/sms.png"><h6> Send SMS </h6></div> </a>-->
+                    <a class="msg" href="#a">
+                        <div class="msgicn"><img src="images/msg.png"><h6> Send SMG </h6></div>
+                    </a>
+
+                </div>
+
+
+                <div class="taps">
+
+
+                    <div class="title-of-maketaps">
+                        <!--<p class="balance-vip">Balance</p>-->
+                        <p class="bank-transfer-vip">Bank Transfer</p>
+
+                        <p class="credit-card-vip">Credit Card</p>
+
+                        <p class="cash-vip">Cash</p>
+
+
+                    </div>
+
+
+                    <!--<div class="makepay-tap1">-->
+                    <!---->
+                    <!--<p>Your balance is</p>-->
+                    <!--<h1>254</h1> <h6>SAR</h6>-->
+                    <!--<p> You don't have balance to pay for this <br> item </p>-->
+                    <!--<div class="next">-->
+                    <!--<button type="button" disabled>Confirm</button>-->
+                    <!--</div>-->
+
+                    <!---->
+                    <!---->
+                    <!--</div>&lt;!&ndash; end of taps1 &ndash;&gt;-->
+
+                    <div class="makepay-tap2">
+                    
+                    
+                                            <p>
+                            After making the bank transfer,
+                            please upload its picture to us
+
+                        </p>
+
+                        <div class="upload-file">
+                            <input class="add-file hidden-input" type="file" name="file" id="file4">
+                            <label for="file4"></label>
+                        </div>
+
+                        <div class="Vip_image">
+
+                        </div>
+
+
+                        <div class="next">
+                            <button type="button">Confirm</button>
+                        </div>
+                    
+                    
+                    
+                    
+                    
+
+
+                    </div>
+                    <!-- end of taps2 -->
+
+                    <div class="makepay-tap3">
+
+                        <div class="name-input"><input type="text" placeholder="Holder’s name" value=""></div>
+                        <div class="name-input"><input type="number" placeholder="Card number" value=""></div>
+
+                        <div class="name-input"><input type="text" data-field="date" data-format="dd-MM-yyyy"
+                                                       placeholder="Expiration date" value=""></div>
+                        <div class="name-input"><input type="number" min="0" max="99" placeholder="CVV" value=""></div>
+
+                        <div class="next">
+                            <button type="button">Confirm</button>
+                        </div>
+
+                    </div>
+                    <!-- end of taps3 -->
+
+                    <div class="makepay-tap4">
+
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.<br>
+                            <br>
+                            Ut enim ad minim, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat.
+                            Ut enim ad minim, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat</p>
+
+                        <div class="next">
+                            <button type="button">Confirm</button>
+                        </div>
+
+                    </div>
+                    <!-- end of taps4 -->
+
+
+                </div>
+                <!-- end of taps -->
+                <div class="phone-mean">
+                    <img class="call-arrow-down" src="images/call-arrow.png">
+
+                    <div class="phone-number">
+                        <span>+974512584</span>
+
+                    </div>
+                </div>
+
+            </div>
+            <!-- bgvipimg -->
+
+
+        </div>
+        <!-- end of the mean -->
+
+
+        <!-- footer -->
+
+        <div class="vipfooter">
+
+            <div class="footerbg">
+
+                <div class="getapp">
+
+
+                    <p>Get Almoajer app</p>
+                    <a href="#a"> <img src="images/apple.png"></a>
+                    <a href="#a"> <img src="images/android.png"></a>
+
+                </div>
+                <!-- end Get Almoajer app-->
+
+                <div class="botmenu">
+                    <a href="#a"><p>About</p></a>
+                    <a href="#a"><p>Help</p></a>
+                    <a href="#a"><p>Policies</p></a>
+                    <a href="#a"><p>Terms</p></a>
+
+
+                </div>
+                <!-- end botmenu-->
+
+                <div class="social">
+                    <a href="# " class="twitter"> </a>
+                    <a href="#" class="google"></a>
+                    <a href="#" class="instagram"> </a>
+                    <a href="#" class="linkedin"> </a>
+                    <a href="#" class="youtube"></a>
+                    <a href="#" class="facebook"> </a>
+
+
+                </div>
+                <!-- end social-->
+
+
+            </div>
+            <!--end footerbg-->
+        </div>
+        <!--end vipfooter-->
+
+
+    </div>
+    <!-- end of the content -->
+
+</div>
+<!-- end of the continar -->
+
+
+<script src="js/jQuery1.11.2.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>

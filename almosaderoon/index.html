@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>home</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-rtl.css" rel="stylesheet">
+
+<link href="css/style.css"  rel="stylesheet">
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact us</p> </a></li>
+      <li><a href="news-details.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/news-details.jpg"></div><p>news details</p> </a></li>
+      <li><a href="other.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/other.jpg"></div><p>other</p> </a></li>
+      <li><a href="service.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/service.jpg"></div><p>service</p> </a></li>
+           <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+<!--master head--> 
+<section class="first-head-mean">
+  <div class="container-fluid first-head">
+    <div class="container remove-padding">
+      <div class="social-icons remove-padding">
+        <div class="facebook"> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a> </div>
+        <div class="twitter"> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a> </div>
+        <div class="youtube"> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a> </div>
+        <div class="google"> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a> </div>
+        <div class="linkedin"> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Rss"><i class="fa fa-linkedin-square "></i></a> </div>
+        <div class="instagram"> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Rss"><i class="fa fa-instagram "></i></a> </div>
+      </div>
+      <div class="top-links hidden-xs">
+      
+          <a>اتصل بنا </a>
+     <a> English</a>
+     
+     </div>
+
+
+
+    </div>
+ 
+    
+  </div>
+</section>
+
+
+<div class="container remove-padding head-page">
+<div class="col-md-3 col-sm-4 col-xs-9  remove-padding">
+<img src="img/logo@1x.png" class="img-responsive">
+</div>
+
+        
+ <div  class="side-menu">   
+    
+        
+  <span class=" hidden-md hidden-lg fa fa-reorder" onclick="openNav()"></span>
+    
+    
+  <div id="mySidenav" class="sidenav hidden-md hidden-lg">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="container mobile-links">
+<a href="#">رئيسية</a>
+<a href="#">عاجل </a>
+<a href="#">سياسة</a>
+<a href="#">تجارة & صناعة</a>
+<a href="#">استمثار</a>
+<a href="#">بنوك & بورصة</a>
+<a href="#">اتصالات</a>
+<a href="#">زراعة & ري</a>
+<a href="#">تقارير</a>
+<a href="#">معارض</a>
+<a href="#">منوعات</a>
+<a class=" visible-xs">اتصل بنا </a>
+<a class=" visible-xs"> English</a>
+ </div>
+</div>
+
+</div>
+
+<div class="col-sm-8 col-md-9  ads-mean remove-padding hidden-xs hidden-sm">
+ <img class="img-responsive" src="img/ads.png">
+</div>
+</div>
+
+  <div class="mega-menu-cont hidden-xs hidden-sm">
+    <nav class=" container-fluid">
+      <ul class="container">
+        <li><a href="#">رئيسية</a></li>
+        <li><a href="#">عاجل </a></li>
+        <li><a href="#">سياسة</a></li>
+        <li><a href="#">تجارة & صناعة</a></li>
+        <li><a href="#">استمثار</a></li>
+        <li><a href="#">بنوك & بورصة</a></li>
+        <li><a href="#">اتصالات</a></li>
+        <li><a href="#">زراعة & ري</a></li>
+        <li><a href="#">تقارير</a></li>
+        <li><a href="#">معارض</a></li>
+        <li class="final-title-menu"><a href="#">منوعات</a></li>
+
+        
+      </ul>
+      <!-- .container --> 
+    </nav>
+  </div>
+  
+ <!--end master head--> 
+ 
+ 
+ <!--service-->
+ 
+ 
+  
+ <div class="container-fluid service-container">
+  
+  
+  
+  
+   <div class="container">
+   
+   
+   <h2 class="text-center service-title">الخدمات</h2>
+   
+   
+   <div class="col-md-2 col-sm-4 col-xs-6 sercive-cont">
+     <div class="sercive-mean" >
+       <img src="img/Capa 11@1x.png" class="center-block img-responsive">
+       <p class="text-center">المعارض</p>
+     </div>
+
+   </div>
+
+     <div class="col-md-2 col-sm-4 col-xs-6 sercive-cont">
+     <div class="sercive-mean" >
+       <img src="img/جمارك@1x.png" class="center-block">
+       <p class="text-center">خدامات جمركية</p>
+     </div>
+
+   </div>
+      <div class="col-md-2 col-sm-4 col-xs-6 sercive-cont">
+     <div class="sercive-mean" >
+       <img src="img/دراسات@1x.png" class="center-block">
+       <p class="text-center">دراسات</p>
+     </div>
+
+   </div>
+   
+   
+   
+      <div class="col-md-2 col-sm-4 col-xs-6 sercive-cont">
+     <div class="sercive-mean" >
+       <img src="img/ندوات@1x.png" class="center-block">
+       <p class="text-center">ندوات</p>
+     </div>
+
+   </div>
+   
+         <div class="col-md-2 col-sm-4 col-xs-6 sercive-cont">
+     <div class="sercive-mean" >
+       <img src="img/Layer 13@1x.png" class="center-block">
+       <p class="text-center">مشاكل التصدير </p>
+     </div>
+
+   </div>
+   
+
+
+
+         <div class="col-md-2 col-sm-4 col-xs-6 sercive-cont">
+         <a href="#">
+     <div class="sercive-mean" >
+       <img src="img/Layer 14@1x.png" class="center-block">
+       <p class="text-center">المزيد</p>
+     </div>
+</a>
+   </div>
+
+
+
+
+   
+   
+   
+   
+
+
+
+
+   </div>
+ 
+ 
+ </div>
+
+ <!--end service-->
+ 
+ <!--slider-->
+ <section class="news-slid-cont">
+  <div class="container remove-padding">
+    <div class="col-md-4 col-lg-6 remove-padding col-sm-7"> 
+      <!-- Carousel -->
+      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"> 
+        <!-- Indicators -->
+        <ol class="carousel-indicators" >
+          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner ">
+         
+          <div class="item active"><a href="#"> <img src="img/img4@1x.png" alt="First slide"> 
+            <!-- Static Header -->
+            <div class="news-type">
+              <h5> Food </h5>
+            </div>
+            <!-- /header-text -->
+            
+            <div class="pragraph-cont text-center">
+              <h3 class="text-center">أسعار السلع الغذائية والإنشائية شهدت انخفاضاً</h3>
+              <p>"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا نخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</p>
+              <ul class="article-meta">
+                <li class="article-date"><i class="fa fa-clock-o"></i><span>August 22, 2016</span></li>
+                <li class="article-comments"><i class="fa fa-comments"></i><span>48</span></li>
+                <li class="article-views"><i class="fa fa-eye"></i><span>41 </span></li>
+              </ul>
+            </div>
+              </a>
+          </div>
+        
+           
+          <div class="item "> <a href="#"><img src="img/img4@1x.png" alt="First slide"> 
+            <!-- Static Header -->
+            <div class="news-type">
+              <h5> Food </h5>
+            </div>
+            <!-- /header-text -->
+            
+            <div class="pragraph-cont text-center">
+              <h3 class="text-center">أسعار السلع الغذائية والإنشائية شهدت انخفاضاً</h3>
+              <p>"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا نخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</p>
+              <ul class="article-meta">
+                <li class="article-date"><i class="fa fa-clock-o"></i><span>August 22, 2016</span></li>
+                <li class="article-comments"><i class="fa fa-comments"></i><span>48</span></li>
+                <li class="article-views"><i class="fa fa-eye"></i><span>41 </span></li>
+              </ul>
+            </div>
+              </a>
+          </div>
+        
+          
+          
+          <div class="item">
+          <a href="#">
+           <img src="img/img4@1x.png" alt="First slide"> 
+            <!-- Static Header -->
+            <div class="news-type">
+              <h5> Food </h5>
+            </div>
+            <!-- /header-text -->
+            
+            <div class="pragraph-cont text-center">
+              <h3 class="text-center">أسعار السلع الغذائية والإنشائية شهدت انخفاضاًb</h3>
+              <p>"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا نخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا.</p>
+              <ul class="article-meta">
+                <li class="article-date"><i class="fa fa-clock-o"></i><span>August 22, 2016</span></li>
+                <li class="article-comments"><i class="fa fa-comments"></i><span>48</span></li>
+                <li class="article-views"><i class="fa fa-eye"></i><span>41 </span></li>
+              </ul>
+            </div>
+            </a> 
+          </div>
+         
+          
+        </div>
+        
+
+ 
+  </a>
+      </div>
+      <!-- /carousel --> 
+    </div>
+    
+    <div class="col-md-4 col-lg-3 col-sm-5 hidden-xs remove-padding important-news">
+
+      
+      
+<a href="#">
+        <div class="last-important"> <img src="img/img5@1x.png" alt="First slide"> 
+        <!-- Static Header -->
+        <div class="news-type news-type-Travel">
+          <h5> Travel </h5>
+        </div>
+        <!-- /header-text -->
+        
+        <div class="pragraph-cont  text-center">
+          <h3 class="text-center">أسعار السلع الغذائية </h3>
+          <p>"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا نخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</p>
+          <ul class="article-meta">
+            <li class="article-date"><i class="fa fa-clock-o"></i><span>August 22, 2016</span></li>
+            <li class="article-comments"><i class="fa fa-comments"></i><span>48</span></li>
+            <li class="article-views"><i class="fa fa-eye"></i><span>41 </span></li>
+          </ul>
+        </div>
+      </div>
+     
+</a>
+      </div>
+      
+      
+      
+
+  
+    <div class="col-md-4 col-lg-3 hidden-xs hidden-sm remove-padding">
+     <a href="#">  <div class="last-important"> <img src="img/p1.png" alt="First slide"> 
+        <!-- Static Header -->
+        <div class="news-type news-type-Travel">
+          <h5> Travel </h5>
+        </div>
+        <!-- /header-text -->
+        
+        <div class="pragraph-cont  text-center">
+          <h3 class="text-center">أسعار السلع الغذائية </h3>
+          <p>"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا نخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</p>
+          <ul class="article-meta">
+            <li class="article-date"><i class="fa fa-clock-o"></i><span>August 22, 2016</span></li>
+            <li class="article-comments"><i class="fa fa-comments"></i><span>48</span></li>
+            <li class="article-views"><i class="fa fa-eye"></i><span>41 </span></li>
+          </ul>
+        </div>
+      </div> </a>
+    </div>
+  </div>
+</section>
+ 
+  <!--end slider-->
+ 
+ 
+ <section class="news-content-cont">
+  <div class="container remove-padding mean-container">
+    <div class="content container remove-padding marquee-mean">
+      <div class="simple-marquee-container">
+        <div class="marquee-sibling"><p> <b>اخبار عاجلة</b> </p></div>
+        <div class="marquee">
+          <ul class="marquee-content-items">
+            <li> والإنشائية شهدت"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائا</li>
+            <li> والإنشائية شهدت"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائا </li>
+            <li> والإنشائية شهدت"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائا </li>
+            <li> والإنشائية شهدت"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائا </li>
+            <li> والإنشائية شهدت"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائا </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+        <div class="col-md-5 col-xs-12 col-sm-8 left-mean">
+      <h3 class="title"> خبر اليوم</h3>
+      <div class="container col-xs-12  remove-padding top-news-cont">
+        <div class="col-xs-12 remove-padding top-news-mean"> 
+        <img class="img-responsive" src="img/aircraft-643271_1280-265x160@1x.png">
+          <div class="news-type news-type-Travel">
+            <h5> Travel </h5>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        
+        
+        <a  href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً
+ ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت
+ انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية</a>
+  <div class="date-comment">
+   <i class="fa fa-clock-o"></i><span>August 22, 2016</span> 
+   <i class="fa fa-comments"></i><span>33</span></div>
+       
+       
+        <p>"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا
+"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</p>
+      </div>
+      
+      
+        <div class="col-md-12 remove-padding tabs-mean">
+        <div class="tabbable-panel">
+          <div class="tabbable-line">
+            <ul class="nav nav-tabs ">
+              <li class="active"> <a href="#tab_default_1" data-toggle="tab"> رياضة </a> </li>
+              <li> <a href="#tab_default_2" data-toggle="tab">  حوادث  </a> </li>
+              <li> <a href="#tab_default_3" data-toggle="tab">  صحة  </a> </li>
+              <li> <a href="#tab_default_4" data-toggle="tab"> بيئة </a> </li>
+            </ul>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_default_1">
+                <div class="col-md-12 col-sm-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/11@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/10@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/11@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/bdaia_sport_01-384x220@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/4@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/bdaia_sport_01-384x220@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/10@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+              </div>
+              
+              
+              <div class="tab-pane" id="tab_default_2">
+                <div class="col-md-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/11@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/bdaia_sport_01-384x220@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/4@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/bdaia_sport_01-384x220@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/10@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="tab-pane" id="tab_default_3">
+                <div class="col-md-12 col-sm-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/11@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/10@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/11@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/bdaia_sport_01-384x220@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="tab-pane" id="tab_default_4">
+                <div class="col-md-12 col-sm-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/11@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/10@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-md-12 col-xs-6 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/11@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/bdaia_sport_01-384x220@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/4@1x.png">
+                    <div class="photo-in"> <span> <i class="fa fa-play" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/bdaia_sport_01-384x220@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+                <div class="col-xs-12 remove-padding tabs-new-cont">
+                  <div class="col-md-4 col-sm-4 remove-padding"> <img src="img/10@1x.png">
+                    <div class="vedio-in"> <span> <i class="fa fa-camera" aria-hidden="true"></i> </span> </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا</a>
+                    <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      
+      </div>
+      
+      
+          <div class="col-md-4 hidden-xs hidden-sm other-news">
+      <h3 class="title">تجارة و صناعة </h3>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/technology_healh-is-in-your-hands_069K1-250x167@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> L"الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/davehillphoto-5240d30114fcbb3-265x160@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/michael_jordan-265x160@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/mom-1252752_1280-105x77@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/food-715542_1280-105x77@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/eye-766166_1280-105x77@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/technology_healh-is-in-your-hands_069K1-250x167@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/technology_healh-is-in-your-hands_069K1-250x167@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/davehillphoto-5240d30114fcbb3-265x160@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/michael_jordan-265x160@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/mom-1252752_1280-105x77@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/davehillphoto-5240d30114fcbb3-265x160@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/food-715542_1280-105x77@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#">"الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/eye-766166_1280-105x77@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> Lorem Ipsum is simply dummy text of the printing Lorem Ipsum is simply dummy text of the printing and typesettin...</a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+      <div class="news-block container remove-padding col-md-12">
+        <div class="col-md-5 remove-padding"> <img class="img-responsive" src="img/davehillphoto-5240d30114fcbb3-265x160@1x.png"> </div>
+        <div class="col-md-7 remove-padding"> <a href="#"> "الإحصاء": أسعار السلع الغذائية والإنشائية شهد انخفاضاً ملحوظا"الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً ملحوظا "الإحصاء": أسعار السلع الغذائية والإنشائية شهدت انخفاضاً  </a>
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>August 22, 2016</span> <i class="fa fa-comments"></i><span>33</span></div>
+        </div>
+      </div>
+
+    </div>
+    
+    
+        <div  class="col-md-3 side-bar-mean  col-sm-4 col-xs-12" >
+      
+      
+      
+      
+      <h3 class="title"> المقالات</h3>
+      <div class="col-md-12 remove-padding latest-news-mean" >
+        <div class="col-md-5 remove-padding"> <img src="img/12-105x70@1x.png"> </div>
+        <div class="col-md-7 remove-padding">
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>15-اكتوبر-2016</span> </div>
+          <a href="#">  أسعار السلع الغذائية والإنشاة
+ شهد انخفاضاً ملحوظ</a>
+          <div class="clearfix"></div>
+          <span><i class="fa fa-user-circle"></i><span>منال عبد الحميد</span></span> </div>
+      </div>
+      
+      
+      
+      <div class="col-md-12 remove-padding latest-news-mean" >
+        <div class="col-md-5 remove-padding"> <img src="img/12-105x70@1x.png"> </div>
+        <div class="col-md-7 remove-padding">
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>15-اكتوبر-2016</span> </div>
+          <a href="#">أسعار السلع الغذائية والإنشاة
+ شهد انخفاضاً ملحوظ</a>
+          <div class="clearfix"></div>
+          <span><i class="fa fa-user-circle"></i><span>منال عبد الحميد</span></span> </div>
+      </div>
+      
+      
+      <div class="col-md-12 remove-padding latest-news-mean" >
+        <div class="col-md-5 remove-padding"> <img src="img/12-105x70@1x.png"> </div>
+        <div class="col-md-7 remove-padding">
+          <div class="date-comment"> <i class="fa fa-clock-o"></i><span>15-اكتوبر-2016</span> </div>
+          <a href="#">أسعار السلع الغذائية والإنشاة
+ شهد انخفاضاً ملحوظ</a>
+          <div class="clearfix"></div>
+          <span><i class="fa fa-user-circle"></i><span>منال عبد الحميد</span></span> </div>
+      </div>
+      <div class="clearfix"></div>
+      
+      
+      
+      
+      
+<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Falmosadron%2F%3Fref%3Dsearch&tabs=timeline&width=360&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="100%" height="500" style="border:none;overflow:hidden; margin-top:20px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+ <div class="ads-mean">     
+<img src="img/vod ads @1x.png">
+</div>
+
+      </div>
+    
+    
+    </div>
+    </section>
+ 
+
+
+
+<!--master footer--> 
+ 
+  <section class="footer">
+  <div class="container-fluid footer-mean">
+    <div class=" container footer-mean text-center"> 
+    
+    
+    <img src="img/logo-fot@1x.png" class="center-block">
+      <div class="text-center foot-links" >
+       <a href="#">رئيسية </a>
+        <a href="#">عاجل</a>
+         <a href="#">سياسة</a>
+          <a href="#">تجارة & صناعة</a> 
+          <a href="#">استمثار</a>
+           <a href="#">بنوك & بورصة</a>
+            <a href="#">اتصالات</a>
+             <a href="#">زراعة & ري</a> 
+             <a href="#">تقارير</a>
+              <a href="#">معارض</a>
+   
+                 <a href="#">منوعات</a> </div>   
+                 
+                 <div class="contact-us-fot text-danger">
+                 
+                 <div class="email">
+                 <i class="fa fa-envelope"></i>
+                 <p>info@almosaderon.com</p>
+                 </div>
+                                  <div class="email">
+                 <i class="fa fa-phone"></i>
+                 <p>01021356465</p>
+                 </div>
+                 
+                                  <div class="email">
+                 <i class="fa fa-map-marker"></i>
+                 <p>27 شارع محمد فهمي المحضر شارع الطياران مدينة نصر</p>
+                 </div>
+                 </div>              
+                 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+      <div class="social-icons-foot"> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Facebook"><i class="fa fa-facebook"></i></a> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Twitter"><i class="fa fa-twitter"></i></a> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Youtube"><i class="fa fa-youtube"></i></a> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus"><i class="fa fa-google-plus"></i></a> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Rss"><i class="fa fa-linkedin-square "></i></a> <a target="_blank" href="#" data-toggle="tooltip" data-placement="bottom" title="Rss"><i class="fa fa-instagram "></i></a> </div>
+    </div>
+  </div>
+  <div class="container-fluid copy-right-mean">
+    <p class="text-center">جميع الحقوق محفوظة لموقع المصدرون</p>
+  </div>
+</section>
+
+<!--master footer--> 
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/marquee.js"></script> 
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+<script>
+$(function (){$('.simple-marquee-container').SimpleMarquee();});
+</script> 
+
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

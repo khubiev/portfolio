@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>register</title>
+        <link href="css/bootstrap.css" rel="stylesheet">
+
+            <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+                          <link rel="stylesheet" href="css/chosen.css">
+
+        <link href="css/style.css"  rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+          integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="icon" href="img/logo-fiv.png" type="" sizes="16x16">
+  </head>
+  <body>
+    
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;
+display: table;
+    width: 100%;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+ 
+ <li><a href="communities.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/communities.jpg">
+  </div><p>communities</p> </a>
+</li>
+
+ <li><a href="index.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/index.jpg">
+  </div><p>index</p> </a>
+</li>
+
+ <li><a href="register.html" class="shot-link">
+  <div class="shot-frame">
+  <img class="shot-img" src="img/shots/register.jpg">
+  </div><p>register</p> </a>
+</li>
+
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+    
+<div class="all-body">
+
+  <!-- start header  -->
+
+      <div class="search-main remove-padding">
+        <div class="container">
+          <form>
+            <input type="text" name="" placeholder="What are you looking for ? ">
+            <button>serch</button>
+          </form>
+        </div>
+      </div>
+
+<div class="menu-side-main">
+   <div class="menu-head">
+     <p>All pages</p>
+     <span class="colse-menu-btn flat-hover"><i class="fas fa-times"></i></span>
+   </div>
+   <div class="menu-main">
+      <ul>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="slider"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="service"><i class="fas fa-cog"></i> Services</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="count"><i class="fas fa-retweet"></i> rents</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="faq"><i class="fas fa-life-ring"></i> Faqs</a></li>
+        <li><a href="#" class="close-menu-link scroll-to" data-scroll="apply"><i class="fas fa-sign-in-alt"></i> Apply</a></li>
+        <li><a  class="more-links-btn" href="#"> <i class="fas fa-clipboard-check"></i> Why choose us
+<span><i class="fas fa-chevron-down"></i></span>
+        </a>
+ <ul class="more-links-main">
+                <li><a href="#">My account</a></li>
+                <li><a href="#">My Surveys</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our offer to customers</a></li>
+                <li><a href="#">Realising your potential</a></li>
+                <li><a href="#">Twenty11 communities</a></li>
+                <li><a href="#">Tenancy Sustainment Licence </a></li>
+               <li> <a href="#">Report Anti Social Behavior </a></li>
+             </ul>
+        </li>
+         <li><a class="more-links-btn" href="#"><i class="fas fa-plus-square"></i> More<span><i class="fas fa-chevron-down"></i></span></a>
+ <ul class="more-links-main">
+                <li><a href="#">My account</a></li>
+                <li><a href="#">My Surveys</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Our offer to customers</a></li>
+                <li><a href="#">Realising your potential</a></li>
+                <li><a href="#">Twenty11 communities</a></li>
+                <li><a href="#">Tenancy Sustainment Licence </a></li>
+               <li> <a href="#">Report Anti Social Behavior </a></li>
+             </ul>
+
+         </li>
+      </ul>
+
+   </div>
+   <div class="menu-footer">
+     <ul class="social-links">
+      <li>
+        <a href="#" class="flat-hover"><i class="fab fa-facebook-f"></i></a></li>
+         <li>
+          <a href="#" class="flat-hover"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+   </div>
+
+
+
+</div>
+
+
+      <div class="body-bg"></div>
+
+<div class="container-fluid head-main">
+   <div class="container remove-padding">
+      <a href="#"><img data-aos="fade-right"     data-aos-easing="linear"
+     data-aos-duration="500" src="img/logo.png"></a>
+
+      <ul>
+
+          <li data-aos="flip-right"     data-aos-easing="linear"
+     data-aos-duration="500" class="search-btn search-link"> <i class="fas fa-search"></i></li>
+          <li data-aos="flip-right"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="200" class="sing-btn"><a href="#"><i class="fas fa-user-alt"></i></a></li>
+                    <li data-aos="flip-right"     data-aos-easing="linear"
+     data-aos-duration="500" data-aos-delay="400" class="menu-btn"><div id="button1">
+       <div class="icn-first-space" ></div>
+      <div class="icn-space" ></div>
+</div>
+  <div id="button">
+        <div class="icn-first-space"></div>
+      <div class="icn-space"></div>
+  
+  </div></li>
+      </ul>
+   </div>
+
+</div>
+
+
+
+<!-- end header  --> 
+<div class="clearfix"></div>
+
+<div class="container-fluid remove-padding cover-main">
+   <img src="img/1.jpg">
+
+<div class="container remove-padding">
+<ul>
+   <li><a href="#">Home</a> </li>
+   <li><i class="fas fa-chevron-right"></i></li>
+   <li><p>Register</p></li>
+</ul>
+          <h1>register</h1>
+           
+          <div class="line-title text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71px" height="11px"> <path fill-rule="evenodd" d="M59.669,10.710 L49.164,3.306 L39.428,10.681 L29.714,3.322 L20.006,10.682 L10.295,3.322 L1.185,10.228 L-0.010,8.578 L10.295,0.765 L20.006,8.125 L29.714,0.765 L39.428,8.125 L49.122,0.781 L59.680,8.223 L69.858,1.192 L70.982,2.895 L59.669,10.710 Z"></path></svg>
+          </div> 
+
+</div>
+
+</div>
+
+<div class="container inside-page-main">
+   <div class="col-md-8 col-md-offset-2 col-xs-12 col-sm-12">
+
+<p>
+Please note that registration is not available to existing Red Kite Customers
+
+If you are in temporary accommodation with Red Kite, but do not hold a full Red Kite tenancy, you may still be eligible for a Twenty11 home and should answer 'no' to the question asking if you are an existing Red Kite tenant.
+
+*** You must be an adult (over the age of 16 and not in full time education) to register and complete the pre-registration process ***
+
+</p>
+
+
+<div class="col-xs-12 personal-info-main">
+
+
+<h3 class="open-inputs">Your Personal Details</h3>
+
+
+
+<div class="col-xs-12 remove-padding input-main">
+
+<!-- wrong or empty fild  -->
+
+<!-- if this fild required add a star to p tag -->
+
+<div class="col-xs-12 input-item wrong-fild-val">
+   <p>First name: * </p>
+   <input placeholder="" type="text">
+   <span>this fild is empty</span>
+
+</div>
+
+<!--end wrong or empty fild  -->
+
+
+<div class="col-xs-12 input-item">
+   <p>Last name:</p>
+   <input placeholder="" type="text">
+
+</div>
+
+
+
+<div class="col-xs-12 input-item">
+   <p>Email:</p>
+   <input placeholder="" type="email">
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+<div class="col-xs-12 personal-info-main">
+
+
+<h3>Your Contact Information</h3>
+
+
+<div class="col-xs-12 remove-padding input-main" style="display: none;">
+
+<div class="col-xs-12 input-item">
+   <p>Phone:</p>
+   <input placeholder="" type="Phone">
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+<div class="col-xs-12 personal-info-main">
+
+
+<h3>Options</h3>
+
+
+<div class="col-xs-12 remove-padding input-main" style="display: none;">
+
+<div class="col-xs-12 input-item">
+   <p>Existing Red Kite Customer:</p>
+
+   <select class="my-select">
+                <option>Yes</option>
+                <option>No</option>
+
+
+   </select> 
+</div>
+
+
+<div class="col-xs-12 input-item">
+   <p>Number of Bedrooms required:</p>
+
+   <select class="my-select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+
+
+   </select> 
+</div>
+
+
+
+</div>
+
+</div>
+
+
+<div class="col-xs-12 personal-info-main">
+
+
+<h3>Your Password</h3>
+
+
+<div class="col-xs-12 remove-padding input-main" style="display: none;">
+
+<div class="col-xs-12 input-item">
+   <p>Password:</p>
+   <input placeholder="" type="password">
+
+</div>
+
+<div class="col-xs-12 input-item">
+   <p>Confirm password:</p>
+   <input placeholder="" type="password">
+
+</div>
+
+
+
+</div>
+
+</div>
+
+
+
+<button class="reg-btn" type="submit">Register</button>
+
+
+   </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid contact-main" id="contact">
+   <div class="container remove-padding">
+      <h1>Get in Touch</h1>
+      <p>Subscribe to mailinglist to receive updates on new arrivals,<br>
+special offers and other discount information</p>
+
+<form>
+  <input type="email" name="" placeholder="Enter your e-mail">
+  <button type="submit">Send</button>
+
+</form>
+
+   </div>
+
+
+
+</div>
+
+<div class="container-fluid footer-main">
+   <div class="container text-center">
+      <ul class="social-main-fot">
+            <li><a href="#" class="flat-hover"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#" class="flat-hover"><i class="fab fa-twitter"></i></a></li>
+      </ul>
+      <ul class="link-bot-main">
+        
+           <li><a href="#">Policies</a> </li>
+           <li><a href="#">Site Map</a> </li>
+           <li><a href="#">A to Z</a> </li>
+           <li><a href="#">Faqs</a> </li>
+         
+      </ul>
+
+      <p>Copyright © 2019 Twenty11. All rights reserved.</p>
+
+
+   </div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+<script src="js/jquery.countup.min.js"></script> 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="js/chosen.jquery.js"></script>
+
+
+
+
+
+<script>
+
+$(document).ready(function() {
+
+$(".my-select").chosen();
+
+
+  AOS.init();
+
+
+
+
+$(".body-bg").click(function(){
+$(".search-main").slideUp("fast");
+$('.body-bg').removeClass('body-overlay');
+});
+$(".search-link").click(function(){
+event.preventDefault();
+$(".search-main").slideToggle("fast");
+$(".body-bg").addClass('body-overlay')
+});
+
+
+$(".menu-btn").click(function(){
+$(".menu-side-main").addClass('open-menu');
+$(".body-bg").addClass('body-overlay')
+});
+
+$(".body-bg, .colse-menu-btn, .close-menu-link").click(function(){
+$(".menu-side-main").removeClass('open-menu');
+$('.body-bg').removeClass('body-overlay');
+});
+
+
+
+
+      $(".personal-info-main h3").click(function(){
+      $(this).next().slideToggle("fast")
+      .siblings(".input-main").slideUp("fast");
+      $(this).toggleClass('open-inputs');
+      });
+
+
+
+
+$( ".more-links-btn" ).click(function() {
+  event.preventDefault();
+$(".more-links-btn").not(this).siblings('.more-links-main').slideUp();
+$(this).siblings('.more-links-main').slideToggle();
+
+$(".more-links-btn").not(this).removeClass('pro-open-link');
+$(this).toggleClass('pro-open-link');
+  });
+
+
+
+
+});
+
+
+
+              
+            
+
+
+
+
+
+</script>
+
+  <script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+
+</body>
+</html>

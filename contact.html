@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>contact</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="img/fiv-icn.png" type="" sizes="16x16">
+
+
+</head>
+<body>
+<style>
+    
+     html, body {
+  overflow-x: hidden;
+}
+    
+</style>
+
+<div class="container-fluid menu-main">
+
+    <div class="container">
+        <ul>
+            <li><a href="index.html" class="home-link"><span class="number-menu">01</span>Home.</a></li>
+            <li><a href="projects.html" class="work-link"><span class="number-menu">02</span>Work.</a></li>
+            <li><a href="about.html" class="about-link"><span class="number-menu">03</span>About.</a></li>
+            <li><a href="contact.html" class="contact-link"><span class="number-menu">04</span>Contact.</a></li>
+
+
+        </ul>
+
+    </div>
+
+</div>
+
+
+<div class="logo">
+    <a href="index.html" class="logo-main">
+        <span class="scroll-item"><img class="logo" src="img/logo.svg"><img class="logo" style="display: none;"
+                                                                            src="img/logo-w.svg"></span>
+
+    </a>
+</div>
+<div class="say-hello">
+
+    <a href="contact.html"><img class="scroll-item" src="img/say-hello.svg"></a>
+
+</div>
+<div class="menu">
+    <div class="logo-main">
+        <div class="scroll-item">
+            <div id="nav-icon3">
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <span></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid remove-padding form-main">
+    <div class="container remove-padding">
+
+        <div class="col-md-6 col-xs-12 col-sm-6 form-cont">
+            <h1>
+                <div data-aos="fade-right" data-aos-duration="1000"
+                >Get in
+                </div>
+                <span data-aos="fade-left"
+                      data-aos-delay="100" data-aos-duration="1000">
+touch.</span></h1>
+            <form action="send.php" method="post">
+                <div class="col-md-6 col-xs-12 col-sm-6 form-item" data-aos="fade-right"
+                     data-aos-anchor-placement="center-bottom" data-aos-delay="200" data-aos-duration="1000">
+
+                    <div class="col-3 input-effect">
+                        <input class="effect-16" type="text" placeholder="" name="name">
+                        <label>Name </label>
+                        <span class="focus-border"></span>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 col-xs-12 col-sm-6 form-item" data-aos="fade-left"
+                     data-aos-anchor-placement="center-bottom" data-aos-delay="300" data-aos-duration="1000">
+
+                    <div class="col-3 input-effect">
+                        <input class="effect-16" type="email" placeholder="" name="email">
+                        <label>Email </label>
+                        <span class="focus-border"></span>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-xs-12 form-item" data-aos="fade-right"
+                     data-aos-anchor-placement="center-bottom" data-aos-delay="400" data-aos-duration="1000">
+
+                    <div class="col-3 input-effect">
+                        <textarea class="effect-16 text-effect" placeholder="" name="details"></textarea>
+                        <label>Project Description </label>
+                        <span class="focus-border"></span>
+                    </div>
+
+                </div>
+
+
+                <div class="col-xs-12">
+                    <button type="submit">
+                        <div data-aos="fade-right"
+                             data-aos-anchor-placement="center-bottom" data-aos-duration="1000"> Send it
+                        </div>
+                        <br><span class="line" data-aos="fade-left"
+                                  data-aos-anchor-placement="center-bottom" data-aos-duration="1000"></span></button>
+
+
+                </div>
+
+
+            </form>
+
+
+            <div class="col-xs-12">
+                <p data-aos="fade-right"
+                   data-aos-anchor-placement="center-bottom" data-aos-duration="1000">Or just say</p>
+                <a href="https://wa.me/201092329405?text=hi">
+                    <div data-aos="fade-up"
+                         data-aos-anchor-placement="center-bottom" data-aos-duration="1000"> hello (whatsapp)
+                    </div>
+                </a>
+
+
+            </div>
+
+
+        </div>
+        <div class="col-md-5 col-md-offset-1 col-xs-12 col-sm-6 cont-img-vic-main">
+            <img data-aos="flip-up"
+                 data-aos-delay="500" data-aos-duration="1000" src="img/cont-vic.svg">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.mousefollower.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+<script>
+    AOS.init();
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        $('#nav-icon3').click(function () {
+            $(this).toggleClass('open');
+            $(".logo").toggleClass('open-logo-bg');
+        });
+        $(function () {
+            $('.logo-main, .scroll, .say-hello, .logo-main').mousefollower();
+        });
+
+        $("#nav-icon3").click(function () {
+            $(".menu-main").slideToggle("slow");
+            $(".menu").toggleClass('menu-w');
+            $(".menu-main .container ul li a").toggleClass("show");
+            $('.logo-main').find('img').toggle();
+        });
+
+        $(".menu-main .container ul li a").click(function () {
+            $('#nav-icon3').removeClass('open');
+            $(".menu-main").slideUp("slow");
+            $('.logo-main').find('img').toggle();
+            $(".menu").toggleClass('menu-w');
+
+        });
+        $(window).load(function () {
+            $(".col-3 input").val("");
+
+            $(".input-effect input, .input-effect textarea").focusout(function () {
+                if ($(this).val() != "") {
+                    $(this).addClass("has-content");
+                } else {
+                    $(this).removeClass("has-content");
+                }
+            })
+        });
+
+        $(".cont-img-vic-main").height($(".form-cont").height());
+
+
+        var textarea = document.querySelector('.input-effect textarea');
+
+        textarea.addEventListener('keydown', autosize);
+
+        function autosize() {
+            var el = this;
+            setTimeout(function () {
+                el.style.cssText = 'height:auto; padding:0';
+
+                el.style.cssText = 'height:' + el.scrollHeight + 'px';
+            }, 0);
+        }
+
+
+    });
+</script>
+</body>
+</html>

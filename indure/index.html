@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Philosophy</title>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css"  rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+
+<style type="text/css">
+.more-pages-btn {
+    background-color: #f7f7f7;
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    box-shadow: 0px 0px 5px 0px rgba(154, 154, 154, 0.54);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    position: fixed;
+    right: 0;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+  overflow: hidden;
+  z-index: 99999
+}
+
+
+.more-pages-btn:after {
+  animation: sheen infinite;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to bottom, transparent, rgba(255,255,255,1) 50%, transparent);
+  transform: rotateZ(60deg) translate(-1em, 4em);
+  animation-delay: 0s;
+  animation-duration: 5s;
+}
+
+.more-pages-btn.more-pages-btn-active:after {  animation: sheenee infinite !important;}
+
+@keyframes sheen {
+  100% {
+    transform: rotateZ(60deg) translate(0, -4em);
+  }
+}
+
+
+.more-pages-btn img {
+    width: 30px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+    opacity: 0.8
+}
+
+.all-pages-main {
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    width: 350px;
+    background-color: white;
+    top: 0;
+    z-index: 9999;
+   
+    -webkit-box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    box-shadow: 0 15px 5px 0 rgba(77, 77, 77, 0.28);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+        right: -360px;
+}
+
+.all-pages-main h1 { font-size: 22px;
+    font-weight: 400;
+    font-family: sans-serif;
+    color: #999999;
+    border-bottom: 1px solid #ddd;
+    padding: 10px; }
+        .all-pages-main ul { margin-top: 10px; margin-bottom: 10px; }
+
+    .all-pages-main ul li { float: left; width: 49%;padding: 10px; list-style: none;  }
+.all-pages-main ul li .shot-frame { position: relative; width: 100%; height: 70px;    border: 1px solid #eee; }
+
+    .all-pages-main ul li img { width: 100%; position: absolute; height: 100%; object-fit: cover; object-position: top;-webkit-transition: all 0.5s ease-out 0s;
+    transition: all 0.5s ease-out 0s; }
+
+a.shot-link {text-decoration: none;}
+
+a.shot-link:hover img.shot-img {object-position: bottom;  } 
+a.shot-link p { text-align: center; margin-top: 10px; font-size: 16px; color: #000; text-decoration: none;    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical; text-transform: capitalize; }
+
+
+
+.all-pages-main::-webkit-scrollbar {
+ width: 5px;
+ background-color: #dedede;
+}
+ .all-pages-main::-webkit-scrollbar-thumb {
+ border-radius: 0;
+ -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+ background-color: #bdbbbb;
+}
+
+.all-pages-main-active {  right: 0; }
+.more-pages-btn-active { right: 351px }
+
+
+@media only screen and (max-width: 767px){
+
+.more-pages-btn {    width: 40px;
+    height: 40px; margin-top: -20px;}
+
+    .more-pages-btn img {
+    width: 23px;
+
+
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.more-pages-btn-active {
+    right: 0;
+
+}
+
+.all-pages-main {
+
+    width: 300px;
+    z-index: 99999;
+
+}
+
+a.shot-link p {
+
+    font-size: 14px;
+
+}
+
+
+
+}
+</style>
+
+
+
+<div class="all-pages-main">
+   <h1>pages</h1>
+   <ul>
+    
+      <li><a href="reports.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/reports.jpg"></div><p>reports</p> </a></li>
+      <li><a href="contact-us.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/contact-us.jpg"></div><p>contact us</p> </a></li>
+      <li><a href="FAQ.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/FAQ.jpg"></div><p>FAQ</p> </a></li>
+      <li><a href="add-reports.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/add-reports.jpg"></div><p>add reports</p> </a></li>
+      <li><a href="network.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/network.jpg"></div><p>network</p> </a></li>
+      <li><a href="index.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/index.jpg"></div><p>home</p> </a></li>
+      <li><a href="log-in.html" class="shot-link"><div class="shot-frame"><img class="shot-img" src="img/shots/login.jpg"></div><p>login</p> </a></li>
+
+
+
+
+   </ul>
+
+</div>
+
+<span class="more-pages-btn">
+  <img src="img/more.png">
+</span>
+
+
+<div class="div container-fluid remove-padding body-cont make-bg-philosophy">
+<section class="header">
+<div class="container-fluid hidden-xs">
+<div class="container head">
+  <div class="col-md-3 col-sm-3 remove-padding">
+   <a href="#" class="logo">
+     <img src="img/logo.png">
+   </a>
+  </div>
+  <ul class="menu-web col-md-9 col-sm-9">
+   <li class="text-to-anmi-2  " ><a href="#">Philosophy</a></li>
+   <li class="text-to-anmi-2  "  ><a href="#">Companies</a></li>
+   <li class="text-to-anmi-3"  ><a href="#">Network</a></li>
+   <li class="text-to-anmi-4" ><a href="#">FAQs</a></li>
+   <li class="text-to-anmi-5"  ><a href="#">Resources</a></li>
+   <li class="text-to-anmi-6"  ><a href="#">News</a></li>
+   <li class="text-to-anmi-7" ><a href="#">Contact</a></li>
+   <li class="text-to-anmi-8">|</li>
+   <li class="menu-btn">
+   
+
+<div id="button1">
+       <div class="icn-first-space" ></div>
+      <div class="icn-space" ></div>
+</div>
+  <div id="button">
+        <div class="icn-first-space"></div>
+      <div class="icn-space"></div>
+  
+  </div>
+
+
+   </li>
+   
+
+
+  
+  </ul>
+  
+ <p class="text-to-anmi-9">Menu</p>
+
+
+</div>
+  
+  
+</div>
+</section>
+
+  <div class="mobile-menu visible-xs remove-padding">
+<div class="col-xs-12 remove-padding" >
+  
+    <div class="navbar-header remove-padding">
+    <img class="mob-logo" src="img/logo.png">
+    <button type="button" class="navbar-toggle mob-btn" data-toggle="collapse" data-target=".navbar-collapse"> <div id="button-mob">
+       <div class="icn-first-space" ></div>
+      <div class="icn-space" ></div>
+</div> </button>
+  </div>
+    <div class="collapse navbar-collapse mob-menu container-fluid remove-padding">
+    <ul class="remove-padding">
+      <li class="col-xs-12"> <a href="#">Philosophy </a></li>
+      <div class="line-under"></div>
+      <li class="col-xs-12"> <a href="#">Companies</a></li>
+      <div class="line-under"></div>
+      <li class="col-xs-12"> <a href="#">Network</a></li>
+      <div class="line-under"></div>
+      <li class="col-xs-12"><a href="#">FAQs</a></li>
+      <div class="line-under"></div>
+      <li class="col-xs-12"><a href="#">Resources</a></li>
+      <div class="line-under"></div>
+      <li class="col-xs-12"><a href="#">News</a></li>
+      <div class="line-under"></div>
+      <li class="col-xs-12"><a href="#">Contact</a></li>
+
+  
+    </ul>
+  </div> <!--nav-collapse --> 
+  </div>
+  </div>
+
+
+
+
+    <div class="container philosophy-cont">
+   <p class="des text-center col-xs-10 col-xs-offset-1">
+   Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis.Nam dapibus nisl vitae elit fringilla rutrum.<br><br> Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis.
+   </p>
+   <div class="clearfix"></div>
+   <h4 class="we-do">What We Do</h4>
+   <div class="line-under-title center-block"></div>
+   <p class="text-center we-do-des col-md-6 col-md-offset-3">Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis.Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum.<br><br> neque sem pretium metus, quis mollis.</p>
+   <div class="clearfix"></div>
+      <h4 class="we-do">What We Believe In</h4>
+   <div class="line-under-title center-block"></div>
+   <p class="text-center we-Believe-des col-md-8 col-md-offset-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium pretium tempor. Ut <br>eget imperdiet neque. In volutpat ante semp.</p>
+  
+  <div class="container remove-padding Philosophy-grids-mian">
+   
+  <div class="col-md-4 col-sm-6 col-xs-12 Philosophy-grids">
+  <div class="icn-for-grid col-md-3">
+   <img src="img/frdm_icn.png">
+ </div>
+ <div class="col-xs-9">
+ <h4>Freedom</h4>
+ <p>In hac habitasse platea dictumst. Vivamus.</p>
+ </div>
+  </div> 
+       <div class="col-md-4 col-sm-6 col-xs-12 Philosophy-grids">
+  <div class="icn-for-grid col-xs-3">
+   <img src="img/equality_icn.png" alt="">
+ </div>
+ <div class="col-xs-9">
+ <h4>Equality</h4>
+ <p>In hac habitasse platea dictumst. Vivamus.</p>
+ </div>
+  </div> 
+     <div class="col-md-4 col-sm-6 col-xs-12 Philosophy-grids">
+  <div class="icn-for-grid col-xs-3">
+   <img src="img/sucs_icn.png" alt="">
+ </div>
+ <div class="col-xs-9">
+ <h4>Success</h4>
+ <p>In hac habitasse platea dictumst. Vivamus.</p>
+ </div>
+  </div> 
+     <div class="col-md-4 col-sm-6 col-xs-12 Philosophy-grids">
+  <div class="icn-for-grid col-xs3">
+   <img src="img/love_icn.png" alt="">
+ </div>
+ <div class="col-xs-9">
+ <h4>Love</h4>
+ <p>In hac habitasse platea dictumst. Vivamus.</p>
+ </div>
+  </div> 
+    <div class="col-md-4 col-sm-6 col-xs-12 Philosophy-grids">
+  <div class="icn-for-grid col-xs-3">
+   <img src="img/ofbox_icn.png" alt="">
+ </div>
+ <div class="col-xs-9">
+ <h4>Alweys expanding the out of possible</h4>
+ <p>In hac habitasse platea dictumst. Vivamus.</p>
+ </div>
+  </div> 
+ 
+
+    <div class="col-md-4 col-sm-6 col-xs-12 Philosophy-grids leyeron">
+
+ <a href="#"> <h3 class="text-center">View our companies</h3></a>
+ </div>
+  </div> 
+</div>   
+
+
+<div class="clearfix"></div>
+
+
+<div class="container-fluid befor-footer hidden-xs">
+ 
+
+</div>
+<section>
+ <div class="container-fluid footer">
+   <div class="container footer-mian hidden-xs">
+    <ul class="footer-links col-md-8 col-sm-10">
+     <li><a href="#">Startups Application</a></li>
+     <li><a href="#">Company Login</a></li>
+     <li><a href="#">About</a></li>
+     <li><a href="#">Contact us</a></li>
+     <li><a href="#" class="sub"><b>Subscripe to our newsletter</b></a></li>
+    </ul>
+    <div class="footer-logo col-xs-12 text-center col-md-2 col-sm-2">
+   <a class="make-black-white-effect" href="#"><img  src="img/logo-footer.png" ></a>
+   </div>
+   </div>
+   
+      <div class="container footer-mian visible-xs">
+    <div class="col-xs-4 text-center bot-links">
+     <a href="#">Startups Application</a>
+     <a href="#">Company Login</a>
+     </div>
+     
+         <div class="col-xs-4  bot-links text-center">
+     <a href="#">Company Login</a>
+     <a href="#">About</a>
+     </div>
+     
+              <div class="col-xs-4  bot-links text-center">
+     <a href="#">Contact us</a>
+     <a href="#" class="sub"><b>Subscripe to our newsletter</b></a>
+     </div>
+     
+
+
+    
+    <div class="footer-logo col-xs-12 text-center col-md-2 col-sm-2">
+   <a class="make-black-white-effect" href="#"><img  src="img/logo-footer.png" ></a>
+   </div>
+   </div>
+ </div>
+
+</section>
+
+</div>
+  
+  
+
+
+<script src="js/jquery-1.11.2.min.js"></script> 
+<script src="js/bootstrap.js"></script> 
+
+
+<script>
+var open=false;
+$(document).ready(function(){
+   $("#button, #button-mob").click(function(){
+        $(this).toggleClass("add-bg-btn");
+    });
+	
+	
+	
+
+	
+	
+	    $(".menu-btn").click(function(){
+			if(open==false){
+				$('.text-to-anmi-1').addClass('text-to-anmi-11').removeClass('text-to-anmi-1');
+$('.text-to-anmi-12').addClass('text-to-anmi-2').removeClass('text-to-anmi-12');
+$('.text-to-anmi-13').addClass('text-to-anmi-3').removeClass('text-to-anmi-13');
+$('.text-to-anmi-14').addClass('text-to-anmi-4').removeClass('text-to-anmi-14');
+$('.text-to-anmi-15').addClass('text-to-anmi-5').removeClass('text-to-anmi-15');
+$('.text-to-anmi-16').addClass('text-to-anmi-6').removeClass('text-to-anmi-16');
+$('.text-to-anmi-17').addClass('text-to-anmi-7').removeClass('text-to-anmi-17');
+$('.text-to-anmi-19').addClass('text-to-anmi-9').removeClass('text-to-anmi-19');
+
+        $(".text-to-anmi-1, .text-to-anmi-2, .text-to-anmi-3, .text-to-anmi-4, .text-to-anmi-5, .text-to-anmi-6, .text-to-anmi-7, .text-to-anmi-9").css("-webkit-animation-play-state", "running" );
+			open=true;
+			}
+			else{
+				 
+$(".text-to-anmi-11, .text-to-anmi-12, .text-to-anmi-13, .text-to-anmi-14, .text-to-anmi-15, .text-to-anmi-16, .text-to-anmi-17, .text-to-anmi-19").css("-webkit-animation-play-state", "running" );
+				
+$('.text-to-anmi-1').addClass('text-to-anmi-11').removeClass('text-to-anmi-1');
+$('.text-to-anmi-2').addClass('text-to-anmi-12').removeClass('text-to-anmi-2');
+$('.text-to-anmi-3').addClass('text-to-anmi-13').removeClass('text-to-anmi-3');
+$('.text-to-anmi-4').addClass('text-to-anmi-14').removeClass('text-to-anmi-4');
+$('.text-to-anmi-5').addClass('text-to-anmi-15').removeClass('text-to-anmi-5');
+$('.text-to-anmi-6').addClass('text-to-anmi-16').removeClass('text-to-anmi-6');
+$('.text-to-anmi-7').addClass('text-to-anmi-17').removeClass('text-to-anmi-7');
+$('.text-to-anmi-9').addClass('text-to-anmi-19').removeClass('text-to-anmi-9');
+
+
+
+open=false;
+
+
+				}
+			
+    });
+	
+	
+	
+	
+		
+	
+});
+
+</script>
+
+<script>
+$( ".more-pages-btn" ).click(function() {
+  $( ".all-pages-main" ).toggleClass( "all-pages-main-active" );
+  $( this ).toggleClass( "more-pages-btn-active" );
+});
+</script>
+
+</body>
+</html>
